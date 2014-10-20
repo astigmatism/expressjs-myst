@@ -1,0 +1,1699 @@
+1,right,87864,0,401,317,78,enabled,r,go 88272;
+2,left,87864,0,0,319,96,enabled,l,go 87805;
+3,right,87805,0,380,319,99,enabled,r,go 87864;
+4,left,87805,0,0,318,88,enabled,l,go 88498;
+5,marker,88272,0,368,70,112,enabled,,
+6,right,88272,0,408,319,71,enabled,r,go 88498;
+7,left,88272,0,0,319,71,enabled,l,go 87864;
+8,-,88272,41,187,192,114,enabled,o,go 83255;pm L3 Wind Mov;vm 250;sv Ch_hut1=NO;in 1\ps DR Wood Shut;
+9,marker,88498,0,27,55,117,enabled,,
+10,right,88498,0,386,319,93,enabled,r,go 87805;
+11,left,88498,0,0,319,93,enabled,l,go 88272;
+12,monitor,88498,2,67,171,105,enabled,o,?? CH_BluePage|go 88813|go 88814;pm MU ChannelAchenar;vm 50;
+13,-,88814,0,0,319,480,enabled,o,go 88498;pm MU ChannelAchenar;vm 200;zm -1.0=0=0=0.0;
+14,-,88814,26,158,263,175,disabled,,
+15,marker,88814,0,89,85,89,enabled,,"?? CH_BluePage|no |ca X_Global grabPage:CH_BluePage,go 88813;"
+16,moovmarker,88814,178,200,73,91,enabled,,
+17,buttonmarker,88814,118,222,20,52,enabled,,
+18,-,88814,106,219,42,19,enabled,,go 88815;
+19,-,88814,106,236,42,13,enabled,,go 88816;
+20,-,88814,106,247,42,14,enabled,,go 88817;
+21,-,88814,106,260,42,16,enabled,,go 88818;
+22,left,11327,0,0,319,127,enabled,l,go 11029;
+23,right,11327,0,393,319,86,enabled,r,go 11029;
+24,-,11327,0,163,306,213,enabled,o,go 9075;
+25,qphp2,11327,154,257,71,60,enabled,o,go 9075;
+26,marker,11029,160,171,154,45,enabled,,
+27,right,11029,0,379,319,100,enabled,r,go 11327;
+28,left,11029,0,0,319,100,enabled,l,go 11327;
+29,-,11029,0,112,319,227,enabled,o,go 11657;
+30,qsi2,11029,144,155,38,45,enabled,o,go 11657;
+31,right,15551,0,392,319,87,enabled,r,go 15273;
+32,left,15551,0,0,319,105,enabled,l,go 15273;
+33,-,15551,0,130,224,262,enabled,o,go 15024;
+34,moovmarker,15551,294,106,26,94,enabled,,
+35,qsr2,15551,112,346,46,47,enabled,o,go 15024;
+36,qphp2,15551,225,143,35,36,enabled,,
+37,marker2,15273,154,118,166,57,enabled,,
+38,marker,15273,128,292,94,48,enabled,,
+39,right,15273,0,396,319,83,enabled,r,go 15551;
+40,left,15273,0,0,319,83,enabled,l,go 15551;
+41,-,15273,0,137,296,235,enabled,o,go 15662;
+42,qls,15273,134,292,86,55,enabled,o,go 15662;
+43,right,15906,0,372,319,107,enabled,r,go 15662;
+44,left,15906,0,0,319,107,enabled,l,go 15662;
+45,-,15906,0,164,300,176,enabled,o,go 15551;
+46,moovmarker,15906,286,117,34,85,enabled,,
+47,marker2,15662,140,91,180,65,enabled,,
+48,marker,15662,107,322,127,71,enabled,,
+49,left,15662,0,0,319,106,enabled,l,go 15906;
+50,right,15662,0,373,319,106,enabled,r,go 15906;
+51,-,15662,0,124,277,270,enabled,o,go 16172;
+52,qls,15662,101,315,135,67,enabled,o,go 16172;
+53,left,16582,0,0,319,95,enabled,l,go 16172;
+54,right,16582,0,384,319,95,enabled,r,go 16172;
+55,-,16582,0,72,269,225,enabled,o,go 15551;
+56,qsr2,16582,136,150,42,37,enabled,o,go 15551;
+57,marker,16172,95,204,158,75,enabled,,
+58,right,16172,0,373,319,106,enabled,r,go 16582;
+59,left,16172,0,0,319,106,enabled,l,go 16582;
+60,-,16172,0,92,295,270,enabled,o,go 16663;
+61,right,17121,0,373,319,106,enabled,r,go 16663;
+62,left,17121,0,0,319,106,enabled,l,go 16663;
+63,-,17121,0,92,249,239,enabled,o,go 16582;
+64,qsr2,17121,142,159,41,34,enabled,o,go 16582;
+65,right,16663,0,373,319,105,enabled,r,go 17121;
+66,left,16663,0,0,319,105,enabled,l,go 17121;
+67,climbstairs,16663,77,184,242,106,enabled,o,?? Ch_lowerstairs|go 17225|ps DR Gate Not Rattle;
+68,left,18197,0,0,319,96,enabled,l,go 17973;
+69,right,18197,0,383,319,96,enabled,r,go 17973;
+70,-,18197,0,107,248,262,enabled,o,go 17667;
+71,moovmarker,18197,289,238,31,80,enabled,,
+72,marker2,17973,162,262,24,31,enabled,,
+73,marker,17973,156,397,164,49,enabled,,
+74,right,17973,0,373,319,106,enabled,r,go 18197;
+75,left,17973,0,0,319,106,enabled,l,go 18197;
+76,-,17973,0,66,244,270,enabled,o,go 18638;
+77,qsi3,17973,110,82,44,36,enabled,o,go 18638;
+78,left,18775,0,0,319,118,enabled,l,go 18638;
+79,right,18775,0,421,319,58,enabled,r,go 18638;
+80,-,18775,0,149,210,274,enabled,o,go 18197;
+81,qsl2,18775,107,345,49,46,enabled,o,go 18197;
+82,right,18638,0,396,319,83,enabled,r,go 18775;
+83,left,18638,0,0,319,83,enabled,l,go 18775;
+84,-,18638,0,118,284,255,enabled,o,go 19143;
+85,qsi4,18638,129,293,42,42,enabled,o,go 19143;
+86,right,19212,0,372,319,107,enabled,r,go 19143;
+87,left,19212,0,0,319,107,enabled,l,go 19143;
+88,-,19212,0,141,249,230,enabled,o,go 18775;
+89,qsl2,19212,128,305,42,37,enabled,o,go 18775;
+90,right,19143,0,376,319,103,enabled,r,go 19212;
+91,-,19143,0,243,254,174,enabled,o,go 19459;
+92,-,19143,0,91,250,156,enabled,o,go 32060;
+93,marker,19143,35,193,24,41,enabled,,
+94,left,19143,0,0,319,103,enabled,l,go 19212;
+95,qsi7,19143,139,145,34,33,enabled,o,go 32060;
+96,qsi4,19143,113,331,40,40,enabled,o,go 19459;
+97,left,19870,0,0,319,103,enabled,l,go 19459;
+98,right,19870,0,376,319,103,enabled,r,go 32060;
+99,-,19870,0,98,248,201,enabled,o,go 19212;
+100,right,19870,0,314,45,165,enabled,r,go 32060;
+101,marker,19870,36,228,35,62,enabled,,
+102,moovmarker,19870,288,207,32,81,enabled,,
+103,qsl2,19870,142,157,29,25,enabled,o,go 19212;
+104,marker,19459,150,288,32,68,enabled,,
+105,right,19459,0,391,319,88,enabled,r,go 19870;
+106,left,19459,0,0,319,88,enabled,l,go 32060;
+107,-,19459,0,112,269,245,enabled,o,go 20137;
+108,qsi5,19459,132,298,36,35,enabled,,
+109,-,32368,0,208,272,191,enabled,o,go 19212;
+110,marker,32368,20,228,39,59,enabled,,go 87250;
+111,left,32368,0,0,319,102,enabled,l,go 19459;
+112,right,32368,0,377,319,102,enabled,r,go 32060;
+113,left,32368,0,0,54,161,enabled,l,go 19459;
+114,right,32060,0,372,319,107,enabled,r,go 19459;
+115,left,32060,0,0,319,102,enabled,l,go 32368;
+116,-,32060,0,142,255,210,enabled,o,go 32743;
+117,right,20241,0,371,319,108,enabled,r,go 20137;
+118,left,20241,0,0,319,108,enabled,l,go 20137;
+119,-,20241,0,109,280,249,enabled,o,go 19870;
+120,moovmarker,20241,262,206,58,82,enabled,,
+121,qsl2,20241,154,174,21,21,enabled,o,go 19870;
+122,marker2,20137,154,82,21,66,enabled,,
+123,-,20137,0,75,249,160,enabled,o,go 2153;
+124,marker,20137,140,321,40,51,enabled,,
+125,right,20137,0,400,319,79,enabled,r,go 20241;
+126,left,20137,0,0,319,79,enabled,l,go 20241;
+127,-,20137,0,234,249,160,enabled,o,go 20680;
+128,qsi5,20137,115,333,32,39,enabled,o,go 20680;
+129,-,20137,0,75,249,161,enabled,o,go 2153;
+130,qsi6,20137,113,82,39,41,enabled,o,go 2153;
+131,marker3,20137,35,191,22,44,enabled,,
+132,right,11997,0,374,319,105,enabled,r,go 11657;
+133,left,11997,0,0,319,105,enabled,l,go 11657;
+134,-,11997,0,101,319,270,enabled,o,go 11327;
+135,qphp2,11997,162,241,69,72,enabled,o,go 11327;
+136,marker,11657,169,177,151,37,enabled,,
+137,right,11657,0,384,319,95,enabled,r,go 11997;
+138,left,11657,0,0,319,95,enabled,l,go 11997;
+139,-,11657,0,84,289,268,enabled,o,go 12062;
+140,qsi2,11657,140,139,34,44,enabled,o,go 12062;
+141,-,20934,0,67,266,230,enabled,o,go 20241;
+142,marker,20934,36,232,32,60,enabled,,
+143,left,20934,0,0,319,88,enabled,l,go 20680;
+144,right,20934,0,391,319,88,enabled,r,go 2153;
+145,right,20934,0,307,59,172,enabled,r,go 2153;
+146,moovmarker,20934,281,19,40,54,enabled,,
+147,qsr3,20934,111,98,46,50,enabled,o,go 20241;
+148,marker2,20680,150,409,170,52,enabled,,
+149,right,20680,0,380,319,96,enabled,r,go 20934;
+150,marker,20680,139,170,40,34,enabled,,
+151,left,20680,0,0,319,96,enabled,l,go 2153;
+152,-,20680,0,119,273,261,enabled,o,go 21498;
+153,qel1,20680,136,391,45,39,enabled,o,go 20934;
+154,qpip1,20680,145,157,34,40,enabled,o,go 21498;
+155,right,2465,0,392,319,87,enabled,r,go 2153;
+156,left,2465,0,0,319,87,enabled,l,go 20680;
+157,-,2465,0,190,277,203,enabled,o,go 20241;
+158,left,2465,0,1,49,157,enabled,l,go 20680;
+159,marker,2465,15,229,44,65,enabled,,go 87251;
+160,marker2,2465,150,94,68,45,enabled,,
+161,qsr3,2465,117,348,42,45,enabled,o,go 20241;
+162,marker,2153,152,252,23,35,enabled,,
+163,right,2153,0,387,319,92,enabled,r,go 20680;
+164,left,2153,0,0,319,92,enabled,l,go 2465;
+165,-,2153,0,102,257,258,enabled,o,go 26492;
+166,qbri1,2153,149,205,34,32,enabled,o,go 26492;
+167,left,21506,0,0,319,93,enabled,l,go 21498;
+168,right,21506,0,386,319,93,enabled,r,go 21498;
+169,-,21506,0,97,270,253,enabled,o,go 20934;
+170,moovmarker,21506,266,23,54,93,enabled,,
+171,marker3,21498,121,150,56,44,enabled,,
+172,-,21498,0,74,255,157,enabled,o,go 23887;
+173,marker2,21498,134,459,75,24,enabled,,
+174,marker,21498,24,182,38,61,enabled,,
+175,right,21498,0,402,319,77,enabled,r,go 21506;
+176,left,21498,0,0,319,77,enabled,l,go 21506;
+177,-,21498,0,228,253,187,enabled,o,go 21943;
+178,qel1 right,21498,117,432,67,47,enabled,o,go 21506;
+179,qpip1,21498,134,131,52,49,enabled,o,go 23887;
+180,right,22077,0,390,319,89,enabled,r,go 23887;
+181,left,22077,0,0,319,89,enabled,l,go 21943;
+182,-,22077,0,89,246,274,enabled,o,go 21506;
+183,right,22077,0,309,55,170,enabled,r,go 23887;
+184,marker,22077,39,241,27,40,enabled,,
+185,marker,21943,140,298,180,45,enabled,,
+186,right,21943,0,367,319,112,enabled,r,go 22077;
+187,left,21943,0,0,319,112,enabled,l,go 23887;
+188,-,21943,0,113,262,255,enabled,o,go 22520;
+189,qel1,21943,138,291,64,49,enabled,o,go 22520;
+190,marker2,24265,159,0,38,22,enabled,,
+191,-,24265,0,187,258,202,enabled,o,go 21506;
+192,marker,24265,22,240,28,44,enabled,,
+193,right,24265,0,390,319,90,enabled,r,go 23887;
+194,left,24265,0,0,319,90,enabled,l,go 21943;
+195,left,24265,0,0,59,163,enabled,l,go 21943;
+196,moovmarker,24265,258,229,62,60,enabled,,
+197,qsr4,24265,111,346,47,47,enabled,o,go 21506;
+198,marker2,23887,142,5,23,38,enabled,,
+199,marker,23887,135,310,37,57,enabled,,
+200,right,23887,0,364,319,115,enabled,r,go 21943;
+201,left,23887,0,0,319,115,enabled,l,go 24265;
+202,-,23887,0,123,277,238,enabled,o,go 24323;
+203,qpip1,23887,121,280,67,60,enabled,o,go 24323;
+204,right,22730,0,390,319,89,enabled,r,go 22520;
+205,left,22730,0,0,319,89,enabled,l,go 22520;
+206,-,22730,0,112,254,243,enabled,o,go 22077;
+207,marker,22520,92,316,229,108,enabled,,
+208,right,22520,0,390,319,90,enabled,r,go 22730;
+209,left,22520,0,0,319,90,enabled,l,go 22730;
+210,-,22520,0,175,265,217,enabled,o,go 22799;
+211,qel1,22520,118,330,87,60,enabled,o,go 22799;
+212,marker2,23050,71,432,97,48,enabled,,
+213,marker,23050,159,294,16,42,enabled,,
+214,right,23050,0,368,319,111,enabled,r,go 22799;
+215,left,23050,0,0,319,111,enabled,l,go 22799;
+216,-,23050,0,53,265,256,enabled,o,go 22730;
+217,qsr5,23050,118,95,45,49,enabled,o,go 22730;
+218,marker,22799,91,191,169,86,enabled,,
+219,right,22799,0,375,319,104,enabled,r,go 23050;
+220,left,22799,0,0,319,104,enabled,l,go 23050;
+221,-,22799,0,118,292,249,enabled,o,?? Ch_elevator1|go 23468|go 23467;
+222,marker,23632,98,411,77,69,enabled,,
+223,marker2,23632,133,275,69,74,enabled,,
+224,right,23632,0,391,319,88,enabled,r,?? Ch_elevator1|go 23468|go 23467;
+225,left,23632,0,0,319,88,enabled,l,?? Ch_elevator1|go 23468|go 23467;
+226,-,23632,0,69,246,254,enabled,o,go 23050;
+227,qsr5,23632,118,113,50,46,enabled,o,go 23050;
+228,doormarker,23467,30,159,227,139,enabled,,"?? Ch_openelevator1|go 96885|sc Boardwalk 27-W (DoorOpen),ps DR Wood Open,sv Ch_openelevator1=YES;"
+229,right,23467,0,388,319,91,enabled,r,"?? Ch_openelevator1|in 1\ps DR Wood Shut,sv Ch_openelevator1=NO;go 23632;"
+230,left,23467,0,0,319,91,enabled,l,"?? Ch_openelevator1|in 1\ps DR Wood Shut,sv Ch_openelevator1=NO;go 23632;"
+233,up,23467,265,117,54,242,enabled,u,"?? Ch_openelevator1|ps DR Wood Shut,sv Ch_openelevator1=NO;go 98985;"
+234,marker,98985,0,216,305,46,enabled,,
+235,down,98985,0,0,129,480,enabled,d,?? Ch_elevator1|go 23468|go 23467;
+236,left,24693,0,0,319,106,enabled,l,go 24323;
+237,right,24693,0,373,319,106,enabled,r,go 24323;
+238,-,24693,0,107,246,246,enabled,o,go 24265;
+239,moovmarker,24693,255,228,65,53,enabled,,
+240,marker,24693,160,26,49,43,enabled,,
+241,marker,24323,83,335,82,55,enabled,,
+242,right,24323,0,390,319,89,enabled,r,go 24693;
+243,left,24323,0,0,319,89,enabled,l,go 24693;
+244,-,24323,0,157,249,229,enabled,o,go 24946;
+245,qpip1,24323,97,321,72,66,enabled,o,go 24946;
+246,right,25142,0,385,319,94,enabled,r,go 24946;
+247,left,25142,0,0,319,94,enabled,l,go 24946;
+248,-,25142,0,80,264,276,enabled,o,go 24693;
+249,moovmarker,25142,255,30,65,74,enabled,,
+250,qsl5,25142,112,106,43,34,enabled,o,go 24693;
+251,marker,24946,94,210,76,33,enabled,,
+252,right,24946,0,373,319,106,enabled,r,go 25142;
+253,left,24946,0,0,319,106,enabled,l,go 25142;
+254,-,24946,0,108,226,262,enabled,o,go 25490;
+255,right,12417,0,420,319,59,enabled,r,go 12062;
+256,left,12417,0,0,319,59,enabled,l,go 12062;
+257,-,12417,0,122,313,282,enabled,o,go 11997;
+258,qphp2,12417,276,240,29,70,enabled,o,go 11997;
+259,right,12062,0,418,319,61,enabled,r,go 12417;
+260,left,12062,0,0,319,61,enabled,l,go 12417;
+261,-,12062,0,133,290,243,enabled,o,go 12547;
+262,qsi2,12062,136,300,34,33,enabled,o,go 12547;
+263,right,25804,0,368,319,111,enabled,r,go 25490;
+264,left,25804,0,0,319,111,enabled,l,go 25490;
+265,-,25804,0,111,243,236,enabled,o,go 25142;
+266,moovmarker,25804,247,20,73,113,enabled,,
+267,qsl5,25804,122,131,49,39,enabled,o,go 25142;
+268,marker,25490,24,169,153,70,enabled,,
+269,right,25490,0,358,319,121,enabled,r,go 25804;
+270,left,25490,0,0,319,121,enabled,l,go 25804;
+271,left,26717,0,0,319,104,enabled,l,go 26492;
+272,right,26717,0,375,319,104,enabled,r,go 26492;
+273,-,26717,0,145,257,206,enabled,o,go 2465;
+274,moovmarker,26717,270,383,49,91,enabled,,
+275,marker,26492,146,252,24,38,enabled,,
+276,-,26492,0,224,284,165,enabled,o,go 26960;
+277,-,26492,0,94,284,130,enabled,o,go 29021;
+278,marker2,26492,36,193,23,38,enabled,,
+279,right,26492,0,388,319,91,enabled,r,go 26717;
+280,left,26492,0,0,319,91,enabled,l,go 26717;
+281,qbr1,26492,151,177,45,46,enabled,o,go 29021;
+282,left,27330,0,0,319,101,enabled,l,go 26960;
+283,right,27330,0,378,319,101,enabled,r,go 29021;
+284,-,27330,0,104,297,167,enabled,o,go 26717;
+285,right,27330,0,302,55,177,enabled,r,go 29021;
+286,marker,27330,35,230,32,58,enabled,,
+287,moovmarker,27330,258,232,62,29,enabled,,
+288,qsl4,27330,113,103,45,37,enabled,o,go 26717;
+289,marker,26960,138,85,24,39,enabled,,
+290,right,26960,0,370,319,109,enabled,r,go 27330;
+291,left,26960,0,0,319,109,enabled,l,go 29021;
+292,-,26960,0,112,271,242,enabled,o,go 27623;
+293,marker,29021,131,443,37,36,enabled,,
+294,right,29021,0,351,319,128,enabled,r,go 26960;
+295,left,29021,0,0,319,128,enabled,l,go 29197;
+296,-,29021,0,146,278,195,enabled,o,go 29603;
+297,qbr1 right,29021,145,356,49,45,enabled,o,go 26960;
+298,marker3,29197,165,295,41,24,enabled,,
+299,marker2,29197,157,137,163,48,enabled,,
+300,-,29197,0,205,256,197,enabled,o,go 26717;
+301,marker,29197,9,225,47,67,enabled,,go 87253;
+302,right,29197,0,401,319,78,enabled,r,go 29021;
+303,left,29197,0,0,319,112,enabled,l,go 26960;
+304,left,29197,2,0,45,163,enabled,l,go 26960;
+305,qsl4,29197,109,342,47,60,enabled,o,go 26717;
+306,right,27804,0,365,319,114,enabled,r,go 27623;
+307,left,27804,0,0,319,114,enabled,l,go 27623;
+308,-,27804,0,120,267,194,enabled,o,go 27330;
+309,moovmarker,27804,254,234,61,25,enabled,,
+310,qsl4,27804,132,140,38,37,enabled,o,go 27330;
+311,marker,27623,119,0,38,145,enabled,,
+312,right,27623,0,366,319,113,enabled,r,go 27804;
+313,left,27623,0,0,319,113,enabled,l,go 27804;
+314,-,27623,0,96,239,225,enabled,o,go 28067;
+315,marker,28195,146,39,93,77,enabled,,
+316,left,28195,0,0,319,112,enabled,l,go 28067;
+317,right,28195,0,367,319,112,enabled,r,go 28067;
+318,-,28195,2,180,239,193,enabled,o,go 27804;
+319,moovmarker,28195,259,384,61,89,enabled,,
+320,qsr6,28195,106,355,47,45,enabled,o,go 27804;
+321,qsl4,28195,134,303,45,32,enabled,o,go 27804;
+322,marker,28067,127,174,26,132,enabled,,
+323,right,28067,0,367,319,112,enabled,r,go 28195;
+324,left,28067,0,0,319,112,enabled,l,go 28195;
+325,-,28067,0,114,256,248,enabled,o,go 28497;
+326,marker,28810,141,66,101,64,enabled,,
+327,right,28810,0,377,319,102,enabled,r,go 28497;
+328,left,28810,0,0,319,102,enabled,l,go 28497;
+329,-,28810,0,135,250,221,enabled,o,go 28195;
+330,moovmarker,28810,258,381,61,71,enabled,,
+331,qsr6,28810,129,319,39,43,enabled,o,go 28195;
+332,moovmarker,28497,246,202,48,48,enabled,,
+333,marker,28497,148,158,35,174,enabled,,
+334,right,28497,0,367,319,112,enabled,r,go 28810;
+335,left,28497,0,0,319,112,enabled,l,go 28810;
+336,right,29603,0,385,319,94,enabled,r,go 29713;
+337,left,29603,0,0,319,94,enabled,l,go 35914;
+338,-,29603,0,225,275,186,enabled,o,go 30164;
+339,left,29603,0,0,49,158,enabled,l,go 35914;
+340,qbr1,29603,121,424,49,55,enabled,o,go 29713;
+341,marker3,29713,123,0,45,66,enabled,,
+342,marker2,29713,168,285,43,27,enabled,,
+343,marker,29713,166,148,154,39,enabled,,
+344,left,29713,0,0,319,94,enabled,l,go 29603;
+345,right,29713,0,385,319,94,enabled,r,go 35914;
+346,-,29713,0,134,233,216,enabled,o,go 29197;
+347,qsl4,29713,133,308,37,38,enabled,o,go 29197;
+348,left,35914,0,0,319,122,enabled,l,go 29713;
+349,right,35914,0,357,319,122,enabled,r,go 35651;
+350,-,35914,0,115,271,220,enabled,o,go 35578;
+351,moovmarker,35914,262,164,59,67,enabled,,
+352,marker,35651,141,169,35,89,enabled,,
+353,right,35651,0,357,319,122,enabled,r,go 29713;
+354,left,35651,0,0,319,122,enabled,l,go 35914;
+355,-,35651,0,82,254,202,enabled,o,go 30164;
+356,right,35651,0,323,40,156,enabled,r,go 29713;
+357,qbr1,35651,137,135,43,47,enabled,o,go 30164;
+358,marker,30460,170,117,34,24,enabled,,
+359,right,30460,0,399,319,80,enabled,r,go 30164;
+360,left,30460,0,0,319,109,enabled,l,go 30164;
+361,-,30460,0,82,261,161,enabled,o,go 29713;
+362,-,30460,0,236,259,165,enabled,o,go 35914;
+363,moovmarker,30460,257,345,62,46,enabled,,
+364,qsl6,30460,114,104,40,37,enabled,o,go 29713;
+365,qsr7,30460,112,349,46,49,enabled,o,go 35914;
+366,marker,30164,128,328,29,113,enabled,,
+367,right,30164,0,365,319,114,enabled,r,go 30460;
+368,left,30164,0,0,319,114,enabled,l,go 30460;
+369,-,30164,0,119,262,239,enabled,o,go 30631;
+370,qbr1,30164,128,304,54,48,enabled,o,go 30631;
+371,left,13049,0,0,319,88,enabled,l,go 12547;
+372,right,13049,0,391,319,88,enabled,r,go 12547;
+373,-,13049,0,114,298,241,enabled,o,go 12417;
+374,qphp2,13049,254,241,30,57,enabled,o,go 12417;
+375,marker,12547,162,349,159,57,enabled,,
+376,right,12547,0,402,319,77,enabled,r,go 13049;
+377,left,12547,0,0,319,95,enabled,l,go 13049;
+378,-,12547,0,147,273,256,enabled,o,go 13268;
+379,qsi2,12547,109,330,53,47,enabled,o,go 13268;
+380,left,30934,0,0,319,120,enabled,l,go 30631;
+381,right,30934,0,359,319,120,enabled,r,go 30631;
+382,-,30934,0,127,258,222,enabled,o,go 30460;
+383,moovmarker,30934,254,337,66,74,enabled,,
+384,qsr7,30934,131,297,45,53,enabled,o,go 30460;
+385,qsl6,30934,126,135,39,44,enabled,o,go 30460;
+386,marker,30631,104,381,36,99,enabled,,
+387,right,30631,0,359,319,120,enabled,r,go 30934;
+388,left,30631,0,0,319,120,enabled,l,go 30934;
+389,-,30631,0,143,260,251,enabled,o,go 31118;
+390,-,30631,0,143,260,251,enabled,o,go 31118;
+391,qbr1,30631,108,337,60,72,enabled,o,go 31118;
+392,left,31432,0,0,319,96,enabled,l,go 31118;
+393,right,31432,0,383,319,96,enabled,r,go 31118;
+394,-,31432,2,70,237,237,enabled,o,go 30934;
+395,qsr7,31432,136,150,53,54,enabled,o,go 30934;
+396,qsl6 left,31432,102,0,83,43,enabled,o,go 31118;
+397,marker,31118,102,251,48,96,enabled,,
+398,right,31118,0,383,319,96,enabled,r,go 31432;
+399,left,31118,0,0,319,96,enabled,l,go 31432;
+400,-,31118,0,120,248,226,enabled,o,go 31551;
+401,left,31961,0,0,319,95,enabled,l,go 31551;
+402,right,31961,0,391,319,88,enabled,r,go 31551;
+403,-,31961,0,95,298,247,enabled,o,go 31432;
+404,qsr7,31961,153,165,40,46,enabled,o,go 31432;
+405,qsl6 left,31961,139,60,52,34,enabled,o,go 31551;
+406,marker,31551,9,258,114,146,enabled,,
+407,right,31551,0,435,319,45,enabled,r,go 31961;ca CH_Bridge leavingCard:;
+408,left,31551,0,0,319,88,enabled,l,go 31961;ca CH_Bridge leavingCard:;
+409,crossbridge,31551,0,238,232,196,enabled,o,"?? Ch_bridge|go 36725,ca CH_Bridge leavingCard:;"
+410,handle,31551,56,177,58,27,enabled,q,
+411,qel3 right,31551,136,434,45,45,enabled,o,"?? Ch_bridge|go 31961,ca CH_Bridge leavingCard:;"
+412,left,37065,0,0,319,117,enabled,l,go 36725;
+413,right,37065,0,362,319,117,enabled,r,go 36725;
+414,-,37065,0,112,246,221,enabled,o,go 31961;
+415,right,36725,0,362,319,117,enabled,r,go 37065;
+416,left,36725,0,0,319,117,enabled,l,go 37065;
+417,-,36725,0,141,265,222,enabled,o,go 37272;
+418,qel3 right,36725,157,362,59,52,enabled,o,go 37065;
+419,right,32743,0,362,319,117,enabled,r,go 32972;
+420,left,32743,0,0,319,117,enabled,l,go 32972;
+421,-,32743,0,155,254,243,enabled,o,go 33225;
+422,left,32972,0,0,319,117,enabled,l,go 32743;
+423,right,32972,0,362,319,117,enabled,r,go 32743;
+424,-,32972,0,131,256,225,enabled,o,go 32368;
+425,left,33358,0,0,319,104,enabled,l,go 33225;
+426,right,33358,0,375,319,104,enabled,r,go 33225;
+427,-,33358,0,77,253,269,enabled,o,go 32972;
+428,moovmarker,33358,281,350,39,57,enabled,,
+429,qsl3,33358,108,102,46,45,enabled,o,go 32972;
+430,marker,33225,155,327,18,51,enabled,,
+431,right,33225,0,375,319,104,enabled,r,go 33358;
+432,left,33225,0,0,319,104,enabled,l,go 33358;
+433,-,33225,0,136,279,220,enabled,o,go 33578;
+434,left,33832,0,0,319,122,enabled,l,go 33578;
+435,right,33832,0,357,319,122,enabled,r,go 33578;
+436,-,33832,6,137,278,195,enabled,o,go 33358;
+437,-,33832,6,137,278,195,enabled,o,go 33358;
+438,qsl3,33832,127,148,43,39,enabled,o,go 33358;
+439,marker,33578,149,351,19,63,enabled,,
+440,right,33578,0,357,319,122,enabled,r,go 33832;
+441,left,33578,0,0,319,122,enabled,l,go 33832;
+442,-,33578,0,69,250,141,enabled,o,go 34259;
+443,-,33578,0,208,251,178,enabled,o,go 35112;
+444,marker2,33578,37,191,22,42,enabled,,
+445,qbr1,33578,150,314,37,44,enabled,o,go 35112;
+446,left,35578,0,0,319,122,enabled,l,go 35112;
+447,right,35578,0,357,319,122,enabled,r,go 34259;
+448,-,35578,0,53,225,249,enabled,o,go 33832;
+449,right,35578,0,321,50,158,enabled,r,go 34259;
+450,marker,35578,46,240,19,35,enabled,,
+451,moovmarker,35578,267,157,52,74,enabled,,
+452,marker,35112,152,188,19,65,enabled,,
+453,right,35112,0,357,319,122,enabled,r,go 35578;
+454,left,35112,0,0,319,122,enabled,l,go 34259;
+455,-,35112,0,115,236,248,enabled,o,go 35651;
+456,qbr1,35112,144,157,47,49,enabled,o,go 35651;
+457,right,34259,0,354,319,125,enabled,r,go 35112;
+458,left,34259,0,0,319,125,enabled,l,go 34505;
+459,-,34259,0,132,257,197,enabled,o,go 34773;
+460,marker2,34505,159,74,161,55,enabled,,
+461,-,34505,0,223,265,161,enabled,o,go 33832;
+462,marker,34505,28,244,21,38,enabled,,
+463,left,34505,0,0,319,125,enabled,l,go 35112;
+464,right,34505,0,354,319,125,enabled,r,go 34259;
+465,left,34505,0,0,44,162,enabled,l,go 35112;
+466,qsl3,34505,134,294,44,46,enabled,o,go 33832;
+467,right,34773,0,354,319,125,enabled,r,go 35057;
+468,left,34773,0,0,319,125,enabled,l,go 35057;
+469,marker,35057,155,86,165,65,enabled,,
+470,left,35057,0,0,319,125,enabled,l,go 34773;
+471,right,35057,0,354,319,125,enabled,r,go 34773;
+472,-,35057,0,123,255,235,enabled,o,go 34505;
+473,left,13553,0,0,319,94,enabled,l,go 13268;
+474,right,13553,0,385,319,94,enabled,r,go 13268;
+475,-,13553,0,82,255,239,enabled,o,go 13049;
+476,qphp2 left,13553,257,60,36,34,enabled,o,go 13268;
+477,qphp2,13553,255,93,38,36,enabled,,
+478,marker2,13268,164,190,156,42,enabled,,
+479,marker,13268,159,300,55,50,enabled,,
+480,right,13268,0,392,319,87,enabled,r,go 13553;
+481,left,13268,0,0,319,87,enabled,l,go 13553;
+482,-,13268,0,107,261,250,enabled,o,go 13703;
+483,qls,13268,161,308,47,31,enabled,o,go 13703;
+484,left,37442,0,0,319,117,enabled,l,go 37272;
+485,right,37442,0,362,319,117,enabled,r,go 37272;
+486,-,37442,0,122,250,246,enabled,o,go 37065;
+487,right,37272,0,362,319,117,enabled,r,go 37442;
+488,left,37272,0,0,319,117,enabled,l,go 37442;
+489,-,37272,0,132,278,236,enabled,o,go 37667;
+490,qel3 right,37272,144,377,75,80,enabled,o,go 37442;
+491,left,38065,0,0,319,115,enabled,l,go 37667;
+492,right,38065,0,364,319,115,enabled,r,go 37667;
+493,-,38065,0,117,258,240,enabled,o,go 37442;
+494,right,37667,0,390,319,89,enabled,r,go 38065;
+495,left,37667,0,0,300,115,enabled,l,go 38065;
+496,-,37667,0,128,247,259,enabled,o,go 38264;
+497,left,38457,0,0,319,73,enabled,l,go 38264;
+498,right,38457,0,376,317,103,enabled,r,go 38264;
+499,-,38457,0,72,230,245,enabled,o,go 38065;
+500,qbr2,38457,117,73,70,75,enabled,o,go 38065;
+501,right,38264,0,330,319,149,enabled,r,go 38457;
+502,left,38264,0,0,319,110,enabled,l,go 38457;
+503,-,38264,0,115,272,219,enabled,o,go 38861;
+504,qel3,38264,151,228,70,86,enabled,o,go 38861;
+505,left,39075,0,0,319,115,enabled,l,go 38861;
+506,right,39075,0,364,319,115,enabled,r,go 38861;
+507,-,39075,0,135,255,187,enabled,o,go 38457;
+508,right,38861,0,364,319,115,enabled,r,go 39075;
+509,left,38861,0,0,319,115,enabled,l,go 39075;
+510,-,38861,0,131,252,275,enabled,o,go 39330;
+511,qel3,38861,149,226,73,83,enabled,o,go 39330;
+512,left,39528,0,0,319,115,enabled,l,go 39330;
+513,right,39528,0,364,319,115,enabled,r,go 39330;
+514,-,39528,0,60,255,277,enabled,o,go 39075;
+515,marker,39330,125,396,40,85,enabled,,
+516,right,39330,0,364,319,115,enabled,r,go 39528;
+517,left,39330,0,0,319,115,enabled,l,go 39528;
+518,-,39330,0,109,256,232,enabled,o,go 39809;
+519,qel3 left,39330,150,30,64,81,enabled,o,go 39528;
+520,left,40121,0,0,319,115,enabled,l,go 39809;
+521,right,40121,0,364,319,115,enabled,r,go 39809;
+522,-,40121,0,120,273,223,enabled,o,go 39528;
+523,qbr2 left,40121,143,0,62,60,enabled,o,go 39809;
+524,right,39809,0,364,319,115,enabled,r,go 40121;
+525,left,39809,0,0,319,115,enabled,l,go 40121;
+526,-,39809,0,71,249,251,enabled,o,go 40222;
+527,qel3 left,39809,121,0,91,52,enabled,o,go 40121;
+528,left,40631,0,0,319,110,enabled,l,go 40222;
+529,right,40631,0,369,319,110,enabled,r,go 40222;
+530,-,40631,1,159,244,247,enabled,o,go 40121;
+531,qbr2,40631,145,196,52,67,enabled,o,go 40121;
+532,right,40222,0,369,319,110,enabled,r,go 40631;
+533,left,40222,0,0,319,110,enabled,l,go 40631;
+534,-,40222,0,108,257,239,enabled,o,go 40846;
+535,qel3,40222,137,138,68,43,enabled,o,go 40846;
+536,left,41077,0,0,319,113,enabled,l,go 42420;
+537,right,41077,0,366,319,113,enabled,r,go 40846;
+538,-,41077,0,124,283,252,enabled,o,go 40631;
+539,qbr2,41077,147,201,55,64,enabled,o,go 40631;
+540,right,40846,0,366,319,113,enabled,r,go 42420;
+541,left,40846,0,0,319,113,enabled,l,go 41077;
+542,-,40846,0,86,240,263,enabled,o,go 41960;
+543,right,40846,0,330,46,149,enabled,r,go 42420;
+544,qel3,40846,113,82,96,62,enabled,o,go 41960;
+545,marker2,42420,161,194,159,23,enabled,,
+546,marker,42420,128,306,32,58,enabled,,
+547,right,42420,0,379,319,100,enabled,r,go 41077;
+548,left,42420,0,0,319,100,enabled,l,go 42690;
+549,-,42420,0,101,268,247,enabled,o,go 42940;
+550,qpip2,42420,123,277,45,62,enabled,o,go 42940;
+551,left,42690,0,0,319,100,enabled,l,go 41077;
+552,right,42690,0,379,319,100,enabled,r,go 42420;
+553,-,42690,0,181,310,219,enabled,o,go 41960;
+554,left,42690,0,1,45,162,enabled,l,go 41077;
+555,qel3,42690,110,328,102,60,enabled,o,go 41960;
+556,marker,42194,142,156,30,43,enabled,,
+557,left,42194,0,0,319,108,enabled,l,go 41960;
+558,right,42194,0,371,319,108,enabled,r,go 41960;
+559,-,42194,0,240,257,132,enabled,o,go 41077;
+560,-,42194,0,114,259,126,enabled,o,go 42420;
+561,qpip2,42194,134,139,46,42,enabled,o,go 42420;
+562,qbr2 right,42194,151,370,46,52,enabled,o,go 41960;
+563,-,41960,0,135,263,209,enabled,o,go 41466;
+564,right,41960,0,371,319,108,enabled,r,go 42194;
+565,left,41960,0,0,319,108,enabled,l,go 42194;
+566,left,13949,0,0,319,93,enabled,l,go 13703;
+567,right,13949,0,375,319,104,enabled,r,go 13703;
+568,-,13949,0,91,276,244,enabled,o,go 13553;
+569,qphp2,13949,234,92,43,55,enabled,o,go 13553;
+570,moovmarker,13703,294,52,13,12,enabled,,
+571,marker3,13703,160,171,160,51,enabled,,
+572,marker,13703,41,201,15,26,enabled,,
+573,marker2,13703,155,324,59,41,enabled,,
+574,right,13703,0,392,319,87,enabled,r,go 13949;
+575,left,13703,0,0,319,87,enabled,l,go 13949;
+576,-,13703,0,240,262,162,enabled,o,go 14175;
+577,-,13703,0,79,262,162,enabled,o,go 17626;
+578,-,13703,10,185,55,57,enabled,,go 86839;
+579,qls,13703,147,311,70,54,enabled,o,go 14175;
+580,marker,42940,85,352,70,52,enabled,,
+581,right,42940,0,368,319,111,enabled,r,go 43125;
+582,left,42940,0,0,319,111,enabled,l,go 43125;
+583,-,42940,0,110,258,259,enabled,o,go 43268;
+584,qpip2,42940,99,312,53,58,enabled,o,go 43268;
+585,qpip2 right,42940,99,368,53,24,enabled,o,go 43125;
+586,left,43125,0,0,319,111,enabled,l,go 42940;
+587,right,43125,0,368,319,111,enabled,r,go 42940;
+588,-,43125,0,128,265,232,enabled,o,go 42690;
+589,marker,43268,97,218,62,67,enabled,,
+590,right,43268,0,373,319,106,enabled,r,go 43713;
+591,left,43268,0,0,319,106,enabled,l,go 43713;
+592,-,43268,0,111,253,231,enabled,o,?? Ch_pipebridge|go 43979|go 43980;
+593,left,43713,0,0,319,106,enabled,l,go 43268;
+594,right,43713,0,373,319,106,enabled,r,go 43268;
+595,-,43713,0,75,266,233,enabled,o,go 43125;
+596,qel3,43713,144,135,66,31,enabled,o,go 43125;
+597,right,43979,0,377,319,102,enabled,r,go 44229;
+598,left,43979,0,0,319,102,enabled,l,go 44229;
+599,marker2,43979,23,235,133,76,enabled,,
+600,none,43979,29,230,57,77,enabled,o,sv Ch_pipebridge=NO;ca CH_WaterSound enterZone:27;pv PipeBridgeIn-F.m4v\go 43980=n;ps GR Ratchet III;in 2.5\ps GR Ratchet III;in 5\ps SW GenLights On;
+601,left,44229,0,0,319,102,enabled,l,?? Ch_pipebridge|go 43979|go 43980;
+602,right,44229,0,377,319,102,enabled,r,?? Ch_pipebridge|go 43979|go 43980;
+603,-,44229,0,98,249,230,enabled,o,go 43713;
+604,qel3,44229,151,154,51,30,enabled,o,go 43713;
+605,marker,41669,129,152,44,59,enabled,,
+606,left,41669,0,0,319,113,enabled,l,go 41466;
+607,right,41669,0,412,319,67,enabled,r,go 41466;
+608,-,41669,0,146,251,267,enabled,o,go 42194;
+609,qpip2,41669,128,146,60,58,enabled,o,go 42194;
+610,qbr2,41669,155,364,40,48,enabled,o,go 42194;
+612,right,41466,0,366,319,113,enabled,r,"?? Ch_openelevator|in 1\ps DR Wood Shut,sv Ch_openelevator=NO;go 41669;"
+613,left,41466,0,0,319,113,enabled,l,"?? Ch_openelevator|in 1\ps DR Wood Shut,sv Ch_openelevator=NO;go 41669;"
+615,openelevator,41466,26,184,212,113,enabled,o,"?? Ch_openelevator|go 98476|ps DR Wood Open,sv Ch_openelevator=YES,go 41466;"
+616,up,41466,251,113,68,253,enabled,u,go 44827;
+617,down,44827,0,0,89,480,enabled,d,go 41466;
+618,left,14360,0,0,319,75,enabled,l,go 14175;
+619,right,14360,0,379,316,100,enabled,r,go 17626;
+620,-,14360,0,53,242,226,enabled,o,go 13949;
+621,right,14360,0,289,48,190,enabled,r,go 17626;
+622,marker,14360,52,240,16,32,enabled,,
+623,-,14360,24,227,53,58,enabled,,go 87418;
+624,marker,14175,157,163,58,30,enabled,,
+625,right,14175,0,373,319,106,enabled,r,go 14360;
+626,left,14175,0,0,319,106,enabled,l,go 17626;
+627,-,14175,0,117,275,205,enabled,o,go 14602;
+628,qls,14175,152,163,62,40,enabled,o,go 14602;
+629,-,17667,0,197,282,187,enabled,o,go 13949;
+630,marker,17667,36,240,18,34,enabled,,
+631,right,17667,0,385,319,94,enabled,r,go 17626;
+632,left,17667,0,0,319,94,enabled,l,go 14175;
+633,-,17667,0,197,282,187,enabled,o,go 13949;
+634,left,17667,0,0,58,162,enabled,l,go 14175;
+635,moovmarker,17667,304,235,16,91,enabled,,
+636,-,17667,16,221,56,66,enabled,,go 87249;
+637,qphp2,17667,236,272,26,50,enabled,o,go 13949;
+638,marker,17626,157,352,163,65,enabled,,
+639,right,17626,0,367,319,112,enabled,r,go 14175;
+640,left,17626,0,0,319,112,enabled,l,go 17667;
+641,-,17626,0,114,273,224,enabled,o,go 17973;
+642,qsi3,17626,130,127,43,41,enabled,o,go 17973;
+643,left,15024,0,0,319,94,enabled,l,go 14602;
+644,right,15024,0,385,319,94,enabled,r,go 14602;
+645,-,15024,0,89,307,262,enabled,o,go 14360;
+646,marker,14602,144,141,75,42,enabled,,
+647,right,14602,0,367,319,112,enabled,r,go 15024;
+648,left,14602,0,0,319,112,enabled,l,go 15024;
+649,-,14602,0,117,319,210,enabled,o,go 15273;
+650,qls,14602,147,141,70,46,enabled,o,go 15273;
+651,doormarker,36433,0,113,276,256,enabled,,
+652,opendoor,36433,0,127,271,223,enabled,o,ca CH_Elevator leavingCard:;go 84124;ps DR Wood Open;pm L2 Wind Mov;vm 100;sv Ch_openelevator1=YES;
+653,moovmarker,36433,143,188,73,105,enabled,,
+654,none,36433,45,329,71,64,enabled,o,cb CH_Elevator pullHandleBegan:\pullHandleMoved:none\pullHandleEnded:36433;
+655,doormarker,83889,0,123,277,232,enabled,,
+656,-,83889,0,127,271,221,enabled,o,ca CH_Elevator leavingCard:;go 36337;sv Ch_openelevator1=YES;ps DR Wood Open;
+657,moovmarker,83889,143,188,73,105,enabled,,
+658,none,83889,45,329,71,64,enabled,o,cb CH_Elevator pullHandleBegan:\pullHandleMoved:none\pullHandleEnded:83889;
+659,doormarker,36337,0,123,277,232,enabled,,
+660,leaveElevator,36337,0,196,272,150,enabled,o,ca CH_Elevator leavingCard:;go 23632;sv Ch_openelevator1=NO;in 1\ps DR Wood Shut;
+661,-,36337,0,138,272,58,enabled,o,ca CH_Elevator leavingCard:;go 83889;ps DR Wood Shut;vm 50;sv Ch_openelevator1=NO;
+662,none,36337,46,336,70,57,enabled,,cb CH_Elevator pullHandleBegan:\pullHandleMoved:none\pullHandleEnded:36337;
+663,closeDoor,84124,0,135,271,60,enabled,o,ca CH_Elevator leavingCard:;go 36433;pm L2 Wind Mov;vm 50;ps DR Wood Shut;sv Ch_openelevator1=NO;
+664,-,84124,0,195,270,144,enabled,o,ca CH_Elevator leavingCard:;go 46447;pm L2 Wind!Ropes Mov;vm 250;sv Ch_openelevator1=NO;in 1\ps DR Wood Shut;
+665,none,84124,46,336,70,57,enabled,,cb CH_Elevator pullHandleBegan:\pullHandleMoved:none\pullHandleEnded:84124;
+666,openDoor,84711,0,129,266,223,enabled,o,ca CH_Elevator leavingCard:;go 84244;pm L2 Wind Mov;vm 100;ps DR Wood Open;sv Ch_openelevator2=YES;
+667,moovmarker,84711,126,189,79,107,enabled,,
+668,none,84711,39,348,61,47,enabled,o,cb CH_Elevator pullHandleBegan:\pullHandleMoved:none\pullHandleEnded:84711;
+669,leave elevator,84244,0,195,266,153,enabled,o,ca CH_Elevator leavingCard:;go 72768;pm L2 Wind Mov;vm 200;in 1\ps DR Wood Shut;sv Ch_openelevator2=NO;
+670,CloseDoor,84244,0,134,267,61,enabled,o,ca CH_Elevator leavingCard:;go 84711;pm L2 Wind Mov;vm 50;ps DR Wood Shut;sv Ch_openelevator2=NO;
+671,none,84244,39,348,61,47,enabled,,cb CH_Elevator pullHandleBegan:\pullHandleMoved:none\pullHandleEnded:84244;
+672,-,84808,0,129,266,224,enabled,o,ca CH_Elevator leavingCard:;go 85222;pm L3 Wind Mov;vm 100;ps DR Wood Open;sv Ch_openelevator2=YES;
+673,moovmarker,84808,126,189,79,107,enabled,,
+674,none,84808,39,348,61,47,enabled,o,cb CH_Elevator pullHandleBegan:\pullHandleMoved:none\pullHandleEnded:84808;
+675,-,85222,0,133,265,60,enabled,o,ca CH_Elevator leavingCard:;go 84808;pm L3 Wind Mov;vm 50;ps DR Wood Shut;sv Ch_openelevator2=NO;
+676,-,85222,0,193,265,152,enabled,o,ca CH_Elevator leavingCard:;go 76503;in 1\ps DR Wood Shut;sv Ch_openelevator2=NO;
+677,none,85222,39,348,61,47,enabled,,cb CH_Elevator pullHandleBegan:\pullHandleMoved:none\pullHandleEnded:85222;
+678,-,85464,0,122,286,232,enabled,o,ca CH_Elevator leavingCard:;go 44320;ps DR Wood Open;sv Ch_openelevator=YES;
+679,none,85464,44,342,72,68,enabled,o,cb CH_Elevator pullHandleBegan:\pullHandleMoved:none\pullHandleEnded:85464;
+680,moovmarker,85464,144,187,80,130,enabled,,
+681,-,44320,0,201,288,151,enabled,o,ca CH_Elevator leavingCard:;go 41669;in 1\ps DR Wood Shut;sv Ch_openelevator=NO;
+682,closedoor,44320,6,127,283,73,enabled,o,ca CH_Elevator leavingCard:;go 85464;ps DR Wood Shut;sv Ch_openelevator=NO;
+683,none,44320,44,350,72,60,enabled,,cb CH_Elevator pullHandleBegan:\pullHandleMoved:none\pullHandleEnded:44320;
+684,none,85642,44,342,72,68,enabled,o,cb CH_Elevator pullHandleBegan:\pullHandleMoved:none\pullHandleEnded:85642;
+685,-,85642,0,121,289,232,enabled,o,ca CH_Elevator leavingCard:;go 85801;ps DR Wood Open;in .75\go 101798\ps EL SoftHum;
+686,moovmarker,85642,142,187,82,112,enabled,,
+687,none,85801,28,352,85,48,enabled,o,go 101798;
+688,door,101798,0,127,286,68,enabled,o,ca CH_Elevator leavingCard:;ps SW Switch Flick;go 85801;in 1.25\go 85642\ps DR Wood Shut;
+689,-,101798,0,195,291,158,enabled,o,ca CH_Elevator leavingCard:;go 86090;in 1\ps DR Wood Shut;
+690,none,101798,44,350,72,60,enabled,o,cb CH_Elevator pullHandleBegan:\pullHandleMoved:none\pullHandleEnded:101798;
+691,marker,21064,140,129,20,18,enabled,,
+692,up,21064,244,0,75,480,enabled,u,go 2952;
+693,right,21064,0,384,319,95,enabled,r,go 4459;
+694,left,21064,0,0,319,95,enabled,l,go 4459;
+695,-,21064,0,104,319,113,enabled,o,go 4696;
+696,-,21064,0,294,59,62,enabled,o,go 6746;
+697,moovmarker,21064,161,132,34,33,enabled,,
+698,down,2952,0,0,106,480,enabled,d,go 21064;
+699,moovmarker,2952,1,122,21,23,enabled,,
+700,moovmarker2,2952,159,277,32,29,enabled,,
+701,left,4459,0,0,319,95,enabled,l,go 21064;
+702,right,4459,0,384,319,95,enabled,r,go 21064;
+703,-,4459,0,114,297,252,enabled,o,go 6971;pm PH Pouring Mov;vm 100;
+704,-,4459,0,114,297,252,enabled,o,go 6971;
+705,qphp1,4459,73,228,91,49,enabled,o,go 6971;
+706,-,4696,0,195,302,118,enabled,o,ca CH_PumpHouse leavingCard:;go 5138;
+707,-,4696,0,107,123,130,enabled,,
+708,right,4696,0,330,319,150,enabled,r,ca CH_PumpHouse leavingCard:;go 5088;
+709,moovmarker,4696,104,126,67,51,enabled,,
+710,handle,4696,65,144,40,20,enabled,q,
+711,left,5088,0,0,319,82,enabled,l,go 4696;
+712,-,5088,0,181,291,186,enabled,o,go 4459;
+713,-,5088,0,86,61,79,enabled,o,go 6746;
+714,-,5138,0,145,317,180,enabled,o,go 5381;
+715,left,5138,0,0,318,135,enabled,l,go 83657;
+716,right,5138,0,344,318,135,enabled,r,go 83657;
+717,left,83657,0,0,319,129,enabled,l,go 5138;
+718,right,83657,0,350,319,129,enabled,r,go 5138;
+719,-,83657,0,136,310,190,enabled,o,go 5088;
+720,moovmarker,5381,122,313,69,88,enabled,,
+721,right,5381,0,381,319,98,enabled,r,go 5784;
+722,left,5381,0,0,319,118,enabled,l,go 5784;
+723,-,5381,0,75,241,97,enabled,o,go 6397;
+724,right,5784,0,350,319,129,enabled,r,go 5381;
+725,left,5784,0,0,319,62,enabled,l,go 5381;
+726,-,5784,0,72,298,272,enabled,o,go 83657;
+727,up,6020,183,0,136,480,enabled,u,go 6397;
+728,down,6397,0,0,69,480,enabled,d,go 6020;
+729,right,6397,0,361,319,118,enabled,r,go 6577;
+730,left,6397,0,0,319,104,enabled,l,go 6577;
+731,moovmarker,6397,81,272,74,153,enabled,,
+732,right,6577,0,284,319,195,enabled,r,go 6397;
+733,left,6577,0,0,319,108,enabled,l,go 6397;
+734,-,6577,0,141,286,143,enabled,o,go 5784;
+735,-,6746,0,0,319,480,enabled,o,go 21064;
+736,handle,6746,122,206,67,66,enabled,,"?? Ch_waterpath1|pa handle=Pumphouse FaucetMove\0=0=70=74\7\0.1\NO,sv Ch_waterpath1=NO|pa handle=Pumphouse FaucetMove\0=0=70=74\-7\0.1\NO,sv Ch_waterpath1=YES;ps SQ Small Wood Valve;ca CH_WaterSound inPumphouse:2;"
+737,marker,6971,190,0,132,48,enabled,,
+738,right,6971,0,357,319,122,enabled,r,go 10780;
+739,left,6971,0,0,319,122,enabled,l,go 10780;
+740,-,6971,0,151,274,189,enabled,o,go 7283;
+741,qphp1,6971,115,251,74,44,enabled,o,go 7283;
+742,-,10780,0,163,288,135,enabled,o,go 21064;
+743,right,10780,0,327,319,152,enabled,r,go 6971;
+744,left,10780,0,0,319,120,enabled,l,go 6971;
+745,right,7283,0,367,319,112,enabled,r,go 10669;
+746,left,7283,0,0,319,112,enabled,l,go 10669;
+747,-,7283,0,127,276,217,enabled,o,go 7663;
+748,qphp1,7283,72,136,94,66,enabled,o,go 7663;
+749,right,10669,0,352,319,127,enabled,r,go 7283;
+750,left,10669,0,0,319,86,enabled,l,go 7283;
+751,-,10669,0,89,319,236,enabled,o,go 10780;
+752,left,7663,0,0,319,59,enabled,l,go 10298;
+753,-,7663,0,128,284,203,enabled,o,go 7761;
+754,qphp1,7663,150,178,48,43,enabled,o,go 7761;
+755,right,10298,0,385,319,94,enabled,r,go 7663;
+756,-,10298,0,144,319,225,enabled,o,go 10669;
+757,qphp2,10298,258,109,61,93,enabled,o,go 10669;
+758,right,7761,0,360,319,120,enabled,r,go 10036;
+759,left,7761,0,0,319,117,enabled,l,go 10036;
+760,-,7761,0,138,283,188,enabled,o,go 8059;
+761,qphp1,7761,144,233,69,50,enabled,o,go 8059;
+762,left,10036,0,0,319,128,enabled,l,go 7761;
+763,right,10036,0,399,319,80,enabled,r,go 7761;
+764,-,10036,0,183,319,213,enabled,o,go 10298;
+765,qphp2,10036,106,289,96,89,enabled,o,go 10298;
+766,right,8059,0,405,319,75,enabled,r,go 9781;
+767,left,8059,0,0,319,131,enabled,l,go 9781;
+768,-,8059,0,156,275,198,enabled,o,go 8323;
+769,qphp1,8059,96,202,83,87,enabled,o,go 8323;
+770,right,9781,0,376,319,103,enabled,r,go 8059;
+771,left,9781,0,0,319,103,enabled,l,go 8059;
+772,-,9781,0,122,319,225,enabled,o,go 10036;
+773,qphp2,9781,160,231,70,67,enabled,o,go 10036;
+774,right,8323,0,405,319,75,enabled,r,go 9721;
+775,left,8323,0,0,319,75,enabled,l,go 9721;
+776,-,8323,0,139,286,219,enabled,o,go 8635;
+777,qphp1,8323,73,232,88,108,enabled,o,go 8635;
+778,right,9721,0,371,319,108,enabled,r,go 8323;
+779,left,9721,0,0,319,108,enabled,l,go 8323;
+780,-,9721,0,134,306,208,enabled,o,go 9781;
+781,qphp2,9721,200,237,70,57,enabled,o,go 9781;
+782,marker,8635,274,102,45,38,enabled,,
+783,right,8635,0,351,319,128,enabled,r,go 9420;
+784,left,8635,0,0,319,128,enabled,l,go 9420;
+785,-,8635,0,139,283,180,enabled,o,go 8881;
+786,left,9420,0,0,319,83,enabled,l,go 8635;
+787,right,9420,0,396,319,83,enabled,r,go 8635;
+788,-,9420,0,113,319,240,enabled,o,go 9721;
+789,qphp2,9420,125,173,100,76,enabled,o,go 9721;
+790,marker,8881,196,61,124,61,enabled,,
+791,right,8881,0,371,319,108,enabled,r,go 9075;
+792,-,8881,0,70,295,257,enabled,o,go 11029;ca CH_WaterSound pathToPumphouse:0;
+793,left,8881,0,0,319,73,enabled,l,go 9075;
+794,qsi2,8881,185,85,28,24,enabled,o,go 11029;
+795,right,9075,0,365,319,114,enabled,r,go 8881;
+796,left,9075,0,0,319,114,enabled,l,go 8881;
+797,-,9075,0,150,301,182,enabled,o,go 9420;
+798,qphp2,9075,180,162,88,66,enabled,o,go 9420;
+799,right,93457,0,406,319,73,enabled,r,go 93725;
+800,left,93457,0,0,315,48,enabled,l,go 94270;
+801,-,93457,58,329,140,73,enabled,o,go 94853;
+802,-,93457,6,50,232,231,enabled,o,go 95623;
+803,moovmarker,94270,142,229,69,46,enabled,,
+804,right,94270,0,362,319,117,enabled,r,go 93457;
+805,left,94270,0,0,319,72,enabled,l,go 93983;
+806,-,94270,13,111,260,218,enabled,o,go 94554;
+807,right,93725,0,380,319,99,enabled,r,go 93983;
+808,left,93725,0,0,319,79,enabled,l,go 93457;
+809,-,93725,0,105,317,266,enabled,o,go 96173;
+810,right,93983,0,414,315,65,enabled,r,go 94270;
+811,left,93983,0,0,319,53,enabled,l,go 93725;
+812,-,93983,0,234,246,178,enabled,o,go 95785;
+813,-,93983,11,54,304,179,enabled,o,go 92944;
+814,-,95623,0,0,318,480,enabled,o,go 93457;
+815,-,95623,10,81,55,24,enabled,,
+816,-,95623,11,52,59,27,enabled,,
+817,-,95623,0,0,29,52,enabled,,
+818,-,95623,47,98,84,129,enabled,o,go 71121;
+819,-,95623,21,249,96,165,enabled,o,go 98232;
+820,-,95623,273,42,24,28,enabled,,
+821,-,95623,275,62,44,29,enabled,,
+822,rightmarker,71121,0,286,177,193,enabled,,
+823,none,71121,0,0,319,479,enabled,o,"go 95623;?? Ch_ldrawer|ps DR Slide,sv Ch_ldrawer=NO;"
+824,marker,71121,0,68,226,277,enabled,,
+825,-,71121,51,56,125,90,enabled,,
+826,-,71121,18,0,86,75,enabled,,
+827,closedrawer,71121,10,77,141,217,enabled,,sv Ch_ldrawer=NO;ps DR Slide;go 71121;
+828,-,71121,143,178,42,39,enabled,,
+829,-,71121,121,197,23,27,enabled,,
+830,-,71121,106,213,22,29,enabled,,
+831,-,71121,95,227,13,18,enabled,,
+832,opendrawer,71121,115,142,113,190,enabled,,sv Ch_ldrawer=YES;ps DR Slide;go 71121;
+833,-,71121,71,233,25,26,enabled,,
+834,marker,98232,0,53,186,349,enabled,,
+835,marker2,98232,73,173,201,116,enabled,,
+836,none,98232,0,0,319,480,enabled,o,"go 95623;?? Ch_rdrawer|sv Ch_rdrawer=NO,ps DR Slide;"
+837,closedrawer,98232,17,134,150,263,enabled,,sv Ch_rdrawer=NO;ps DR Slide;go 98232;en tornpage=NO;
+838,-,98232,101,178,69,39,enabled,,
+839,-,98232,116,252,59,45,enabled,,
+840,-,98232,114,297,67,42,enabled,,
+841,-,98232,63,179,46,19,enabled,,
+842,-,98232,72,267,46,26,enabled,,
+843,-,98232,75,315,44,22,enabled,,
+844,tornpage,98232,73,210,78,64,enabled,,sc marker2=Sirrus BedDrwr-2 (TornPage);en coverall=YES;en coverpage=YES;zm 1.6=-20=0=0.25;
+845,opendrawer,98232,124,135,67,231,enabled,,sv Ch_rdrawer=YES;ps DR Slide;go 98232;
+846,coverall,98232,0,0,319,480,enabled,,go 98232;
+847,coverpage,98232,72,190,202,112,enabled,,
+848,-,95785,0,0,318,479,enabled,o,go 93983;
+849,-,95785,121,277,169,84,enabled,,
+850,-,95785,44,204,109,72,enabled,,
+851,-,95785,45,0,140,129,enabled,,
+852,-,95785,1,0,95,40,enabled,,
+853,-,95785,69,293,32,81,enabled,,
+854,-,95785,101,264,22,52,enabled,,
+855,-,95785,33,165,32,45,enabled,,
+856,-,95785,73,155,60,18,enabled,,
+857,-,95785,41,270,18,82,enabled,,
+858,right,92740,0,424,318,55,enabled,r,go 92944;
+859,left,92740,1,0,318,55,enabled,l,go 93276;
+860,-,92740,0,55,319,369,enabled,o,go 93457;
+861,right,93276,0,389,319,90,enabled,r,go 92740;
+862,left,93276,0,0,319,95,enabled,l,go 92944;
+863,right,92944,0,367,319,112,enabled,r,go 93276;
+864,-,92944,0,154,299,147,enabled,o,go 92512;pm L3 Wind Mov;vm 250;sv Ch_hut2=NO;in 1\ps DR Door Close;
+865,marker3,94554,0,0,5,5,enabled,,
+866,none,94554,0,0,319,480,enabled,o,"go 94270;sv Ch_northdesk=NO;?? Ch_desk1|sv Ch_desk1=NO,ps DR Drawer;"
+867,marker,94554,0,103,103,276,enabled,,
+868,moovmarker,94554,280,215,40,91,enabled,,
+869,closedrawer,94554,0,117,60,243,disabled,,
+870,-,94554,189,90,126,104,enabled,,
+871,-,94554,206,252,35,25,enabled,,
+872,-,94554,198,284,36,19,enabled,,
+873,-,94554,230,294,31,11,enabled,,
+874,-,94554,258,305,13,10,enabled,,
+875,-,94554,269,312,12,13,enabled,,
+876,-,94554,268,322,18,24,enabled,,
+877,-,94554,44,237,32,30,enabled,,
+878,-,94554,33,288,44,28,enabled,,
+879,opendrawer,94554,4,118,88,244,enabled,,"?? Ch_desk1|sv Ch_northdesk=YES,sv Ch_desk1=NO|sv Ch_northdesk=YES,sv Ch_desk1=YES;ps DR Slide;go 94554;"
+880,marker2,94554,1,136,92,112,enabled,,"?? CH_RedPage|no |ca X_Global grabPage:CH_RedPage,go 94554;"
+881,right,94853,0,379,318,98,enabled,r,go 95104;
+882,left,94853,0,0,319,94,enabled,l,go 95433;
+883,left,95433,0,0,319,111,enabled,l,go 95104;
+884,right,95433,0,375,319,105,enabled,r,go 94853;
+885,-,95433,38,316,87,98,enabled,,
+886,-,95433,77,2,79,107,enabled,o,go 94270;
+887,left,95104,0,0,319,52,enabled,l,go 94853;
+888,-,95104,0,51,318,300,enabled,o,go 93983;
+889,right,95104,0,351,319,128,enabled,r,go 95433;
+890,-,95104,85,365,83,114,enabled,o,go 94270;
+891,-,96173,0,0,319,480,enabled,o,"go 93725;?? Ch_desk2|ps DR Drawer,sv Ch_desk2=NO;"
+892,marker,96173,0,118,94,272,enabled,,
+893,closedrawer,96173,3,140,64,218,disabled,,
+894,-,96173,33,162,49,154,disabled,,
+895,-,96173,180,141,118,37,enabled,,
+896,-,96173,178,239,59,88,enabled,,
+897,-,96173,132,193,69,108,enabled,,
+898,opendrawer,96173,3,139,83,218,enabled,,ps DR Slide;?? Ch_desk2|sv Ch_desk2=NO|sv Ch_desk2=YES;go 96173;
+899,-,86839,0,0,319,480,enabled,,ca CH_WaterPath leavingCard:;ca CH_WaterSound enterZone:4;go 13703;
+900,handle,86839,109,200,96,82,enabled,,cb CH_WaterPath pullHandleBegan:\pullHandleMoved:\pullHandleEnded:handle=2=center;
+901,-,87418,0,0,319,480,enabled,,ca CH_WaterPath leavingCard:;ca CH_WaterSound enterZone:5;go 14360;
+902,handle,87418,104,189,99,85,enabled,,cb CH_WaterPath pullHandleBegan:\pullHandleMoved:\pullHandleEnded:handle=2=left;
+903,-,87249,0,0,319,480,enabled,,ca CH_WaterPath leavingCard:;ca CH_WaterSound enterZone:8;go 17667;
+904,handle,87249,114,193,92,92,enabled,,cb CH_WaterPath pullHandleBegan:\pullHandleMoved:\pullHandleEnded:handle=2=right;
+905,right,91766,0,359,317,120,enabled,r,"go 99487;?? Ch_temple|in 1\ps DR Metal Close,sv Ch_temple=NO;"
+906,left,91766,2,0,317,120,enabled,l,"go 99317;?? Ch_temple|in 1\ps DR Metal Close,sv Ch_temple=NO;"
+907,ExitTemple,91766,0,177,308,135,enabled,o,"?? Ch_temple|go 80720,pm L3 Wind Mov,vm 250,in 1\ps DR Metal Close,sv Ch_temple=NO|sv Ch_temple=YES,ps DR Metal Open,go 91766;"
+908,opendoor,91766,3,176,310,124,disabled,,
+909,-,99317,0,0,176,175,enabled,o,go 90873;
+910,left,99317,0,0,319,72,enabled,l,go 92144;
+911,right,99317,0,393,319,86,enabled,r,go 91766;
+912,left,99487,0,0,317,83,enabled,l,go 91766;
+913,right,99487,0,388,319,91,enabled,r,go 92144;
+914,-,99487,0,178,241,189,enabled,o,go 91261;
+915,moovmarker,92144,123,111,124,120,enabled,,
+916,left,92144,0,0,318,56,enabled,l,go 99487;
+917,right,92144,1,377,316,102,enabled,r,go 99317;
+918,-,92144,0,55,317,136,enabled,o,go 91261;
+919,-,92144,0,191,319,186,enabled,o,go 91011;
+920,-,92144,0,90,248,165,enabled,o,go 101349;
+921,right,99650,0,376,319,103,enabled,r,go 91261;
+922,left,99650,0,0,319,91,enabled,l,go 91455;
+923,-,99650,0,160,290,160,enabled,o,go 91766;
+924,left,91455,0,0,319,172,enabled,l,go 101349;
+925,-,91455,0,174,309,186,enabled,o,go 90873;
+926,right,91455,0,361,319,118,enabled,r,go 99650;
+927,left,91261,0,0,318,104,enabled,l,go 99650;
+928,right,91261,0,289,116,190,enabled,r,go 101349;
+929,right,91261,0,375,318,104,enabled,r,go 101349;
+930,left,101349,0,0,318,96,enabled,l,go 91261;
+931,right,101349,0,373,318,106,enabled,r,go 91455;
+932,moovmarker,101349,97,119,153,243,enabled,,
+933,-,101349,90,140,80,203,enabled,q,pv Temple Altar-F.m4v\go 101349=n;
+934,-,101349,169,212,147,88,enabled,o,go 90255;
+935,left,100047,1,0,317,74,enabled,l,go 90873;
+936,right,100047,0,403,319,76,enabled,r,go 91011;
+937,-,100047,49,182,209,106,enabled,o,go 91766;sv Ch_temple=NO;
+938,left,90873,0,0,319,79,enabled,l,go 91011;
+939,right,90873,0,379,318,97,enabled,r,go 100047;
+940,right,91011,0,356,317,123,enabled,r,go 90873;
+941,-,91011,4,128,309,210,enabled,o,go 90255;
+942,left,91011,0,0,319,67,enabled,l,go 100047;
+943,-,91011,0,0,104,167,enabled,o,go 91261;
+944,-,91011,159,46,84,58,enabled,o,go 90018;
+945,right,100130,0,398,318,81,enabled,r,go 90018;
+946,left,100130,0,0,305,80,enabled,l,go 90543;
+947,-,100130,0,83,303,159,enabled,o,go 100047;
+948,-,100130,63,322,159,61,enabled,o,go 99650;
+949,left,90543,0,0,319,97,enabled,l,go 90255;
+950,right,90543,0,368,319,111,enabled,r,go 100130;
+951,-,90543,0,96,298,272,enabled,o,go 90873;
+952,right,90018,0,345,319,135,enabled,r,go 90255;
+953,left,90018,0,0,318,97,enabled,l,go 100130;
+954,-,90255,1,153,290,164,enabled,o,go 46695;pm MU ChannelTemple;vm 50;
+955,left,90255,0,0,319,89,enabled,l,go 90018;
+956,right,90255,0,370,319,109,enabled,r,go 90543;
+957,left,89646,0,0,319,90,enabled,l,go 89440;
+958,right,89646,0,303,319,176,enabled,r,go 89440;
+959,-,89646,0,119,319,187,enabled,o,go 89220;pm MU ChannelTemple;vm 30;
+960,left,89440,0,0,319,100,enabled,l,go 89646;
+961,right,89440,0,379,319,100,enabled,r,go 89646;
+962,right,89440,0,379,319,100,enabled,r,go 89646;
+963,-,89440,0,166,290,109,enabled,o,go 100130;pm MU ChannelTemple;vm 200;
+964,left,89220,0,0,318,70,enabled,l,go 88905;
+965,right,89220,0,409,318,70,enabled,r,go 88905;
+966,-,89220,0,157,296,136,enabled,o,go 82376;pm L3 Wind Mov;vm 250;
+967,-,88905,0,0,319,73,enabled,o,go 89220;
+968,right,88905,0,406,319,73,enabled,r,go 89220;
+969,-,88905,5,129,302,191,enabled,o,go 89440;pm MU ChannelTemple;vm 50;
+970,right,46136,0,386,319,93,enabled,r,"go 46447;?? Ch_openelevator1|in 1\ps DR Wood Shut,sv Ch_openelevator1=NO;"
+971,left,46136,0,0,319,93,enabled,l,"go 46447;?? Ch_openelevator1|in 1\ps DR Wood Shut,sv Ch_openelevator1=NO;"
+972,doormarker,46136,0,123,318,257,enabled,,
+973,opendoor,46136,1,140,268,174,enabled,,"?? Ch_openelevator1|go 96885,pm L2 Wind Mov,vm 100|ps DR Wood Open,sv Ch_openelevator1=YES,go 46136;"
+974,none,46136,4,144,263,169,disabled,o,
+975,-,98756,0,0,318,480,enabled,o,go 96441;
+976,-,98756,55,198,264,66,enabled,,
+977,marker,98756,183,457,71,22,enabled,,
+978,marker,46447,45,262,57,105,enabled,,
+979,right,46447,0,351,319,128,enabled,r,go 46136;
+980,-,46447,0,137,318,210,enabled,o,go 47569;
+981,left,46447,0,0,319,136,enabled,l,go 46136;
+982,-,96569,0,0,317,81,enabled,o,go 96441;
+983,right,96569,0,398,317,81,enabled,r,go 96441;
+984,-,96569,0,90,312,288,enabled,o,go 47569;
+985,marker,96441,66,156,255,149,enabled,,
+986,right,96441,0,375,314,105,enabled,r,go 46447;
+987,left,96441,5,0,314,105,enabled,l,go 46447;
+988,-,96441,0,108,319,259,enabled,o,?? Ch_elevator1|go 46136|go 98756;
+989,marker2,51770,94,129,40,25,enabled,,
+990,marker,51770,6,21,263,79,enabled,,
+991,-,51770,0,147,319,184,enabled,o,go 51416;
+992,right,51770,0,332,319,147,enabled,r,go 51667;
+993,left,51770,0,0,319,147,enabled,l,go 51667;
+994,-,51667,0,130,319,210,enabled,,
+995,left,51667,0,0,318,130,enabled,l,go 51770;
+996,right,51667,0,339,319,140,enabled,r,go 51770;
+997,-,51667,3,132,316,205,enabled,o,go 52119;pm L2 Wind Mov;vm 100;
+998,right,52457,1,347,317,132,enabled,r,go 52119;
+999,left,52457,0,1,319,71,enabled,l,go 52658;
+1000,-,52457,78,55,24,53,enabled,,
+1001,-,52457,17,46,65,75,enabled,,
+1002,-,52457,0,344,107,60,enabled,,
+1003,right,52658,0,398,319,81,enabled,r,go 52457;
+1004,-,52658,75,135,166,143,enabled,o,go 51770;pm L2 Wind Mov;vm 200;
+1005,left,52658,0,0,318,95,enabled,l,go 52987;
+1006,-,52658,92,394,28,82,enabled,,
+1007,-,52658,57,439,36,18,enabled,,
+1008,-,52658,0,377,36,102,enabled,,
+1009,left,52119,0,0,319,72,enabled,l,go 52457;
+1010,right,52119,0,410,319,69,enabled,r,go 52987;
+1011,-,52119,15,397,107,67,enabled,,
+1012,-,52119,0,0,108,66,enabled,,
+1013,right,52987,0,369,318,110,enabled,r,go 52658;
+1014,left,52987,1,0,318,83,enabled,l,go 52119;
+1015,-,52987,80,172,152,112,enabled,o,go 53051;pm L2 Wind Mov;vm 200;
+1016,-,52987,99,56,19,41,enabled,,
+1017,-,52987,85,37,18,48,enabled,,
+1018,-,52987,0,2,89,82,enabled,,
+1019,right,53323,0,360,319,120,enabled,r,go 53051;
+1020,left,53323,0,0,319,120,enabled,l,go 53051;
+1021,-,53323,90,157,177,156,enabled,o,go 52457;pm L2 Wind Mov;vm 100;
+1022,left,53051,0,0,318,101,enabled,l,go 53323;
+1023,right,53051,0,378,318,101,enabled,r,go 53323;
+1024,-,53051,0,137,319,183,enabled,o,go 53748;
+1025,left,53916,0,0,318,106,enabled,l,go 53748;
+1026,right,53916,0,373,318,106,enabled,r,go 53748;
+1027,-,53916,0,142,319,175,enabled,o,go 53323;
+1028,left,53748,0,0,318,110,enabled,l,go 53916;
+1029,right,53748,0,369,318,110,enabled,r,go 53916;
+1030,-,53748,0,136,318,202,enabled,o,go 54235;pm L2 Wind Mov;vm 100;
+1031,left,54701,0,0,319,87,enabled,l,go 54883;
+1032,right,54701,0,395,319,84,enabled,r,go 54277;
+1033,-,54701,89,202,147,93,enabled,o,go 53916;pm L2 Wind Mov;vm 200;
+1034,-,54701,87,34,23,56,enabled,,
+1035,-,54701,104,62,15,40,enabled,,
+1036,-,54701,116,91,15,28,enabled,,
+1037,-,54701,63,283,50,30,enabled,,
+1038,-,54701,39,307,57,30,enabled,,
+1039,-,54701,13,329,57,37,enabled,,
+1040,-,54701,114,329,42,28,enabled,,
+1041,-,54701,107,362,48,28,enabled,,
+1042,-,54701,0,351,35,47,enabled,,
+1043,-,54701,0,418,21,37,enabled,,
+1044,-,54701,0,447,60,32,enabled,,
+1045,-,54701,70,391,34,70,enabled,,
+1046,left,54883,0,1,319,115,enabled,l,go 54235;
+1047,right,54883,0,363,318,116,enabled,r,go 54701;
+1048,-,54883,64,124,192,172,enabled,o,go 55164;pm L2 Wind Mov;vm 200;
+1049,-,54883,108,325,20,126,enabled,,
+1050,-,54883,64,344,18,112,enabled,,
+1051,-,54883,61,432,53,19,enabled,,
+1052,-,54883,50,0,92,63,enabled,,
+1053,Left,54277,0,0,318,88,enabled,l,go 54701;
+1054,right,54277,0,393,318,86,enabled,r,go 54235;
+1055,-,54277,100,30,50,41,enabled,,
+1056,-,54277,107,75,46,28,enabled,,
+1057,-,54277,94,3,26,165,enabled,,
+1058,-,54277,15,42,66,46,enabled,,
+1059,-,54277,5,0,76,29,enabled,,
+1060,-,54277,16,103,55,29,enabled,,
+1061,-,54277,22,430,39,46,enabled,,
+1062,-,54277,78,390,30,46,enabled,,
+1063,-,54277,9,389,72,30,enabled,,
+1064,-,54277,27,411,21,26,enabled,,
+1065,left,54235,0,0,319,107,enabled,l,go 54277;
+1066,-,54235,98,176,127,98,enabled,o,go 57357;pm L2 Wind Mov;vm 200;
+1067,right,54235,0,376,319,102,enabled,r,go 54883;
+1068,-,54235,90,24,36,90,enabled,,
+1069,-,54235,120,52,19,39,enabled,,
+1070,-,54235,75,0,23,71,enabled,,
+1071,-,54235,101,108,19,34,enabled,,
+1072,-,54235,2,46,46,45,enabled,,
+1073,left,55164,0,0,319,117,enabled,l,go 55361;
+1074,right,55164,0,362,319,117,enabled,r,go 55361;
+1075,-,55164,28,165,282,139,enabled,o,go 55677;
+1076,left,55361,0,0,319,101,enabled,l,go 55164;
+1077,right,55361,0,378,319,101,enabled,r,go 55164;
+1078,-,55361,60,147,196,157,enabled,o,go 54277;pm L2 Wind Mov;vm 100;
+1079,left,55677,0,0,319,135,enabled,l,go 55975;
+1080,-,55677,49,243,255,118,enabled,o,go 56127;
+1081,right,55975,0,350,317,129,enabled,r,go 55677;
+1082,-,55975,0,218,317,112,enabled,o,go 55361;
+1083,left,56127,0,0,318,102,enabled,l,go 56544;
+1084,right,56127,0,377,318,102,enabled,r,go 56544;
+1085,-,56127,0,159,295,157,enabled,o,go 56830;
+1086,left,56544,0,0,319,109,enabled,l,go 56127;
+1087,right,56544,0,370,319,109,enabled,r,go 56127;
+1088,-,56544,77,167,227,129,enabled,o,go 55975;
+1089,right,56830,0,362,319,117,enabled,r,go 57070;
+1090,-,56830,0,166,317,124,enabled,o,go 57119;
+1091,left,57070,0,0,317,138,enabled,l,go 56830;
+1092,-,57070,0,197,315,115,enabled,o,go 56544;
+1093,none,57119,27,209,70,45,enabled,q,cb CH_Stairs pullHandleBegan:\pullHandleMoved:none\pullHandleEnded:;
+1094,right,57119,0,335,318,144,enabled,r,ca CH_Stairs leavingCard:;go 57070;
+1095,moovmarker,57119,150,206,53,53,enabled,,
+1096,-,47569,0,129,285,103,enabled,o,go 47869;
+1097,-,47569,0,250,283,104,enabled,o,go 50393;
+1098,left,47569,2,0,317,123,enabled,l,go 50725;
+1099,right,47569,0,356,317,123,enabled,r,go 50725;
+1100,marker2,50725,0,396,60,56,enabled,,
+1101,marker,50725,158,202,115,75,enabled,,
+1102,-,50725,0,127,319,225,enabled,o,go 96441;
+1103,left,50725,0,0,319,129,enabled,l,go 47569;
+1104,right,50725,0,350,319,129,enabled,r,go 47569;
+1105,qel4,50725,146,195,130,88,enabled,o,go 96441;
+1106,left,57628,0,0,317,136,enabled,l,go 57357;
+1107,right,57628,0,343,317,136,enabled,r,go 57357;
+1108,-,57628,0,151,271,159,enabled,o,go 54701;pm L2 Wind Mov;vm 100;
+1109,left,57357,0,0,318,118,enabled,l,go 57628;
+1110,right,57357,0,361,318,118,enabled,r,go 57628;
+1111,-,57357,0,155,319,178,enabled,o,go 57876;
+1112,left,58150,0,0,315,117,enabled,l,go 57876;
+1113,right,58150,0,362,315,117,enabled,r,go 57876;
+1114,-,58150,0,143,319,187,enabled,o,go 57628;
+1115,left,57876,0,0,318,115,enabled,l,go 58150;
+1116,right,57876,0,364,318,115,enabled,r,go 58150;
+1117,-,57876,1,147,291,81,enabled,o,go 58558;
+1118,-,57876,0,248,292,84,enabled,o,go 59735;
+1119,right,58828,0,325,318,154,enabled,r,go 58558;
+1120,-,58828,22,170,286,116,enabled,o,go 58150;
+1121,-,58828,0,29,319,116,enabled,o,go 59735;
+1122,left,58558,0,0,319,128,enabled,l,go 58828;
+1123,-,58558,0,325,319,154,enabled,o,go 58973;
+1124,-,58558,0,195,300,104,enabled,o,go 59918;
+1125,left,58973,0,1,319,110,enabled,l,go 59359;
+1126,-,58973,0,348,317,131,enabled,o,go 59607;
+1127,-,58973,9,187,295,135,enabled,o,go 66725;
+1128,right,59359,0,336,317,143,enabled,r,go 58973;
+1129,-,59359,0,30,319,104,enabled,o,go 58828;
+1130,-,59359,0,175,319,125,enabled,o,go 59918;
+1131,left,59607,0,0,318,112,enabled,l,go 59735;
+1132,-,59607,0,348,317,131,enabled,o,go 58558;
+1133,-,59607,0,200,300,117,enabled,o,go 58150;
+1134,right,59735,0,337,318,142,enabled,r,go 59607;
+1135,-,59735,0,21,318,103,enabled,o,go 59359;
+1136,-,59735,0,172,311,113,enabled,o,go 66725;
+1137,left,60345,0,0,317,119,enabled,l,go 59918;
+1138,right,60345,0,360,317,119,enabled,r,go 59918;
+1139,-,60345,0,134,287,97,enabled,o,go 58973;
+1140,-,60345,0,247,286,70,enabled,o,go 58828;
+1141,left,59918,0,0,319,103,enabled,l,go 60345;
+1142,right,59918,0,376,319,103,enabled,r,go 60345;
+1143,-,59918,0,152,319,213,enabled,o,go 60558;
+1144,left,60811,0,0,318,103,enabled,l,go 60558;
+1145,right,60811,0,376,318,103,enabled,r,go 60558;
+1146,-,60811,0,147,319,201,enabled,o,go 60345;
+1147,left,60558,0,0,319,123,enabled,l,go 60811;
+1148,right,60558,0,367,319,112,enabled,r,go 60811;
+1149,-,60558,22,151,267,209,enabled,o,go 61143;pm L2 Wind Mov;vm 100;
+1150,left,61362,0,1,317,120,enabled,l,go 61615;
+1151,right,61362,0,348,319,131,enabled,r,go 61143;
+1152,-,61362,46,337,55,124,enabled,,
+1153,-,61362,0,342,55,87,enabled,,
+1154,-,61362,53,97,74,75,enabled,,
+1155,left,61615,0,1,316,118,enabled,l,go 61856;
+1156,right,61615,0,357,317,122,enabled,r,go 61362;
+1157,-,61615,16,191,278,158,enabled,o,go 60811;pm L2 Wind Mov;vm 200;
+1158,-,61615,40,5,34,148,enabled,,
+1159,-,61615,55,0,77,44,enabled,,
+1160,-,61615,60,115,66,45,enabled,,
+1161,-,61615,0,389,112,90,enabled,,
+1162,left,61143,0,0,319,111,enabled,l,go 61362;
+1163,right,61143,0,358,317,121,enabled,r,go 61856;
+1164,-,61143,0,128,319,172,enabled,o,go 62019;pm L2 Wind Mov;vm 200;
+1165,-,61143,33,34,50,111,enabled,,
+1166,-,61143,53,111,65,112,enabled,,
+1167,left,61856,8,0,311,80,enabled,l,go 61143;
+1168,right,61856,0,394,319,85,enabled,r,go 61615;
+1169,-,61856,84,194,150,106,enabled,o,go 63091;pm L2 Wind Mov;vm 200;
+1170,-,61856,0,380,118,67,enabled,,
+1171,left,62368,0,0,319,117,enabled,l,go 62019;
+1172,right,62368,0,362,319,117,enabled,r,go 62019;
+1173,-,62368,0,161,258,165,enabled,o,go 61615;pm L2 Wind Mov;vm 100;
+1174,left,62019,0,0,318,87,enabled,l,go 62368;
+1175,right,62019,0,392,318,87,enabled,r,go 62368;
+1176,-,62019,0,151,319,167,enabled,o,go 62538;
+1177,left,62929,0,0,319,135,enabled,l,go 62538;
+1178,right,62929,0,344,319,135,enabled,r,go 62538;
+1179,-,62929,4,140,315,201,enabled,o,go 62368;
+1180,left,62538,0,1,319,65,enabled,l,go 62929;
+1181,right,62538,0,397,319,82,enabled,r,go 62929;
+1182,-,62538,213,82,77,44,enabled,,
+1183,-,62538,205,23,69,53,enabled,,
+1184,-,62538,203,0,98,20,enabled,,
+1185,-,62538,73,78,31,69,enabled,,
+1186,-,62538,0,0,51,67,enabled,,
+1187,-,62538,199,371,74,60,enabled,,
+1188,-,47869,0,135,319,157,enabled,o,go 47918;
+1189,-,47869,0,307,319,172,enabled,o,go 49884;
+1190,left,47869,0,0,319,135,enabled,l,go 49611;
+1191,marker,49611,143,343,78,75,enabled,,
+1192,right,49611,0,324,319,155,enabled,r,go 47869;
+1193,-,49611,0,0,319,133,enabled,o,go 50393;
+1194,-,49611,3,154,316,118,enabled,o,go 50725;
+1195,left,63414,0,0,319,120,enabled,l,go 63091;
+1196,right,63414,0,360,319,120,enabled,r,go 63091;
+1197,-,63414,0,144,300,192,enabled,o,go 61362;pm L2 Wind Mov;vm 100;
+1198,left,63091,0,0,318,109,enabled,l,go 63414;
+1199,right,63091,0,370,318,109,enabled,r,go 63414;
+1200,-,63091,0,137,319,191,enabled,o,go 63618;
+1201,left,63938,0,0,319,127,enabled,l,go 63618;
+1202,right,63938,0,352,319,127,enabled,r,go 63618;
+1203,-,63938,1,164,318,149,enabled,o,go 63414;
+1204,left,63618,0,0,318,114,enabled,l,go 63938;
+1205,right,63618,0,365,318,114,enabled,r,go 63938;
+1206,-,63618,0,164,301,162,enabled,o,go 64200;
+1207,right,64200,0,342,319,137,enabled,r,go 64450;
+1208,-,64200,0,176,307,124,enabled,o,go 64766;
+1209,left,64450,0,0,319,151,enabled,l,go 64200;
+1210,-,64450,1,198,312,122,enabled,o,go 63938;
+1211,left,64766,0,0,319,76,enabled,l,go 64977;
+1212,right,64766,0,367,319,112,enabled,r,go 64977;
+1213,-,64766,0,156,304,156,enabled,o,go 65080;
+1214,-,64766,135,64,53,52,enabled,,
+1215,left,64977,0,0,319,118,enabled,l,go 64766;
+1216,right,64977,0,361,319,118,enabled,r,go 64766;
+1217,-,64977,0,160,299,157,enabled,o,go 64450;
+1218,right,65080,0,319,319,160,enabled,r,go 65493;
+1219,-,65080,0,164,319,129,enabled,o,go 65580;
+1220,left,65493,0,0,318,144,enabled,l,go 65080;
+1221,-,65493,11,200,294,105,enabled,o,go 64977;
+1222,left,65580,0,0,319,112,enabled,l,go 65832;
+1223,right,65580,0,367,319,112,enabled,r,go 65832;
+1224,-,65580,0,150,312,193,enabled,o,go 66189;
+1225,left,65832,0,0,319,127,enabled,l,go 65580;
+1226,right,65832,0,352,319,127,enabled,r,go 65580;
+1227,-,65832,0,128,265,213,enabled,o,go 65493;
+1228,left,66189,0,0,319,117,enabled,l,go 66492;
+1229,right,66189,0,362,319,117,enabled,r,go 66492;
+1230,-,66189,0,161,279,185,enabled,o,go 68522;pm L2 Wind Mov;vm 100;
+1231,left,66492,0,0,319,134,enabled,l,go 66189;
+1232,right,66492,0,345,319,134,enabled,r,go 66189;
+1233,-,66492,0,148,295,189,enabled,o,go 65832;
+1234,left,66725,0,0,317,102,enabled,l,go 66921;
+1235,right,66725,0,377,317,102,enabled,r,go 66921;
+1236,-,66725,0,143,318,180,enabled,o,go 67173;
+1237,left,66921,0,0,318,106,enabled,l,go 66725;
+1238,right,66921,0,373,318,106,enabled,r,go 66725;
+1239,-,66921,0,151,309,80,enabled,o,go 59607;
+1240,-,66921,0,247,308,81,enabled,o,go 59359;
+1241,left,67173,0,0,318,91,enabled,l,go 67523;
+1242,right,67173,1,388,318,91,enabled,r,go 67523;
+1243,-,67173,0,148,297,191,enabled,o,go 67796;pm L2 Wind Mov;vm 100;
+1244,left,67523,0,0,319,97,enabled,l,go 67173;
+1245,right,67523,2,374,317,105,enabled,r,go 67173;
+1246,-,67523,0,152,315,172,enabled,o,go 66921;
+1247,marker,68522,70,242,171,47,enabled,,
+1248,left,68522,0,1,318,104,enabled,l,go 67796;
+1249,right,68522,0,359,319,120,enabled,r,go 68131;
+1250,-,68522,0,0,68,157,enabled,,
+1251,-,68522,43,0,148,37,enabled,,
+1252,-,68522,228,425,91,54,enabled,,
+1253,-,68522,208,341,111,52,enabled,,
+1254,left,67796,2,0,317,107,enabled,l,go 68021;
+1255,right,67796,0,391,319,88,enabled,r,go 68522;
+1256,-,67796,84,177,148,99,enabled,o,go 68852;pm L2 Wind Mov;vm 200;
+1257,-,67796,30,380,57,53,enabled,,
+1258,-,67796,197,334,122,95,enabled,,
+1259,-,67796,197,0,122,69,enabled,,
+1260,-,67796,208,67,79,64,enabled,,
+1261,left,68131,0,0,317,108,enabled,l,go 68522;
+1262,-,68131,86,197,148,96,enabled,o,go 67523;pm L2 Wind Mov;vm 200;
+1263,right,68131,0,408,319,71,enabled,r,go 68021;
+1264,-,68131,198,282,88,88,enabled,,
+1265,-,68131,202,2,117,131,enabled,,
+1266,-,68131,205,429,114,50,enabled,,
+1267,-,68131,18,397,174,56,enabled,,
+1268,left,68021,0,0,318,97,enabled,l,go 68131;
+1269,-,68021,67,208,203,140,enabled,o,go 66492;pm L2 Wind Mov;vm 200;
+1270,right,68021,0,381,318,98,enabled,r,go 67796;
+1271,-,68021,201,187,106,111,enabled,,
+1272,-,68021,208,411,111,68,enabled,,
+1273,-,68021,0,3,24,105,enabled,,
+1274,-,68021,11,55,28,89,enabled,,
+1275,-,68021,201,0,118,54,enabled,,
+1276,-,68021,245,47,74,80,enabled,,
+1277,-,47918,0,124,319,223,enabled,o,go 48267;
+1278,left,47918,0,0,319,124,enabled,l,go 49214;
+1279,right,47918,0,349,319,130,enabled,r,go 49214;
+1280,-,49214,0,249,281,75,enabled,o,go 49611;
+1281,-,49214,0,109,319,130,enabled,o,go 49884;
+1282,-,49214,0,145,285,86,enabled,o,go 49884;
+1283,left,49214,0,0,319,111,enabled,l,go 47918;
+1284,right,49214,0,368,319,111,enabled,r,go 47918;
+1285,left,68852,0,0,319,97,enabled,l,go 68871;
+1286,right,68852,0,382,319,97,enabled,r,go 68871;
+1287,-,68852,0,148,315,185,enabled,o,go 69143;
+1288,left,68871,2,0,317,141,enabled,l,go 68852;
+1289,right,68871,2,338,317,141,enabled,r,go 68852;
+1290,-,68871,44,156,253,163,enabled,o,go 68131;pm L2 Wind Mov;vm 100;
+1291,left,69143,0,0,318,103,enabled,l,go 69606;
+1292,right,69143,0,376,318,103,enabled,r,go 69606;
+1293,-,69143,0,148,319,214,enabled,o,go 69669;pm L2 Wind Mov;vm 100;
+1294,left,69606,0,0,319,126,enabled,l,go 69143;
+1295,right,69606,0,353,319,126,enabled,r,go 69143;
+1296,-,69606,0,157,318,170,enabled,o,go 68871;
+1297,marker,70615,151,196,57,44,enabled,,
+1298,left,70615,0,0,319,62,enabled,l,go 69669;
+1299,right,70615,0,339,318,140,enabled,r,go 70222;
+1300,-,70615,77,180,189,129,enabled,o,go 70784;pm L2 Wind Mov;vm 200;
+1301,-,70615,0,0,53,89,enabled,,
+1302,qus,70615,138,200,69,71,enabled,o,go 70784;pm L2 Wind Mov;vm 200;
+1303,left,69669,0,0,315,59,enabled,l,go 69937;
+1304,right,69669,0,416,319,63,enabled,r,go 70615;
+1305,-,69669,1,0,39,132,enabled,,
+1306,-,69669,235,389,84,65,enabled,,
+1307,-,69669,0,379,88,100,enabled,,
+1308,left,70222,2,1,315,108,enabled,l,go 70615;
+1309,right,70222,0,359,318,120,enabled,r,go 69937;
+1310,-,70222,46,177,215,171,enabled,o,go 69606;pm L2 Wind Mov;vm 200;
+1311,left,69937,0,0,319,102,enabled,l,go 70222;
+1312,right,69937,0,404,319,75,enabled,r,go 69669;
+1313,-,69937,14,331,80,148,enabled,,
+1314,marker2,70784,19,377,211,38,enabled,,
+1315,marker,70784,172,155,80,64,enabled,,
+1316,left,70784,0,0,319,107,enabled,l,go 71418;
+1317,right,70784,0,332,319,147,enabled,r,go 71418;
+1318,-,70784,0,153,319,155,enabled,o,go 71489;
+1319,moovmarker,70784,221,0,85,43,enabled,,
+1320,qus,70784,169,171,76,82,enabled,o,go 71489;
+1321,left,71418,0,0,318,130,enabled,l,go 70784;
+1322,right,71418,1,349,318,130,enabled,r,go 70784;
+1323,-,71418,0,157,294,173,enabled,o,go 69937;pm L2 Wind Mov;vm 100;
+1324,marker,71489,123,118,105,82,enabled,,
+1325,left,71489,0,0,318,99,enabled,l,go 71823;
+1326,right,71489,0,359,319,120,enabled,r,go 71823;
+1327,-,71489,0,112,319,227,enabled,o,go 72009;
+1328,moovmarker,71489,198,0,81,21,enabled,,
+1329,qus,71489,119,120,113,133,enabled,o,go 72009;
+1330,left,71823,0,0,317,120,enabled,l,go 71489;
+1331,right,71823,1,360,317,120,enabled,r,go 71489;
+1332,-,71823,0,156,304,164,enabled,o,go 71418;
+1333,marker,72009,81,117,158,123,enabled,,
+1334,left,72009,0,0,318,97,enabled,l,go 72353;
+1335,right,72009,1,382,318,97,enabled,r,go 72353;
+1336,-,72009,0,140,319,217,enabled,o,go 72506;
+1337,moovmarker,72009,186,6,107,92,enabled,,
+1338,left,72353,0,0,317,113,enabled,l,go 72009;
+1339,right,72353,0,366,317,113,enabled,r,go 72009;
+1340,-,72353,0,175,275,151,enabled,o,go 71823;
+1341,qhut,72353,101,197,156,95,enabled,o,go 71823;
+1342,doormarker,72506,0,204,247,236,enabled,,
+1343,marker,72506,0,0,320,208,enabled,,
+1344,left,72506,0,0,319,57,enabled,l,"go 72768;?? Ch_openelevator2|in 1\ps DR Door Close,sv Ch_openelevator2=NO;"
+1345,right,72506,0,393,319,86,enabled,r,"go 72768;?? Ch_openelevator2|in 1\ps DR Door Close,sv Ch_openelevator2=NO;"
+1346,stairsshut,72506,4,60,285,139,enabled,,ps DR Gate Not;
+1347,EnterElevator,72506,27,250,220,113,enabled,o,go 97270;pm L2 wind Mov;vm 100;
+1348,OpenElevator,72506,27,249,220,120,enabled,,ps DR Wood Open;sv Ch_openelevator2=YES;go 72506;
+1349,CloseElevator,72506,0,356,236,73,enabled,,ps DR Wood Shut;sv Ch_openelevator2=NO;go 72506;
+1350,climbstairs,72506,0,22,309,171,enabled,o,"go 76263;?? Ch_openelevator2|ps DR Wood Shut,sv Ch_openelevator2=NO;"
+1351,up,72506,260,225,58,181,enabled,u,go 100536;
+1352,down,100536,0,0,128,479,enabled,d,go 72506;
+1353,left,72768,0,0,319,120,enabled,l,go 72506;
+1354,right,72768,0,359,319,120,enabled,r,go 72506;
+1355,-,72768,0,159,300,172,enabled,o,go 72353;pm L2 Wind!Ropes Mov;vm 250;
+1356,qhut,72768,161,248,70,60,enabled,o,go 72353;pm L2 Wind!Ropes Mov;vm 250;
+1357,-,48267,0,139,319,185,enabled,o,go 48563;
+1358,left,48267,0,0,318,141,enabled,l,go 49069;
+1359,right,48267,0,326,319,153,enabled,r,go 49069;
+1360,marker,49069,3,385,295,76,enabled,,
+1361,-,49069,0,150,319,173,enabled,o,go 49214;
+1362,left,49069,0,0,319,150,enabled,l,go 48267;
+1363,right,49069,0,323,319,156,enabled,r,go 48267;
+1364,left,48563,0,0,319,62,enabled,l,go 48888;
+1365,right,48563,0,393,319,86,enabled,r,go 48888;
+1366,-,48563,0,377,117,61,enabled,,
+1367,-,48563,0,0,95,78,enabled,,
+1368,marker,48888,4,352,221,80,enabled,,
+1369,left,48888,0,0,318,149,enabled,l,go 48563;
+1370,right,48888,0,330,318,149,enabled,r,go 48563;
+1371,-,48888,0,147,319,185,enabled,o,go 49069;
+1372,-,50393,1,0,318,135,enabled,o,go 50514;
+1373,right,50393,0,314,319,165,enabled,r,go 50043;
+1374,-,50393,0,163,312,128,enabled,o,go 51081;
+1375,marker,50043,135,59,103,82,enabled,,
+1376,left,50043,0,0,319,124,enabled,l,go 50393;
+1377,-,50043,3,346,314,128,enabled,o,go 47869;
+1378,-,50043,0,198,318,108,enabled,o,go 50725;
+1379,right,50514,0,322,319,157,enabled,r,go 49884;
+1380,-,50514,0,144,319,146,enabled,o,go 47918;
+1381,-,50514,0,0,319,142,enabled,o,go 49611;
+1382,moovmarker,50514,191,130,73,67,enabled,,
+1383,-,49884,0,311,319,168,enabled,o,go 50043;
+1384,left,49884,0,0,319,155,enabled,l,go 50514;
+1385,-,49884,0,186,318,123,enabled,o,go 51081;
+1386,left,51416,0,0,317,111,enabled,l,go 51081;
+1387,right,51416,0,362,319,117,enabled,r,go 51081;
+1388,-,51416,0,113,286,120,enabled,o,go 50043;
+1389,-,51416,0,246,286,107,enabled,o,go 50514;
+1390,-,51081,0,132,319,211,enabled,o,go 51667;
+1391,left,51081,0,0,319,133,enabled,l,go 51416;
+1392,right,51081,0,346,319,133,enabled,r,go 51416;
+1393,marker,76659,0,376,101,51,enabled,,
+1394,doormarker,76659,91,62,169,115,enabled,,
+1395,none,76659,106,64,147,101,enabled,o,"?? Ch_openelevator2|go 45661,pm L3 Wind Mov,vm 100|sv Ch_openelevator2=YES,ps DR Wood Open,go 76659;"
+1396,-,76659,106,139,145,28,enabled,,"?? Ch_openelevator2|ps DR Wood Shut,sv Ch_openelevator2=NO,go 76659;"
+1397,left,76659,0,0,319,66,enabled,l,"go 76503;?? Ch_openelevator2|in 1\ps DR Wood Shut,sv Ch_openelevator2=NO;"
+1398,right,76659,0,357,319,122,enabled,r,"go 76503;?? Ch_openelevator2|in 1\ps DR Wood Shut,sv Ch_openelevator2=NO;"
+1399,-,76659,0,187,319,170,enabled,o,"go 77034;?? Ch_openelevator2|ps DR Wood Shut,sv Ch_openelevator2=NO;"
+1400,opendoor,76659,105,67,146,99,disabled,,
+1401,qsir,76659,126,231,129,93,enabled,o,"go 77034;?? Ch_openelevator2|ps DR Wood Shut,sv Ch_openelevator2=NO;"
+1402,left,76503,0,0,318,92,enabled,l,go 76659;
+1403,right,76503,0,431,319,48,enabled,r,go 76659;
+1404,-,76503,0,94,319,323,enabled,o,go 78451;
+1405,qtmp,76503,157,319,74,73,enabled,o,go 78451;
+1406,marker,81254,0,100,320,204,enabled,,
+1407,left,81254,0,0,319,130,enabled,l,go 81100;
+1408,right,81254,0,349,319,130,enabled,r,go 81100;
+1409,-,81254,1,137,316,195,enabled,o,go 80720;
+1410,closedoor,81254,7,135,303,82,enabled,,sv Ch_gate=YES;ps DR Steel Close;go 81254;
+1411,left,81100,0,1,318,108,enabled,l,go 81254;
+1412,right,81100,0,381,319,98,enabled,r,go 81254;
+1413,-,81100,0,118,319,264,enabled,o,go 81740;
+1414,qach,81100,151,324,61,51,enabled,o,go 81740;
+1415,left,81586,0,0,319,97,enabled,l,go 81740;
+1416,right,81586,0,362,319,117,enabled,r,go 81740;
+1417,-,81586,0,102,319,253,enabled,o,go 81254;
+1418,qtmp3,81586,121,176,114,45,enabled,o,go 81254;
+1419,left,81740,0,0,319,139,enabled,l,go 81586;
+1420,-,81740,0,145,319,99,enabled,o,go 82060;
+1421,-,81740,0,250,319,229,enabled,o,go 82639;
+1422,right,82376,0,337,316,120,enabled,r,go 82060;
+1423,-,82376,0,0,318,194,enabled,o,go 82639;
+1424,moovmarker,82376,137,259,96,68,enabled,,
+1425,-,82376,0,195,319,145,enabled,o,go 81586;
+1426,left,82060,0,0,319,125,enabled,l,go 82376;
+1427,right,82060,0,354,319,125,enabled,r,go 82376;
+1428,-,82060,13,172,252,108,enabled,o,go 88905;pm MU ChannelTemple;vm 30;
+1429,left,82639,0,0,318,131,enabled,l,go 82793;
+1430,right,82639,0,348,318,131,enabled,r,go 82793;
+1431,-,82639,0,133,317,204,enabled,o,go 83143;
+1432,marker2,82793,63,0,57,18,enabled,,
+1433,marker,82793,10,49,165,47,enabled,,
+1434,left,82793,0,0,319,87,enabled,l,go 82639;
+1435,right,82793,0,392,319,87,enabled,r,go 82639;
+1436,-,82793,0,254,319,136,enabled,o,go 82060;
+1437,-,82793,0,92,318,139,enabled,o,go 81586;
+1438,qtmp2,82793,93,286,147,60,enabled,o,go 82060;
+1439,qel2 left,82793,157,0,60,21,enabled,o,go 82639;
+1440,qtmp3,82793,143,93,86,40,enabled,o,go 81586;
+1441,doormarker,83143,23,138,266,189,enabled,,
+1442,doorMarker2,83143,33,234,242,81,disabled,,
+1443,doormarker1,83143,33,152,243,82,disabled,,
+1444,left,83143,0,0,319,130,enabled,l,"go 83255;?? Ch_hut1|pm L3 Wind Mov,vm 250,sv Ch_hut1=NO,in 1\ps DR Wood Shut;"
+1445,right,83143,0,355,319,124,enabled,r,"go 83255;?? Ch_hut1|pm L3 Wind Mov,vm 250,sv Ch_hut1=NO,in 1\ps DR Wood Shut;"
+1446,opendoor,83143,59,174,197,116,disabled,,
+1447,closedoor1,83143,55,157,214,23,enabled,,"?? Ch_hut1|sv Ch_hut1=NO,ps DR Wood Shut,pm L3 Wind Mov,vm 250,go 83143;"
+1448,closedoor2,83143,36,282,234,24,enabled,,"?? Ch_hut1|sv Ch_hut1=NO,ps DR Wood Shut,pm L3 Wind Mov,vm 250,go 83143;"
+1449,enterHut,83143,66,174,192,108,enabled,o,"pm MU ChannelAchenar;?? Ch_hut1|go 87805,vm 200|ps DR Wood Open,vm 50,sv Ch_hut1=YES,go 83143;"
+1450,marker2,83255,120,33,47,38,enabled,,
+1451,marker,83255,69,71,137,45,enabled,,
+1452,left,83255,0,0,319,123,enabled,l,go 83143;
+1453,right,83255,0,356,319,123,enabled,r,go 83143;
+1454,-,83255,0,127,318,215,enabled,o,go 82793;
+1455,qtmp2,83255,175,244,67,56,enabled,o,go 82793;
+1456,qtmp3,83255,177,139,76,52,enabled,o,go 82793;
+1457,qel2,83255,196,25,49,57,enabled,o,go 83143;
+1458,left,77034,0,0,319,162,enabled,l,go 77151;
+1459,right,77034,0,355,319,124,enabled,r,go 77151;
+1460,-,77034,0,169,319,186,enabled,o,go 77454;
+1461,qsir,77034,131,163,108,55,enabled,o,go 77454;
+1462,right,77151,0,353,319,126,enabled,r,go 77034;
+1463,left,77151,0,0,319,67,enabled,l,go 77034;
+1464,-,77151,0,67,317,284,enabled,o,go 76503;
+1465,left,77454,0,0,318,106,enabled,l,go 77805;
+1466,right,77454,0,352,319,127,enabled,r,go 77805;
+1467,-,77454,0,108,317,232,enabled,o,go 77985;
+1468,qsir,77454,152,210,113,75,enabled,o,go 77985;
+1469,left,77805,0,0,319,96,enabled,l,go 77454;
+1470,right,77805,0,383,319,96,enabled,r,go 77454;
+1471,-,77805,0,105,317,241,enabled,o,go 77151;
+1472,qhi,77805,121,242,112,87,enabled,o,go 77151;
+1473,left,77985,0,0,319,124,enabled,l,go 78158;
+1474,right,77985,0,355,319,124,enabled,r,go 78158;
+1475,-,77985,0,138,314,202,enabled,o,go 92317;
+1476,left,78158,0,0,319,125,enabled,l,go 77985;
+1477,right,78158,0,353,319,126,enabled,r,go 77985;
+1478,-,78158,0,131,319,221,enabled,o,go 77805;
+1479,qhi,78158,166,215,95,63,enabled,o,go 77805;
+1480,right,92317,0,381,319,98,enabled,r,"go 92512;?? Ch_hut2|sv Ch_hut2=NO,pm L3 Wind Mov,vm 250,in 1\ps DR Door Close;"
+1481,left,92317,0,0,319,157,enabled,l,"go 92512;?? Ch_hut2|sv Ch_hut2=NO,pm L3 Wind Mov,vm 250,in 1\ps DR Door Close;"
+1482,doormarker,92317,9,199,284,117,enabled,,
+1483,enterHut,92317,26,202,260,100,enabled,o,"?? Ch_hut2|go 92740,pm MU ChannelSirrus,vm 200|sv Ch_hut2=YES,ps cDoorSqueak2,pm MU ChannelSirrus,vm 50,go 92317;"
+1484,OpenDoor,92317,26,203,261,99,disabled,,
+1485,closeDoor,92317,63,267,200,35,enabled,,"?? Ch_hut2|sv Ch_hut2=NO,pm L3 Wind Mov,vm 250,ps DR Door Close,go 92317;"
+1486,marker,92512,45,312,55,60,enabled,,
+1487,left,92512,0,0,319,123,enabled,l,go 92317;
+1488,right,92512,0,337,319,142,enabled,r,go 92317;
+1489,-,92512,1,127,318,203,enabled,o,go 78158;
+1490,qhi,92512,165,226,86,45,enabled,o,go 78158;
+1491,left,78451,0,0,319,107,enabled,l,go 78770;
+1492,right,78451,0,382,318,97,enabled,r,go 78770;
+1493,-,78451,0,106,319,273,enabled,o,go 78886;
+1494,qtmp left,78451,167,54,93,53,enabled,o,go 78770;
+1495,left,78770,0,0,318,93,enabled,l,go 78451;
+1496,right,78770,0,386,318,93,enabled,r,go 78451;
+1497,-,78770,0,93,319,292,enabled,o,go 76659;
+1498,qel2 left,78770,126,52,97,42,enabled,o,go 78451;
+1499,qel2,78770,125,93,98,33,enabled,o,go 76659;
+1500,qsir,78770,131,164,93,52,enabled,o,go 76659;
+1501,left,78886,2,0,317,121,enabled,l,go 79112;
+1502,right,78886,0,358,317,121,enabled,r,go 79112;
+1503,-,78886,0,179,319,175,enabled,o,go 79496;
+1504,qtmp left,78886,137,10,96,42,enabled,o,go 79112;
+1505,qach,78886,171,187,54,33,enabled,o,go 79496;
+1506,marker2,79112,0,39,58,90,enabled,,
+1507,marker,79112,89,167,65,39,enabled,,
+1508,left,79112,0,0,319,117,enabled,l,go 78886;
+1509,right,79112,0,364,318,115,enabled,r,go 78886;
+1510,-,79112,0,119,319,243,enabled,o,go 78770;
+1511,qel2 left,79112,173,45,70,72,enabled,o,go 78886;
+1512,marker,79664,0,428,140,42,enabled,,
+1513,left,79664,0,0,319,107,enabled,l,go 79496;
+1514,right,79664,0,372,319,107,enabled,r,go 79496;
+1515,-,79664,0,116,316,237,enabled,o,go 79112;
+1516,left,79496,0,0,319,117,enabled,l,go 79664;
+1517,right,79496,0,362,319,117,enabled,r,go 79664;
+1518,-,79496,0,120,318,227,enabled,o,go 80159;
+1519,qtmp,79496,175,215,86,58,enabled,o,go 80159;
+1520,qach right,79496,191,424,53,39,enabled,o,go 79664;
+1521,marker,80103,1,381,173,56,enabled,,
+1522,left,80103,0,0,318,124,enabled,l,go 80159;
+1523,right,80103,1,355,318,124,enabled,r,go 80159;
+1524,-,80103,0,123,318,232,enabled,o,go 79664;
+1525,moovmarker,80103,141,0,132,46,enabled,,
+1526,marker2,80103,68,280,76,59,enabled,,
+1527,qel2,80103,200,308,46,47,enabled,o,go 79664;
+1528,left,80159,0,0,318,108,enabled,l,go 80103;
+1529,right,80159,1,371,318,108,enabled,r,go 80103;
+1530,-,80159,0,120,310,224,enabled,o,go 80492;
+1531,qtmp,80159,89,272,149,25,enabled,o,go 80492;
+1532,qach right,80159,133,445,83,34,enabled,o,go 80103;
+1533,gatemarker,80492,0,232,320,153,enabled,,
+1534,marker,80492,1,44,318,183,enabled,,
+1535,left,80492,0,0,319,97,enabled,l,go 80720;
+1536,right,80492,0,367,318,112,enabled,r,go 80720;
+1537,-,80492,0,230,319,127,enabled,o,go 81100;
+1538,enterTemple,80492,0,145,297,78,disabled,o,go 92144;
+1539,closegate,80492,0,329,316,39,enabled,,ps DR Steel Close;sv Ch_gate=YES;go 80492;
+1540,-,80492,0,145,294,75,enabled,o,go 46979;
+1541,qach,80492,166,250,76,17,enabled,o,go 81100;
+1542,left,80720,0,0,319,111,enabled,l,go 80492;
+1543,right,80720,0,368,319,111,enabled,r,go 80492;
+1544,-,80720,0,135,319,201,enabled,o,go 80103;
+1545,marker,80720,77,200,34,18,enabled,,
+1546,qel2,80720,163,198,49,56,enabled,o,go 80103;
+1547,left,46979,0,0,318,146,enabled,l,"?? Ch_temple|in 1\ps DR Metal Close,sv Ch_temple=NO;go 80720;"
+1548,doormarker,46979,0,105,320,257,enabled,,
+1549,enterTemple,46979,0,155,306,166,enabled,o,"?? Ch_temple|go 92145,pm MU ChannelTemple,vm 100,sv Ch_temple=NO,in 1\ps DR Metal Close|sv Ch_temple=YES,ps DR Metal Open,go 46979;"
+1550,none,46979,0,291,306,30,enabled,,"?? Ch_temple|ps DR Metal Close,sv Ch_temple=NO,go 46979;"
+1551,opendoor,46979,0,157,1,1,disabled,,
+1552,right,46979,0,333,318,146,enabled,r,"?? Ch_temple|in 1\ps DR Metal Close,sv Ch_temple=NO;go 81100;"
+1553,left,76263,0,0,319,104,enabled,l,go 75778;
+1554,right,76263,1,366,318,113,enabled,r,go 75778;
+1555,-,76263,0,103,242,239,enabled,o,go 75674;
+1556,moovmarker,76263,255,318,65,117,enabled,,
+1557,qbs,76263,88,77,94,89,enabled,o,go 75674;
+1558,left,75778,0,0,318,113,enabled,l,go 76263;
+1559,right,75778,0,366,318,113,enabled,r,go 76263;
+1560,entervillage,75778,0,123,307,215,enabled,o,?? Ch_upperstairs|go 72768;
+1561,left,75674,0,0,319,129,enabled,l,go 75275;
+1562,right,75674,0,349,319,130,enabled,r,go 75275;
+1563,-,75674,0,133,287,213,enabled,o,go 75252;
+1564,qbs,75674,75,154,73,61,enabled,o,go 75252;
+1565,left,75275,0,0,319,117,enabled,l,go 75674;
+1566,right,75275,0,362,319,117,enabled,r,go 75674;
+1567,-,75275,0,127,319,217,enabled,o,go 75778;
+1568,marker,75252,109,306,211,74,enabled,,
+1569,left,75252,0,0,319,135,enabled,l,go 74809;
+1570,right,75252,0,344,319,135,enabled,r,go 74809;
+1571,-,75252,8,142,278,195,enabled,o,go 74505;
+1572,qbs,75252,83,159,57,53,enabled,o,go 74505;
+1573,left,74809,0,0,319,116,enabled,l,go 75252;
+1574,right,74809,0,363,319,116,enabled,r,go 75252;
+1575,-,74809,0,115,319,223,enabled,o,go 75275;
+1576,qts,74809,197,255,86,82,enabled,o,go 75275;
+1577,left,74505,2,0,317,145,enabled,l,go 74269;
+1578,right,74505,2,369,317,110,enabled,r,go 74269;
+1579,-,74505,0,157,249,191,enabled,o,go 74168;
+1580,qbs,74505,78,160,66,54,enabled,o,go 74168;
+1581,left,74269,1,0,318,105,enabled,l,go 74505;
+1582,right,74269,1,375,318,105,enabled,r,go 74505;
+1583,-,74269,0,110,318,221,enabled,o,go 74809;
+1584,qts,74269,196,265,77,66,enabled,o,go 74809;
+1585,left,74168,0,0,319,125,enabled,l,go 73852;
+1586,right,74168,0,354,319,125,enabled,r,go 73852;
+1587,-,74168,0,158,232,185,enabled,o,go 73587;
+1588,qbs,74168,63,170,64,52,enabled,o,go 73587;
+1589,left,73852,0,0,318,116,enabled,l,go 74168;
+1590,right,73852,1,363,318,116,enabled,r,go 74168;
+1591,-,73852,0,121,317,220,enabled,o,go 74269;
+1592,qts,73852,200,258,77,67,enabled,o,go 74269;
+1593,marker2,73587,184,409,136,71,enabled,,
+1594,marker,73587,96,160,108,32,enabled,,
+1595,left,73587,0,0,319,147,enabled,l,go 73346;
+1596,right,73587,2,358,316,121,enabled,r,go 73346;
+1597,-,73587,0,149,319,211,enabled,o,go 73038;
+1598,left,73346,0,0,319,127,enabled,l,go 73587;
+1599,right,73346,0,333,319,146,enabled,r,go 73587;
+1600,-,73346,0,130,318,180,enabled,o,go 73852;
+1601,qts,73346,217,262,101,52,enabled,o,go 73852;
+1602,left,73038,0,0,318,126,enabled,l,go 17225;
+1603,right,73038,0,353,318,126,enabled,r,go 17225;
+1604,none,73038,0,167,274,180,enabled,o,"?? Ch_lowerstairs|go 17121|sv Ch_lowerstairs=YES,ps DR Wood Open,go 73038;"
+1605,-,73038,101,165,198,34,enabled,,"?? Ch_lowerstairs|sv Ch_lowerstairs=NO,ps DR Wood Shut,go 73038;"
+1606,-,17225,0,121,302,252,enabled,o,go 73346;pm L2 Wind Mov;vm 250;
+1607,left,17225,0,0,319,123,enabled,l,go 73038;
+1608,right,17225,0,354,319,125,enabled,r,go 73038;
+1609,qts,17225,218,276,79,57,enabled,o,go 73346;pm L2 Wind Mov;vm 250;
+1610,left,86090,0,0,319,117,enabled,l,go 86416;
+1611,right,86090,0,349,319,130,enabled,r,go 86416;
+1612,-,86090,43,200,66,68,enabled,o,go 100694;
+1613,-,100894,0,0,319,480,enabled,o,go 86090;
+1614,-,100894,10,65,300,346,enabled,,
+1615,marker,100894,165,277,84,110,enabled,,sv Ch_elevator3=NO;ca X_Linking linkToAge:iMystDB;
+1616,-,100694,0,0,318,480,enabled,o,go 86090;
+1617,-,100694,9,145,296,191,enabled,o,go 100894;
+1618,left,86416,0,0,319,94,enabled,l,go 86090;
+1619,right,86416,0,385,319,94,enabled,r,go 86090;
+1620,openDoor,86416,40,168,238,141,enabled,o,ps DR Wood Open;go 86711;
+1621,closeDoor,86711,0,280,275,35,enabled,o,ps DR Wood Shut;go 86416;
+1622,-,86711,43,179,236,98,enabled,o,go 98476;
+1623,right,86711,0,385,319,94,enabled,r,go 86090;in 1\ps DR Wood Shut;
+1624,left,86711,0,0,319,94,enabled,l,go 86090;in 1\ps DR Wood Shut;
+1625,-,86840,0,0,319,480,enabled,,ca CH_WaterPath leavingCard:;ca CH_WaterSound enterZone:8;go 19143;
+1626,handle,86840,109,200,96,82,enabled,,cb CH_WaterPath pullHandleBegan:\pullHandleMoved:\pullHandleEnded:handle=3=center;
+1627,-,86841,0,0,319,480,enabled,,ca CH_WaterPath leavingCard:;ca CH_WaterSound enterZone:9;go 20137;
+1628,handle,86841,109,200,96,82,enabled,,cb CH_WaterPath pullHandleBegan:\pullHandleMoved:\pullHandleEnded:handle=4=center;
+1629,-,86842,0,0,319,480,enabled,,ca CH_WaterPath leavingCard:;ca CH_WaterSound enterZone:15;go 21498;
+1630,handle,86842,109,200,96,82,enabled,,cb CH_WaterPath pullHandleBegan:\pullHandleMoved:\pullHandleEnded:handle=5=center;
+1631,-,86843,0,0,319,480,enabled,,ca CH_WaterPath leavingCard:;ca CH_WaterSound enterZone:14;go 26492;
+1632,handle,86843,109,200,96,82,enabled,,cb CH_WaterPath pullHandleBegan:\pullHandleMoved:\pullHandleEnded:handle=6=center;
+1633,-,86844,0,0,319,480,enabled,,ca CH_WaterPath leavingCard:;ca CH_WaterSound enterZone:10;go 33578;
+1634,handle,86844,109,200,96,82,enabled,,cb CH_WaterPath pullHandleBegan:\pullHandleMoved:\pullHandleEnded:handle=7=center;
+1635,-,87419,0,0,319,480,enabled,,ca CH_WaterPath leavingCard:;ca CH_WaterSound enterZone:9;go 19870;
+1636,handle,87419,104,189,99,85,enabled,,cb CH_WaterPath pullHandleBegan:\pullHandleMoved:\pullHandleEnded:handle=3=left;
+1637,-,87420,0,0,319,480,enabled,,ca CH_WaterPath leavingCard:;ca CH_WaterSound enterZone:15;go 20934;
+1638,handle,87420,104,189,99,85,enabled,,cb CH_WaterPath pullHandleBegan:\pullHandleMoved:\pullHandleEnded:handle=4=left;
+1639,-,87421,0,0,319,480,enabled,,ca CH_WaterPath leavingCard:;ca CH_WaterSound enterZone:16;go 22077;
+1640,handle,87421,104,189,99,85,enabled,,cb CH_WaterPath pullHandleBegan:\pullHandleMoved:\pullHandleEnded:handle=5=left;
+1641,-,87422,0,0,319,480,enabled,,ca CH_WaterPath leavingCard:;ca CH_WaterSound enterZone:20;go 27330;
+1642,handle,87422,104,189,99,85,enabled,,cb CH_WaterPath pullHandleBegan:\pullHandleMoved:\pullHandleEnded:handle=6=left;
+1643,-,87423,0,0,319,480,enabled,,ca CH_WaterPath leavingCard:;ca CH_WaterSound enterZone:12;go 35578;
+1644,handle,87423,104,189,99,85,enabled,,cb CH_WaterPath pullHandleBegan:\pullHandleMoved:\pullHandleEnded:handle=7=left;
+1645,-,87250,0,0,319,480,enabled,,ca CH_WaterPath leavingCard:;ca CH_WaterSound enterZone:10;go 32368;
+1646,handle,87250,114,193,92,92,enabled,,cb CH_WaterPath pullHandleBegan:\pullHandleMoved:\pullHandleEnded:handle=3=right;
+1647,-,87251,0,0,319,480,enabled,,ca CH_WaterPath leavingCard:;ca CH_WaterSound enterZone:14;go 2465;
+1648,handle,87251,114,193,92,92,enabled,,cb CH_WaterPath pullHandleBegan:\pullHandleMoved:\pullHandleEnded:handle=4=right;
+1649,-,87252,0,0,319,480,enabled,,ca CH_WaterPath leavingCard:;ca CH_WaterSound enterZone:19;go 24265;
+1650,handle,87252,114,193,92,92,enabled,,cb CH_WaterPath pullHandleBegan:\pullHandleMoved:\pullHandleEnded:handle=5=right;
+1651,-,87253,0,0,319,480,enabled,,ca CH_WaterPath leavingCard:;ca CH_WaterSound enterZone:13;go 29197;
+1652,handle,87253,114,193,92,92,enabled,,cb CH_WaterPath pullHandleBegan:\pullHandleMoved:\pullHandleEnded:handle=6=right;
+1653,-,87254,0,0,319,480,enabled,,ca CH_WaterPath leavingCard:;ca CH_WaterSound enterZone:11;go 34505;
+1654,handle,87254,114,193,92,92,enabled,,cb CH_WaterPath pullHandleBegan:\pullHandleMoved:\pullHandleEnded:handle=7=right;
+1655,right,23468,0,388,319,91,enabled,r,go 23632;
+1656,left,23468,0,0,319,91,enabled,l,go 23632;
+1657,up,23468,265,117,54,242,enabled,u,go 98985;
+1658,-,31551,22,164,109,65,enabled,,cb CH_Bridge pullHandleBegan:\pullHandleMoved:handle\pullHandleEnded:31551;
+1659,right,43980,0,377,319,102,enabled,r,go 44229;
+1660,left,43980,0,0,319,102,enabled,l,go 44229;
+1661,none,43980,29,230,57,77,enabled,o,sv Ch_pipebridge=YES;pv PipeBridgeOut-F.m4v\go 43979=n;ps GR Ratchet III;in 2.5\ps GR Ratchet III;in 5\ps SW GenLights On;
+1662,buttonmarker,88815,118,222,20,52,enabled,,
+1663,marker,88819,0,89,85,89,enabled,,
+1664,marker,88820,0,89,85,89,enabled,,
+1665,marker,88821,0,89,85,89,enabled,,
+1666,marker,88822,0,89,85,89,enabled,,
+1667,buttonmarker,88819,118,222,20,52,enabled,,
+1668,buttonmarker,88820,118,222,20,52,enabled,,
+1669,buttonmarker,88821,118,222,20,52,enabled,,
+1670,buttonmarker,88822,118,222,20,52,enabled,,
+1671,buttonmarker,88816,118,222,20,52,enabled,,
+1672,buttonmarker,88817,118,222,20,52,enabled,,
+1673,buttonmarker,88818,118,222,20,52,enabled,,
+1674,marker,88813,0,89,86,100,enabled,,
+1675,,88813,0,0,320,480,enabled,,go 88498;pm MU ChannelAchenar;vm 200;
+1676,buttonmarker,88813,118,222,20,52,enabled,,
+1677,,88813,107,247,42,12,enabled,,go 88821;
+1678,,88813,107,207,42,30,enabled,,go 88819;
+1679,,88813,107,236,42,12,enabled,,go 88820;
+1680,,88813,107,259,42,30,enabled,,go 88822;
+1681,,27330,14,225,61,68,enabled,,go 87422;
+1682,,26492,6,180,64,65,enabled,,go 86843;
+1683,,20137,7,179,62,68,enabled,,go 86841;
+1684,,20934,14,221,59,74,enabled,,go 87420;
+1685,,21498,5,176,65,68,enabled,,go 86842;
+1686,,22077,13,225,60,65,enabled,,go 87421;
+1687,,24265,3,229,56,67,enabled,,go 87252;
+1688,,19870,17,223,57,67,enabled,,go 87419;
+1689,,19143,5,178,63,67,enabled,,go 86840;
+1690,,33578,8,177,60,70,enabled,,go 86844;
+1691,,35578,14,226,61,65,enabled,,go 87423;
+1692,,34505,0,225,62,70,enabled,,go 87254;
+1693,-,4696,52,129,71,49,enabled,,cb CH_PumpHouse pullHandleBegan:\pullHandleMoved:handle\pullHandleEnded:;
+1694,left,92944,0,0,319,64,enabled,l,go 92740;
+1695,left,57119,0,0,320,97,enabled,l,ca CH_Stairs leavingCard:;go 57070;
+1696,right,57070,0,398,320,82,enabled,r,go 56830;
+1697,left,56830,0,0,320,100,enabled,l,go 57070;
+1698,left,55975,0,0,320,68,enabled,l,go 55677;
+1699,right,55677,0,422,320,58,enabled,r,go 55975;
+1700,left,10298,0,0,320,74,enabled,l,go 7663;
+1701,right,7663,0,417,320,63,enabled,r,go 10298;
+1702,left,4696,0,0,320,60,enabled,l,ca CH_PumpHouse leavingCard:;go 5088;
+1703,right,5088,0,409,320,71,enabled,r,go 4696;

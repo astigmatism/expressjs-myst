@@ -1,0 +1,135 @@
+html, body {
+	margin: 0;
+    padding: 0;
+	height: 100%;
+    width: 100%;
+}
+body {
+    background-color: #272822;
+    color: white;
+    font-family: 'Open+Sans', sans-serif;
+    font-size: 14px;
+    position: relative;
+}
+#commands {
+	padding: 5px;
+	width: 100%;
+	height: 35px;
+}
+#toolbar {
+	position: absolute;
+	width: 40%;
+	right: 0;
+	height: 100%;
+}
+#toolbar .options {
+	padding: 10px;
+}
+#toolbar .options .option {
+	margin: 10px 0px;
+}
+#preview {
+	width: 100%;
+	height: 332px;
+	background-color: #000;
+}
+#editor {
+	position: absolute;
+	left: 0;
+	width: 60%;
+	height: 100%;
+	background-color: #fff;
+}
+
+#audiopicker {
+	position: absolute;
+	z-index: 999;
+	background-color: #272822;
+	width: 100%;
+	top: 0;
+	display: none;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#panelpicker {
+	position: absolute;
+	z-index: 999;
+	background-color: #272822;
+	width: 100%;
+	top: 0;
+	display: none;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+#panelpicker .commands {
+	padding: 5px;
+	width: 100%;
+	height: 35px;
+}
+#panelpicker .panels {
+	width: 100%;
+}
+#panelpicker .panels .screen {
+	cursor: pointer;
+	display: inline-block;
+	height: 86px;
+	width: 136px;
+	border: solid 1px transparent;
+	position: relative;
+}
+#panelpicker .panels .screen .name {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #272822;
+	display: inline-block;
+}
+#panelpicker .panels .onbg {
+	background-color: #000;
+}
+#panelpicker .panels .screen:hover {
+	border: solid 1px red;
+}
+#navigationdialog .panel {
+	height: 333px;
+	width: 544px;
+	background-color: #000;
+	color: #FFF;
+	font-size: 20px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	position: relative;
+}
+#navigationdialog .panel div.overlay {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	opacity: 0.5;
+	background-color: blue;
+}
+#navigationdialog ul.hotspots { list-style-type: none; margin: 5px; padding: 0; width: 100%; height}
+#navigationdialog li { height: 90px; }
+
+#navigationdialog li input {
+	width: 30px;
+}
+
+#panelassets li img {
+	height: 50px;
+	width: 50px;
+}
+
+#navigationdialog .cursors .ui-selecting { background: #FECA40; }
+#navigationdialog .cursors .ui-selected { background: #F39814; color: white; }
+#navigationdialog .cursors { list-style-type: none; margin: 0; padding: 0; }
+#navigationdialog .cursors li { margin: 3px; padding: 1px; float: left; width: 30px; height: 30px; text-align: center; cursor: pointer; }
+
+#audiomenu .ui-selecting { background: #FECA40; }
+#audiomenu .ui-selected { background: #F39814; color: white; }
+#audiomenu { list-style-type: none; margin: 0; padding: 0; width: 100%; }
+#audiomenu li { margin: 3px; padding: 1px; float: left; width: 200px; height: 30px; text-align: center; cursor: pointer; }
+
+#panelassets .ui-selecting { background: #FECA40; }
+#panelassets .ui-selected { background: #F39814; color: white; }
+#panelassets { list-style-type: none; margin: 0; padding: 0; width: 450px; }
+#panelassets li { margin: 3px; padding: 1px; float: left; width: 50px; height: 50px; text-align: center; cursor: pointer; }

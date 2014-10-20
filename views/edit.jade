@@ -1,0 +1,73 @@
+doctype html
+html
+  head
+    title= title
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(src='/libraries/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js')
+    link(rel='stylesheet', href='/libraries/jsoneditor-2.3.1/jsoneditor-min.css', type='text/css')
+    script(src='/libraries/jsoneditor-2.3.1/jsoneditor-min.js')
+    script(src='/libraries/jsoneditor-2.3.1/lib/ace/ace.js')
+    script(src='/libraries/jsoneditor-2.3.1/lib/ace/mode-json.js')
+    script(src='/libraries/jsoneditor-2.3.1/lib/ace/theme-textmate.js')
+    script(src='/libraries/jsoneditor-2.3.1/lib/ace/theme-jsoneditor.js')
+    script(src='/libraries/jQuery-File-Upload-8.8.5/js/jquery.iframe-transport.js')
+    script(src='/libraries/jQuery-File-Upload-8.8.5/js/jquery.fileupload.js')
+    script(src='/js/edit.js')
+    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Open+Sans', type='text/css')
+    link(rel='stylesheet', href='/css/edit.css', type='text/css')
+    link(rel='stylesheet', href='/libraries/jQuery-File-Upload-8.8.5/css/jquery.fileupload-ui.css', type='text/css')
+    link(rel='stylesheet', href='/libraries/jquery-ui-1.10.3.custom/css/ui-darkness/jquery-ui-1.10.3.custom.min.css', type='text/css')
+
+  body
+    #commands
+      div(style='float: left;')
+          button.open Open
+          button.save Save
+          button.delete Delete
+        div(style='float: right;')
+          button.mute Mute
+          button.preview Preview
+          button.clearls Clear Cache
+    #panelpicker
+      .commands
+        button.cancel Cancel
+        button.new New
+      .panels
+    #audiopicker
+      .commands
+        button.cancel Cancel
+        button.stop Stop Audio
+        button.preload Use Selected
+        button.use Use Selected As Ambient
+      ul#audiomenu
+    #editor
+    #toolbar
+      iframe#preview(scrolling='no', frameborder='0')
+      .options(style='padding: 10px;')
+        .option
+          | Panel:
+          span#panelname
+        .option
+          | Background Upload:
+          input#uploadbg(type='file', name='files[]', multiple='multiple')
+        .option
+          | Ambience:
+          button.audiopicker Pick Audio
+        .option
+          | Navigation:
+          button.navigation Build Navigation
+        .option
+          | Insert:
+          button.div Div
+        .option.assets
+          span
+            | Asset Upload:
+            input#uploadasset(type='file', name='files[]', multiple='multiple')
+          br
+          button.insert Insert Selected
+          button.delete Delete Selected
+          ul#panelassets
+    #navigationdialog(title='Navigation')
+      .panel
+      ul.hotspots
+      button.add Add

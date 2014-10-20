@@ -1,0 +1,27 @@
+1,2203,black,
+2,5943,Far-In,?? DU_End=gone|sc Far-In Gone|pa mooVMarker=AtrusMiddleFar\408=0=24=28\468\0.02\YES;
+3,7754,Far-Left,
+4,6997,Far-Out,
+5,7365,Far-Out 2,
+6,7604,Far-Right,
+7,5119,Father-In,
+8,5200,Father-Left,
+9,9757,Father-Out,?? DU_End=gone|sc Father-Out Gone|pa mooVmarker=AtrusMiddleClose\952=0=68=88\156\0.2\YES;
+10,10805,Father-Out 2 Cover,
+11,4840,Father-Out 2,ca DU_Kveer showCorrectVideo:;
+12,11088,Father-Out 2 Open,
+13,5474,Father-Right,
+14,5874,Middle-Far,
+15,10020,Middle-Father,?? DU_End=gone|sc Middle-Father Gone|pa moovMarker=AtrusMiddleMiddle\792=0=36=48\468\0.02\YES;
+16,9674,Middle-Other,
+17,6377,Middle-RockFall,
+18,11283,Nook Close,
+19,10375,Other-In,
+20,8929,Other-Left,
+21,8424,Other-Out,
+22,8487,Other-Out 2,
+23,9088,Other-Right,?? DU_End=gone|sc Other-Right Gone|pa mooVMarker=AtrusFromLeft\364=0=28=40\346\0.02\YES;
+24,9417,RockFall-In,
+25,2943,RockFall-left,?? DU_End=gone|sc RockFall-left Gone|pa mooVMarker=AtrusFromRocks\968=0=44=68\345\0.06\YES;
+26,6532,RockFall-Out,
+27,32302,RockFall-Right,

@@ -1,0 +1,216 @@
+,1,32302,A to Hall Shot
+?? ME_ACacheChest|sc marker=A-Cache 1-E (open);,2,14233,A-Cache 1-E
+,3,11389,A-Cache 2-E
+?? ME_ACacheChest|sc marker=A-Cache 2-W (open);,4,14968,A-Cache 2-W
+,5,14628,A-Cache Cage
+,6,32201,A-Cache Cage Elec-Bright
+,7,31976,A-Cache Cage Electrified
+?? ME_ACacheChest|sc marker=A-Cache Center (Open);?? ME_BluePage|sc marker2=A-Cache Center (noPage);,8,44198,A-Cache Center
+?? ME_ACacheChest|sc marker=A-Cache Chest (open);,9,15266,A-Cache Chest
+,10,38472,A-Cache Exit
+,11,20420,A-Cache Out
+?? ME_BluePage|sc marker=A-Cache Shelves (noPage);,12,14523,A-Cache Shelves
+pm MU Achenar;vm 120;,13,9846,A-Throne 1-S
+,14,10333,A-Throne 2-N
+,15,10209,A-Throne 2-S
+?? ME_ACacheDoor|sc marker=A-Throne 3-E (DoorOpen);,16,21886,A-Throne 3-E
+?? ME_ACacheDoor|sc marker=A-Throne 3-E Throne (DoorOpen)|en Cache Room=NO;,17,32989,A-Throne 3-E Throne
+?? ME_ACacheDoor|sc marker=A-Throne 3-N (DoorOpen);,18,21064,A-Throne 3-N
+,19,25878,A-Throne 3-S
+,20,21348,A-Throne 3-W
+?? ME_ACacheDoor|sc marker=A-Throne 4-N (DoorOpen);,21,25706,A-Throne 4-N
+,22,10531,A-Throne 4-S
+?? ME_ACacheDoor|sc marker=A-Throne 5-N (DoorOpen);pm MU Achenar;vm 80;,23,2383,A-Throne 5-N
+,24,41249,A-Throne Chest/Helmet
+,25,9495,A-Throne Head Mount
+,26,40292,A-Throne Helmet
+,27,44706,A-Throne IntoCache Shot
+,28,42966,A-Throne on Throne 
+,29,21748,A-Throne Weapons Rack
+vm 20;sc leftMarker=A-ThroneHolo ControlLeft=0=0=101=37;?? ME_ACacheDoor|sc marker=A-ThroneHolo (DoorOpen);-ps EL SharpHum;-ca ME_Fortress startHolo:;,30,34613,A-ThroneHolo
+,31,22570,ArmE 1-E
+,32,51206,ArmE 1-N
+,33,51613,ArmE 1-S
+,34,22809,ArmE 1-W
+,35,22499,ArmE 2-E
+,36,51766,ArmE 2-N
+,37,52187,ArmE 2-S
+,38,23081,ArmE 2-W
+,39,35617,ArmE 3-E
+,40,52319,ArmE 3-N
+,41,52712,ArmE 3-S
+pm AR Water/Wind Mov;vm 150;,42,9075,ArmE 3-W
+,43,53837,ArmN 1-E
+,44,26888,ArmN 1-N
+,45,30681,ArmN 1-S
+,46,54051,ArmN 1-W
+,47,53284,ArmN 2-E
+,48,27151,ArmN 2-N
+,49,30853,ArmN 2-S
+,50,53622,ArmN 2-W
+,51,52786,ArmN 3-E
+,52,27417,ArmN 3-N
+pm AR Water/Wind Mov;vm 150;,53,31168,ArmN 3-S
+,54,53079,ArmN 3-W
+,55,54276,ArmS 1-E
+,56,4956,ArmS 1-N
+?? ME_SouthStairs|none|sc marker=ArmS 1-S (StairsDown);,57,5756,ArmS 1-S
+,58,20686,ArmS 1-W
+,59,54936,ArmS 2-E
+,60,5129,ArmS 2-N
+,61,5533,ArmS 2-S
+,62,54769,ArmS 2-W
+,63,55235,ArmS 3-E
+pm AR Water/Wind Mov;vm 150;,64,5967,ArmS 3-N
+,65,6249,ArmS 3-S
+,66,55516,ArmS 3-W
+,67,47603,ArmW 1-E
+,68,56759,ArmW 1-N
+,69,56906,ArmW 1-S
+,70,38352,ArmW 2-E
+,71,56567,ArmW 2-N
+,72,56293,ArmW 2-S
+pm AR Water/Wind Mov;vm 150;,73,48091,ArmW 3-E
+,74,55809,ArmW 3-N
+,75,55633,ArmW 3-S
+,76,38013,ArmW 4-W
+,77,45701,ArmW 5-W
+pm AR Water/Wind Mov;vm 150;,78,47302,ArmW 6-W
+,79,47045,black
+,80,11614,East Is. 1-E (up)
+,81,11865,East Is. 2-E (Up)
+,82,26778,East Is. 2-W (Down)
+,83,26420,East Is. 3-N (Down)
+,84,12236,East Is. 3-S (Up)
+,85,26366,East Is. 4-N (Down)
+,86,12345,East Is. 4-S (Up)
+,87,12583,East Is. 5-E (Up)
+,88,22133,East Is. 5-W (Down)
+,89,12991,East Is. 6-E (up)
+,90,13636,East Is. 7-E (Up)
+,91,16009,East Is. 7-W (Down)
+pm AR Water/Wind Mov;vm 150;,92,15376,East Is. 8-N (Up)
+,93,15738,East Is. 8-S (Down)
+,94,38824,East Is. 8-W (Down)
+ca ME_Fortress setElevWindow:;-ca ME_Fortress runElevator:-;,95,39144,Elevator Closed-down
+ca ME_Fortress setElevWindow:;-ca ME_Fortress runElevator:-;,96,50628,Elevator Closed-up
+,97,39710,Elevator Open-Down
+,98,43114,Elevator Open-Up
+-?? ME_ElevAtTop|go 43114=r|go 39710=r;,99,49328,ElevatorRear
+pm AR Water/Wind Mov;vm 150;,100,17290,GearGate2 (no book)
+sc marker=Hall 1-E (All);,101,23400,Hall 1-E
+,102,24605,Hall 1-N
+?? ME_FacingSouth|sc marker=Hall 1-S (South)|sc marker=Hall 1-S (All);,103,24888,Hall 1-S
+,104,13535,Hall 1-W
+sc marker=Hall 2-E (All);,105,23648,Hall 2-E
+,106,24452,Hall 2-N
+?? ME_FacingSouth|sc marker=Hall 2-S (South)|sc marker=Hall 2-S (All);,107,25262,Hall 2-S
+,108,13233,Hall 2-W
+sc marker=Hall 3-E (All);pm MU MiddleLoop;vm 40;,109,23934,Hall 3-E
+,110,24230,Hall 3-N
+?? ME_FacingSouth|sc marker=Hall 3-S (South)|sc marker=Hall 3-S (All);pm MU MiddleLoop;vm 80;,111,25440,Hall 3-S
+,112,9418,Hall 3-W
+,113,45089,Hall Door East
+,114,46050,Hall Door North
+,115,46082,Hall Door South
+,116,46338,Hall Door West
+,117,39604,Hall Entrance N
+,118,39260,Hall Entrance W
+,119,16305,HubControl 1-N
+,120,31555,HubControl 2-S Down
+-zm 1.5=-50=0=1;,121,31339,HubControl 2-S LookUp
+ca ME_Fortress initElevAction:;,122,16622,HubControl 2-S UpOpen
+"-?? ME_ElevGoTop|sv ME_ElevGoTop=NO,ps MR Elev Mech Strt,pv HubControlElevatorUp-F.m4v\ps MR Elev Mech End\go 16622=n;",123,43632,HubControl 2.5-S
+ca ME_Fortress startTopHub:;-zm 1.5=-20=0=0.5;,124,33554,HubControl 3-S
+in 0.25\go 49567=l;,125,50726,HubHall 0-N
+pm MU MiddleLoop;vm 40;,126,50114,HubHall 1-N
+"?? ME_HubDoorL1|no |sc marker2=HubHall 1-S (noDoor);?? ME_HubStairs|sc marker=HubHall 1-S (StairsDown),en forward=NO;",127,16757,HubHall 1-S
+,128,33191,HubHall 1-S LookDown
+pm MU Achenar;vm 160;,129,11084,HubHall 1-W
+,130,48250,HubHall 2-E
+,131,35407,HubHall 2-N
+?? ME_HubDoorL1|none|sc HubHall 2-S NoDoor;,132,20207,HubHall 2-S
+,133,17797,HubHall 2-W
+,134,48777,HubHall 3-E
+,135,35295,HubHall 3-N
+"?? ME_HubDoorL1|none|sc HubHall 3-S NoDoor,en elevator=NO;pm MU MiddleLoop;vm 40;",136,34882,HubHall 3-S
+,137,49567,HubHall 3-W
+,138,49680,HubHall 4-E
+,139,47838,HubHall 4-W
+pm MU Sirrus;vm 80;,140,48636,HubHall 5-E
+,141,36229,LowerHub 1-N
+,142,33452,LowerHub 1-S
+,143,17552,LowerHub 1-S
+ca ME_Fortress initHubDisplay:;-zm 1.35=-20=0=0.5;,144,35943,LowerHub 2-S
+,145,27798,North Is. 1-N
+,146,30341,North Is. 1-S
+,147,28101,North Is. 2-N
+,148,30166,North Is. 2-S
+,149,28222,North Is. 3-N
+,150,29888,North Is. 3-S
+,151,28639,North Is. 4-N
+,152,29561,North Is. 4-S
+,153,28915,North Is. 5-N
+,154,29262,North Is. 5-S
+pm AR Water/Wind Mov;vm 150;,155,29105,North Is. IconCloseUp
+pm MU Sirrus;vm 130;,156,32588,S to Hall Shot
+,157,36783,S-Cache 1-E
+,158,36999,S-Cache 1-W
+,159,36399,S-Cache 2-E
+?? ME_RedPage|sc marker=S-Cache 2-W (NoPage);,160,40595,S-Cache 2-W
+?? ME_RedPage|sc marker=S-Cache Chest (noPage);,161,20749,S-Cache Chest
+,162,43451,S-Cache Closed Chest
+,163,44978,S-Cache Out
+,164,37202,S-Cache Wine Rack
+,165,16983,S-Cache Wine Rack Note
+pm MU Sirrus;vm 80;,166,34421,S-Throne 1-S
+,167,19870,S-Throne 2-N
+?? ME_SCacheDoor|sc marker=S-Throne 2-S (CacheOpen);,168,14014,S-Throne 2-S
+?? ME_SCacheDoor|sc marker=S-Throne 3-E (DoorOpen);,169,18568,S-Throne 3-E
+,170,18075,S-Throne 3-N
+?? ME_SCacheDoor|sc marker=S-Throne 3-S (DoorOpen);,171,18811,S-Throne 3-S
+,172,18361,S-Throne 3-W
+,173,2054,S-Throne 4-N
+,174,34198,S-Throne 4-S
+pm MU Sirrus;vm 70;,175,41131,S-Throne 5-N
+,176,18985,S-Throne Bird
+,177,58034,S-Throne Boat
+,178,19260,S-Throne Clock
+,179,57679,S-Throne LadyPainting
+,180,44432,S-Throne Looking in Cache
+,181,19681,S-Throne Minerals
+,182,58740,S-Throne MountainPainting
+,183,10941,S-Throne Music Box
+,184,43824,S-Throne on Throne
+,185,37869,S-Throne Ship & Rocket
+,186,58524,S-Throne SirrusPainting
+,187,58301,S-Throne Spaceship
+?? ME_FacingNorth|sc S-Throne Telescope-N;,188,58930,S-Throne Telescope-SEW
+"?? ME_SCacheDoor|sc marker=S-Throne Throne (DoorOpen),en cache room=YES|en cache room=NO;",189,34002,S-Throne Throne
+,190,7850,South 1-E
+?? ME_SouthStairs|none|sc marker=South 1-N (down);,191,3017,South 1-N
+,192,7993,South 1-S
+,193,7054,South 1-W
+?? ME_SouthStairs|none|sc marker=South 2-N (stairsdown);,194,4421,South 2-N
+,195,7366,South 2-S
+,196,8256,South 3-E
+,197,4850,South 3-N
+?? ME_SouthStairs|none|sc marker=South 3-S (StairsDown);pm AR Water/Wind Mov;vm 150;,198,6858,South 3-S
+,199,7467,South 4-N
+?? ME_SouthStairs|none|sc marker=South 4-S (StairsDown);,200,6591,South 4-S
+,201,57586,South Island Extra-E
+,202,41678,SouthStairs 1-N down
+,203,41939,SouthStairs 2-N down
+,204,42503,SouthStairs 2-S up
+,205,37582,SouthStairs 3-N Cover
+,206,42050,SouthStairs 3-N down
+,207,46649,SouthStairs 3-N Open
+,208,8794,SouthStairs N
+"?? ME_SouthStairs|no |sc stairmark=SouthStairs N-Back (down);-?? ME_SStairDown|ps MR Elect Stairs Dn,ca ME_Fortress playStairsMovie:d;-?? ME_SStairUp|ps MR Elect Stairs Up,ca ME_Fortress playStairsMovie:u;",209,40081,SouthStairs N-Back
+,210,42335,SouthStairs S up
+ca ME_Fortress initCypherLock:;,211,8700,SouthStairs W
+,212,0,none
+in 0.25\go 48777=r;,213,50727,HubHall 0-N
+?? ME_ACacheChest|sc marker=A-Cache 1-E (noPage/open)|sc marker=A-Cache 1-E (noPage);,214,14234,A-Cache 1-E
+-?? ME_ElevGoMid|go 16622;,215,16306,HubControl 1-N
+ca ME_Fortress setElevWindow:;-ca ME_Fortress runElevator:-;,216,50629,Elevator Closed-up

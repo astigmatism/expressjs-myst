@@ -1,0 +1,1 @@
+{"onload":{"preload":{"video":["Intro2_F"],"images":["3\/bg.jpg"]}},"onrendercomplete":{"preload":{"panels":["@4"]}},"content":[{"tag":"video","src":"Intro2_F","autoplay":true,"end":32,"attr":{"width":544,"height":333},"events":{"ended":{"exit":"@4"}}}],"background":"3\/bg.jpg","navigation":[{"width":"544","height":"332","goto":"@4","cursor":"up"}]}

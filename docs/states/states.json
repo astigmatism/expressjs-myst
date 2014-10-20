@@ -1,0 +1,88 @@
+{
+	"DocMarkerSwitch": {
+		"value":"off",
+		"encrypt": true
+	},
+	"GearMarkerSwitch": {
+		"value":"off",
+		"encrypt": true
+	},
+	"VaultControlPanelDigits": {
+		"value": "67",
+		"notes":"when digits are anything invalid, imager goes to no image (default). 67: goes to turning on water.  40 goes to turning on mountain",
+		"update": {
+			"Imager": "off",
+			"ImagerButtonGoesTo": {
+				"default": "@163",
+				"67": "@162",
+				"40": "@164"
+			}
+		}
+	},
+	"Imager":{
+		"value":"water",
+		"notes":"Imager in Vault. This state tells what it is showing",			
+		"update": {
+			"Vault6GoesTo":{
+				"off":"@43",
+				"water": "@27",
+				"mountain": "@54",
+				"marker":"@60"
+			},
+			"Vault5GoesTo": {
+				"off":"@48",
+				"water": "@20",
+				"mountain": "@53",
+				"marker": "@59"
+			},
+			"Vault4GoesTo": {
+				"off": "@47",
+				"water": "@18",
+				"mountain": "@52",
+				"marker": "@58"
+			},
+			"Vault3GoesTo": {
+				"off": "@46",
+				"water": "@16",
+				"mountain": "@51",
+				"marker": "@57"
+			},
+			"Vault2GoesTo": {
+				"off": "@45",
+				"water": "@14",
+				"mountain": "@50",
+				"marker": "@56"
+			},
+			"Vault1GoesTo": {
+				"off": "@44",
+				"water": "@12",
+				"mountain": "@49",
+				"marker": "@55"
+			}
+		}
+	},
+	"ImagerButtonGoesTo": {
+		"notes":"when imager button is pressed, exit to this panel",
+		"value":"@162"
+	},
+	"Vault6GoesTo": {
+		"notes":"[=Vault6GoesTo], closest path to imager",
+		"value":"@27"
+	},
+	"Vault5GoesTo": {
+		"notes":"[=Vault5GoesTo], 2nd closest path to imager",
+		"value":"@20"
+	},
+	"Vault4GoesTo": {
+		"value":"@18"
+	},
+	"Vault3GoesTo": {
+		"value":"@16"
+	},
+	"Vault2GoesTo": {
+		"value":"@14"
+	},
+	"Vault1GoesTo": {
+		"value":"@12"
+	}
+}

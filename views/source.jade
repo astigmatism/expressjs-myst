@@ -1,0 +1,50 @@
+html
+    head
+        title= title
+        script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+        script(type='text/javascript', src='/libraries/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js')
+        link(href='http://fonts.googleapis.com/css?family=Raleway', rel='stylesheet', type='text/css')
+        link(href='http://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet', type='text/css')
+        link(rel='stylesheet', href='/css/source.css', type='text/css', media='all')
+        link(href='/libraries/jquery-ui-1.10.3.custom/css/ui-darkness/jquery-ui-1.10.3.custom.min.css', rel='stylesheet')
+      body
+        h2= name + ':' + id
+        br
+        br
+        .nav
+          img(src='/source/myst/' + name + '.jpeg')
+          - for (var i = 0; i < hotspots.length; ++i) {
+            div(style='width:' + hotspots[i].width + 'px;height:' + hotspots[i].height + 'px;' + (hotspots[i].bottom > 0 ? 'bottom:' + hotspots[i].bottom + 'px;' : 'top:0px;') + (hotspots[i].left > 0 ? 'left:' + hotspots[i].left + 'px;' : ''))= hotspots[i].id
+          - }
+        img(src='/source/myst/' + name + '.jpeg', style='float:left')
+        div(style='clear: both;')
+        br
+        br
+        table
+          tr
+            th ID
+            th Width
+            th Height
+            th Left
+            th Bottom
+            th Goes To
+            th Pic
+            th Name
+            th Event
+            th Commands
+          - for (var i = 0; i < hotspots.length; ++i) {
+            tr
+              td= hotspots[i].id
+              td= hotspots[i].width
+              td= hotspots[i].height
+              td= hotspots[i].left
+              td= hotspots[i].bottom
+              td
+                a(href='/edit/source?id=' + hotspots[i].goto)= hotspots[i].goto + ':' + hotspots[i].gotoname
+              td
+                a(href='/edit/source?id=' + hotspots[i].goto)
+                  img(height='70', src='/source/myst/' + hotspots[i].gotoname + '.jpeg')
+              td= hotspots[i].name
+              td= hotspots[i].event
+              td= hotspots[i].commands
+          - }

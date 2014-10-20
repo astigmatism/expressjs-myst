@@ -1,0 +1,346 @@
+PK,CardID,Image Name,Commands
+1,21776,Beach1-NE,
+2,22034,Beach1-SE,
+3,21716,Beach1-W,?? MY_Gears|sc GeaMarker=Beach1-W (gears-up);ca MY_Clock showClock:clock=Beach1-W (ClockMatrix)=65=66;ca MY_Clock showWheels:upmarker;
+4,22299,Beach1-W/down,?? MY_Gears|sc GeaMarker2=Beach1-W/down (gears up);ca MY_Clock showWheels:marker;
+5,60828,Beach2-E,
+6,56703,Beach2-W,?? MY_CloMarker|sc cloMarker=Beach2-W (switch-on);ca MY_Clock showClock:clock=Beach2-W (ClockMatrix)=65=70;
+7,60452,Beach3-E,
+8,57311,Beach3-W,?? MY_CloMarker|sc CloMarker=Beach3-W (switch-on);ca MY_Clock showClock:clock=Beach3-W (ClockMatrix)=45=91;
+9,60372,Beach4-E,
+10,60085,Beach4-W,"en in=NO;?? MY_CloMarker|sc CloMarker=Beach4-W (switch-on);?? MY_CloDOOn|sc doormarker=Beach4-W (Door/Gear),en in=YES;?? MY_CloDOOff|sc doormarker=Beach4-W (DoorOpen),en in=YES;"
+11,72845,Beach4-W (DoorOpen),
+12,80371,black,"ps transprt1;vm 0;pv full,fade=SirrusLose-F.m4v\go 201;"
+13,80468,black,
+14,81655,black,"ps transprt1;vm 0;pv full,fade=AchenarLose-F.m4v\go 201;"
+15,23444,Black,
+16,59355,MystBoat1-E,
+17,48097,MystBoat1-W,
+18,59122,MystBoat2-E,
+19,57582,MystBoat2-W,
+20,57822,MystBoat3-W,
+21,58250,MystBoat4-W,
+22,58803,Boat5-E,
+23,58602,Boat5-W,
+24,73177,Boat5-W (cover),
+25,77008,Boat5-W (open),
+26,83883,Book BadCover1,
+27,76069,Book BadCover2,
+28,84489,Book BadCover3,
+29,85075,Book BadCover4,
+30,84121,Book BadOpen1,
+31,84241,Book BadOpen2,
+32,84836,Book BadOpen3,
+33,85465,Book BadOpen4,
+34,74738,Book CH 01,ca MY_Library showPage:CH;
+35,74269,Book CH.Cover,
+36,79654,Book FP.Cover,
+37,80097,Book FP.Open,ca MY_Library showPage:Pattern;
+38,75053,Book ME 8,ca MY_Library showPage:ME;
+39,74947,Book ME.Cover,
+40,75735,Book SE 1,
+41,83051,Book SE 13,ca MY_Library showPage:SE;
+42,75389,Book SE.Cover,
+43,73926,Book ST 14,ca MY_Library showPage:ST;
+44,73496,Book ST.Cover,
+45,36854,Cabin1-E,sv MY_CabinDoor=NO;ca MY_Cabin showValveWheel:marker=CabinValveFar=markerGauge=CabinGaugeFar;ca MY_Cabin setFurnaceAudio:2;?? MY_Pilot|pa markerPilot=CabinPilotFar\0=0=11=10\4\0.2\YES;?? MY_CabinFire|pa markerFire=CabinFireFar\60=0=15=50\35\0.1\YES;
+46,36943,Cabin2-E,ca MY_Cabin initValveWheel:marker=array;?? MY_Pilot|pa MarkerPilot=CabinPilotClose\0=0=19=18\2=5\0.1\YES;?? MY_CabinFire|pa markerFire=CabinFire\108=0=27=90\35\0.1\YES;
+47,37341,Cabin2-W,ca MY_Cabin setFurnaceAudio:1;
+48,37618,Cabin3-W,ca MY_Cabin initSafeH:;ca MY_Cabin setFurnaceAudio:3;
+49,37752,Cabin3-W HandleDown,in 1.0\go 37618;
+50,37940,Cabin3-W SafeOpen,zm 1.25=46=50=0.0;?? MY_Matchbook|sc marker=Cabin-MatchboxOpen;
+51,71232,Clock1-E,
+52,70105,Clock1-W,?? MY_GearGate|sc Clock1-W (GateOpen);ca MY_Clock initGears:;
+53,8336,Dock1-E,sv Gl_showIButton=YES;pm BR Seagulls:Water Slosh Mx Mov;vm 180;?? MY_Boat|sc Dock1-E boatup|pa moovMarker=Birds1\800=0=50=124\132\0.1\YES;?? MY_DocMarker|sc DocMarker=Dock1-E (Switch-on);?? MY_GearGate|sc gearMarker=Dock1-E (gearOpen);
+54,77365,Dock1-N,?? MY_DockDoor|sc Dock1-N Open;
+55,2838,Dock1-S,?? MY_Boat|sc Dock1-S BoatUp;
+56,4734,Dock1-W,
+57,2737,Dock2-E,"?? MY_DocMarker|sc DocMarker=Dock2-E (switch-on);?? MY_GearGate|sc gearMarker=Dock2-E (gearOpen);?? MY_VaultOpen|sc marker2=Dock2-E Ped/Open,sv MY_VaultOpen=NO;?? MY_VaultOpenEmpty|sc marker2=Dock2-E Ped/Open/Empty,sv MY_VaultOpenEmpty=NO;"
+58,4495,Dock2-W,?? MY_Boat|sc Dock2-W BoatUp;
+59,5026,DockStairs-N,?? MY_Boat|sc DockStairs-N BoatUp;
+60,87741,Fireplace-Entered,-go 56926=l;
+61,56926,FirePlace1-NE DoorUp,"?? MY_LibStairs|sc marker2=FirePlace1-NE DoorDown w/stairs;?? MY_0RedPage|no |sc marker1=FirePlace1-NE (RedPage);ca MY_Library checkBlastedBooks:FirePlace1-NE DoorUp BurntBook,FirePlace1-NE DoorUp BurntBook;pm MR Elev Room Loud Mov;vm 20;"
+62,61587,FirePlace1-NE LightsOff,in 0.75\ps EL SharpHum\go 63906;
+63,63906,FirePlace1-NE LightsOn,ca MY_Library frplShowHits:;
+64,65888,FirePlace1-NE LightsOff,in 1\ps DR FrplDr Up\go 56926=o;
+65,71909,FirePlace1-SW DoorUp,?? MY_BluePage|sc bluepage=FirePlace1-SW (noBlue);?? MY_RedPage|sc redpage=FirePlace1-SW (noRed);
+66,23753,FirePlace1-SW DoorUp (cover),
+67,28552,FirePlace1-SW DoorUp (open),ca MY_Library playBookMovie:white;
+68,19240,Forest.5-S,?? MY_Boat|sc boatMarker=Forest.5-S (boat up);?? MY_GarMarker|sc GarMarker=Forest.5-S (Switch-on);
+69,18993,Forest.5-W,ca MY_Clock showClock:clock=Forest.5-W (ClockMatrix)=27=28;
+70,18304,Forest1-E,?? MY_MinMarker|sc MinMarker=Forest1-E (switch-on);
+71,17084,Forest1-W,ca MY_Clock showClock:clock=Forest1-W (ClockMatrix)=35=37;
+72,17571,Forest2-NE,?? MY_MinMarker|sc MinMarker=Forest2-NE (switch-on);
+73,18697,Forest2-S,
+74,17948,Forest3-N,
+75,17825,Forest3-S,?? MY_CabMarker|sc CabMarker=Forest3-S (Switch-on);
+76,19652,Forest4-E,?? MY_CabinDoor|sc doormarker=Forest4-E (Door Open);?? MY_CabMarker|sc CabMarker=Forest4-E (switch-on);
+77,38306,Forest4-E (Door Open),
+78,19909,Forest4-N,
+79,21343,Forest4-S,?? MY_CabMarker|sc CabMarker=Forest4-S (Switch-on);?? MY_CabinDoor|sc doormarker=Forest4-S (Door Open);
+80,36553,Forest4-S (Door Open),
+81,21170,Forest4-W,
+82,18553,Forest5-E,
+83,17319,Forest5-W,?? MY_Gears|sc GeaMarker=Forest5-W (gears-up);ca MY_Clock showClock:clock=Forest5-W (ClockMatrix)=41=40;
+84,22764,Forest6-E,
+85,22896,Forest6-W,?? MY_Gears|sc GeaMarker=Forest6-W (gears-up);ca MY_Clock showClock:clock=Forest6-W (ClockMatrix)=52=54;
+86,20226,Forest7-E,?? MY_CabMarker|sc CabMarker=Forest7-E (Switch-on);
+87,20099,Forest7-W,?? MY_Gears|sc GeaMarker=Forest7-W (gears-up);
+88,20863,Forest8-E,?? MY_CabMarker|sc CabMarker=Forest8-E (Switch-on);
+89,20615,Forest8-W,?? MY_Gears|sc GeaMarker=Forest8-W (gears-up);ca MY_Clock showClock:clock=Forest8-W (ClockMatrix)=44=43;
+90,80989,Garden 2-N,?? MY_Boat|sc Garden 2-N BoatUp;
+91,80753,Garden 2-S,?? MY_Boat|sc Garden 2-S BoatUp;
+92,78996,Garden 3-N,?? MY_Boat|sc Garden 3-N BoatUp;
+93,81200,Garden 3-S,?? MY_Boat|sc Garden 3-S BoatUp;?? MY_GarMarker|sc garmarker=Garden 3-S (Switch-On);
+94,82458,Garden 3.5-N,
+95,26459,Garden 3.5-S,?? MY_GarMarker|sc garMarker=Garden 3.5-S (Switch-On);
+96,83270,Garden 4-N,
+97,82706,Garden 4-S,
+98,26663,Garden.5-N,
+99,27005,Garden.5-S,?? MY_Boat|sc boatMarker=Garden.5-S (boat-up);
+100,11521,Garden1-E,
+101,11943,Garden1-N,
+102,12224,Garden1-S,?? MY_PlaMarker|sc PlaMarker=Garden1-S (Switch-on);?? MY_Boat|sc Garden1-S Boat-Up;
+103,11357,Garden1-W,?? MY_Boat|sc boatMarker=Garden1-W (boat-up);
+104,14817,Garden2-E,?? MY_PlaMarker|sc PlaMarker=Garden2-E (Switch-on);
+105,14569,Garden2-W,?? MY_Boat|sc Garden2-W Boat-Up;?? MY_GarMarker|sc GarMarker=Garden2-W (switch-on);
+106,15013,Garden2-W/down,?? MY_Boat|sc Garden2-W/down Boat-Up;
+107,15587,Garden3-E,?? MY_Boat|sc Garden3-E Boat-Up;
+108,15854,Garden3-E/down,?? MY_Boat|sc Garden3-E/down Boat-Up;
+109,15359,Garden3-W,?? MY_GarMarker|sc GarMarker=Garden3-W (switch-on);
+110,16155,Garden3.5-E,?? MY_Boat|sc BoatMarker=Garden3.5-E (boat-up);?? MY_GarMarker|sc GarMarker=Garden3.5-E (switch-on);
+111,15974,Garden3.5-W,
+112,16774,Garden4-E,?? MY_Boat|sc boatMarker=Garden4-E (boat-up);?? MY_GarMarker|sc GarMarker=Garden4-E (Switch-on);
+113,16440,Garden4-W,
+114,40072,GardenPillar1-N,-ca MY_Planetarium checkBoat:;?? MY_Pillar7|sc 7=GardenPillar1-N (on).png|sc 7=GardenPillar1-N (off).png;
+115,33253,GardenPillar2-N,-ca MY_Planetarium checkBoat:;?? MY_Pillar6|sc 6=GardenPillar2-N (on).png|sc 6=GardenPillar2-N (off).png;
+116,39131,GardenPillar3-N,-ca MY_Planetarium checkBoat:;?? MY_Pillar5|sc 5=GardenPillar3-N (on).png|sc 5=GardenPillar3-N (off).png;
+117,39621,GardenPillar4-N,-ca MY_Planetarium checkBoat:;?? MY_Pillar4|sc 4=GardenPillar4-N (on).png|sc 4=GardenPillar4-N (off).png;
+118,40436,GardenPillar5-S,-ca MY_Planetarium checkBoat:;?? MY_Pillar3|sc 3=GardenPillar5-S (on).png|sc 3=GardenPillar5-S (off).png;
+119,33326,GardenPillar6-S,-ca MY_Planetarium checkBoat:;?? MY_Pillar2|sc 2=GardenPillar6-S (on).png|sc 2=GardenPillar6-S (off).png;
+120,39194,GardenPillar7-S,-ca MY_Planetarium checkBoat:;?? MY_Pillar1|sc 1=GardenPillar7-S (on).png|sc 1=GardenPillar7-S (off).png;
+121,39902,GardenPillar8-S,-ca MY_Planetarium checkBoat:;?? MY_Boat|sc boatMarker=GardenPillar8-S (boat-up);?? MY_Pillar8|sc 8=GardenPillar8-S (on).png|sc 8=GardenPillar8-S (off).png;
+122,82170,Gear1-N (up),
+123,10575,Gear1-S,?? MY_Boat|sc boatMarker=Gears1-S (boat-up);?? MY_Boat|sc Gear1-S Boat-Up;
+124,59796,GearGate1,
+125,64050,GearGate2,
+126,43221,GearGate2 (cover),
+127,72560,GearGate2 (open),
+128,78797,Gears1-N,
+129,10973,Gears1-NE,?? MY_GeaMarker|sc geaMarker=Gears1-NE (Switch-On);?? MY_GearGate|sc gearMarker=Gears1-NE (gearOpen);
+130,35918,GenControlRoom1-E,"?? MY_GenIsPowering|pm EL GenRun,vm 150;ca MY_Spaceship showButtons:;ca MY_Spaceship showVoltage:;-zm 1.75=110=0=0.5;"
+131,36329,GenControlRoom1-W,
+132,40799,GenStairs.2-S,
+133,44417,GenStairs.3-N,
+134,44564,GenStairs.5-E,
+135,40600,GenStairs.5-W,
+136,28930,GenStairs0-E,
+137,56481,GenStairs0-S,
+138,33668,GenStairs1-E,
+139,35605,GenStairs1-W,
+140,33976,GenStairs2-S,
+141,44138,GenStairs2-W,
+142,35524,GenStairs3-N,
+143,34228,GenStairs3-S,
+144,34394,GenStairs4-E,
+145,35305,GenStairs4-N,
+146,34663,GenStairs5-E,no button=GenStairs5-E (button);
+147,43558,GenStairs5-E DoorOpen,"?? MY_GenIsPowering|pm EL GenRun,vm 50;in 0.5\ps SW GenLights On\sc marker=GenStairs5-E OpenLight1;in 1.0\ps SW GenLights On\sc marker=GenStairs5-E OpenLight2;in 1.5\ps SW GenLights On\sc marker=GenStairs5-E OpenLight3;"
+148,34888,GenStairs5-W,
+149,43331,GenWallDiagram1-W,
+150,46094,Library.5-E,?? DU_End=win|sc Library.5-E B;
+151,46439,Library1-E,?? MY_LibStairs|sc Library1-E StairsDown;
+152,48298,Library1-N,?? DU_End=win|sc Library1-N B;?? MY_0RedPage|no |sc marker=Library1-N (RedPage);
+153,46739,Library1-NE,"?? MY_LibStairs|sc Library1-NE StairsDown;?? MY_0RedPage|no |sc marker=Library1-NE (RedPage);ca MY_Library checkBlastedBooks:Library1-NE B,Library1-NE B StairsDown;"
+154,75919,Library1-NE Interim,?? DU_End=win|sc Library1-NE B Interim;?? MY_0RedPage|no |sc marker=Library1-NE (RedPage);ps DR LibStairs Down;pa stairs=LibraryStairsDown\548=0=137=102\44\0.1\NO;in 5\ps DR LibStairs Thump\go 46739\pm MR Elev Room Loud Mov\vm 30;
+155,28679,Library1-NW,"?? MY_LibStairs|sc Library1-NW DoorDown;ca MY_Library checkBlastedBooks:Library1-NW B,Library1-NW B DoorDown;"
+156,47448,Library1-S,?? DU_End=win|sc Library1-S B;?? MY_0BluePage|no |sc marker=Library1-S (BluePage);
+157,47833,Library1-SE,"?? MY_LibStairs|sc Library1-SE StairsDown;ca MY_Library checkBlastedBooks:Library1-SE B,Library1-SE B StairsDown;"
+158,76679,Library1-SE StairsDown,?? DU_End=win|sc Library1-SE B StairsDown;ps DR LibStairs Up;pa stairs=LibraryStairsUp\685=0=137=104\-46\0.1\NO;in 5\ps DR LibStairs Thump\go 47833\pm AR Lite Wind Mov\vm 30;
+159,47338,Library1-SW,"?? MY_LibStairs|sc Library1-SW DoorDown;?? MY_0BluePage|no |sc marker=Library1-SW (BluePage);ca MY_Library checkBlastedBooks:Library1-SW B,Library1-SW B DoorDown;"
+160,46851,Library1-W,?? MY_LibStairs|sc Library1-W DoorDown;
+161,48883,Library2-E,?? MY_LibStairs|sc Library2-E StairsDown;
+162,50447,Library2-N,"pm AR Lite Wind Mov;?? DU_End=win|sc Library2-N B,en book=NO;?? MY_0RedPage|no |sc marker=Library2-N (RedPage);"
+163,72326,Library2-N (BookCover),
+164,73249,Library2-N (BookOpen),ca MY_Library playBookMovie:red;
+165,48589,Library2-NE,
+166,59640,Library2-NW,
+167,49518,Library2-S,"pm AR Lite Wind Mov;?? DU_End=win|sc Library2-S B,en book=NO;?? MY_0BluePage|no |sc marker=Library2-S (BluePage);"
+168,70993,Library2-S (BookCover),
+169,72136,Library2-S (BookOpen),ca MY_Library playBookMovie:blue;
+170,49308,Library2-SE,
+171,49781,Library2-SW,
+172,49958,Library2-W,?? MY_LibStairs|sc Library2-W DoorDown;
+173,48938,Library3-E,
+174,50330,Library3-NW,ps EL SharpHum;in 0.5\ca MY_Library initMap:;
+175,53170,LibraryElevator (closed)*,ca MY_Library stopElevatorSound:;sv MY_LibElevLevel1=YES;pm MR Elev Room Loud Mov;vm 25;
+176,63481,LibraryElevator (LightOff),ca MY_Library startElevatorSound:;-?? Gl_zipMode|go 61001=o|pv LibElevator Up-F.m4v\go 61001=n;
+177,65111,ObserveElevator (LightOff),ca MY_Library startElevatorSound:;-?? Gl_zipMode|go 53170=o|pv LibElevator Down-F.m4v\go 53170=o;
+178,52926,LibraryElevator (open)*,
+179,50829,LibraryTunnel1-E,
+180,53543,LibraryTunnel1-E,
+181,54814,LibraryTunnel1-W,
+182,51152,LibraryTunnel2-E,
+183,53974,LibraryTunnel2-E,
+184,54569,LibraryTunnel2-W,
+185,51409,LibraryTunnel3-E,
+186,54046,LibraryTunnel3-E,
+187,54324,LibraryTunnel3-W,
+188,51672,LibraryTunnel4-E,
+189,51830,LibraryTunnel5-E,
+190,52000,LibraryTunnel6-E,
+191,52235,LibraryTunnel7-E,
+192,52656,LibraryTunnel7-E DoorOpen,
+193,53495,LibraryTunnel7-W,
+194,44018,LibraryUp,pm AR Lite Wind Mov;vm 30;
+195,27316,MineShip1-N,
+196,79339,MineShip1-S,
+197,30742,MineShip2-E,
+198,82210,MineShip2-N,
+199,27647,MineShip2-S,
+200,31383,MineShip3-S/Top,ca MY_Spaceship initBreakers:1;
+201,31038,MineShip3-S/Up,
+202,24061,MineShip4-N,
+203,24064,MineShip4-S,
+204,29665,MineShip4.5-S,
+205,29282,MineShip5-N,
+206,30320,MineShip6-N/Top,ca MY_Spaceship initBreakers:2;
+207,29906,MineShip6-N/Up,
+208,23279,Myst Graphics,
+209,62129,Observ1-N,
+210,66387,Observ1-NW,
+211,64325,Observ1-NE,
+212,61232,Observ1-S,
+213,61932,Observ1-S/up,?? MY_ObserveAny|sc marker=Observ1-S/up (Slot);
+214,66650,Observ1.5-NE,
+215,66941,Observ1.5-NW,
+216,68717,Observ1.5-SW,
+217,68606,Observ1.5-SE,
+218,67498,Observ2-N,
+219,67304,Observ2-N/Up,
+220,68289,Observ2-S,
+221,67709,Observ2-SW,
+222,68068,Observ2-SE,
+223,85634,ObservatoryElevEntered,?? MY_LibElevLevel1|in 1\go 52926=l|in 1\go 64906=l;
+224,66100,ObservCodeBoat,
+225,70175,ObservCodeGear,
+226,70509,ObservCodeSpace,?? MY_ObserveShi|sc ObservCodeSpace;?? MY_ObserveDoc|sc ObservCodeBoat;?? MY_ObserveGea|sc ObservCodeGear;?? MY_ObserveCab|sc ObservCodeTree;
+227,70908,ObservCodeTree,
+228,61001,ObservElevator (closed),ca MY_Library stopElevatorSound:;sv MY_LibElevLevel1=NO;pm MU Obser_Elecmot Mix Mov;vm 70;
+229,64906,ObservElevator (open),?? MY_ObserveAny|sc marker=ObservElevator (slot);
+230,86247,ObservPlatform1-E,
+231,62806,ObservPlatform1-N,
+232,63062,ObservPlatform1-N (Down),
+233,62704,ObservPlatform1-S,ca MY_Library clueSlot:;
+234,81698,ObservPlatform1-W,
+235,86555,ObservPlatform2-E,
+236,68940,ObservPlatform2-N,"en mkr=NO;?? MY_ObserveShi|sc mkr=ObservPlatform2-N Space,en mkr=YES;?? MY_ObserveDoc|sc mkr=ObservPlatform2-N Boat,en mkr=YES;?? MY_ObserveGea|sc mkr=ObservPlatform2-N Gear,en mkr=YES;?? MY_ObserveCab|sc mkr=ObservPlatform2-N Tree,en mkr=YES;"
+237,69458,ObservPlatform2-S,
+238,69720,ObservPlatform2-S (Down),
+239,87373,ObservPlatform2-W,
+240,62394,ObservStairs1-S,?? MY_ObserveShi|sc marker=ObservStairs1-S (Slot);?? MY_ObserveGea|sc marker=ObservStairs1-S (Slot);?? MY_ObserveDoc|sc marker=ObservStairs1-S (Slot);?? MY_ObserveCab|sc marker=ObservStairs1-S (Slot/Tree);
+241,69187,ObservStairs2-N,?? MY_ObserveShi|sc marker=ObservStairs2-N Space;?? MY_ObserveDoc|sc marker=ObservStairs2-N Boat;?? MY_ObserveGea|sc marker=ObservStairs2-N Gear;?? MY_ObserveCab|sc marker=ObservStairs2-N Tree;
+242,78339,Planetarium Up,
+243,38607,Planetarium1-N LightsOff,
+244,30633,Planetarium1-N LightsOn,
+245,38896,Planetarium1-S LightsOff,
+246,30143,Planetarium1-S LightsOn,
+247,41827,Planetarium2-N LightsOff,
+248,42482,Planetarium2-N LightsOn,
+249,41124,Planetarium2-S LightsOff,
+250,42183,Planetarium2-S LightsOn,
+251,41328,Planetarium3-N LightsOff,
+252,42659,Planetarium3-N LightsOn,
+253,41677,Planetarium3-Up LightsOff,-zm 1.5=0=0=0.5;sc Month=Planetarium3-Up Sliders;sc Day=Planetarium3-Up Sliders;sc Year=Planetarium3-Up Sliders;sc Time=Planetarium3-Up Sliders;ca MY_Planetarium showDate:;ca MY_Planetarium showStarMap:;
+254,42800,Planetarium3-Up LightsOn,-zm 1.5=0=0=0.5;sc Month=Planetarium3-Up Sliders;sc Day=Planetarium3-Up Sliders;sc Year=Planetarium3-Up Sliders;sc Time=Planetarium3-Up Sliders;ca MY_Planetarium showDate:;ca MY_Planetarium showStarMap:Light;
+255,5726,Platform0.5-S,?? MY_GearGate|sc gearMarker=Platform0.5-S (gearOpen);
+256,5956,Platform0.5-W,?? MY_Boat|sc Platform0.5-W BoatUp*;?? MY_DocMarker|sc docmarker=Platform0.5-W (switch-on);ca MY_Planetarium checkBlastedBoat:down=docmarker=Platform0.5-W (up/off);
+257,6278,Platform1-E,?? MY_GearGate|sc gearMarker=Platform1-E (gearOpen);
+258,6551,Platform1-S,?? MY_DocMarker|sc docMarker2=Platform1-S (switch-on);?? MY_Boat|sc Platform1-S BoatUp*;ca MY_Planetarium checkBlastedBoat:down=docMarker2=Platform1-S (up/down);
+259,6798,Platform1-W,?? MY_Boat|sc Platform1-W BoatUp*;
+260,7040,Platform2-E,?? MY_DocMarker|sc DocMarker=Platform2-E (switch-on);?? MY_GearGate|sc gearMarker=Platform2-E (gearOpen);?? MY_Boat|sc Platform2-E BoatUp*;
+261,7191,Platform2-S,?? MY_Boat|sc Platform2-S BoatUp;
+262,7516,Platform2-W,
+263,7902,Platform3-N *,
+264,55730,MystSpaceShip1-N,
+265,55329,MystSpaceShip1-S,
+266,55938,MystSpaceShip2-N,sc N1=SpaceShip2-N Sliders;sc N2=SpaceShip2-N Sliders;sc N3=SpaceShip2-N Sliders;sc N4=SpaceShip2-N Sliders;sc N5=SpaceShip2-N Sliders;ca MY_Spaceship showSliders:;-?? MY_SpaceSolved|ca MY_Spaceship restartBookLoop:|zm 3.0=240=0=0.5;
+267,56157,MystSpaceShip2-S,-zm 2.5=1.50=0=0=0.5;no keymask=SpaceShip2-S (KeysDown)=85=72=59=24;
+268,65713,MystSpaceship3-N,
+269,63509,MystSpaceShip3-S,?? MY_ShiMarker|sc shiMarker=None|sc shiMarker=SpaceShip3-S (Switch-off);
+270,55197,SpaceShipEnter,en EnterShip=NO;sv MY_SpaceshipDoor=NO;
+271,78050,SpaceShipExit-Interior,?? MY_ShiMarker|sc shiMarker=NULL|sc shiMarker=SpaceShipExit-Interior (Off);
+272,12527,SpaceShipPath1-E,
+273,12581,SpaceShipPath1-S,?? MY_Boat|sc boatMarker=SpaceShipPath1-S (boat-up);
+274,13071,SpaceShipPath2-E,?? MY_ShiMarker|sc ShiMarker=SpaceShipPath2-E (Switch-on);
+275,12994,SpaceShipPath2-W,
+276,13372,SpaceShipPath3-E,?? MY_ShiMarker|sc ShiMarker=SpaceShipPath3-E (Switch-on);
+277,14084,SpaceShipPath3-W,
+278,13712,SpaceShipPath4-E,?? MY_ShiMarker|sc ShiMarker=SpaceShipPath4-E (Switch-On);
+279,14069,SpaceShipPath4-W,
+280,10316,StairsGear2-E,?? MY_GeaMarker|sc geaMarker=StairsGear2-E (Switch-on);?? MY_GearGate|sc gearMarker=StairsGear2-E (gearOpen);
+281,11197,StairsGear2-N,?? MY_Boat|sc StairsGear2-N BoatUp*;
+282,31619,TreeGate1-E,ca MY_Cabin showTreeGate:TreeGate=TreeGate1-E;
+283,32948,TreeGate1-W,
+284,31932,TreeGate2-E,ca MY_Cabin showTreeGate:treeGate=TreeGate2-E;
+285,32604,TreeGate2-W,
+286,32178,TreeGate3-E,ca MY_Cabin showTreeGate:TreeGate=TreeGate3-E;
+287,83585,TreeGate3-Eup 1,ca MY_Cabin showTreeGate:treeGate=TreeGate3-Eup;
+288,32403,TreeGate3-W,
+289,57929,TreeGateEntered,in 1\go 45039=l;
+290,45039,TreeGateIn*,ca MY_Cabin showTreeGate:TreeMarker=TreeGate;
+291,71480,TreeGateLookDown,ca MY_Cabin showTreeGate:TreeGateLookDown;
+292,45222,TreeRoom2-N,
+293,46046,TreeRoom2-S,ca MY_Cabin showTreeGate:treeMarker=TreeRoom2-S;ca MY_Cabin showValveWheel:marker=TreeRoomValve ;
+294,45561,TreeRoom3-N,
+295,77210,TreeRoom3-N (cover),
+296,77588,TreeRoom3-N (open)*,
+297,45802,TreeRoom3-S,?? MY_TreeGateBelowGround|ca MY_Cabin showTreeGate:treeMarker=TreeRoom3-S;ca MY_Cabin showValveWheel:marker=TreeRoomFarValve ;
+298,5234,Vault 1-In,"?? MY_VaultWater|sc Vault 1-In Water,pa mooVMarker=Vault 1 Water\232=0=8=44\30\0.25\YES;"
+299,89364,Vault 1-Out,?? MY_Boat|sc Vault 1-Out BoatUp;
+300,25094,Vault 2-In,"?? MY_VaultWater|sc Vault 2-In Water,pa mooVMarker=Vault 2 Water\464=0=16=56\30\0.25\YES;"
+301,89294,Vault 2-Out,?? MY_Boat|sc Vault 2-Out BoatUp;
+302,79408,Vault 3-In,"?? MY_VaultWater|sc Vault 3-In Water,pa moovMarker=Vault 3 Water\944=0=16=56\60\0.25\YES;"
+303,88832,Vault 3-Out,?? MY_Boat|sc Vault 3-Out BoatUp;
+304,86000,Vault 4-In,"?? MY_VaultWater|sc Vault 4-In Water,pa moovMarker=Vault 4 Water\812=0=28=88\60\0.25\YES;"
+305,88671,Vault 4-Out,
+306,89742,Vault 5-E*,
+307,86355,Vault 5-In,"?? MY_VaultWater|sc Vault 5-In Water,pa moovMarker=Vault 5 Water\132=0=12=124\60\0.25\YES;"
+308,88345,Vault 5-Out,
+309,90296,Vault 5-W,
+310,87276,Vault 6-E,
+311,86826,Vault 6-In,"vm 10;no pm stop;?? MY_VaultWater|sc Vault 6-In Water,pa mooVMarker=Vault WaterLoop\952=0=68=236\60\0.1\YES;"
+312,88101,Vault 6-Out,
+313,87971,Vault 6-W,
+314,90595,Vault ControlPanel,"?? MY_VaultPanelOpen|ps SW Spaceship Lever,go 90877;"
+315,90877,Vault ControlPanel,no Down=Vault ControlPanel (Down)*;sv MY_VaultPanelOpen=NO;zm 1.75=0=0=0.0;in 0.50\ps SW Spaceship Lever\sc marker=Vault ControlPanel (Sunk)*;in 0.75\ps MR Mech Bsmt Stairs;in 1.0\sc marker=Vault ControlPanel (Open)*\ca MY_Library showVaultDigits:;
+316,90101,Vault ControlPanel Page,
+317,8079,Woodpath1-N  *,?? MY_PlaMarker|sc PlaMarker=Woodpath1-N (Switch-on);
+318,8631,Woodpath1-N Crumpled,
+319,25971,Woodpath1-N Note,?? MY_PlaMarker|sc PlaMarker=Woodpath1-N (Switch-on);
+320,2123,WoodPath1-S,?? MY_Boat|sc WoodPath1-S BoatUp;?? MY_DocMarker|sc DocMarker=WoodPath1-S (switch-on);
+321,3604,Woodpath2-N,?? MY_PlaMarker|sc PlaMarker=Woodpath2-N (Switch-on);
+322,9648,Woodpath2-S  *,?? MY_Boat|sc Woodpath2-S BoatUp *;
+323,28321,Woodpath2-S Crumpled,
+324,91471,Woodpath2-S Note,?? MY_Boat|sc Woodpath2-S BoatUp Note;
+325,8794,Woodpath3-E,?? MY_PlaMarker|sc PlaMarker=Woodpath3-E (Switch-on);
+326,9189,Woodpath3.5-E,"en EnterPla=NO;?? MY_PlaMarker|sc PlaMarker=WoodPath3.5-E (Switch-On)=40=40=80=80;?? MY_PlaDOOn|sc DoorClosed=WoodPath3.5-E (open/on),en DoorClosed=NO,en EnterPla=YES;?? MY_PlaDOOff|sc DoorClosed=WoodPath3.5-E (open/off),en DoorClosed=NO,en EnterPla=YES;"
+327,9457,Woodpath3.5-W *,
+328,9960,Woodpath4-N,
+329,10238,Woodpath4-S  *,?? MY_PlaMarker|sc PlaMarker=WoodPath4-S (Switch-on);?? MY_Boat|sc Woodpath4-S BoatUp *;
+330,100,black,"sv Gl_showIButton=NO;pm stop;pv full,touch=CyanLogo-F.m4v\go 105=c;"
+331,150,black,-in 4.0\ps transprt1\go 8336;
+332,110,black,"-in 0.5\pv full,touch=Intro-F.m4v^go 120;"
+333,120,IntroBookDown,pm Intro Wind;vm 180;
+334,130,IntroBook (end),pm Intro Wind;vm 180;
+335,86827,Vault 6-In,?? MY_VaultWater|sc Vault 6-In Water;-ca MY_Library swVaultImager:;
+336,201,Credits1,?? DU_End=win|pm MU QuitGame Mov|pm MU QuitGame2 Mov;vm 180;-in 6.0\go 202=c;
+337,202,Credits2,-in 6.0\go 203=c;
+338,203,Credits3,-in 6.0\go 204=c;
+339,204,Credits4,-in 6.0\go 205=c;
+340,205,Credits5,-in 6.0\go 206=e;
+341,206,black,"-?? DU_End=win|ps transprt1,go 44018=e;"
+342,28553,FirePlace1-SW DoorUp (Atrus1),
+343,28554,FirePlace1-SW DoorUp (Atrus2),
+344,65889,FirePlace1-SW DoorDown,ps MR FrplRotate End;ca MY_Library frplRotEnd:;in 1\ps DR FrplDr Up\go 71909=o;
+345,105,sunlogo,in 3.0\go 110=e;

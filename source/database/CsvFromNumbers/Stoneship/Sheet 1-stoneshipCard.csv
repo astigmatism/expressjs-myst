@@ -1,0 +1,187 @@
+1,56279,Achenar-Bed,?? ST_BluePage|sc page=Achenar-Bed (NoPage);
+2,57160,Achenar-Drawers,ca ST_AchenarRoom resetDresser:;
+3,56690,Achenar-Dresser,
+4,57056,Achenar-DresserHolo,
+5,54156,Achenar-MaskL,
+6,54808,Achenar-MaskR,
+7,56057,Achenar-Ribs,
+8,49743,Achenar-TornNote,zm 1.6=0=75=0.25;
+9,54498,Achenar1-N,ca ST_Blink setBuzzerVol:0;
+10,56476,Achenar1-S,?? ST_SonLight=on|none|sc marker=Achenar1-S (dark);
+11,55640,Achenar2-E,
+12,54590,Achenar2-N,
+13,55464,Achenar2-S,?? ST_SonLight=on|none|sc marker=Achenar2-S (dark);
+14,55086,Achenar2-W,?? ST_BluePage|sc page=Achenar2-W (noPage);
+15,25833,black,
+16,3004,Boat1-E,?? ST_SonLight=on|none|sc marker2=Boat1-E (dark);pm AR Water!Wind Mov;vm 175;
+17,4785,Boat1-N,pm AR Water!Wind Mov;vm 175;
+18,4355,Boat1-S,pm AR Water!Wind Mov;vm 175;
+19,5066,Boat1-W,?? ST_Pump=1|sc marker=Boat1-W (dry);pm AR Water!Wind Mov;vm 175;
+20,7277,Boat2-E,
+21,8154,Boat2-N dry,?? ST_SonLight=on|none|sc Boat2-N dark/dry;
+22,7674,Boat2-S,?? ST_Pump=1|sc marker=Boat2-S (dry);
+23,7846,Boat2-W,?? ST_Pump=1|sc marker=Boat2-W (dry);pm AR Water!Wind Mov;vm 175;
+24,8277,Boat3-E,
+25,8569,Boat3-W,
+26,8776,Boat4-E,pm AR Water!Wind Mov;vm 175;
+27,9375,Boat4-N dry,?? ST_SonLight=on|none|sc Boat4-N dark/dry;
+28,14498,Boat4-S,
+29,9010,Boat4-W,
+30,53791,BookRoom Book,
+31,53406,BookRoom Book (cover),
+32,53570,BookRoom Book (open),
+33,18133,BookRoom2-down,?? ST_DadLight|sc BookRoom2-down (light);
+34,22222,BookRoom2-up,?? ST_DadLight|sc BookRoom2-up (light);
+35,18382,BookRoom3-down,?? ST_DadLight|sc BookRoom3-down (light);
+36,21969,BookRoom3-up,?? ST_DadLight|sc BookRoom3-up (light);
+37,18589,BookRoom4-down,?? ST_DadLight|sc BookRoom4-down (light);
+38,21345,BookRoom4-up,?? ST_DadLight|sc BookRoom4-up (light);
+39,18724,BookRoom5-down,?? ST_DadLight|sc BookRoom5-down (light);
+40,20949,BookRoom5-up,?? ST_DadLight|sc BookRoom5-up (light);
+41,19153,BookRoom6-down,?? ST_DadLight|sc BookRoom6-down (light);
+42,20695,BookRoom6-up,?? ST_DadLight|sc BookRoom6-up (light);
+43,23473,BookRoom7-E (book),
+44,15664,BookRoom7-E (down light),
+45,19700,BookRoom7-E,?? ST_DadLight|sc BookRoom7-E (light)|en none=NO;vm 200;
+46,20098,BookRoom7-N,?? ST_DadLight|sc BookRoom7-N (light);
+47,19768,BookRoom7-S,?? ST_DadLight|sc BookRoom7-S (light);
+48,20478,BookRoom7-W,?? ST_DadLight|sc BookRoom7-W (light);
+49,38245,Bow-E,
+50,24007,Bow-N,
+51,25561,Bow-S,
+52,38423,Bow-W,?? ST_SonLight=on|none|sc marker2=Bow-W (dark);
+53,38754,domeTunnel exit,
+54,44006,DomeTunnel-exit,ca ST_Blink initBlink:44006=black=DomeTunnel-exit (blue);vm 10;ca ST_Blink setBuzzerVol:200;
+55,41476,DomeTunnel-exit,ca ST_Blink initBlink:41476=black=DomeTunnel-exit (blue);vm 10;ca ST_Blink setBuzzerVol:200;
+56,41982,DomeTunnel1-in,"ca ST_Blink initBlink:41982=black=DomeTunnel1-in (blue);?? ST_DadLight|sc DomeTunnel1-in Spot,pm MU Compass!Bubbles On Mov|pm MU Compass!Bubbles Off;vm 25;ca ST_Blink setBuzzerVol:150;"
+57,39189,DomeTunnel1-in,"ca ST_Blink initBlink:39189=black=DomeTunnel1-in (blue);?? ST_DadLight|sc DomeTunnel1-in Spot,pm MU Compass!Bubbles On Mov|pm MU Compass!Bubbles Off;vm 25;ca ST_Blink setBuzzerVol:150;"
+58,43543,DomeTunnel1-out,ca ST_Blink initBlink:43543=black=DomeTunnel1-out (blue);vm 25;ca ST_Blink setBuzzerVol:150;
+59,41220,DomeTunnel1-out,ca ST_Blink initBlink:41220=black=DomeTunnel1-out (blue);vm 25;ca ST_Blink setBuzzerVol:150;
+60,42238,DomeTunnel2-in,ca ST_Blink initBlink:42238=black=DomeTunnel2-in (blue);?? ST_DadLight|sc DomeTunnel2-in Spot;vm 50;ca ST_Blink setBuzzerVol:100;
+61,39587,DomeTunnel2-in,ca ST_Blink initBlink:39587=black=DomeTunnel2-in (blue);?? ST_DadLight|sc DomeTunnel2-in Spot;vm 50;ca ST_Blink setBuzzerVol:100;
+62,43330,DomeTunnel2-out,ca ST_Blink initBlink:43330=black=DomeTunnel2-out (blue);vm 50;ca ST_Blink setBuzzerVol:100;
+63,41079,DomeTunnel2-out,ca ST_Blink initBlink:41079=black=DomeTunnel2-out (blue);vm 50;ca ST_Blink setBuzzerVol:100;
+64,43252,DomeTunnel3-out,ca ST_Blink initBlink:43252=black=DomeTunnel3-out (blue);vm 100;ca ST_Blink setBuzzerVol:50;
+65,40849,DomeTunnel3-out,ca ST_Blink initBlink:40849=black=DomeTunnel3-out (blue);vm 100;ca ST_Blink setBuzzerVol:50;
+66,42851,DomeTunnel4-out,ca ST_Blink initBlink:42851=DomeTunnel4-out (dark)=DomeTunnel4-out (blue);vm 150;ca ST_Blink setBuzzerVol:25;
+67,40560,DomeTunnel4-out,ca ST_Blink initBlink:40560=DomeTunnel4-out (dark)=DomeTunnel4-out (blue);?? ST_DadLight|sc DomeTunnel4-out Spot;vm 150;ca ST_Blink setBuzzerVol:25;
+68,40420,DomeTunnel5-compass (dark),ca ST_Blink initCompass:;ca ST_Blink setBuzzerVol:25;
+69,42296,DomeTunnelA3-in (dark),?? ST_SonLight=on|sc DomeTunnelA3-in;?? ST_DadLight|sc DomeTunnelA3-in Spot;vm 100;ca ST_Blink setBuzzerVol:50;
+70,42593,DomeTunnelA4-in (dark),?? ST_SonLight=on|sc DomeTunnelA4-in;?? ST_DadLight|sc DomeTunnelA4-in Spot;vm 150;ca ST_Blink setBuzzerVol:25;
+71,39710,DomeTunnelC3-in,?? ST_SonLight=on|none|sc DomeTunnelC3-in (dark);?? ST_DadLight|sc DomeTunnelC3-in Spot;vm 100;ca ST_Blink setBuzzerVol:50;
+72,40070,DomeTunnelC4-in (dark),?? ST_SonLight=on|sc DomeTunnelC4-in;?? ST_DadLight|sc DomeTunnelC4-in Spot;vm 150;ca ST_Blink setBuzzerVol:25;
+73,14325,Lighthouse1-N,
+74,13528,Lighthouse1-S,?? ST_Hatch=locked|none|sc marker2=Lighthouse1-S (open);?? ST_Pump=3|sc Lighthouse1-S dry;ca ST_Chest correction:Lighthouse1-S up;
+75,27062,Lighthouse10,?? ST_ChestValve|sc marker2=Lighthouse10 (open);
+76,13829,Lighthouse2-N,?? ST_Pump=3|sc Lighthouse2-N dry;
+77,21190,Lighthouse2-N down,?? ST_Pump=3|sc Lighthouse2-N down dry;
+78,19307,Lighthouse2-S down,?? ST_Pump=3|sc Lighthouse2-S down dry;ca ST_Chest correction:atChest;
+79,13801,Lighthouse2-S up,"?? ST_Hatch=open|sc marker1=Lighthouse2-S up (open);?? ST_Hatch=closed|sc marker3=Lighthouse2-S up (nolock),en marker2=NO;"
+80,21557,Lighthouse3-down,
+81,26625,Lighthouse3-up,
+82,26476,Lighthouse4-up,
+83,23638,Lighthouse5-down,
+84,25863,Lighthouse6-up,
+85,24202,Lighthouse7-down,?? ST_Key=floor|sc marker=Lighthouse7-down (key);?? ST_Hatch=locked|none|sc marker3=Lighthouse7-down (lock);
+86,24357,Lighthouse9-down,?? ST_ChestValve|sc marker=Lighthouse9-down (open);?? ST_Key=floor|sc marker2=Lighthouse9-down (key);?? ST_Hatch=locked|none|sc marker3=Lighthouse9-down (lock);
+87,25223,Lighthouse9-up (interim),
+88,2347,LighthouseTop1-Battery,sc level=LighthouseTop1-Battery (level);ca ST_Power setPowerLevelMeter:;
+89,2260,LighthouseTop1-N,ca ST_Power initGenerator:;
+90,27714,LighthouseTop1-S,?? ST_Hatch=closed|sc marker=LighthouseTop1-S (closed);
+91,28050,LighthouseTop1-S down,
+92,7102,Path/Lighthouse1-N,
+93,5269,Path/Lighthouse1-S,
+94,6838,Path/Lighthouse2-N,
+95,5411,Path/Lighthouse2-S,
+96,6623,Path/Lighthouse3-N,
+97,5866,Path/Lighthouse3-S,?? ST_Pump=3|sc marker=Path/Lighthouse3-S (dry);ca ST_Chest correction:marker2=Path/Lighthouse3-S (up);
+98,6006,Path/Lighthouse3-S/Up,
+99,6360,Path/Lighthouse4-S,?? ST_Pump=3|sc Path/Lighthouse4-S dry;ca ST_Chest correction:Path/Lighthouse4-S up;pm AR Water/Wind Mov;vm 175;
+100,11348,Path/Umbrella1-N,
+101,13219,Path/Umbrella1-S,
+102,11707,Path/Umbrella2-N,
+103,13046,Path/Umbrella2-S,
+104,11823,Path/Umbrella3-N,
+105,12578,Path/Umbrella3-S,
+106,12033,Path/Umbrella4-N,pm AR Water!Wind Mov;vm 175;?? ST_Pump=1|sc sw1=Path/Umbrella4-N Switch=0=0=52=54;?? ST_Pump=2|sc sw2=Path/Umbrella4-N Switch=0=52=52=54;?? ST_Pump=3|sc sw3=Path/Umbrella4-N Switch=1=104=52=56;
+107,12443,Path/Umbrella4-S,
+108,53126,Sirrus-Bed,
+109,51439,Sirrus-Desk,
+110,51501,Sirrus-Desk2,"?? ST_SirrusDesk|en open=NO,sc marker=Sirrus-Desk2 (open)|en drawer=NO,en close=NO;"
+111,51730,Sirrus-Dresser,
+112,52184,Sirrus-Dresser2,ca ST_SirrusRoom resetDresser:;
+113,52299,Sirrus-SphereEast,
+114,52563,Sirrus-SphereWest,
+115,52816,Sirrus-Syringe,
+116,46193,Sirrus1-N,ca ST_Blink setBuzzerVol:0;
+117,47876,Sirrus1-S,?? ST_SonLight=on|none|sc marker=Sirrus1-S (dark);
+118,50580,Sirrus2-E,
+119,50415,Sirrus2-N,
+120,50899,Sirrus2-S,?? ST_SonLight=on|none|sc marker=Sirrus2-S (Dark);
+121,51138,Sirrus2-W,
+122,57878,TelescopeBG,ca ST_Telescope startBlinkTimer:;
+123,16772,Tunnel1-down,
+124,23242,Tunnel1-up,?? ST_SonLight=on|none|sc marker2=Tunnel1-up (dark);pm EV Drip II Mov;vm 50;
+125,16949,Tunnel2-down,
+126,22922,Tunnel2-up,
+127,17160,Tunnel3-down,
+128,22530,Tunnel3-up,
+129,17526,Tunnel4-down (doorclose),pm EV Drip II Mov;vm 140;en enter=NO;
+130,17724,Tunnel4-down (doorOpen),?? ST_DadLight|sc Tunnel4-down (doorOpen) (light);
+131,22387,Tunnel4-up,
+132,32358,TunnelA1-down (dark_dry),?? ST_SonLight=on|sc TunnelA3-down;vm 50;
+133,36189,TunnelA1-up,?? ST_SonLight=on|none|sc TunnelA1-up (dark);vm 50;
+134,32643,TunnelA2-down,?? ST_SonLight=on|none|sc TunnelA2-down (dark);vm 60;
+135,35952,TunnelA2-up (dark),?? ST_SonLight=on|sc TunnelA2-up;vm 60;ca ST_Blink setBuzzerVol:0;
+136,32964,TunnelA3-down,?? ST_SonLight=on|none|sc TunnelA3-down (dark);vm 70;ca ST_Blink setBuzzerVol:10;
+137,35832,TunnelA3-up (dark),?? ST_SonLight=on|sc TunnelA3-up;vm 70;ca ST_Blink setBuzzerVol:10;
+138,33179,TunnelA4-down,?? ST_SonLight=on|none|sc TunnelA4-down (dark);vm 80;ca ST_Blink setBuzzerVol:25;
+139,35436,TunnelA4-up (dark),?? ST_SonLight=on|sc TunnelA4-up;vm 80;ca ST_Blink setBuzzerVol:25;
+140,33288,TunnelA5-down,ca ST_Blink initBlink:33288=black=TunnelA5-down (blue);vm 90;ca ST_Blink setBuzzerVol:50;
+141,35205,TunnelA5-up (dark),?? ST_SonLight=on|sc TunnelA5-up;vm 90;ca ST_Blink setBuzzerVol:50;
+142,33592,TunnelA6-down,ca ST_Blink initBlink:33592=black=TunnelA6-down (blue);ca ST_Blink initTunnelDoor:A-DN;vm 100;ca ST_Blink setBuzzerVol:100;
+143,34998,TunnelA6-up,?? ST_SonLight=on|none|sc black;vm 100;ca ST_Blink setBuzzerVol:100;
+144,34007,TunnelA7-down,?? ST_SonLight=on|none|sc black;vm 100;ca ST_Blink setBuzzerVol:100;
+145,34573,TunnelA7-up,ca ST_Blink initBlink:34573=black=TunnelA7-up (blue);ca ST_Blink initTunnelDoor:A-UP;vm 100;ca ST_Blink setBuzzerVol:100;
+146,34261,TunnelA8-down (dark),vm 90;ca ST_Blink setBuzzerVol:50;
+147,34559,TunnelA8-up,ca ST_Blink initBlink:34559=black=TunnelA8-up (blue);vm 90;ca ST_Blink setBuzzerVol:50;
+148,31581,TunnelAC6.5-><door,ca ST_Blink initBlink:31581=black=TunnelAC6.5-><door (blue);vm 120;ca ST_Blink setBuzzerVol:200;
+149,31805,TunnelAC6.5-><door,ca ST_Blink initBlink:31805=black=TunnelAC6.5-><door (blue);vm 120;ca ST_Blink setBuzzerVol:200;
+150,44083,TunnelAC6.5-door,ca ST_Blink initBlink:44083=black=TunnelAC6.5-door (blue);vm 120;ca ST_Blink setBuzzerVol:200;
+151,39028,TunnelAC6.5-door,ca ST_Blink initBlink:39028=black=TunnelAC6.5-door;vm 120;ca ST_Blink setBuzzerVol:200;
+152,28272,"TunnelC1,3,5-down (dry)",?? ST_SonLight=on|none|sc TunnelC1-down (dark_dry);vm 50;
+153,32230,TunnelC1-up (dark),?? ST_SonLight=on|sc TunnelC1-up;vm 50;
+154,28578,TunnelC2-down,?? ST_SonLight=on|none|sc TunnelC2-down (dark);vm 60;
+155,31259,TunnelC2-up (dark),?? ST_SonLight=on|sc TunnelC2-up;vm 60;ca ST_Blink setBuzzerVol:0;
+156,28820,TunnelC3-down,?? ST_SonLight=on|none|sc TunnelC3-down (dark);vm 70;ca ST_Blink setBuzzerVol:10;
+157,31136,TunnelC3-up (dark),?? ST_SonLight=on|sc TunnelC3-up;vm 70;ca ST_Blink setBuzzerVol:10;
+158,36440,TunnelC4-down,?? ST_SonLight=on|none|sc TunnelC4-down (dark);vm 80;ca ST_Blink setBuzzerVol:25;
+159,30890,TunnelC4-up (dark),?? ST_SonLight=on|sc TunnelC4-up;vm 80;ca ST_Blink setBuzzerVol:25;
+160,36761,TunnelC5-down,ca ST_Blink initBlink:36761=black=TunnelC5-down (blue);vm 90;ca ST_Blink setBuzzerVol:50;
+161,30666,TunnelC5-up (dark),?? ST_SonLight=on|sc TunnelC5-up;vm 90;ca ST_Blink setBuzzerVol:50;
+162,29150,TunnelC6-down,ca ST_Blink initBlink:29150=black=TunnelC6-down (blue);ca ST_Blink initTunnelDoor:C-DN;vm 100;ca ST_Blink setBuzzerVol:100;
+163,30263,TunnelC6-up,?? ST_SonLight=on|none|sc black;vm 100;ca ST_Blink setBuzzerVol:100;
+164,29287,TunnelC7-down,?? ST_SonLight=on|none|sc black;vm 100;ca ST_Blink setBuzzerVol:100;
+165,30057,TunnelC7-up,ca ST_Blink initBlink:30057=black=TunnelC7-up (blue);ca ST_Blink initTunnelDoor:C-UP;vm 100;ca ST_Blink setBuzzerVol:100;
+166,29531,TunnelC8-down,?? ST_SonLight=on|none|sc TunnelC8-down (dark);vm 90;en doormarker=NO;ca ST_Blink setBuzzerVol:50;
+167,29732,TunnelC8-up,ca ST_Blink initBlink:29732=black=TunnelC8-up (blue);vm 90;ca ST_Blink setBuzzerVol:50;
+168,44466,WoodPath.5-down,
+169,15443,WoodPath1-down,
+170,9713,WoodPath1-up,
+171,15190,WoodPath2-down,
+172,9774,WoodPath2-up,
+173,14901,WoodPath3-down,
+174,10143,WoodPath3-up,
+175,14622,WoodPath4-down,
+176,10287,WoodPath4-up,
+177,16564,WoodPath5-down,
+178,10747,WoodPath5-up,
+179,16326,WoodPath6-down,
+180,10756,WoodPath6-up,
+181,16033,WoodPath7-down,
+182,11193,WoodPath7-up,
+183,9376,Boat4-N,?? ST_SonLight=on|none|sc Boat4-N dark;
+184,32359,TunnelA1-down,?? ST_SonLight=on|none|sc TunnelA1-down (dark);
+185,34262,TunnelA8-down,vm 90;
+186,8155,Boat2-N,?? ST_SonLight=on|none|sc Boat2-N dark;
+187,28273,TunnelC1-down,?? ST_SonLight=on|none|sc TunnelC1-down (dark);

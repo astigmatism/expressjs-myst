@@ -1,0 +1,818 @@
+1,-,56279,0,0,319,480,544,332,0,0,enabled,o,go 55086;
+2,-,56279,0,35,169,381,432,176,0,40,enabled,,
+3,page,56279,43,175,93,125,142,97,45,199,enabled,,?? ST_BluePage|ca ST_AchenarRoom returnPage: |ca X_Global grabPage:ST_BluePage;go 56279;
+4,-,57160,0,0,266,109,124,277,0,0,enabled,l,go 56690;
+5,m7,57160,11,132,109,212,241,114,12,150,enabled,,
+6,close7,57160,20,139,17,197,224,18,21,158,enabled,,ca ST_AchenarRoom resetDresser:7;
+7,open7,57160,102,132,17,195,221,18,107,150,enabled,,ca ST_AchenarRoom openDrawer:7;
+8,m6,57160,13,123,120,229,260,125,14,140,enabled,,
+9,close6,57160,23,132,16,213,242,17,24,150,enabled,,ca ST_AchenarRoom resetDresser:6;
+10,open6,57160,113,123,19,212,241,20,118,140,enabled,,ca ST_AchenarRoom openDrawer:6;
+11,-,57160,48,77,185,260,295,193,50,88,disabled,,
+12,-,57160,0,367,266,111,126,277,0,416,enabled,r,go 56690;
+13,m5,57160,11,109,133,256,291,139,12,124,enabled,,
+14,close5,57160,26,118,15,239,271,16,28,134,enabled,,ca ST_AchenarRoom resetDresser:5;
+15,open5,57160,125,109,18,224,254,19,131,124,enabled,,ca ST_AchenarRoom openDrawer:5;
+16,m4,57160,15,93,137,289,328,143,16,106,enabled,,
+17,close4,57160,24,97,20,273,310,21,25,110,enabled,,ca ST_AchenarRoom resetDresser:4;
+18,open4,57160,133,93,18,290,329,19,139,106,enabled,,ca ST_AchenarRoom openDrawer:4;
+19,m3,57160,24,82,146,307,348,152,25,93,enabled,,
+20,close3,57160,22,87,29,304,345,31,23,99,enabled,,ca ST_AchenarRoom resetDresser:3;
+21,open3,57160,147,82,22,279,317,23,153,93,enabled,,ca ST_AchenarRoom openDrawer:3;
+22,m2,57160,1,38,193,398,452,201,2,44,enabled,,
+23,close2,57160,24,58,35,353,401,37,25,66,enabled,,ca ST_AchenarRoom resetDresser:2;
+24,open2,57160,165,37,28,349,396,30,172,42,enabled,,ca ST_AchenarRoom openDrawer:2;
+25,m1,57160,18,22,205,458,520,214,19,25,enabled,,
+26,close1,57160,25,30,40,416,472,42,27,34,enabled,,ca ST_AchenarRoom resetDresser:1;
+27,open1,57160,185,22,37,367,416,39,193,25,enabled,,ca ST_AchenarRoom openDrawer:1;
+28,halfPage,57160,49,209,57,34,39,60,51,237,enabled,o,go 49743;
+29,-,57160,233,0,86,480,544,90,243,0,enabled,,
+30,-,57160,257,128,62,196,223,65,268,146,enabled,o,go 57056;
+31,-,56690,0,0,319,480,544,332,0,0,enabled,o,go 55640;pm MU Achenar Rm Mov;vm 180;
+32,-,56690,248,188,42,94,107,44,259,214,enabled,o,go 57056;
+33,-,56690,25,128,223,207,235,233,27,146,enabled,o,go 57160;pm MU Achenar Rm Mov;vm 120;
+34,-,56690,261,369,58,89,101,61,272,419,enabled,o,go 54808;
+35,-,56690,257,30,62,71,81,65,268,34,enabled,o,go 54156;
+36,-,57056,0,0,319,480,544,332,0,0,enabled,o,ca ST_AchenarRoom leavingCard:;go 56690;pm MU Achenar Rm Mov;vm 255;
+37,down,57056,0,0,88,480,544,92,0,0,enabled,d,ca ST_AchenarRoom leavingCard:;go 57160;pm MU Achenar Rm Mov;vm 255;
+38,-,57056,57,120,147,224,254,153,60,136,enabled,,
+39,marker,57056,64,122,36,45,51,38,67,139,enabled,,
+40,limit,57056,33,123,68,217,246,71,35,140,enabled,,cb ST_AchenarRoom pullHandleBegan:\pullHandleMoved:limit\pullHandleEnded:;
+41,marker2,57056,180,168,138,116,132,144,188,191,enabled,,
+42,button,57056,126,217,23,26,30,24,132,246,enabled,,
+43,-,54156,22,0,297,480,544,310,23,0,enabled,,go pop;
+44,-,54156,48,165,239,158,180,249,50,187,enabled,,
+45,-,54808,0,0,319,480,544,332,0,0,enabled,,go pop;
+46,-,54808,45,161,244,159,181,254,47,183,enabled,,
+47,-,56057,0,0,319,480,544,332,0,0,enabled,o,go 54590;
+48,-,56057,6,187,278,105,119,290,7,212,enabled,,
+49,-,56057,7,27,70,163,185,73,8,31,enabled,,
+50,-,49743,0,0,319,480,544,332,0,0,enabled,o,go 57160;
+51,-,49743,55,127,206,106,121,215,58,144,enabled,,
+52,-,54498,0,41,319,397,450,332,0,47,enabled,o,go 54590;pm MU Achenar Rm Mov;vm 255;
+53,right,54498,0,437,319,42,48,332,0,496,enabled,r,go 56476;
+54,-,54498,21,464,152,15,17,159,22,526,enabled,o,go 55640;pm MU Achenar Rm Mov;vm 255;
+55,left,54498,0,0,319,42,48,332,0,0,enabled,l,go 56476;
+56,-,54498,0,0,107,124,141,112,0,0,enabled,o,go 55086;pm MU Achenar Rm Mov;vm 255;
+57,marker,56476,7,156,278,169,192,290,8,177,enabled,,
+58,left,56476,0,0,319,157,178,332,0,0,enabled,l,go 54498;
+59,-,56476,1,163,280,163,185,292,2,185,enabled,o,go 34559;pm EV Drip II Mov;vm 90;in 1\ps DR FrplDr Up;sv ST_TunnelDoor=NO;
+60,right,56476,0,322,319,157,178,332,0,365,enabled,r,go 54498;
+61,right,55640,0,341,319,138,157,332,0,387,enabled,r,go 55464;
+62,left,55640,0,0,319,138,157,332,0,0,enabled,l,go 54590;
+63,-,55640,0,159,200,171,194,209,0,181,enabled,o,go 56690;pm MU Achenar Rm Mov;vm 180;
+64,-,55640,166,127,71,45,51,74,173,144,enabled,o,go 54156;
+65,-,55640,166,320,71,45,51,74,173,363,enabled,o,go 54808;
+66,left,54590,0,0,319,140,159,332,0,0,enabled,l,go 55086;
+67,right,54590,0,339,319,140,159,332,0,385,enabled,r,go 55640;
+68,-,54590,0,157,271,167,190,283,0,178,enabled,o,go 56057;
+69,marker,55464,32,188,186,103,117,194,34,214,enabled,,
+70,right,55464,0,352,319,127,144,332,0,399,enabled,r,go 55086;
+71,left,55464,0,0,319,127,144,332,0,0,enabled,l,go 55640;
+72,-,55464,0,162,251,156,177,262,0,184,enabled,o,go 56476;pm MU Achenar Rm Mov;vm 140;
+73,page,55086,81,210,22,52,59,23,85,238,enabled,,
+74,right,55086,0,354,319,125,142,332,0,402,enabled,r,go 54590;
+75,left,55086,0,0,319,125,142,332,0,0,enabled,l,go 55464;
+76,-,55086,17,97,123,303,344,128,18,110,enabled,o,go 56279;
+77,marker2,3004,71,147,179,66,75,187,74,167,enabled,,
+78,right,3004,0,392,319,87,99,332,0,445,enabled,r,go 4355;
+79,left,3004,0,0,319,92,105,332,0,0,enabled,l,go 4785;
+80,-,3004,38,230,202,134,152,211,40,261,enabled,o,go 7277;
+81,-,3004,89,103,181,127,144,189,93,117,enabled,o,?? ST_Pump=2|go 8154|go 8155;
+82,qbow,3004,141,296,48,46,53,50,147,336,enabled,o,go 7277;
+83,right,4785,0,379,319,100,114,332,0,430,enabled,r,go 3004;
+84,left,4785,0,0,319,82,93,332,0,0,enabled,l,go 5066;
+85,-,4785,46,125,161,141,160,168,48,142,enabled,o,go 11348;
+86,qpum,4785,141,189,66,58,66,69,147,215,enabled,o,go 11348;
+87,left,4355,0,0,319,37,42,332,0,0,enabled,l,go 3004;
+88,right,4355,0,375,319,104,118,332,0,425,enabled,r,go 5066;
+89,-,4355,58,211,221,166,189,230,61,240,enabled,o,go 5269;
+90,-,4355,62,30,150,78,89,157,65,34,enabled,o,go 7277;
+91,qlig,4355,138,312,53,36,41,56,144,354,enabled,o,go 5269;
+92,qbow,4355,138,30,39,22,25,41,144,34,enabled,o,go 7277;
+93,qbow left,4355,138,6,39,25,29,41,144,7,enabled,o,go 3004;
+94,right,5066,0,370,319,109,124,332,0,420,enabled,r,go 4785;
+95,left,5066,0,0,319,109,124,332,0,0,enabled,l,go 4355;
+96,marker,5066,39,200,92,82,93,96,41,227,enabled,,
+97,down1,5066,18,186,127,104,118,133,19,211,enabled,o,"?? ST_Pump=1|go 16772,pm EV Drip II Mov,vm 100;"
+98,qdad1,5066,72,227,31,25,29,33,75,258,enabled,o,"?? ST_Pump=1|go 16772,pm EV Drip II Mov,vm 100;"
+99,right,7277,0,373,319,106,121,332,0,423,enabled,r,go 7674;
+100,left,7277,0,0,319,123,140,332,0,0,enabled,l,?? ST_Pump=2|go 8154|go 8155;
+101,-,7277,9,125,269,230,261,280,10,142,enabled,o,go 8277;
+104,left,8154,0,0,319,112,127,332,0,0,enabled,l,go 7846;
+105,right,8154,0,358,319,112,127,332,0,406,enabled,r,go 7277;
+107,-,8154,0,147,319,183,208,332,0,167,enabled,o,?? ST_Pump=2|go 28272|go 28273;pm EV Drip II Mov;vm 50;
+108,qSirD,8154,99,198,45,36,41,47,104,225,enabled,o,?? ST_Pump=2|go 28272|go 28273;pm EV Drip II Mov;vm 50;
+109,marker,7674,19,387,59,90,102,62,20,439,enabled,,
+110,right,7674,0,415,319,64,73,332,0,471,enabled,r,go 7846;
+111,left,7674,0,0,319,141,160,332,0,0,enabled,l,go 7277;
+112,-,7674,0,313,160,166,189,167,0,355,enabled,o,go 5066;
+113,-,7674,65,157,89,150,170,93,68,178,enabled,o,go 5269;
+114,marker,7846,13,0,67,84,96,70,14,0,enabled,,
+115,left,7846,0,0,319,67,76,332,0,0,enabled,l,go 7674;
+116,-,7846,15,0,139,126,143,145,16,0,enabled,o,go 5066;
+117,right,7846,0,387,319,92,105,332,0,439,enabled,r,?? ST_Pump=2|go 8154|go 8155;
+118,-,7846,59,176,132,213,242,138,62,200,enabled,o,go 11348;
+119,right,8277,0,380,319,99,113,332,0,431,enabled,r,go 8569;
+120,left,8277,0,0,319,99,113,332,0,0,enabled,l,go 8569;
+121,-,8277,5,99,236,223,253,246,6,113,enabled,o,go 8776;
+122,right,8569,0,381,319,97,110,332,0,432,enabled,r,go 8277;
+123,left,8569,0,1,319,97,110,332,0,2,enabled,l,go 8277;
+124,-,8569,0,111,270,267,303,281,0,126,enabled,o,go 7846;
+125,right,8776,0,375,319,104,118,332,0,425,enabled,r,go 14498;
+126,left,8776,0,0,319,86,98,332,0,0,enabled,l,?? ST_Pump=2|go 9375|go 9376;
+127,-,8776,29,86,244,232,263,254,31,98,enabled,o,go 9713;
+128,qtel,8776,161,86,69,84,96,72,168,98,enabled,o,go 9713;
+132,-,9375,0,137,319,200,227,332,0,156,enabled,o,pm EV Drip II Mov;vm 50;go 32358;
+133,right,9375,0,360,319,118,134,332,0,408,enabled,r,go 8776;
+134,left,9375,0,7,319,118,134,332,0,8,enabled,l,go 9010;
+135,qAchD,9375,106,246,44,37,42,46,111,279,enabled,o,pm EV Drip II Mov;vm 50;go 32358;
+136,left,14498,0,1,319,110,125,332,0,2,enabled,l,go 8776;
+137,right,14498,0,369,319,110,125,332,0,419,enabled,r,go 9010;
+138,-,14498,0,111,294,259,294,306,0,126,enabled,o,go 38245;
+139,left,9010,0,0,319,110,125,332,0,0,enabled,l,go 14498;
+140,-,9010,6,131,293,228,259,305,7,149,enabled,o,go 8569;
+141,right,9010,0,352,319,127,144,332,0,399,enabled,r,?? ST_Pump=2|go 9375|go 9376;
+142,qste4,9010,124,259,63,68,78,66,130,294,enabled,o,go 8569;
+143,marker,53791,196,140,28,10,12,30,204,159,enabled,,
+144,-,53406,0,0,319,480,544,332,0,0,enabled,o,go 23473;
+145,-,53406,11,146,295,189,215,307,12,166,enabled,o,go 53570;
+146,-,53570,0,0,319,480,544,332,0,0,enabled,o,go 23473;
+147,-,53570,9,67,298,344,390,311,10,76,enabled,,
+148,marker,53570,166,277,80,112,127,84,173,314,enabled,,ca X_Linking linkToAge:iMystDB;
+149,-,18133,4,147,203,179,203,212,5,167,enabled,o,go 18382;vm 100;
+150,right,18133,0,340,319,139,158,332,0,386,enabled,r,go 22222;
+151,left,18133,0,0,319,139,158,332,0,0,enabled,l,go 22222;
+152,-,22222,0,99,320,252,286,333,0,113,enabled,o,go 22387;pm EV Drip II Mov;vm 100;in 1\ps DR FrplDr Up;sv ST_TunnelDoorD=NO;
+153,right,22222,0,334,319,142,161,332,0,379,enabled,r,go 18133;
+154,left,22222,0,0,319,142,161,332,0,0,enabled,l,go 18133;
+155,-,18382,0,82,246,302,343,256,0,93,enabled,o,go 18589;vm 125;
+156,left,18382,0,0,319,126,143,332,0,0,enabled,l,go 21969;
+157,right,18382,0,410,320,71,81,333,0,465,enabled,r,go 21969;
+158,-,21969,10,152,297,174,198,310,11,173,enabled,o,go 22222;vm 75;
+159,right,21969,0,339,319,135,153,332,0,385,enabled,r,go 18382;
+160,left,21969,0,3,319,135,153,332,0,4,enabled,l,go 18382;
+161,-,18589,0,76,236,285,323,246,0,87,enabled,o,go 18724;vm 150;
+162,left,18589,0,0,319,113,129,332,0,0,enabled,l,go 21345;
+163,right,18589,0,362,319,113,129,332,0,411,enabled,r,go 21345;
+164,-,21345,0,131,301,210,238,314,0,149,enabled,o,go 21969;vm 100;
+165,right,21345,0,339,319,140,159,332,0,385,enabled,r,go 18589;
+166,left,21345,0,0,319,140,159,332,0,0,enabled,l,go 18589;
+167,-,18724,0,106,271,276,313,283,0,121,enabled,o,go 19153;vm 175;
+168,right,18724,0,372,320,112,127,333,0,422,enabled,r,go 20949;
+169,left,18724,0,4,319,112,127,332,0,5,enabled,l,go 20949;
+170,qDadD,18724,171,149,63,82,93,66,178,169,enabled,o,go 19153;vm 175;
+171,-,20949,0,110,320,313,355,333,0,125,enabled,o,go 21345;vm 125;
+172,right,20949,0,426,319,53,61,332,0,483,enabled,r,go 18724;
+173,left,20949,0,0,319,110,125,332,0,0,enabled,l,go 18724;
+174,-,19153,0,136,245,208,236,255,0,155,enabled,o,go 19700;vm 200;
+175,right,19153,0,351,320,139,158,333,0,398,enabled,r,go 20695;
+176,left,19153,0,0,319,139,158,332,0,0,enabled,l,go 20695;
+177,-,20695,0,96,320,283,321,333,0,109,enabled,o,go 20949;vm 150;
+178,right,20695,0,370,320,126,143,333,0,420,enabled,r,go 19153;
+179,left,20695,0,0,319,126,143,332,0,0,enabled,l,go 19153;
+180,-,23473,0,0,319,480,544,332,0,0,enabled,o,in 1\ps cGas;pv BookRoom Down-F.m4v\go 15664=n\vm 200;
+181,-,23473,147,213,76,59,67,80,153,242,enabled,o,go 53406;
+182,none,15664,0,7,319,467,530,332,0,8,enabled,o,go 19700;vm 200;
+183,table,15664,67,140,157,215,244,164,70,159,enabled,o,in 1\ps cGas;pv BookRoom Up-F.m4v\go 23473=n\vm 250;
+184,book,15664,151,216,70,52,59,73,158,245,disabled,,
+185,right,19700,0,335,320,142,161,333,0,380,enabled,r,go 19768;
+186,left,19700,0,5,319,142,161,332,0,6,enabled,l,go 20098;
+187,none,19700,0,136,61,219,249,64,0,155,enabled,o,go 15664;vm 250;
+188,right,20098,24,340,295,130,148,307,25,386,enabled,r,go 19700;
+189,left,20098,0,6,319,153,174,332,0,7,enabled,l,go 20478;
+190,left,19768,0,6,319,100,114,332,0,7,enabled,l,go 19700;
+191,right,19768,0,322,319,153,174,332,0,365,enabled,r,go 20478;
+192,-,20478,0,77,319,170,193,332,0,88,enabled,o,go 20695;vm 175;
+193,right,20478,0,366,319,113,129,332,0,415,enabled,r,go 20098;
+194,left,20478,0,0,319,76,87,332,0,0,enabled,l,go 19768;
+195,qDad2,20478,193,168,100,77,88,105,201,191,enabled,o,go 20695;vm 175;
+196,right,38245,0,352,319,127,144,332,0,399,enabled,r,go 25561;
+197,left,38245,0,0,319,127,144,332,0,0,enabled,l,go 24007;
+198,right,24007,0,358,319,121,138,332,0,406,enabled,r,go 38245;
+199,left,24007,0,0,319,121,138,332,0,0,enabled,l,go 38423;
+200,-,24007,38,67,198,120,136,207,40,76,enabled,o,go 9713;
+201,-,24007,181,0,94,110,125,98,189,0,enabled,o,go 9713;
+202,qtel,24007,218,0,37,33,38,39,227,0,enabled,o,go 9713;
+203,left,25561,0,0,319,117,133,332,0,0,enabled,l,go 38245;
+204,right,25561,0,345,319,135,153,332,0,391,enabled,r,go 38423;
+205,qste4 right,25561,141,435,26,25,29,28,147,493,enabled,o,go 38423;
+206,right,38423,0,385,319,94,107,332,0,437,enabled,r,go 24007;
+207,left,38423,0,0,319,94,107,332,0,0,enabled,l,go 25561;
+208,marker2,38423,81,188,170,60,68,177,85,214,enabled,o,?? ST_Pump=2|go 9375|go 9376;
+209,-,38423,66,94,186,82,93,194,69,107,enabled,o,go 9010;
+210,-,38423,50,382,161,97,110,168,53,433,enabled,o,go 9713;
+211,qtel right,38423,242,426,23,37,42,24,252,483,enabled,o,go 24007;
+212,-,44006,0,0,319,480,544,332,0,0,enabled,o,ca ST_Blink killBlinkTimer:;go 43543;
+213,none,44006,44,235,241,114,130,251,46,267,enabled,o,ca ST_Blink killBlinkTimer:;go 30263;pm EV Drip II Mov;vm 100;
+214,none,44006,45,133,242,104,118,252,47,151,enabled,o,ca ST_Blink killBlinkTimer:;go 29287;pm EV Drip II Mov;vm 100;
+215,-,41476,0,0,319,480,544,332,0,0,enabled,o,ca ST_Blink killBlinkTimer:;go 41220;
+216,none,41476,42,237,241,105,119,251,44,269,enabled,o,ca ST_Blink killBlinkTimer:;go 34007;pm EV Drip II Mov;vm 100;
+217,none,41476,42,132,241,105,119,251,44,150,enabled,o,ca ST_Blink killBlinkTimer:;go 34998;pm EV Drip II Mov;vm 100;
+218,-,41982,0,161,268,161,183,279,0,183,enabled,o,ca ST_Blink killBlinkTimer:;go 42238;
+219,right,41982,0,338,319,141,160,332,0,384,enabled,r,ca ST_Blink killBlinkTimer:;go 41220;
+220,left,41982,0,0,319,147,167,332,0,0,enabled,l,ca ST_Blink killBlinkTimer:;go 41220;
+221,qdom1,41982,184,222,56,39,45,59,192,252,enabled,o,ca ST_Blink killBlinkTimer:;go 42238;
+222,-,39189,0,171,275,147,167,287,0,194,enabled,o,ca ST_Blink killBlinkTimer:;go 39587;
+223,right,39189,0,342,319,137,156,332,0,388,enabled,r,ca ST_Blink killBlinkTimer:;go 43543;
+224,left,39189,0,0,319,142,161,332,0,0,enabled,l,ca ST_Blink killBlinkTimer:;go 43543;
+225,qDom2,39189,171,216,73,45,51,76,178,245,enabled,o,ca ST_Blink killBlinkTimer:;go 39587;
+226,-,43543,61,172,123,126,143,128,64,195,enabled,o,ca ST_Blink killBlinkTimer:;go 44006;
+227,right,43543,0,315,319,162,184,332,0,357,enabled,r,ca ST_Blink killBlinkTimer:;go 39189;
+228,left,43543,0,1,319,162,184,332,0,2,enabled,l,ca ST_Blink killBlinkTimer:;go 39189;
+229,-,41220,56,173,120,128,146,125,59,197,enabled,o,ca ST_Blink killBlinkTimer:;go 41476;
+230,right,41220,0,325,319,154,175,332,0,369,enabled,r,ca ST_Blink killBlinkTimer:;go 41982;
+231,left,41220,0,0,319,162,184,332,0,0,enabled,l,ca ST_Blink killBlinkTimer:;go 41982;
+232,-,42238,0,160,266,160,182,277,0,182,enabled,o,ca ST_Blink killBlinkTimer:;go 42296;
+233,right,42238,0,331,319,148,168,332,0,376,enabled,r,ca ST_Blink killBlinkTimer:;go 41079;
+234,left,42238,0,0,319,141,160,332,0,0,enabled,l,ca ST_Blink killBlinkTimer:;go 41079;
+235,qdom1,42238,171,217,67,46,53,70,178,246,enabled,o,ca ST_Blink killBlinkTimer:;go 42296;
+236,-,39587,0,185,279,109,124,291,0,210,enabled,o,ca ST_Blink killBlinkTimer:;go 39710;
+237,right,39587,0,331,319,148,168,332,0,376,enabled,r,ca ST_Blink killBlinkTimer:;go 43330;
+238,left,39587,0,0,319,148,168,332,0,0,enabled,l,ca ST_Blink killBlinkTimer:;go 43330;
+239,qDom2,39587,166,217,75,53,61,79,173,246,enabled,o,ca ST_Blink killBlinkTimer:;go 39710;
+240,-,43330,0,148,275,189,215,287,0,168,enabled,o,ca ST_Blink killBlinkTimer:;go 43543;
+241,right,43330,0,347,319,132,150,332,0,394,enabled,r,ca ST_Blink killBlinkTimer:;go 39587;
+242,left,43330,0,0,319,148,168,332,0,0,enabled,l,ca ST_Blink killBlinkTimer:;go 39587;
+243,qDomB,43330,147,216,76,57,65,80,153,245,enabled,o,ca ST_Blink killBlinkTimer:;go 43543;
+244,-,41079,0,180,273,124,141,285,0,204,enabled,o,ca ST_Blink killBlinkTimer:;go 41220;
+245,right,41079,0,327,319,152,173,332,0,371,enabled,r,ca ST_Blink killBlinkTimer:;go 42238;
+246,left,41079,0,0,319,170,193,332,0,0,enabled,l,ca ST_Blink killBlinkTimer:;go 42238;
+247,qdomA,41079,133,216,85,66,75,89,139,245,enabled,o,ca ST_Blink killBlinkTimer:;go 41220;
+248,-,43252,0,177,261,135,153,272,0,201,enabled,o,ca ST_Blink killBlinkTimer:;go 43330;
+249,right,43252,0,331,319,142,161,332,0,376,enabled,r,ca ST_Blink killBlinkTimer:;go 39710;
+250,left,43252,0,6,319,142,161,332,0,7,enabled,l,ca ST_Blink killBlinkTimer:;go 39710;
+251,qDomB,43252,174,223,50,38,44,53,182,253,enabled,o,ca ST_Blink killBlinkTimer:;go 43330;
+252,-,40849,0,157,266,171,194,277,0,178,enabled,o,ca ST_Blink killBlinkTimer:;go 41079;
+253,right,40849,0,299,319,180,204,332,0,339,enabled,r,ca ST_Blink killBlinkTimer:;go 42296;
+254,left,40849,0,0,319,169,192,332,0,0,enabled,l,ca ST_Blink killBlinkTimer:;go 42296;
+255,qdomA,40849,170,218,64,47,54,67,177,248,enabled,o,ca ST_Blink killBlinkTimer:;go 41079;
+256,center,42851,0,132,320,214,243,333,0,150,enabled,o,go 43252;
+257,right,42851,0,356,320,124,141,333,0,404,enabled,r,go 40070;
+258,left,42851,0,5,319,124,141,332,0,6,enabled,l,go 40070;
+259,qDomB,42851,186,222,44,37,42,46,194,252,enabled,o,go 43252;
+260,center,40560,0,132,320,214,243,333,0,150,enabled,o,ca ST_Blink killBlinkTimer:;go 40849;
+261,right,40560,0,353,319,123,140,332,0,401,enabled,r,ca ST_Blink killBlinkTimer:;go 42593;
+262,left,40560,0,0,319,123,140,332,0,0,enabled,l,ca ST_Blink killBlinkTimer:;go 42593;
+263,qdomA,40560,182,224,53,37,42,56,190,254,enabled,o,ca ST_Blink killBlinkTimer:;go 40849;
+264,up,40420,0,0,319,480,544,332,0,0,enabled,,ca ST_Blink leaveCompass:;
+265,-,40420,78,317,147,39,45,153,82,360,enabled,,zm -1.0=0=0=0.5;en SW=YES;en NW=YES;en NE=YES;en SE=YES;
+266,-,40420,57,281,189,46,53,197,60,319,enabled,,zm -1.0=0=0=0.5;en SW=YES;en NW=YES;en NE=YES;en SE=YES;
+267,-,40420,40,181,231,119,135,241,42,206,enabled,,zm -1.0=0=0=0.5;en SW=YES;en NW=YES;en NE=YES;en SE=YES;
+268,-,40420,67,143,175,43,49,183,70,163,enabled,,zm -1.0=0=0=0.5;en SW=YES;en NW=YES;en NE=YES;en SE=YES;
+269,-,40420,88,126,131,26,30,137,92,143,enabled,,zm -1.0=0=0=0.5;en SW=YES;en NW=YES;en NE=YES;en SE=YES;
+270,1,40420,251,237,18,10,12,19,262,269,enabled,,ca ST_Blink compassButton:1;
+271,2,40420,251,255,16,10,12,17,262,289,enabled,,ca ST_Blink compassButton:2;
+272,3,40420,245,272,18,11,13,19,255,309,enabled,,ca ST_Blink compassButton:3;
+273,4,40420,239,288,16,10,12,17,249,327,enabled,,ca ST_Blink compassButton:4;
+274,5,40420,229,303,15,10,12,16,239,344,enabled,,ca ST_Blink compassButton:5;
+275,6,40420,218,315,16,12,14,17,227,357,enabled,,ca ST_Blink compassButton:6;
+276,7,40420,204,327,15,12,14,16,213,371,enabled,,ca ST_Blink compassButton:7;
+277,8,40420,186,336,15,12,14,16,194,381,enabled,,ca ST_Blink compassButton:8;
+278,9,40420,168,339,15,12,14,16,175,385,enabled,,ca ST_Blink compassButton:9;
+279,10,40420,148,340,16,12,14,17,155,386,enabled,,ca ST_Blink compassButton:10;
+280,11,40420,126,337,18,12,14,19,132,382,enabled,,ca ST_Blink compassButton:11;
+281,12,40420,109,324,21,17,20,22,114,368,enabled,,ca ST_Blink compassButton:12;
+282,13,40420,92,315,20,15,17,21,96,357,enabled,,ca ST_Blink compassButton:13;
+283,14,40420,76,299,20,12,14,21,80,339,enabled,,ca ST_Blink compassButton:14;
+284,15,40420,65,279,19,12,14,20,68,317,enabled,,ca ST_Blink compassButton:15;
+285,16,40420,57,256,20,13,15,21,60,291,enabled,,ca ST_Blink compassButton:16;
+286,17,40420,57,233,18,11,13,19,60,265,enabled,,ca ST_Blink compassButton:17;
+287,18,40420,59,210,21,11,13,22,62,238,enabled,,ca ST_Blink compassButton:18;
+288,19,40420,68,187,20,12,14,21,71,212,enabled,,ca ST_Blink compassButton:19;
+289,20,40420,78,167,23,15,17,24,82,190,enabled,,ca ST_Blink compassButton:20;
+290,21,40420,96,153,19,12,14,20,100,174,enabled,,ca ST_Blink compassButton:21;
+291,22,40420,113,139,19,16,19,20,118,158,enabled,,ca ST_Blink compassButton:22;
+292,23,40420,132,133,19,14,16,20,138,151,enabled,,ca ST_Blink compassButton:23;
+293,24,40420,153,131,17,13,15,18,160,149,enabled,,ca ST_Blink compassButton:24;
+294,25,40420,171,131,19,14,16,20,178,149,enabled,,ca ST_Blink compassButton:25;
+295,26,40420,188,138,18,13,15,19,196,157,enabled,,ca ST_Blink compassButton:26;
+296,27,40420,205,144,16,13,15,17,214,164,enabled,,ca ST_Blink compassButton:27;
+297,28,40420,219,157,17,12,14,18,228,178,enabled,,ca ST_Blink compassButton:28;
+298,29,40420,231,169,18,13,15,19,241,192,enabled,,ca ST_Blink compassButton:29;
+299,30,40420,241,185,16,12,14,17,251,210,enabled,,ca ST_Blink compassButton:30;
+300,31,40420,246,201,17,13,15,18,256,228,enabled,,ca ST_Blink compassButton:31;
+301,32,40420,250,219,18,10,12,19,261,249,enabled,,ca ST_Blink compassButton:32;
+302,-,42296,0,155,295,168,191,307,0,176,enabled,o,go 42593;
+303,right,42296,0,337,319,142,161,332,0,382,enabled,r,go 40849;
+304,left,42296,20,0,299,149,169,312,21,0,enabled,l,go 40849;
+305,-,42593,27,5,255,150,170,266,29,6,enabled,o,go 42851;
+306,right,42593,0,371,319,101,115,332,0,421,enabled,r,go 40560;
+307,down,42593,0,158,75,173,197,79,0,180,enabled,d,ca ST_Blink setCompassPopCard:42593;go 40420;
+308,-,39710,0,165,278,172,195,290,0,187,enabled,o,go 40070;
+309,right,39710,0,348,319,131,149,332,0,395,enabled,r,go 43252;
+310,left,39710,21,0,298,124,141,311,22,0,enabled,l,go 43252;
+311,down,40070,0,144,82,192,218,86,0,164,enabled,d,ca ST_Blink setCompassPopCard:40070;go 40420;
+312,-,40070,2,320,285,150,170,297,3,363,enabled,o,go 40560;
+313,left,40070,0,0,319,112,127,332,0,0,enabled,l,go 42851;
+314,right,14325,0,351,319,128,146,332,0,398,enabled,r,?? ST_Pump=3|go 21557|go 13528;
+315,left,14325,0,3,319,128,146,332,0,4,enabled,l,go 13528;
+316,-,14325,0,121,320,243,276,333,0,138,enabled,o,?? ST_Key=held|sv ST_Key=floor;pm AR Water!Wind Mov;vm 175;go 6623;
+317,right,14325,0,349,76,130,148,80,0,396,enabled,r,go 21557;
+318,marker2,13528,249,173,33,118,134,35,260,197,enabled,,
+319,marker3,13528,0,50,73,149,169,76,0,57,enabled,,
+320,-,13528,126,140,193,176,200,201,132,159,enabled,o,go 13801;
+321,right,13528,0,359,319,118,134,332,0,407,enabled,r,go 14325;
+322,left,13528,0,0,319,118,134,332,0,0,enabled,l,go 14325;
+323,marker,13528,0,0,60,401,455,63,0,0,enabled,,
+324,-,13528,0,120,130,196,223,136,0,136,enabled,o,go 19307;
+325,down,13528,0,0,67,195,221,70,0,0,enabled,d,?? ST_Pump=3|go 21557|go 19307;
+326,marker2,27062,0,85,63,63,72,66,0,97,enabled,,
+327,-,27062,0,0,319,480,544,332,0,0,enabled,o,go 24357;
+328,-,27062,31,97,257,322,365,268,33,110,enabled,,
+329,marker,27062,0,85,64,63,72,67,0,97,enabled,q,ca ST_Chest turnChestValve:;
+330,marker,13829,0,0,71,402,456,74,0,0,enabled,,
+331,right,13829,142,373,177,105,119,185,148,423,enabled,r,go 13801;
+332,left,13829,0,0,319,99,113,332,0,0,enabled,l,go 13801;
+333,-,13829,0,151,320,187,212,333,0,172,enabled,o,go 14325;
+334,right,13829,0,368,161,111,126,168,0,418,enabled,r,go 19307;
+335,down,13829,0,25,57,440,499,60,0,29,enabled,d,go 21190;
+336,-,13829,0,298,37,56,64,39,0,338,enabled,o,?? ST_Pump=3|go 21557;
+337,marker,21190,0,0,230,479,543,240,0,0,enabled,,
+338,up,21190,123,4,196,471,534,204,128,5,enabled,u,go 13829;
+339,-,21190,0,283,250,166,189,261,0,321,enabled,o,?? ST_Pump=3|go 21557|go 13829;
+340,marker,19307,0,0,158,480,544,165,0,0,enabled,,
+341,marker2,19307,7,96,210,226,257,219,8,109,enabled,,
+342,up,19307,112,347,205,128,146,214,117,394,enabled,u,"go 13801;?? ST_ChestOpen|sv ST_ChestOpen=NO,in 1\ps Dr Keylock II;"
+343,-,19307,0,288,118,191,217,123,0,327,enabled,o,"go 13528;?? ST_ChestOpen|sv ST_ChestOpen=NO,in 1\ps Dr Keylock II;"
+344,left,19307,0,0,319,125,142,332,0,0,enabled,l,"go 13829;?? ST_ChestOpen|sv ST_ChestOpen=NO,in 1\ps Dr Keylock II;"
+345,marker5,19307,18,219,59,89,101,62,19,249,enabled,,
+346,closeChest,19307,156,115,56,178,202,59,163,131,enabled,q,"?? ST_ChestOpen|sv ST_ChestOpen=NO,pa marker5=Key (chest)\305=0=61=101\-30\0.06\NO,ps Dr Keylock II,in 3.2\ps DR Door Close\go 19307=n;"
+347,key,19307,77,193,48,63,72,50,81,219,enabled,,"?? ST_ChestOpen|ca ST_Chest pickUpKey:upper,go 19307;"
+348,marker3,19307,67,223,12,14,16,13,70,253,enabled,,
+349,marker6,19307,17,223,63,84,96,66,18,253,enabled,,
+350,marker4,13801,235,165,15,14,16,16,245,187,enabled,,
+351,right,13801,0,367,319,112,127,332,0,416,enabled,r,go 13829;
+352,left,13801,0,3,319,112,127,332,0,4,enabled,l,go 13829;
+353,marker1,13801,193,131,100,197,224,105,201,149,enabled,o,"?? ST_Hatch=open|pm EV Drip II Mov,vm 50,go 27714;?? ST_Hatch=closed|ps DR Creak Open,sv ST_Hatch=open,go 13801;"
+354,marker2,13801,0,165,251,37,42,262,0,187,enabled,,
+355,down,13801,0,6,92,285,323,96,0,7,enabled,d,go 19307;
+356,-,21557,0,141,136,173,197,142,0,160,enabled,o,go 23638;
+357,up,21557,0,315,319,165,187,332,0,357,enabled,u,go 13528;
+358,left,21557,0,4,319,115,131,332,0,5,enabled,l,go 14325;
+359,qLigD,21557,23,254,114,60,68,119,24,288,enabled,o,go 23638;
+360,left,26625,0,0,319,179,203,332,0,0,enabled,l,go 13528;
+361,-,26625,0,173,320,182,207,333,0,197,enabled,o,go 14325;
+362,right,26625,0,354,219,117,133,228,0,402,enabled,r,go 21557;
+363,-,26476,0,129,269,322,365,280,0,147,enabled,o,go 26625;
+364,left,26476,2,0,317,65,74,330,3,0,enabled,l,go 23638;
+365,right,26476,2,444,317,35,40,330,3,504,enabled,r,go 23638;
+366,-,23638,0,101,253,292,331,264,0,115,enabled,o,go 24202;vm 25;
+367,right,23638,0,398,319,81,92,332,0,452,enabled,r,go 26476;
+368,left,23638,0,0,319,81,92,332,0,0,enabled,l,go 26476;
+369,qLigD,23638,27,318,62,74,84,65,29,361,enabled,o,go 24202;
+370,-,25863,0,70,320,321,364,333,0,80,enabled,o,go 26476;vm 75;
+371,right,25863,0,393,319,86,98,332,0,446,enabled,r,go 24202;
+372,qligU,25863,228,196,64,64,73,67,238,223,enabled,o,go 26476;
+373,-,24202,0,122,215,259,294,224,0,139,enabled,o,go 24357;
+374,right,24202,0,394,319,85,97,332,0,447,enabled,r,go 25863;
+375,left,24202,0,0,319,85,97,332,0,0,enabled,l,go 25863;
+376,marker,24202,68,307,13,12,14,14,71,348,enabled,,
+377,marker3,24202,81,303,18,18,21,19,85,344,enabled,,
+378,qLigD,24202,84,224,52,67,76,55,88,254,enabled,o,go 24357;
+379,qLigD,24202,23,314,52,67,76,55,24,356,enabled,o,go 24357;
+380,marker,24357,9,101,37,33,38,39,10,115,enabled,,
+381,-,24357,49,265,237,205,233,247,51,301,enabled,o,go 25223;
+382,-,24357,0,97,190,166,189,198,0,110,enabled,o,go 27062;
+383,marker2,24357,72,308,14,26,30,15,75,350,enabled,,
+384,marker3,24357,84,293,25,22,25,27,88,333,enabled,,
+385,qLigU,24357,266,187,53,92,105,56,277,212,enabled,,go 25223;
+386,-,25223,0,69,319,373,423,332,0,79,enabled,o,go 25863;
+387,-,25223,0,0,243,70,80,253,0,0,enabled,o,go 24357;
+388,-,25223,0,438,319,41,47,332,0,497,enabled,o,go 24357;
+389,qLigU,25223,236,83,83,96,109,87,246,95,enabled,o,go 25863;
+390,-,2347,0,0,319,479,543,332,0,0,enabled,o,ca ST_Power stopMeterRedraw:;go 2260;pm EV Drip II Mov;vm 50;
+391,-,2347,23,131,239,240,272,249,24,149,enabled,,
+392,bounds,2347,84,190,81,18,21,85,88,216,enabled,,
+393,level,2347,87,192,1,18,21,2,91,218,enabled,,
+394,LED,2347,168,192,12,14,16,13,175,218,enabled,,
+395,-,2260,23,272,62,48,55,65,24,309,enabled,o,go 2347;
+396,right,2260,0,379,319,100,114,332,0,430,enabled,r,go 27714;
+397,left,2260,0,0,319,100,114,332,0,0,enabled,l,go 27714;
+398,marker,2260,21,206,85,75,85,89,22,234,enabled,q,
+399,marker,27714,0,159,107,171,194,112,0,181,enabled,,
+400,right,27714,0,325,319,151,172,332,0,369,enabled,r,go 2260;
+401,left,27714,0,2,319,151,172,332,0,3,enabled,l,go 2260;
+402,-,27714,32,170,81,143,163,85,34,193,enabled,o,"?? ST_Hatch=open|go 28050|sv ST_Hatch=open,ps DR Creak Open,go 27714;pm EV Drip II Mov;vm 100;"
+403,-,27714,0,172,59,137,156,62,0,195,enabled,,"?? ST_Hatch=open|sv ST_Hatch=closed,ps DR Door Close,go 27714;"
+404,-,28050,0,0,319,480,544,332,0,0,enabled,o,go 27714;
+405,-,28050,65,156,137,170,193,143,68,177,enabled,o,go 13801;pm EV Drip II Mov;vm 150;
+406,right,7102,0,399,319,80,91,332,0,453,enabled,r,go 5269;
+407,left,7102,0,0,319,80,91,332,0,0,enabled,l,go 5269;
+408,-,7102,0,134,247,213,242,258,0,152,enabled,o,go 4785;
+409,-,7102,49,345,179,92,105,187,51,391,enabled,o,go 3004;
+410,-,7102,63,67,62,118,134,65,66,76,enabled,o,go 5066;
+411,-,5269,0,162,297,173,197,310,0,184,enabled,o,go 5411;
+412,right,5269,0,350,319,129,147,332,0,397,enabled,r,go 7102;
+413,left,5269,0,0,319,129,147,332,0,0,enabled,l,go 7102;
+414,qlig,5269,123,225,58,38,44,61,128,255,enabled,o,go 5411;
+415,right,6838,0,364,319,114,130,332,0,413,enabled,r,go 5411;
+416,left,6838,0,0,319,114,130,332,0,0,enabled,l,go 5411;
+417,-,6838,0,125,242,202,229,252,0,142,enabled,o,go 7102;
+418,qste3,6838,127,173,51,61,70,54,133,197,enabled,o,go 7102;
+419,qste3,6838,111,175,47,93,106,49,116,199,enabled,o,go 7102;
+420,-,5411,0,152,316,160,182,329,0,173,enabled,o,go 5866;
+421,right,5411,0,364,319,115,131,332,0,413,enabled,r,go 6838;
+422,left,5411,0,0,319,115,131,332,0,0,enabled,l,go 6838;
+423,qlig,5411,100,210,74,51,58,78,105,238,enabled,o,go 5866;
+424,right,6623,0,371,319,105,119,332,0,421,enabled,r,go 5866;
+425,left,6623,0,0,319,105,119,332,0,0,enabled,l,go 5866;
+426,-,6623,0,113,255,207,235,266,0,129,enabled,o,go 6838;
+427,qste3,6623,151,176,43,49,56,45,158,200,enabled,o,go 6838;
+428,marker,5866,53,200,67,71,81,70,56,227,enabled,,
+429,up,5866,209,88,110,303,344,115,218,100,enabled,u,go 6006;
+430,marker2,5866,77,201,57,36,41,60,81,228,enabled,,
+431,right,5866,0,375,319,104,118,332,0,425,enabled,r,go 6623;
+432,left,5866,0,0,319,104,118,332,0,0,enabled,l,go 6623;
+433,-,5866,2,170,212,133,151,221,3,193,enabled,o,go 6360;
+434,down,6006,0,0,109,480,544,114,0,0,enabled,d,go 5866;
+435,marker,6360,0,148,97,158,180,101,0,168,enabled,,
+436,right,6360,0,379,319,100,114,332,0,430,enabled,r,go 6623;
+437,left,6360,0,0,319,100,114,332,0,0,enabled,l,go 6623;
+438,-,6360,0,120,319,199,226,332,0,136,enabled,o,"go 13528;?? ST_Pump=3|vm 75|pm EV Drip II Mov,vm 150;"
+439,marker2,6360,33,147,84,60,68,88,35,167,enabled,,
+440,-,6360,0,145,121,63,72,126,0,165,enabled,o,?? ST_Pump=3|go 21557|go 13528;
+441,-,11348,0,141,267,177,201,278,0,160,enabled,o,go 11707;
+442,right,11348,0,371,319,108,123,332,0,421,enabled,r,go 13219;
+443,left,11348,0,0,319,108,123,332,0,0,enabled,l,go 13219;
+444,qpum,11348,146,236,60,51,58,63,152,268,enabled,o,go 11707;
+445,right,13219,0,356,319,123,140,332,0,404,enabled,r,go 11348;
+446,left,13219,0,0,319,79,90,332,0,0,enabled,l,go 11348;
+447,-,13219,0,165,239,138,157,249,0,187,enabled,o,go 4355;
+448,-,13219,74,33,160,132,150,167,78,38,enabled,o,go 3004;
+449,qbow,13219,144,84,45,47,54,47,150,96,enabled,o,go 3004;
+450,-,11707,0,162,259,153,174,270,0,184,enabled,o,go 11823;
+451,right,11707,0,391,320,87,99,333,0,444,enabled,r,go 13046;
+452,left,11707,0,0,319,103,117,332,0,0,enabled,l,go 13046;
+453,qpum,11707,128,210,84,67,76,88,134,238,enabled,o,go 11823;
+454,right,13046,0,374,319,100,114,332,0,424,enabled,r,go 11707;
+455,left,13046,0,2,319,100,114,332,0,3,enabled,l,go 11707;
+456,-,13046,0,113,242,212,241,252,0,129,enabled,o,go 13219;
+457,qste2,13046,130,202,62,67,76,65,136,229,enabled,o,go 13219;
+458,-,11823,0,165,270,143,163,281,0,187,enabled,o,go 12033;
+459,right,11823,0,369,319,108,123,332,0,419,enabled,r,go 12578;
+460,left,11823,0,5,319,108,123,332,0,6,enabled,l,go 12578;
+461,right,12578,0,371,319,104,118,332,0,421,enabled,r,go 11823;
+462,left,12578,0,7,319,104,118,332,0,8,enabled,l,go 11823;
+463,-,12578,0,120,247,234,266,258,0,136,enabled,o,go 13046;
+464,qste2,12578,146,193,52,59,67,55,152,219,enabled,o,go 13046;
+465,marker,12033,141,170,51,142,161,54,147,193,disabled,,
+466,right,12033,0,387,319,92,105,332,0,439,enabled,r,go 12443;
+467,left,12033,0,0,319,92,105,332,0,0,enabled,l,go 12443;
+468,sw1,12033,141,170,51,48,55,54,147,193,enabled,,"ps AR Pump Mix;?? ST_Pump=1|sv ST_Pump=0|sv ST_Pump=1,sv ST_DomeTunnel=NO;ps SW PushButton Out;sc Path/Umbrella4-N Switch=54=0=52=54;in 0.5\go 12033;"
+469,sw2,12033,141,217,51,46,53,54,147,246,enabled,,"ps AR Pump Mix;?? ST_Pump=2|sv ST_Pump=0,sv ST_DomeTunnel=NO|sv ST_Pump=2;ps SW PushButton Out;sc Path/Umbrella4-N Switch=54=52=52=54;in 0.5\go 12033;"
+470,sw3,12033,141,262,51,47,54,54,147,297,enabled,,"ps AR Pump Mix;?? ST_Pump=3|sv ST_Pump=0|sv ST_Pump=3,sv ST_DomeTunnel=NO;ps SW PushButton Out;sc Path/Umbrella4-N Switch=55=104=52=56;in 0.5\go 12033;"
+471,-,12443,0,142,256,195,221,267,0,161,enabled,o,go 12578;
+472,right,12443,0,369,319,110,125,332,0,419,enabled,r,go 12033;
+473,left,12443,0,4,319,110,125,332,0,5,enabled,l,go 12033;
+474,qste2,12443,148,203,44,61,70,46,155,231,enabled,o,go 12578;
+475,-,53126,0,0,319,480,544,332,0,0,enabled,o,go 50415;
+476,-,53126,0,102,217,302,343,226,0,116,enabled,,
+477,-,51439,0,0,319,480,544,332,0,0,enabled,o,go 50580;pm MU Sirrus Rm Mov;vm 255;
+478,-,51439,0,116,250,232,263,261,0,132,enabled,o,go 51501;pm MU Sirrus Rm Mov;vm 140;
+479,-,51501,0,0,319,480,544,332,0,0,enabled,o,"go 51439;pm MU Sirrus Rm Mov;vm 255;?? ST_SirrusDesk|sv ST_SirrusDesk=NO,ps DR Slide;"
+480,-,51501,0,64,270,351,398,281,0,73,enabled,,
+481,marker,51501,0,67,115,338,384,120,0,76,enabled,,
+482,close,51501,0,70,41,330,374,43,0,80,enabled,,ps DR Slide;sv ST_SirrusDesk=NO;go 51501;
+483,open,51501,66,67,49,311,353,51,69,76,enabled,,en open=NO;en drawer=YES;en close=YES;sc marker=Sirrus-Desk2 (open);ps DR Slide;sv ST_SirrusDesk=YES;
+484,-,51501,240,112,79,46,53,83,250,127,enabled,,
+485,gizmo,51501,195,201,125,69,79,131,203,228,enabled,,ca ST_SirrusRoom playGizmo:;
+486,-,51501,236,308,83,53,61,87,246,350,enabled,,
+487,drawer,51501,41,100,66,262,297,69,43,114,enabled,o,go 52816;
+488,marker2,51501,307,202,12,11,13,13,320,229,enabled,,
+489,ball,51501,295,225,22,20,23,23,307,255,enabled,,
+490,-,51730,0,0,319,480,544,332,0,0,enabled,o,go 51138;pm MU Sirrus Rm Mov;vm 255;
+491,-,51730,3,150,285,181,206,297,4,170,enabled,o,go 52184;pm MU Sirrus Rm Mov;vm 140;
+492,-,52184,0,0,319,480,544,332,0,0,enabled,o,go 51730;pm MU Sirrus Rm Mov;vm 190;
+493,o6,52184,211,300,67,111,126,70,220,340,enabled,,ca ST_SirrusRoom openDrawer:6;
+494,o5,52184,211,17,67,150,170,70,220,20,enabled,,ca ST_SirrusRoom openDrawer:5;
+495,drawerL,52184,154,25,90,136,155,94,161,29,enabled,,
+496,drawerR,52184,145,309,121,131,149,126,151,351,enabled,,
+497,o1,52184,147,25,55,385,437,58,153,29,enabled,,ca ST_SirrusRoom openDrawer:1;
+498,o2,52184,112,72,38,329,373,40,117,82,enabled,,ca ST_SirrusRoom openDrawer:2;
+499,o4,52184,54,129,40,207,235,42,57,147,enabled,,ca ST_SirrusRoom openDrawer:4;
+500,open6,52184,28,300,251,157,178,262,30,340,enabled,,
+501,close6,52184,107,309,44,142,161,46,112,351,enabled,,ca ST_SirrusRoom resetDresser:6;
+502,open4,52184,0,130,95,217,246,99,0,148,enabled,,
+503,o3,52184,83,105,32,247,280,34,87,119,enabled,,ca ST_SirrusRoom openDrawer:3;
+504,close4,52184,0,133,37,210,238,39,0,151,enabled,,ca ST_SirrusRoom resetDresser:4;
+505,page,52184,38,195,38,57,65,40,40,221,enabled,,ca ST_SirrusRoom takePage:;?? ST_RedPage|ca ST_SirrusRoom returnPage: |ca X_Global grabPage:ST_RedPage;go 52184;
+506,open3,52184,0,106,116,264,300,121,0,121,enabled,,
+507,close3,52184,0,108,33,262,297,35,0,123,enabled,,ca ST_SirrusRoom resetDresser:3;
+508,open2,52184,0,72,151,330,374,158,0,82,enabled,,
+509,close2,52184,0,75,33,324,368,35,0,85,enabled,,ca ST_SirrusRoom resetDresser:2;
+510,open1,52184,0,26,203,422,479,212,0,30,enabled,,
+511,close1,52184,0,34,49,400,454,51,0,39,enabled,,ca ST_SirrusRoom resetDresser:1;
+512,open5,52184,33,17,246,157,178,256,35,20,enabled,,
+513,close5,52184,110,28,45,136,155,47,115,32,enabled,,ca ST_SirrusRoom resetDresser:5;
+514,-,52299,0,0,319,480,544,332,0,0,enabled,,ca ST_SirrusRoom stopGlobeSounds:;go 50415;
+515,-,52299,0,172,266,141,160,277,0,195,enabled,,
+516,marker,52299,241,194,15,13,15,16,251,220,enabled,,
+517,mark,52299,148,194,109,100,114,114,155,220,enabled,,ca ST_SirrusRoom spinEastGlobe:;
+518,-,52563,0,0,319,480,544,332,0,0,enabled,,ca ST_SirrusRoom stopGlobeSounds:;go 50415;
+519,-,52563,0,175,266,135,153,277,0,199,enabled,,
+520,mark,52563,144,191,112,101,115,117,150,217,enabled,,ca ST_SirrusRoom spinWestGlobe:;
+521,marker,52563,240,191,15,13,15,16,250,217,enabled,,
+522,-,52816,0,0,319,480,544,332,0,0,enabled,o,go 51501;
+523,-,52816,65,58,208,421,478,217,68,66,enabled,,
+524,right,46193,0,414,319,65,74,332,0,470,enabled,r,go 47876;
+525,left,46193,0,0,319,65,74,332,0,0,enabled,l,go 47876;
+526,-,46193,0,81,319,322,365,332,0,92,enabled,o,go 50415;pm MU Sirrus Rm Mov;vm 256;
+527,marker,47876,23,167,263,146,166,274,24,190,enabled,,
+528,right,47876,0,378,319,101,115,332,0,429,enabled,r,go 46193;
+529,left,47876,0,0,319,101,115,332,0,0,enabled,l,go 46193;
+530,-,47876,24,173,253,129,147,264,25,197,enabled,o,go 29732;sv ST_TunnelDoorC=NO;pm EV Drip II Mov;vm 90;in 1\ps DR FrplDr Up;
+531,left,50580,0,0,315,97,110,328,0,0,enabled,l,go 50415;
+532,-,50580,296,0,22,11,13,23,309,0,enabled,,
+533,right,50580,0,378,319,101,115,332,0,429,enabled,r,go 50899;
+534,-,50580,0,158,296,158,180,309,0,180,enabled,o,go 51439;pm MU Sirrus Rm Mov;vm 190;
+535,-,50580,123,0,63,47,54,66,128,0,enabled,o,go 52299;
+536,left,50415,0,0,317,85,97,330,0,0,enabled,l,go 51138;
+537,right,50415,0,378,319,101,115,332,0,429,enabled,r,go 50580;
+538,-,50415,120,431,63,47,54,66,125,489,enabled,o,go 52299;
+539,-,50415,122,0,63,47,54,66,127,0,enabled,o,go 52563;
+540,-,50415,7,143,232,198,225,242,8,163,enabled,o,go 53126;
+541,marker,50899,97,206,136,71,81,142,101,234,enabled,,
+542,left,50899,0,0,319,97,110,332,0,0,enabled,l,go 50580;
+543,-,50899,0,147,319,202,229,332,0,167,enabled,o,go 47876;pm MU Sirrus Rm Mov;vm 180;
+544,right,50899,0,379,319,100,114,332,0,430,enabled,r,go 51138;
+545,left,51138,0,0,319,111,126,332,0,0,enabled,l,go 50899;
+546,right,51138,0,392,319,87,99,332,0,445,enabled,r,go 50415;
+547,-,51138,0,136,307,232,263,320,0,155,enabled,o,go 51730;pm MU Sirrus Rm Mov;vm 190;
+548,-,51138,122,431,63,47,54,66,127,489,enabled,o,go 52563;
+549,scope,57878,0,0,319,480,544,332,0,0,enabled,o,ca ST_Telescope shutDown:;go 11193;
+550,pict,57878,106,196,107,98,112,112,111,223,enabled,,
+551,left,57878,0,215,13,10,12,14,0,244,enabled,,
+552,right,57878,0,285,12,13,15,13,0,323,enabled,,
+553,-,57878,49,105,216,279,317,225,51,119,enabled,,cb ST_Telescope moveScopeBegan:\moveScopeMoved:\moveScopeEnded:;
+554,-,16772,0,131,270,209,237,281,0,149,enabled,o,go 16949;pm EV Drip II Mov;vm 125;
+555,right,16772,0,347,320,142,161,333,0,394,enabled,r,go 23242;
+556,left,16772,0,0,319,142,161,332,0,0,enabled,l,go 23242;
+557,qDad1,16772,136,218,65,44,50,68,142,248,enabled,o,go 16949;pm EV Drip II Mov;vm 125;
+558,marker2,23242,125,221,108,45,51,113,131,251,enabled,,
+559,-,23242,0,102,299,271,308,312,0,116,enabled,o,go 3004;
+560,right,23242,0,360,319,119,135,332,0,408,enabled,r,go 16772;
+561,left,23242,0,0,319,119,135,332,0,0,enabled,l,go 16772;
+562,-,16949,0,142,265,187,212,276,0,161,enabled,o,go 17160;pm EV Drip II Mov;vm 125;
+563,right,16949,0,349,319,120,136,332,0,396,enabled,r,go 22922;
+564,left,16949,0,0,319,120,136,332,0,0,enabled,l,go 22922;
+565,qDad1,16949,122,212,78,60,68,82,127,241,enabled,o,go 17160;pm EV Drip II Mov;vm 125;
+566,-,22922,0,141,281,198,225,293,0,160,enabled,o,go 23242;
+567,right,22922,0,340,319,135,153,332,0,386,enabled,r,go 16949;
+568,left,22922,0,0,319,135,153,332,0,0,enabled,l,go 16949;
+569,-,17160,0,156,256,171,194,267,0,177,enabled,o,go 17526;pm EV Drip II Mov;vm 140;
+570,right,17160,0,350,319,127,144,332,0,397,enabled,r,go 22530;
+571,left,17160,0,5,319,127,144,332,0,6,enabled,l,go 22530;
+572,-,22530,3,143,289,194,220,301,4,163,enabled,o,go 22922;pm EV Drip II Mov;vm 50;
+573,right,22530,0,347,319,128,146,332,0,394,enabled,r,go 17160;
+574,left,22530,0,0,319,128,146,332,0,0,enabled,l,go 17160;
+575,qDadU,22530,154,202,86,73,83,90,161,229,enabled,o,go 22922;pm EV Drip II Mov;vm 50;
+576,marker,17526,20,141,227,193,219,237,21,160,enabled,,
+577,enter,17526,32,158,211,156,177,220,34,180,enabled,o,go 18133;vm 75;
+578,-,17526,21,131,10,10,12,11,22,149,disabled,o,
+579,left,17526,0,0,319,145,165,332,0,0,enabled,l,"go 22387;?? ST_TunnelDoorD|sv ST_TunnelDoorD=NO,in 1\ps DR FrplDr Dn,pm EV Drip II Mov,vm 100;"
+580,none,17526,32,158,211,156,177,220,34,180,enabled,,"ps SW PushButton Out;sv ST_TunnelDoorD=YES;?? ST_DadLight|sc marker=Tunnel4-down (doorOpen) (light),pm MU Book!Bubbles Mov,vm 50|sc marker=Tunnel4-down (doorOpen),pm EV Bubbles Mov,vm 75;ps DR FrplDr Dn;en none=NO;en enter=YES;"
+581,right,17526,0,331,319,145,165,332,0,376,enabled,r,"go 22387;?? ST_TunnelDoorD|sv ST_TunnelDoorD=NO,in 1\ps DR FrplDr Dn,pm EV Drip II Mov,vm 100;"
+582,qdadD,17526,162,195,42,32,37,44,169,221,enabled,o,"?? ST_TunnelDoorD|go 18133,vm 75;"
+583,-,17724,0,146,254,179,203,265,0,166,enabled,o,go 18133;
+584,right,17724,0,331,320,148,168,333,0,376,enabled,r,go 22387;
+585,left,17724,0,0,319,148,168,332,0,0,enabled,l,go 22387;
+586,-,22387,0,144,288,195,221,300,0,164,enabled,o,go 22530;pm EV Drip II Mov;vm 75;
+587,right,22387,0,336,319,143,163,332,0,381,enabled,r,go 17526;
+588,left,22387,0,2,319,143,163,332,0,3,enabled,l,go 17526;
+589,qdadU,22387,188,212,44,51,58,46,196,241,enabled,o,go 22530;pm EV Drip II Mov;vm 75;
+591,-,32358,0,148,319,182,207,332,0,168,enabled,o,go 32643;
+592,right,32358,0,333,320,150,170,333,0,378,enabled,r,go 36189;
+593,left,32358,0,0,320,117,133,333,0,0,enabled,l,go 36189;
+594,qAchD,32358,137,258,81,53,61,85,143,293,enabled,o,go 32643;
+595,-,36189,2,149,315,180,204,328,3,169,enabled,o,go 14498;pm AR Water!Wind Mov;vm 175;
+596,right,36189,0,330,319,150,170,332,0,374,enabled,r,?? ST_Pump=2|go 32358|go 32359;
+597,left,36189,0,0,319,150,170,332,0,0,enabled,l,?? ST_Pump=2|go 32358|go 32359;
+598,-,32643,0,150,311,169,192,324,0,170,enabled,o,go 32964;
+599,right,32643,0,328,319,151,172,332,0,372,enabled,r,go 35952;
+600,left,32643,0,0,319,151,172,332,0,0,enabled,l,go 35952;
+601,qAchD,32643,137,215,100,58,66,105,143,244,enabled,o,go 32964;
+602,-,35952,0,161,319,196,223,332,0,183,enabled,o,go 36189;
+603,right,35952,0,355,320,142,161,333,0,403,enabled,r,go 32643;
+604,left,35952,0,0,319,161,183,332,0,0,enabled,l,go 32643;
+605,-,32964,0,157,301,171,194,314,0,178,enabled,o,go 33179;
+606,right,32964,0,331,320,147,167,333,0,376,enabled,r,go 35832;
+607,left,32964,0,0,319,147,167,332,0,0,enabled,l,go 35832;
+608,qAchD,32964,132,260,85,54,62,89,138,295,enabled,o,go 33179;
+609,-,35832,0,142,319,182,207,332,0,161,enabled,o,go 35952;
+610,right,35832,0,323,319,155,176,332,0,367,enabled,r,go 32964;
+611,left,35832,0,0,319,150,170,332,0,0,enabled,l,go 32964;
+612,qAchU,35832,137,194,130,72,82,136,143,220,enabled,o,go 35952;
+613,-,33179,0,134,319,207,235,332,0,152,enabled,o,go 33288;
+614,right,33179,0,333,319,146,166,332,0,378,enabled,r,go 35436;
+615,left,33179,0,2,319,139,158,332,0,3,enabled,l,go 35436;
+616,qAchD,33179,138,202,94,70,80,98,144,229,enabled,o,go 33288;
+617,-,35436,0,151,319,242,275,332,0,172,enabled,o,go 35832;
+618,right,35436,0,337,320,138,157,333,0,382,enabled,r,go 33179;
+619,left,35436,0,0,319,138,157,332,0,0,enabled,l,go 33179;
+620,qAchU,35436,146,187,104,64,73,109,152,212,enabled,o,go 35832;
+621,-,33288,0,149,295,185,210,307,0,169,enabled,o,ca ST_Blink killBlinkTimer:;go 33592;
+622,right,33288,0,330,319,148,168,332,0,374,enabled,r,ca ST_Blink killBlinkTimer:;go 35205;
+623,left,33288,0,5,319,148,168,332,0,6,enabled,l,ca ST_Blink killBlinkTimer:;go 35205;
+624,qAchD,33288,124,255,93,57,65,97,130,289,enabled,o,ca ST_Blink killBlinkTimer:;go 33592;
+625,-,35205,0,136,319,197,224,332,0,155,enabled,o,go 35436;
+626,right,35205,0,323,319,156,177,332,0,367,enabled,r,go 33288;
+627,left,35205,0,0,319,149,169,332,0,0,enabled,l,go 33288;
+628,qAchU,35205,125,194,142,77,88,148,131,220,enabled,o,go 35436;
+629,marker2,33592,10,192,167,142,161,174,11,218,enabled,,
+630,marker,33592,10,192,166,140,159,173,11,218,enabled,,
+631,-,33592,0,135,318,191,217,331,0,153,enabled,o,ca ST_Blink leavingCard:;go 34007;
+632,right,33592,0,330,319,150,170,332,0,374,enabled,r,ca ST_Blink leavingCard:;go 34998;
+633,left,33592,0,0,319,133,151,332,0,0,enabled,l,ca ST_Blink leavingCard:;go 34998;
+634,door,33592,34,296,140,39,45,146,36,336,enabled,o,ca ST_Blink tunnelDoor:;no 44083;
+635,qAchD,33592,142,208,89,66,75,93,148,236,enabled,o,ca ST_Blink leavingCard:;go 34007;
+636,-,34998,0,171,310,166,189,323,0,194,enabled,o,go 35205;
+637,right,34998,0,337,319,139,158,332,0,382,enabled,r,go 33592;
+638,left,34998,0,1,319,139,158,332,0,2,enabled,l,go 33592;
+639,qAchU,34998,142,187,110,56,64,115,148,212,enabled,o,go 35205;
+640,-,34007,0,167,305,177,201,318,0,190,enabled,o,?? ST_SonLight=on|go 34262|go 34261;
+641,right,34007,0,334,319,145,165,332,0,379,enabled,r,go 34573;
+642,left,34007,0,3,319,145,165,332,0,4,enabled,l,go 34573;
+643,-,34573,0,130,165,121,138,172,0,148,enabled,o,ca ST_Blink leavingCard:;go 34998;
+644,marker2,34573,0,130,165,121,138,172,0,148,enabled,,
+645,-,34573,0,133,319,165,187,332,0,151,enabled,o,ca ST_Blink leavingCard:;go 34998;
+646,right,34573,0,323,319,156,177,332,0,367,enabled,r,ca ST_Blink leavingCard:;go 34007;
+647,left,34573,0,0,319,128,146,332,0,0,enabled,l,ca ST_Blink leavingCard:;go 34007;
+648,door,34573,17,126,147,45,51,153,18,143,enabled,o,ca ST_Blink tunnelDoor:;no 31805;
+649,qAchU,34573,169,193,99,74,84,104,176,219,enabled,o,ca ST_Blink leavingCard:;go 34998;
+650,doormarker,34261,107,193,202,93,106,211,112,219,disabled,,
+651,right,34261,0,398,319,79,90,332,0,452,enabled,r,"go 34559;?? ST_TunnelDoor|in 1\ps DR FrplDr Up,sv ST_TunnelDoor=NO;"
+652,marker2,34261,0,109,315,256,291,328,0,124,enabled,,
+653,marker1,34262,0,152,316,176,200,329,0,173,enabled,,
+654,enter,34261,108,192,202,95,108,211,113,218,enabled,o,"?? ST_TunnelDoor|pm MU Achenar Rm Mov,vm 140,go 54498|sv ST_TunnelDoor=YES,ps DR FrplDr Up,pm MU Achenar Rm Mov,vm 25,sc marker2=TunnelA8-down (dark) (open);"
+655,left,34261,0,0,319,134,152,332,0,0,enabled,l,"go 34559;?? ST_TunnelDoor|in 1\ps DR FrplDr Up,sv ST_TunnelDoor=NO;"
+656,none,34261,193,233,17,15,17,18,201,265,disabled,,
+657,right,34559,0,334,320,139,158,333,0,379,enabled,r,ca ST_Blink killBlinkTimer:;?? ST_SonLight=on|go 34262|go 34261;
+658,left,34559,0,0,319,139,158,332,0,0,enabled,l,ca ST_Blink killBlinkTimer:;?? ST_SonLight=on|go 34262|go 34261;
+659,-,34559,0,168,319,145,165,332,0,191,enabled,o,ca ST_Blink killBlinkTimer:;go 34573;
+660,qAchU,34559,142,185,90,61,70,94,148,210,enabled,o,ca ST_Blink killBlinkTimer:;go 34573;
+661,right,31581,0,319,319,160,182,332,0,362,enabled,r,ca ST_Blink killBlinkTimer:;go 29287;
+662,-,31581,55,147,209,194,220,218,58,167,enabled,o,ca ST_Blink killBlinkTimer:;go 39189;
+663,left,31581,0,0,319,160,182,332,0,0,enabled,l,ca ST_Blink killBlinkTimer:;go 30263;
+664,left,31805,0,0,319,149,169,332,0,0,enabled,l,ca ST_Blink killBlinkTimer:;go 34007;
+665,-,31805,80,146,182,179,203,190,84,166,enabled,o,ca ST_Blink killBlinkTimer:;go 41982;
+666,right,31805,0,330,319,149,169,332,0,374,enabled,r,ca ST_Blink killBlinkTimer:;go 34998;
+667,left,44083,0,0,319,154,175,332,0,0,enabled,l,ca ST_Blink killBlinkTimer:;go 34007;
+668,-,44083,59,146,214,183,208,223,62,166,enabled,o,ca ST_Blink killBlinkTimer:;go 41982;
+669,right,44083,0,318,319,161,183,332,0,361,enabled,r,ca ST_Blink killBlinkTimer:;go 34998;
+670,right,39028,0,325,319,154,175,332,0,369,enabled,r,ca ST_Blink killBlinkTimer:;go 29287;
+671,-,39028,46,130,236,205,233,246,48,148,enabled,o,ca ST_Blink killBlinkTimer:;go 39189;
+672,left,39028,0,0,319,154,175,332,0,0,enabled,l,ca ST_Blink killBlinkTimer:;go 30263;
+674,-,28272,0,151,272,186,211,284,0,172,enabled,o,go 28578;
+675,right,28272,0,334,319,139,158,332,0,379,enabled,r,go 32230;
+676,left,28272,0,2,303,135,153,316,0,3,enabled,l,go 32230;
+677,qSirD,28272,152,168,65,48,55,68,159,191,enabled,o,go 28578;
+678,-,32230,0,150,320,156,177,333,0,170,enabled,o,go 7674;pm AR Water!Wind Mov;vm 175;
+679,right,32230,0,318,319,161,183,332,0,361,enabled,r,?? ST_Pump=2|go 28272|go 28273;
+680,left,32230,0,0,319,161,183,332,0,0,enabled,l,?? ST_Pump=2|go 28272|go 28273;
+681,-,28578,0,101,300,239,271,313,0,115,enabled,o,go 28820;
+682,right,28578,0,329,319,148,168,332,0,373,enabled,r,go 31259;
+683,left,28578,0,0,319,148,168,332,0,0,enabled,l,go 31259;
+684,qSirD,28578,137,204,80,45,51,84,143,232,enabled,o,go 28820;
+685,-,31259,0,142,320,190,216,333,0,161,enabled,o,go 32230;
+686,right,31259,0,323,320,149,169,333,0,367,enabled,r,go 28578;
+687,left,31259,0,7,319,149,169,332,0,8,enabled,l,go 28578;
+688,-,28820,0,142,270,193,219,281,0,161,enabled,o,go 36440;
+689,right,28820,0,323,319,156,177,332,0,367,enabled,r,go 31136;
+690,left,28820,0,0,319,156,177,332,0,0,enabled,l,go 31136;
+691,qSirD,28820,137,168,78,52,59,82,143,191,enabled,o,go 36440;
+692,-,31136,0,137,319,189,215,332,0,156,enabled,o,go 31259;
+693,right,31136,0,322,319,150,170,332,0,365,enabled,r,go 28820;
+694,left,31136,0,0,319,150,170,332,0,0,enabled,l,go 28820;
+695,qSirU,31136,174,221,92,65,74,96,182,251,enabled,o,go 31259;
+696,-,36440,0,137,308,205,233,321,0,156,enabled,o,go 36761;
+697,right,36440,0,343,320,131,149,333,0,389,enabled,r,go 30890;
+698,left,36440,0,7,319,131,149,332,0,8,enabled,l,go 30890;
+699,qSirD,36440,139,207,56,69,79,59,145,235,enabled,o,go 36761;
+700,-,30890,0,165,311,178,202,324,0,187,enabled,o,go 31136;
+701,right,30890,0,333,319,143,163,332,0,378,enabled,r,go 36440;
+702,left,30890,0,6,319,143,163,332,0,7,enabled,l,go 36440;
+703,qSirU,30890,148,232,92,63,72,96,155,263,enabled,o,go 31136;
+704,-,36761,0,142,304,193,219,317,0,161,enabled,o,ca ST_Blink killBlinkTimer:;go 29150;
+705,right,36761,0,337,319,142,161,332,0,382,enabled,r,ca ST_Blink killBlinkTimer:;go 30666;
+706,left,36761,0,0,319,142,161,332,0,0,enabled,l,ca ST_Blink killBlinkTimer:;go 30666;
+707,qSirD,36761,139,169,79,53,61,83,145,192,enabled,o,ca ST_Blink killBlinkTimer:;go 29150;
+708,-,30666,0,156,292,171,194,304,0,177,enabled,o,go 30890;
+709,right,30666,0,316,319,162,184,332,0,359,enabled,r,go 36761;
+710,left,30666,0,3,319,162,184,332,0,4,enabled,l,go 36761;
+711,qSirU,30666,181,218,88,68,78,92,189,248,enabled,o,go 30890;
+712,marker,29150,10,146,167,142,161,174,11,166,enabled,,
+713,-,29150,0,141,300,187,212,313,0,160,enabled,o,ca ST_Blink leavingCard:;go 29287;
+714,right,29150,0,327,319,151,172,332,0,371,enabled,r,ca ST_Blink leavingCard:;go 30263;
+715,left,29150,0,0,319,142,161,332,0,0,enabled,l,ca ST_Blink leavingCard:;go 30263;
+716,door,29150,43,151,129,42,48,135,45,172,enabled,o,ca ST_Blink tunnelDoor:;no 31581;
+717,marker2,29150,163,146,12,11,13,13,170,166,enabled,,
+718,qSirD,29150,133,204,47,68,78,49,139,232,enabled,o,ca ST_Blink leavingCard:;go 29287;
+719,-,30263,0,165,305,147,167,318,0,187,enabled,o,go 30666;
+720,right,30263,0,323,319,151,172,332,0,367,enabled,r,go 29150;
+721,-,30263,0,7,319,151,172,332,0,8,enabled,o,go 30666;pm EV Drip II Mov;vm 90;
+722,qSirU,30263,132,233,107,65,74,112,138,265,enabled,o,go 30666;
+723,-,29287,0,170,275,166,189,287,0,193,enabled,o,go 29531;
+724,right,29287,0,331,319,145,165,332,0,376,enabled,r,go 30057;
+725,left,29287,0,7,319,145,165,332,0,8,enabled,l,go 30057;
+726,marker,30057,0,228,165,123,140,172,0,259,enabled,,
+727,-,30057,0,161,290,150,170,302,0,183,enabled,o,ca ST_Blink leavingCard:;go 30263;
+728,right,30057,0,315,320,159,181,333,0,357,enabled,r,ca ST_Blink leavingCard:;go 29287;
+729,left,30057,0,0,319,159,181,332,0,0,enabled,l,ca ST_Blink leavingCard:;go 29287;
+730,door,30057,38,310,123,40,46,128,40,352,enabled,o,ca ST_Blink tunnelDoor:;no 39028;
+731,qSirU,30057,190,240,79,47,54,83,198,272,enabled,o,ca ST_Blink leavingCard:;go 30263;
+732,marker2,29531,0,105,319,251,285,332,0,119,enabled,,
+733,marker1,29531,0,150,311,178,202,324,0,170,enabled,,
+734,doormarker,29531,109,191,201,94,107,210,114,217,enabled,,go 46193;pm MU Sirrus Rm Mov;vm 180;
+735,left,29531,0,0,319,160,182,332,0,0,enabled,l,"go 29732;?? ST_TunnelDoorC|sv ST_TunnelDoorC=NO,in 1\ps DR FrplDr Up;"
+736,none,29531,196,234,13,12,14,14,204,266,disabled,,
+737,enter,29531,109,191,202,97,110,211,114,217,enabled,o,?? ST_SonLight=on|sc marker1=TunnelC8-down (Open)|sc marker2=TunnelC8-down (dark) (open);ps SW Pushbutton Out;pm MU Sirrus Rm Mov;vm 25;ps DR FrplDr Up;sv ST_TunnelDoorC=YES;en enter=NO;en doormarker=YES;
+738,right,29531,0,319,319,160,182,332,0,362,enabled,r,"go 29732;?? ST_TunnelDoorC|sv ST_TunnelDoorC=NO,in 1\ps DR FrplDr Up;"
+739,right,29732,0,326,319,149,169,332,0,370,enabled,r,ca ST_Blink killBlinkTimer:;go 29531;
+740,left,29732,0,0,319,149,169,332,0,0,enabled,l,ca ST_Blink killBlinkTimer:;go 29531;
+741,-,29732,8,155,302,167,190,315,9,176,enabled,o,ca ST_Blink killBlinkTimer:;go 30057;
+742,qSirU,29732,144,240,70,52,59,73,150,272,enabled,o,ca ST_Blink killBlinkTimer:;go 30057;
+743,-,44466,0,99,257,243,276,268,0,113,enabled,o,go 9010;
+744,-,44466,50,299,144,14,16,150,53,339,enabled,o,?? ST_Pump=2|go 9375|go 9376;
+745,left,44466,0,0,319,102,116,332,0,0,enabled,l,go 14498;
+746,right,44466,0,360,319,119,135,332,0,408,enabled,r,go 9713;
+747,qste4,44466,135,241,39,48,55,41,141,274,enabled,o,go 9010;
+748,right,15443,0,339,319,138,157,332,0,385,enabled,r,go 9713;
+749,left,15443,0,0,319,69,79,332,0,0,enabled,l,go 14498;
+750,-,15443,0,69,237,240,272,247,0,79,enabled,o,go 44466;
+751,-,9713,0,158,256,235,267,267,0,180,enabled,o,go 9774;pm MU Telescope:Wind Mov;vm 25;
+752,right,9713,0,396,319,83,95,332,0,449,enabled,r,go 15443;
+753,left,9713,0,7,319,83,95,332,0,8,enabled,l,go 15443;
+754,qtel,9713,177,173,71,99,113,74,185,197,enabled,o,go 9774;pm MU Telescope:Wind Mov;vm 25;
+755,-,15190,0,123,296,237,269,309,0,140,enabled,o,go 15443;pm MU Telescope:Wind Mov;vm 25;
+756,left,15190,0,1,319,98,112,332,0,2,enabled,l,go 9774;
+757,right,15190,0,375,319,98,112,332,0,425,enabled,r,go 9774;
+758,qtel2,15190,110,237,59,70,80,62,115,269,enabled,o,go 15443;pm MU Telescope:Wind Mov;vm 25;
+759,-,9774,0,127,261,266,302,272,0,144,enabled,o,go 10143;pm MU Telescope:Wind Mov;vm 50;
+760,right,9774,0,389,319,90,102,332,0,441,enabled,r,go 15190;
+761,left,9774,0,0,319,90,102,332,0,0,enabled,l,go 15190;
+762,qtel,9774,216,123,77,91,104,81,225,140,enabled,o,go 10143;pm MU Telescope:Wind Mov;vm 50;
+763,-,14901,0,137,202,233,265,211,0,156,enabled,o,go 15190;pm MU Telescope:Wind Mov;vm 50;
+764,right,14901,0,396,258,83,95,269,0,449,enabled,r,go 10143;
+765,left,14901,0,1,319,108,123,332,0,2,enabled,l,go 10143;
+766,qtel2,14901,121,240,48,72,82,50,126,272,enabled,o,go 15190;pm MU Telescope:Wind Mov;vm 50;
+767,-,10143,0,96,258,290,329,269,0,109,enabled,o,go 10287;pm MU Telescope:Wind Mov;vm 75;
+768,right,10143,0,386,319,90,102,332,0,438,enabled,r,go 14901;
+769,left,10143,0,5,319,90,102,332,0,6,enabled,l,go 14901;
+770,qtel,10143,204,98,103,112,127,108,213,112,enabled,o,go 10287;pm MU Telescope:Wind Mov;vm 75;
+771,right,14622,0,367,319,112,127,332,0,416,enabled,r,go 10287;
+772,-,14622,0,169,183,253,287,191,0,192,enabled,o,go 14901;pm MU Telescope:Wind Mov;vm 70;
+773,left,14622,0,0,319,112,127,332,0,0,enabled,l,go 10287;
+774,qtel2 right,14622,88,367,71,55,63,74,92,416,enabled,o,go 10287;
+775,-,10287,0,52,299,340,386,312,0,59,enabled,o,go 10747;pm MU Telescope:Wind Mov;vm 90;
+776,right,10287,0,403,319,76,87,332,0,457,enabled,r,go 14622;
+777,left,10287,0,0,319,53,61,332,0,0,enabled,l,go 14622;
+778,qtel,10287,218,55,80,123,140,84,227,63,enabled,o,go 10747;pm MU Telescope:Wind Mov;vm 90;
+779,right,16564,0,366,320,113,129,333,0,415,enabled,r,go 10747;
+780,left,16564,0,4,319,108,123,332,0,5,enabled,l,go 10747;
+781,-,16564,0,110,168,259,294,175,0,125,enabled,o,go 14622;pm MU Telescope:Wind Mov;vm 90;
+782,-,16564,56,361,75,118,134,79,59,410,enabled,o,go 14622;
+783,-,10747,0,47,282,309,351,294,0,54,enabled,o,go 10756;pm MU Telescope:Wind Mov;vm 125;
+784,right,10747,0,356,319,121,138,332,0,404,enabled,r,go 16564;
+785,left,10747,0,4,193,110,125,201,0,5,enabled,l,go 16564;
+786,qtel,10747,191,47,91,40,46,95,199,54,enabled,o,go 10756;pm MU Telescope:Wind Mov;vm 125;
+787,right,16326,0,396,318,83,95,331,0,449,enabled,r,go 10756;
+788,left,16326,0,0,318,89,101,331,0,0,enabled,l,go 10756;
+789,-,16326,0,114,183,279,317,191,0,130,enabled,o,go 16564;pm MU Telescope:Wind Mov;vm 100;
+790,-,16326,31,397,73,82,93,76,33,450,enabled,o,go 16564;
+791,-,10756,0,146,280,216,245,292,0,166,enabled,o,go 11193;pm MU Telescope:Wind Mov;vm 250;
+792,right,10756,0,369,319,110,125,332,0,419,enabled,r,go 16326;
+793,left,10756,0,1,319,110,125,332,0,2,enabled,l,go 16326;
+794,right,16033,0,378,320,98,112,333,0,429,enabled,r,go 11193;
+795,left,16033,0,2,319,98,112,332,0,3,enabled,l,go 11193;
+796,-,16033,0,98,158,298,338,165,0,112,enabled,o,go 16326;pm MU Telescope:Wind Mov;vm 150;
+797,qtel2,16033,0,375,95,104,118,99,0,425,enabled,o,go 16326;
+798,right,11193,0,355,320,126,143,333,0,403,enabled,r,go 16033;
+799,left,11193,0,1,319,126,143,332,0,2,enabled,l,go 16033;
+800,-,11193,194,209,50,60,68,53,202,237,enabled,o,go 57878;
+804,-,9376,0,137,319,200,227,332,0,156,enabled,o,pm EV Drip II Mov;vm 50;go 32359;
+805,right,9376,0,360,319,118,134,332,0,408,enabled,r,go 8776;
+806,left,9376,0,7,319,118,134,332,0,8,enabled,l,go 9010;
+809,right,32359,0,333,320,150,170,333,0,378,enabled,r,go 36189;
+810,left,32359,0,0,278,76,87,290,0,0,enabled,l,go 36189;
+811,doormarker,34262,107,135,13,13,15,14,112,153,disabled,,
+812,right,34262,0,372,319,106,121,332,0,422,enabled,r,"go 34559;?? ST_TunnelDoor|in 1\ps DR FrplDr Up,sv ST_TunnelDoor=NO;"
+813,enter,34262,108,192,202,95,108,211,113,218,enabled,o,"?? ST_TunnelDoor|pm MU Achenar Rm Mov,vm 140,go 54498|sv ST_TunnelDoor=YES,ps DR FrplDr Up,pm MU Achenar Rm Mov,vm 25,sc marker1=TunnelA8-down (open);"
+814,left,34262,0,0,319,134,152,332,0,0,enabled,l,"go 34559;?? ST_TunnelDoor|in 1\ps DR FrplDr Up,sv ST_TunnelDoor=NO;"
+815,none,34262,193,134,17,15,17,18,201,152,disabled,,
+816,left,8155,0,0,319,112,127,332,0,0,enabled,l,go 7846;
+817,right,8155,0,358,319,112,127,332,0,406,enabled,r,go 7277;
+818,-,8155,0,147,319,183,208,332,0,167,enabled,o,?? ST_Pump=2|go 28272|go 28273;pm EV Drip II Mov;vm 50;
+819,right,28273,0,339,319,139,158,332,0,385,enabled,r,go 32230;
+820,left,28273,0,2,316,135,153,329,0,3,enabled,l,go 32230;
+821,chest,19307,28,248,49,62,71,51,30,282,enabled,q,ca ST_Chest openChest:;
+822,marker4,19307,64,217,12,13,15,13,67,246,enabled,,
+823,marker3,13801,196,175,59,35,40,62,204,199,enabled,q,
+824,-,2260,28,194,94,78,89,98,30,220,enabled,q,ca ST_Power crankGenerator:;rk ca ST_Power crankGenerator:\ca ST_Power crankGeneratorReleased:;
+825,SW,40420,45,123,126,128,146,132,47,140,enabled,,zm 2.5=115=100=0.5;en SW=NO;en NW=NO;en NE=NO;en SE=NO;
+826,NW,40420,170,122,106,113,129,111,177,139,enabled,,zm 2.9=-170=125=0.5;en SW=NO;en NW=NO;en NE=NO;en SE=NO;
+827,NE,40420,168,234,106,123,140,111,175,266,enabled,,zm 2.9=-170=-125=0.5;en SW=NO;en NW=NO;en NE=NO;en SE=NO;
+828,SE,40420,49,249,120,108,123,125,51,283,enabled,,zm 2.8=135=-110=0.5;en SW=NO;en NW=NO;en NE=NO;en SE=NO;
+829,,24357,56,296,56,57,65,59,59,336,enabled,,ca ST_Chest pickUpKey:lower;go 24357;
+830,,19307,0,52,55,168,191,58,0,59,enabled,,?? ST_Pump=3|go 23638;
+831,-,57056,110,201,58,58,66,61,115,228,enabled,q,ca ST_AchenarRoom holoSwitch:;

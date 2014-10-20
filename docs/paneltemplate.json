@@ -1,0 +1,16 @@
+{
+    "onload": {
+        "preload": {
+            "audio": [],
+            "images": []
+        }
+    },
+    "onrendercomplete":{
+    },
+    "navigation": [],
+    "ambience":{
+    },
+    "background":"",
+    "content": [
+    ]
+}

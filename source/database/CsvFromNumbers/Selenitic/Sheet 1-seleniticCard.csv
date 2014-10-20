@@ -1,0 +1,228 @@
+1,25246,Ship 1-W,
+2,2252,Ship 2-W,
+3,2522,Ship 3-W,
+4,3071,Ship 4-W,
+5,5520,MainPath 2-W,
+6,5801,MainPath 3-W,pm AR Lite Wind Mov;vm 150;
+7,7689,MainPath 3-N,
+8,42081,MainPath 3-N (open),pm EV Electmotors;vm 25;
+9,42331,BayStairs 1-Forward,
+10,42717,BayStairs 2-Forward,
+11,42772,BayStairs 3-Forward,
+12,43138,BayStairs 4-Forward,
+13,43281,BayStairs 5-Forward,
+14,43546,BayStairs 6-Forward,
+15,43809,BayStairs 7-forward,pm EV Electmotors;vm 150;
+16,44077,BayStairs 8-forward,
+17,44361,BayStairs 9-Forward,
+18,44745,BayHall 4-Forward,
+19,44825,BayHall 5-Forward,
+20,45135,BayHall 6-Forward,
+21,45359,Bay 1-Forward,
+22,45637,Bay 2-Forward,
+23,50469,BayWalk 1-Foreward,
+24,50747,BayWalk 2-Foreward,
+25,52772,BayWalk 2-In,
+26,51113,BayWalk 3-Foreward,
+27,53215,BayWalk 3-In,
+28,51414,BayWalk 4-Foreward,
+29,53435,BayWalk 4-In,
+30,51511,BayWalk 5-Foreward,
+31,53566,BayWalk 5-In,
+32,41252,BayWalk 1-Back,
+33,51920,BayWalk 5-Back,
+34,52099,BayWalk 4-Back,
+35,52457,BayWalk 3-Back,
+36,52714,BayWalk 2-Back,
+37,45893,Bay 3-Forward,
+38,46177,Bay 4-Forward,pm EV Electmotors;vm 250;
+39,50254,Bay 4-Forward Open,
+40,54153,Ship 1-Forward,sc door=Ship 1-Forward (open);
+41,54404,Ship 2-Forward,pm EV Electmotors;vm 20;
+42,54693,Ship 3-Forward,ca SE_Maze initVars:;-ca SE_Maze setGlowButtonsDB:;
+43,54790,Ship 3-Back,pm EV Electmotors;vm 20;
+44,55056,Ship 2-Back,
+45,55498,Ship 1-Back,
+46,53872,Ship 1-Back (open2),
+47,56929,BookHall 1-Forward,
+48,57194,BookHall 2-Forward,
+49,38335,BookHall 3-Forward,
+50,56076,BookRm 1-Forward,
+51,58460,BookRm 2-Forward,
+52,59242,BookRm 3-Forward,
+53,59522,BookRm 4-Forward,pm MU SE Bookroom;vm 200;
+54,60223,BookRm 4-Back,
+55,60619,BookRm 3-Back,
+56,60716,BookRm 2-Back,
+57,60990,BookRm 1-Back,
+58,59649,BookRm 4-Forward (cover),
+59,59926,BookRm 4-Forward (open),
+60,57373,BookHall 2-Back,
+61,58072,BookHall 4-Back,
+62,58308,BookHall 3-Back,
+63,57644,BookHall 1-Back,pm MU SE Bookroom;vm 80;
+64,55574,Ship 1-Back (open),
+65,46409,Bay 4-Back,
+66,46723,Bay 3-Back,
+67,46893,Bay 2-Back,
+68,47305,Bay 1-Back,
+69,47612,BayStairs 9-back,
+70,47707,BayStairs 8-Back,
+71,48018,BayStairs 7-back,
+72,48189,BayHall 3-Back,
+73,48388,BayHall 2-Back,
+74,48887,Baystairs 6-Back,pm EV Electmotors;vm 85;
+75,49062,BayStairs 5-Back,
+76,49257,BayStairs 4-Back,
+77,49553,BayStairs 3-Back,
+78,49709,BayStairs 2-Back,
+79,49998,BayStairs 1-Back,pm EV Electmotors Mov;vm 25;
+80,7990,MazeHut Controls,sc S1=sliderOff;sc S2=sliderOff;sc S3=sliderOff;sc S4=sliderOff;sc S5=sliderOff;ca SE_MazeHut setSliders:;-zm 1.5=-50=0=1;
+81,6070,MainPath 4-W,
+82,6361,MainPath 5-W,
+83,8646,CraterRim 0-In,
+84,9389,CraterRim 1-Forward,
+85,10153,CraterRim 2-Forward,
+86,32311,CraterRim 2-In,
+87,10522,CraterRim 3-Forward,
+88,11604,CraterRim 4-Forward,
+89,15799,CraterRim 5-In,
+90,12324,CraterRim 6-Forward,pm GR Broken Clock;vm 50;
+91,12227,CraterRim 7-Forward,
+92,21709,CraterRim 6-Out,
+93,12686,CraterRim 8-Forward,
+94,40422,CraterRim 9-Forward,
+95,39863,CraterRim 8-In,
+96,12953,CraterRim 10-Forward,pm WA Lapping;vm 200;
+97,40792,CraterRim 9-In,
+98,41140,CraterRim 9-Back,
+99,13290,CraterRim 10-Forward,
+100,15996,CraterRim 10-In,
+101,13395,CraterRim 11-Forward,
+102,40703,CraterRim 11.5 Forward,
+103,41622,CraterRim 11.5-In,
+104,41779,CraterRim 11.5-Back,
+105,16208,CraterRim 11-In,
+106,13774,CraterRim 12-Forward,pm AR Lite Wind Mov;vm 200;
+107,21856,TunnelEnter 1-Forward,pm AR Lite Wind Mov;vm 200;
+108,22626,TunnelEnter 2-Forward,?? SE_MicSwitch5|sc marker=TunnelEnter 2-Forward (on);
+109,22938,TunnelEnter 2-Back,
+110,23256,TunnelEnter 1-Back,
+111,22095,TunnelEnter Transition,pm AR Howling;vm 200;
+112,5193,WindTunnel Ladder 1,
+113,7202,WindTunnel Ladder 2,
+114,23452,WindTunnel 0-S (dark),pm AR Howling;vm 50;?? SE_TunnelLight|sc WindTunnel 0-S;
+115,23578,WindTunnel 1-S (dark),?? SE_TunnelLight|sc WindTunnel 1-S;
+116,23981,WindTunnel 2-S (dark),?? SE_TunnelLight|sc WindTunnel 2-S;
+117,24125,WindTunnel 3-S (dark),?? SE_TunnelLight|sc WindTunnel 3-S;
+118,24823,Tower 1-up,
+119,24883,Tower 2-up,
+120,25583,Tower 3-up,?? SE_Tower|sc marker=Tower 3-up (open);
+121,25845,Tower 4-up,?? SE_Tower|sc marker=Tower 4-up (open);
+122,25988,Tower 5-up Open,pm AR Lite Wind Mov;vm 150;
+123,40120,Tower 5-up Closed,pm AR Lite Wind Mov;vm 150;
+124,26411,Tower 5-down,
+125,26749,Tower 4-down,
+126,27015,Tower 3-down,
+127,38066,Tower 2.5-down,
+128,27241,Tower 2-down,
+129,27502,Tower 1-down,pm AR Howling;vm 200;
+130,17194,WindTunnel 0-N (dark),?? SE_TunnelLight|sc WindTunnel 0-N;
+131,22429,WindTunnel 1-N (dark),?? SE_TunnelLight|sc WindTunnel 1-N;
+132,27672,WindTunnel 2-N (dark),?? SE_TunnelLight|sc WindTunnel 2-N;
+133,28076,WindTunnel 3-N (dark),?? SE_TunnelLight|sc WindTunnel 3-N;
+134,28273,WindTunnel 4-N (dark),?? SE_TunnelLight|sc WindTunnel 4-N;pm AR Howling;vm 50;
+135,39483,WindTunnel (up-N),
+136,38883,WindTunnel Ladder 2,
+137,38973,WindTunnel Ladder 1,
+138,38470,WindTunnel 4-S (dark),?? SE_TunnelLight|sc WindTunnel 4-S;
+139,28569,WindTunnel (up-S),
+140,26154,Tower Controls,ca SE_TowerControls initVars:pict;
+141,39222,Tower Controls Up,
+142,14046,CraterRim 12-In,
+143,14183,CraterRim 12-Back,
+144,14519,CraterRim 11-Back,
+145,14695,CraterRim 10-Back,pm WA Lapping;vm 200;
+146,15029,CraterRim 8-Back,
+147,15135,CraterRim 7-Back,pm GR Broken Clock;vm 50;
+148,16769,CraterRim 7-Out,
+149,17143,StoneForest 0.5-N,
+150,17415,StoneForest 1-N,pm EV StoneForest No Water Mov;vm 50;
+151,17718,StoneForest 1-W,
+152,18023,StoneForest 1.5-N,
+153,18304,StoneForest 3-N,
+154,18512,StoneForest 4-N,
+155,18744,StoneForest 5-N,?? SE_RedPage|sc marker=StoneForest 5-N (noPage);
+156,19168,StoneForest MicStand,pm EV StoneForest;vm 250;?? SE_MicSwitch4|sc marker=StoneForest MicStand (On);?? SE_RedPage|sc marker2=StoneForest MicStand (noPage);
+157,19395,StoneForest 6-S,
+158,19630,StoneForest 4-S,
+159,19922,StoneForest 3-S,
+160,20027,StoneForest 2-S,
+161,20415,StoneForest 2-E,
+162,20484,StoneForest 1.5-E,
+163,20978,StoneForest 1.2-E,pm EV StoneForest No Water Mov;vm 50;
+164,21177,StoneForest 1-S,
+165,21389,StoneForest 0.5-S,
+166,16515,CraterRim 7-In,
+167,15605,CraterRim 5-Back,
+168,11797,CraterRim 4-In,
+169,10897,CraterRim 3-In,
+170,11112,CraterRim 3-Back,pm GR Broken Clock;vm 150;
+171,11445,CraterRim 3-Out,pm GR Broken Clock;vm 150;
+172,31863,ClockTower LookUp,
+173,31497,ClockTower ButtonStand,?? SE_MicSwitch3|sc marker=ClockTower ButtonStand (On);
+174,10474,CraterRim 2-Back,
+175,8871,CraterRim 0-Back,
+176,28762,Caldera 1-S,
+177,29147,Caldera 2-S,pm AR Lite Wind Mov;vm 150;
+178,29378,Caldera 3-S,
+179,29522,Caldera 4-E,
+180,29905,Caldera 5-E,
+181,30113,Caldera 6-E,?? SE_MicSwitch2|sc marker=Caldera 6-E (On);pm FR Caldron;vm 200;
+182,30507,Caldera 6-N Down,pa marker=Caldera North\416=0=104=84\40\0.2\YES;
+183,30885,Caldera 5-W,
+184,31046,Caldera 4-N,
+185,31357,Caldera 2-N,pm FR Caldron;vm 50;
+186,30278,Caldera 6-S Down,pa marker=Caldera South\400=0=100=92\40\0.2\YES;
+187,9028,CraterRim 0-Out,
+188,6473,MainPath 5-E,
+189,6677,MainPath 4-E,
+190,8207,MainPath 5-S,pm AR Lite Wind Mov;vm 150;
+191,32185,OasisPath 2-S,
+192,32578,OasisPath 3-S,
+193,32879,OasisPath 3.5-S,
+194,33146,OasisPath 4-S,pm AR Lite Wind Mov;vm 150;
+195,33514,OasisPath 6-S,
+196,33578,OasisPath 8-S,
+197,33989,OasisPath 9-S,
+198,37684,OasisPath 10-S,
+199,34053,Oasis Antenna,pm WA Running Far Mov;vm 150;?? SE_BluePage|sc marker=Oasis Antenna (noPage);
+200,34737,Oasis Platform-E,?? SE_BluePage|sc marker=Oasis Platform-E (NoPage);
+201,35133,Oasis Platform-N,
+202,35615,Oasis Exit,
+203,35933,OasisPath 10-N,
+204,36321,OasisPath 9-N,
+205,36414,OasisPath 7-N,
+206,36746,OasisPath 6-N,pm AR Lite Wind Mov;vm 150;
+207,37016,OasisPath 4-N,
+208,37271,OasisPath 3-N,
+209,37398,OasisPath 2-N,pm AR Lite Wind Mov;vm 150;
+210,9703,OasisPath 1-N,
+211,35569,Oasis Fountain,sc marker=Fountain=864=0=108=224;-pa marker=Fountain\864=0=108=224\36\0.2\YES;
+212,34421,Oasis Platform-S,?? SE_MicSwitch1|sc marker=Oasis Platform-S (On);
+213,7030,MainPath 3-E,pm AR Lite Wind Mov;vm 150;
+214,7475,MainPath 1-E,
+215,4375,Ship 4-E,
+216,4819,Ship 3-E,
+217,4871,Ship 2-E,
+218,24522,Ship 1-E,
+219,55809,Ship 0-E,pm WA Lapping;vm 200;
+220,42082,MainPath 3-N,in 3\go 7990;
+221,44746,SpaceShip1-N,
+222,44826,SpaceShip1-S,
+223,56574,SpaceShip2-S,
+224,56664,Spaceship3-N,
+225,58670,SpaceShip3-S,
+226,59030,SpaceShipExit,
+227,42083,MainPath 3-N,in 1\go 42081\ps DR Spaceship II;
+228,45136,SpaceShip2-N,pm WA Lapping;vm 20;

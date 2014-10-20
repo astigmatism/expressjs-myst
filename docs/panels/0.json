@@ -1,0 +1,1 @@
+{"onload":{"preload":{"video":["CYANLOGO"]}},"navigation":[{"width":"544","height":"332","goto":"@1","cursor":"up"}],"content":[{"tag":"video","src":"CYANLOGO","autoplay":true,"attr":{"width":"92","height":"116"},"css":{"top":"108px","left":"226px"},"events":{"ended":{"exit":"@1"}}}]}

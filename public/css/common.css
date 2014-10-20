@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: black;
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+
+#screen {
+    position: absolute;
+    top: 50%;
+    margin-top: -240px;
+    left: 50%;
+    margin-left: -320px;
+    height: 480px;
+    width: 640px;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#panelwrapper {
+    position: absolute;
+    width: 544px;
+    height: 333px;
+    top: 50%;
+    margin-top: -166px;
+    left: 50%;
+    margin-left: -272px;
+    overflow: hidden;
+}
+
+#panelwrapper div.panel, #guard {
+    position: absolute;
+    width: 544px;
+    height: 333px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 100;
+}
+
+div.panel {
+    position: relative;
+    height: 544px;
+    width: 333px;
+}
+
+div.controls {
+    font-family: 'Raleway', sans-serif;
+    position: absolute;
+    width: 544px;
+}
+
+#controls-top {
+    height: 50px;
+    top: 50%;
+    margin-top: -216px;
+    left: 50%;
+    margin-left: -272px;
+}
+
+div.panel div.content, div.panel div.nav {
+    height: 333px;
+    width: 544px;
+    position: absolute;
+    cursor: url('/assets/cursors/up.png'), pointer;
+}
+
+/* all tags within content have these options! */
+div.panel div.content * {
+    cursor: url('/assets/cursors/up.png'), pointer;
+    position: absolute;  
+}
+
+div.panel div.nav div {
+    position: absolute;
+}
+
+#guard {
+    cursor: url('/assets/cursors/up.png'), pointer;
+    display: none;
+    z-index: 999;
+}
+
+#mute {
+    height: 25px;
+    margin-top: 12.5px;
+    width:27px;
+    background: url(/mute.png) no-repeat 0px 0px;
+    cursor: pointer;
+    float: right;
+}
+
+#mute.muted {
+    background-position: 0px -25px;
+}
+
+#zoom, #travel, #title {
+    line-height: 50px;
+    height: 100%;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+#zoom, #travel {
+    float: right;
+}
+
+#title {
+    float: left;
+}
+
+#zoom:hover, #travel:hover {
+    -o-transform: scale(1.1,1.14);
+    -ms-transform: scale(1.1,1.14);
+    -webkit-transform: scale(1.1,1.14);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 250ms;
+    -moz-transform: scale(1.1,1.14);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 250ms;
+}
+
+.zoom1 {
+    -o-transform: scale(1,1);
+    -o-transition-timing-function: ease-out;
+    -o-transition-duration: 500ms;
+    -ms-transform: scale(1,1);
+    -ms-transition-timing-function: ease-out;
+    -ms-transition-duration: 500ms;
+    -webkit-transform: scale(1,1);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 500ms;
+    -moz-transform: scale(1,1);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 500ms; 
+}
+.zoom2 {
+    -o-transform: scale(1.25,1.25);
+    -o-transition-timing-function: ease-out;
+    -o-transition-duration: 500ms;
+    -ms-transform: scale(1.25,1.25);
+    -ms-transition-timing-function: ease-out;
+    -ms-transition-duration: 500ms;
+    -webkit-transform: scale(1.25,1.25);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 500ms;
+    -moz-transform: scale(1.25,1.25);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 500ms;
+}
+.zoom3 {
+    -o-transform: scale(1.5,1.5);
+    -o-transition-timing-function: ease-out;
+    -o-transition-duration: 500ms;
+    -ms-transform: scale(1.5,1.5);
+    -ms-transition-timing-function: ease-out;
+    -ms-transition-duration: 500ms;
+    -webkit-transform: scale(1.5,1.5);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 500ms;
+    -moz-transform: scale(1.5,1.5);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 500ms;
+}

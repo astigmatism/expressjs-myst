@@ -1,0 +1,406 @@
+1,87864,Achenar 1-E,
+2,87805,Achenar 1-N,
+3,88272,Achenar 1-S,?? CH_BluePage|sc marker=Achenar 1-S (noPage);
+4,88498,Achenar 1-W,?? CH_BluePage|sc marker=Achenar 1-W (noPage);
+5,88814,Achenar Monitor,?? Ch_monitor=1|sc buttonmarker=Achenar Button1;?? Ch_monitor=2|sc buttonmarker=Achenar Button2;?? Ch_monitor=3|sc buttonmarker=Achenar Button3;?? Ch_monitor=4|sc buttonmarker=Achenar Button4;zm 2.0=100=0=0.5;
+6,26005,black,
+7,11327,Boardwalk 1-N,
+8,11029,Boardwalk 1-S,?? Ch_elevator1|sc marker=Boardwalk 1-S (Elev1Up);ca CH_WaterSound enterZone:4;
+9,15551,Boardwalk 10-N,pa moovmarker=BW 10-N Windmill\0=0=28=108\12\0.1\YES;ca CH_WaterSound enterZone:5;
+10,15273,Boardwalk 10-S,?? Ch_lowerstairs|sc marker=Boardwalk 10-S (DoorOpen);?? Ch_elevator1|sc marker2=Boardwalk 10-S (Elev1Up);
+11,15906,Boardwalk 11-N,pa moovmarker=BW 11-N Windmill\0=0=36=96\12\0.1\YES;
+12,15662,Boardwalk 11-S,?? Ch_lowerstairs|sc marker=Boardwalk 11-S (DoorOpen);?? Ch_elevator1|sc marker2=Boardwalk 11-S (Elev1Up);
+13,16582,Boardwalk 12-E,ca CH_WaterSound enterZone:6;
+14,16172,Boardwalk 12-W,?? Ch_lowerstairs|sc marker=Boardwalk 12-W (doorOpen);ca CH_WaterSound enterZone:6;
+15,17121,Boardwalk 13-E,
+16,16663,Boardwalk 13-W,?? Ch_lowerstairs|sc Boardwalk 13-W DoorOpen;ca CH_WaterSound enterZone:7;
+17,18197,Boardwalk 14-N,pa moovmarker=BW 14-N Windmill\0=0=32=92\12\0.1\YES;
+18,17973,Boardwalk 14-S,?? Ch_elevator1|sc marker=Boardwalk 14-S (Elev1Up);?? Ch_pipebridge|sc marker2=Boardwalk 14-S (Pipe);
+19,18775,Boardwalk 15-N,
+20,18638,Boardwalk 15-S,
+21,19212,Boardwalk 16-N,ca CH_WaterSound enterZone:8;
+22,19143,Boardwalk 16-S,?? Ch_waterpath3|sc marker=Boardwalk 16-S (Switch);
+23,19870,Boardwalk 17-N,pa moovmarker=BW 17-N Windmill\0=0=32=92\12\0.1\YES;?? Ch_waterpath3|sc marker=Boardwalk 17-N (SwLeft);
+24,19459,Boardwalk 17-S,?? Ch_pipebridge|sc marker=Boardwalk 17-S (Pipe);ca CH_WaterSound enterZone:9;
+25,32368,Boardwalk 18-E,?? Ch_waterpath3|sc marker=Boardwalk 18-E (SwLeft);
+26,32060,Boardwalk 18-W,ca CH_WaterSound enterZone:10;
+27,20241,Boardwalk 19-N,pa moovmarker=BW 19-N Windmill\0=0=60=92\12\0.1\YES;ca CH_WaterSound enterZone:9;
+28,20137,Boardwalk 19-S,?? Ch_pipebridge|sc marker=Boardwalk 19-S (Pipe);?? Ch_bridge|sc marker2=Boardwalk 19-S (BridgeUp);?? Ch_waterpath4|sc marker3=Boardwalk 19-S (SwLeft);
+29,11997,Boardwalk 2-N,
+30,11657,Boardwalk 2-S,?? Ch_elevator1|sc marker=Boardwalk 2-S (Elev1Up);
+31,20934,Boardwalk 20-N,pa moovmarker=BW 20-N Windmill\0=0=40=60\12\0.1\YES;?? Ch_waterpath4|sc marker=Boardwalk 20-N (SwLeft);
+32,20680,Boardwalk 20-S,?? Ch_pipebridge|sc marker=Boardwalk 20-S (Pipe);?? Ch_elevator1|sc marker2=Boardwalk 20-S (Elev1Up);ca CH_WaterSound enterZone:15;
+33,2465,Boardwalk 21-N,?? Ch_waterpath4|sc marker=Boardwalk 21-N (SwLeft);?? Ch_lowerstairs|sc marker2=Boardwalk 21-N (DoorOpen);
+34,2153,Boardwalk 21-S,?? Ch_bridge|sc marker=Boardwalk 21-S (BridgeUp);ca CH_WaterSound enterZone:14;
+35,21506,Boardwalk 22-N,pa moovmarker=BW 22-N Windmill\0=0=56=104\12\0.1\YES;ca CH_WaterSound enterZone:15;
+36,21498,Boardwalk 22-S,?? Ch_waterpath5|sc marker=Boardwalk 22-S (SwLeft);?? Ch_elevator1|sc marker2=Boardwalk 22-S (Elev1Up);?? Ch_pipebridge|sc marker3=Boardwalk 22-S (Pipe);
+37,22077,Boardwalk 23-E,?? Ch_waterpath5|sc marker=Boardwalk 23-E (SwLeft);
+38,21943,Boardwalk 23-W,?? Ch_elevator1|sc marker=Boardwalk 23-W (Elev1Up);ca CH_WaterSound enterZone:16;
+39,24265,Boardwalk 24-N,pa moovmarker=BW 24-N Windmill\0=0=64=68\12\0.1\YES;?? Ch_waterpath5|sc marker=Boardwalk 24-N (SwLeft);?? Ch_lowerstairs|sc marker2=Boardwalk 24-N (DoorOpen);
+40,23887,Boardwalk 24-S,?? Ch_pipebridge|sc marker=Boardwalk 24-S (Pipe);?? Ch_bridge|sc marker2=Boardwalk 24-S (BridgeUp);ca CH_WaterSound enterZone:19;
+41,22730,Boardwalk 25-E,ca CH_WaterSound enterZone:16;
+42,22520,Boardwalk 25-W,?? Ch_elevator1|sc marker=Boardwalk 25-W (Elev1Up);
+43,23050,Boardwalk 26-E,?? Ch_pipebridge|sc marker2=Boardwalk 26-E (Pipe);?? Ch_bridge|sc marker=Boardwalk 26-E (BridgeUp);ca CH_WaterSound enterZone:17;
+44,22799,Boardwalk 26-W,?? Ch_elevator1|sc marker=Boardwalk 26-W (Elev1Up);ca CH_WaterSound enterZone:17;
+45,23632,Boardwalk 27-E,?? Ch_pipebridge|sc marker=Boardwalk 27-E (Pipe);?? Ch_bridge|sc marker2=Boardwalk 27-E (Bridge);
+46,23467,Boardwalk 27-W,ca CH_WaterSound enterZone:18;
+47,98985,Boardwalk 27-W LookUp,?? Ch_elevator1|sc marker=Boardwalk 27-w lookup (ElevUp);
+48,24693,Boardwalk 28-N,pa moovmarker=BW 28-N Windmill\0=0=68=60\12\0.1\YES;?? Ch_lowerstairs|sc marker=Boardwalk 28-N (DoorOpen);
+49,24323,Boardwalk 28-S,?? Ch_pipebridge|sc marker=Boardwalk 28-S (Pipe);
+50,25142,Boardwalk 29-N,pa moovmarker=BW 29-N Windmill\0=0=68=84\12\0.1\YES;
+51,24946,Boardwalk 29-S,?? Ch_pipebridge|sc marker=Boardwalk 29-S (Pipe);
+52,12417,Boardwalk 3-N,
+53,12062,Boardwalk 3-S,
+54,25804,Boardwalk 30-N,pa moovmarker=BW 30-N Windmill\0=0=76=128\12\0.1\YES;
+55,25490,Boardwalk 30-S,?? Ch_pipebridge|sc marker=Boardwalk 30-S (Pipe);
+56,26717,Boardwalk 31-N,pa moovmarker=BW 31-N Windmill\0=0=52=112\12\0.1\YES;ca CH_WaterSound enterZone:14;
+57,26492,Boardwalk 31-S,?? Ch_bridge|sc marker=Boardwalk 31-S (BridgeUp);?? Ch_waterpath6|sc marker2=Boardwalk 31-S (SwLeft);
+58,27330,Boardwalk 32-N,pa moovmarker=BW 32-N Windmill\0=0=64=32\12\0.1\YES;?? Ch_waterpath6|sc marker=Boardwalk 32-N (SwLeft);
+59,26960,Boardwalk 32-S,?? Ch_bridge|sc marker=Boardwalk 32-S (BridgeUp);ca CH_WaterSound enterZone:20;
+60,29021,Boardwalk 33-E,?? Ch_bridge|sc marker=Boardwalk 33-E (Bridge);ca CH_WaterSound enterZone:13;
+61,29197,Boardwalk 33-W,?? Ch_waterpath6|sc marker=Boardwalk 33-W (SwLeft);?? Ch_elevator1|sc marker2=Boardwalk 33-W (Elev1Up);?? Ch_lowerstairs|sc marker3=Boardwalk 33-W (DoorOpen);
+62,27804,Boardwalk 34-N,pa moovmarker=BW 34-N Windmill\0=0=64=28\12\0.1\YES;
+63,27623,Boardwalk 34-S,?? Ch_bridge|sc marker=Boardwalk 34-S (BridgeUp);
+64,28195,Boardwalk 35-N,pa moovmarker=BW 35-N Windmill\0=0=64=100\12\0.1\YES;?? Ch_elevator1|sc marker=Boardwalk 35-N (Elev1Up);
+65,28067,Boardwalk 35-S,?? Ch_bridge|sc marker=Boardwalk 35-S (BridgeUp);
+66,28810,Boardwalk 36-N,pa moovmarker=BW 36-N Windmill\0=0=64=80\12\0.1\YES;?? Ch_elevator1|sc marker=Boardwalk 36-N (Elev1Up);
+67,28497,Boardwalk 36-S,?? Ch_bridge|sc marker=Boardwalk 36-S (BridgeUp);ca CH_WaterSound enterZone:20;
+68,29603,Boardwalk 37-E,
+69,29713,Boardwalk 37-W,?? Ch_elevator1|sc marker=Boardwalk 37-W (Elev1Up);?? Ch_lowerstairs|sc marker2=Boardwalk 37-W (DoorOpen);?? Ch_pipebridge|sc marker3=Boardwalk 37-W (Pipe);ca CH_WaterSound enterZone:13;
+70,35914,Boardwalk 38-N,pa moovmarker=BW 38-N Windmill\0=0=60=76\12\0.1\YES;ca CH_WaterSound enterZone:12;
+71,35651,Boardwalk 38-S,?? Ch_bridge|sc marker=Boardwalk 38-S (BridgeUp);
+72,30460,Boardwalk 39-N,pa moovmarker=BW 39-N Windmill\0=0=64=52\12\0.1\YES;?? Ch_lowerstairs|sc marker=Boardwalk 39-N (DoorOpen);
+73,30164,Boardwalk 39-S,?? Ch_bridge|sc marker=Boardwalk 39-S (BridgeUp);ca CH_WaterSound enterZone:21;
+74,13049,Boardwalk 4-N,
+75,12547,Boardwalk 4-S,?? Ch_elevator1|sc marker=Boardwalk 4-S (Elev1up);
+76,30934,Boardwalk 40-N,pa moovmarker=BW 40-N Windmill\0=0=68=84\12\0.1\YES;ca CH_WaterSound enterZone:21;
+77,30631,Boardwalk 40-S,?? Ch_bridge|sc marker=Boardwalk 40-S (BridgeUp);
+78,31432,Boardwalk 41-N,ca CH_WaterSound enterZone:25;
+79,31118,Boardwalk 41-S,?? Ch_bridge|sc marker=Boardwalk 41-S (BridgeUp);ca CH_WaterSound enterZone:25;
+80,31961,Boardwalk 42-N,ca CH_WaterSound enterZone:26;
+81,31551,Boardwalk 42-S,?? Ch_bridge|sc marker=Boardwalk 42-S (Bridgeup);ca CH_WaterSound enterZone:26;
+82,37065,Boardwalk 43-N,ca CH_WaterSound enterZone:25;
+83,36725,Boardwalk 43-S,ca CH_WaterSound enterZone:25;
+84,32743,Boardwalk 44-E,
+85,32972,Boardwalk 44-W,
+86,33358,Boardwalk 45-N,pa moovmarker=BW 45-N Windmill\0=0=40=64\12\0.1\YES;
+87,33225,Boardwalk 45-S,?? Ch_bridge|sc marker=Boardwalk 45-S (BridgeUp);
+88,33832,Boardwalk 46-N,ca CH_WaterSound enterZone:10;
+89,33578,Boardwalk 46-S,?? Ch_bridge|sc marker=Boardwalk 46-S (BridgeUp);?? Ch_waterpath7|none|sc marker2=Boardwalk 46-S (SwRight);
+90,35578,Boardwalk 47-N,pa moovmarker=BW 47-N Windmill\0=0=56=84\12\0.1\YES;?? Ch_waterpath7|none|sc marker=Boardwalk 47-N (SwRight);
+91,35112,Boardwalk 47-S,?? Ch_bridge|sc marker=Boardwalk 47-S (BridgeUp);ca CH_WaterSound enterZone:12;
+92,34259,Boardwalk 48-E,ca CH_WaterSound enterZone:11;
+93,34505,Boardwalk 48-W,?? Ch_waterpath7|none|sc marker=Boardwalk 48-W (SwRight);?? Ch_elevator1|sc marker2=Boardwalk 48-W (Elev1Up);
+94,34773,Boardwalk 49-E,
+95,35057,Boardwalk 49-W,?? Ch_elevator1|sc marker=Boardwalk 49-W (Elev1Up);
+96,13553,Boardwalk 5-N,
+97,13268,Boardwalk 5-S,?? Ch_elevator1|sc marker2=Boardwalk 5-S (Elev1Up);?? Ch_lowerstairs|sc marker=Boardwalk 5-S (DoorOpen);
+98,37442,Boardwalk 50-N,
+99,37272,Boardwalk 50-S,ca CH_WaterSound enterZone:22;
+100,38065,Boardwalk 51-N,
+101,37667,Boardwalk 51-S,
+102,38457,Boardwalk 52-E,
+103,38264,Boardwalk 52-W,
+104,39075,Boardwalk 53-E,
+105,38861,Boardwalk 53-W,
+106,39528,Boardwalk 54-E,
+107,39330,Boardwalk 54-W,?? Ch_pipebridge|sc marker=Boardwalk 54-W (Pipe);
+108,40121,Boardwalk 55-E,
+109,39809,Boardwalk 55-W,
+110,40631,Boardwalk 56-E,
+111,40222,Boardwalk 56-W,
+112,41077,Boardwalk 57-E,ca CH_WaterSound enterZone:22;
+113,40846,Boardwalk 57-W,
+114,42420,Boardwalk 58-N,?? Ch_pipebridge|sc marker=Boardwalk 58-N (Pipe);?? Ch_elevator1|sc marker2=Boardwalk 58-N (Elev1Up);ca CH_WaterSound enterZone:27;
+115,42690,Boardwalk 58-S,
+116,42194,Boardwalk 59-N,?? Ch_pipebridge|sc marker=Boardwalk 59-n (Pipe);ca CH_WaterSound enterZone:27;
+117,41960,Boardwalk 59-S,ca CH_WaterSound enterZone:23;
+118,13949,Boardwalk 6-N,ca CH_WaterSound enterZone:4;
+119,13703,Boardwalk 6-S,?? Ch_waterpath2|sc marker=Boardwalk 6-S (SwRight);?? Ch_lowerstairs|sc marker2=Boardwalk 6-S (DoorOpen);?? Ch_elevator1|sc marker3=Boardwalk 6-S (Elev1Up);
+120,42940,Boardwalk 60-N,?? Ch_pipebridge|sc marker=Boardwalk 60-N (Pipe);
+121,43125,Boardwalk 60-S,
+122,43268,Boardwalk 61-N,?? Ch_pipebridge|sc marker=Boardwalk 61-N PipeBridge;
+123,43713,Boardwalk 61-S,
+124,43979,Boardwalk 62-N,sc marker2=Boardwalk 62-N (Pipe);ca CH_WaterSound enterZone:27;
+125,44229,Boardwalk 62-S,
+126,41669,Boardwalk 63-N,?? Ch_pipebridge|sc marker=Boardwalk 63-N (Pipe);ca CH_WaterSound enterZone:23;
+127,41466,Boardwalk 63-S,?? Ch_openelevator|sc openelevator=Boardwalk 63-S (DoorOpen);ca CH_WaterSound enterZone:24;
+128,44827,Boardwalk 63-S lookUp,
+129,14360,Boardwalk 7-E,?? Ch_waterpath2|sc marker=Boardwalk 7-E (SwLeft);
+130,14175,Boardwalk 7-W,?? Ch_lowerstairs|sc marker=Boardwalk 7-W (doorOpen);ca CH_WaterSound enterZone:5;
+131,17667,Boardwalk 8-N,pa moovmarker=BW 8-N Windmill\0=0=16=108\12\0.1\YES;?? Ch_waterpath2|sc marker=Boardwalk 8-N (SwLeft);
+132,17626,Boardwalk 8-S,?? Ch_elevator1|sc marker=Boardwalk 8-S (Elev1Up);ca CH_WaterSound enterZone:8;
+133,15024,Boardwalk 9-E,
+134,14602,Boardwalk 9-W,?? Ch_lowerstairs|sc marker=Boardwalk 9-W (doorOpen);
+135,36433,Elevator 1,ca CH_Elevator initHandle:1closed;
+136,83889,Elevator 1-Down Closed,ca CH_Elevator initHandle:1closed;
+137,36337,Elevator 1-Down Open,ca CH_Elevator initHandle:1open;ca CH_WaterSound enterZone:18;
+138,84124,Elevator 1-Up Open,ca CH_Elevator initHandle:1open;
+139,84711,Elevator 2-Down Closed,ca CH_Elevator initHandle:2closed;
+140,84244,Elevator 2-Down Open,ca CH_Elevator initHandle:2open;
+141,84808,Elevator 2-Up Closed,ca CH_Elevator initHandle:2closed;
+142,85222,Elevator 2-Up Open,ca CH_Elevator initHandle:2open;
+143,85464,Elevator 3-Down Closed,ca CH_Elevator initHandle:3closed;
+144,44320,Elevator 3-Down Open,ca CH_Elevator initHandle:3open;ca CH_WaterSound enterZone:24;
+145,85642,Elevator 3-Up Closed,ca CH_Elevator initHandle:3closed;
+146,85801,Elevator 3-Up Open,
+147,101798,Elevator 3-Up Open Light,ca CH_Elevator initHandle:3open;
+148,45661,ElevatorEntered,?? Ch_elevator2|in 0.75\go 85222=r|in 0.75\go 84244=r;
+149,98476,ElevatorEntered,?? Ch_elevator3|in 0.75\go 101798=r|in 0.75\go 44320=r;
+150,96885,ElevatorEntered,?? Ch_elevator1|in 0.75\go 84124=r|in 0.75\go 36337=r;
+151,97270,ElevatorEntered,in 0.75\go 84244=r;
+152,21064,Pumphouse 1-N,?? Ch_pump|sc marker=Pumphouse 1-N (On);pa moovmarker=PH 1-N AxleSpin\0=0=35=36\5\0.06\YES;pm stop;ca CH_WaterSound inPumphouse:1;
+153,2952,Pumphouse 1-N Lookup,pa moovmarker=PH 1-N (lookup) AxleSpin\0=0=25=26\5\0.25\1;pa moovmarker2=PH 1-N Lookout Water\0=0=33=33\5\0.1\1;ca CH_WaterSound inPumphouse:1;
+154,4459,Pumphouse 1-S,ca CH_WaterSound inPumphouse:1;
+155,4696,Pumphouse 2-N,ca CH_PumpHouse startSoundAndAnimation:;ca CH_WaterSound inPumphouse:3;
+156,5088,Pumphouse 2-S,ca CH_WaterSound inPumphouse:3.5;
+157,5138,Pumphouse 3-N,ca CH_WaterSound inPumphouse:4;
+158,83657,Pumphouse 3-S,ca CH_WaterSound inPumphouse:4;
+159,5381,Pumphouse 4-N,pa moovmarker=PH 4-N Windmill\792=0=72=100\-12\0.02\YES;ca CH_WaterSound pathToPumphouse:9;
+160,5784,Pumphouse 4-S,ca CH_WaterSound pathToPumphouse:9;
+161,6020,Pumphouse 5-N,ca CH_WaterSound pathToPumphouse:10;
+162,6397,Pumphouse 5-N LookUp,pa moovmarker=PH 5-N (Lookup)\152=0=76=172\-12\0.02\YES;ca CH_WaterSound pathToPumphouse:10;
+163,6577,Pumphouse 5-S,ca CH_WaterSound pathToPumphouse:10;
+164,6746,Pumphouse Faucet,ca CH_WaterSound inPumphouse:2;
+165,6971,PumphousePath 1-Down,?? Ch_elevator1|sc marker=PumphousePath 1-Down (Elev1Up);ca CH_WaterSound pathToPumphouse:8;
+166,10780,PumphousePath 1-Up,ca CH_WaterSound pathToPumphouse:8;
+167,7283,PumphousePath 2-Down,ca CH_WaterSound pathToPumphouse:7;
+168,10669,PumphousePath 2-Up,ca CH_WaterSound pathToPumphouse:7;
+169,7663,PumphousePath 3-Down,ca CH_WaterSound pathToPumphouse:6;
+170,10298,PumphousePath 3-Up,ca CH_WaterSound pathToPumphouse:6;
+171,7761,PumphousePath 4-Down,ca CH_WaterSound pathToPumphouse:5;
+172,10036,PumphousePath 4-Up,ca CH_WaterSound pathToPumphouse:5;
+173,8059,PumphousePath 5-Down,ca CH_WaterSound pathToPumphouse:4;
+174,9781,PumphousePath 5-Up,ca CH_WaterSound pathToPumphouse:4;
+175,8323,PumphousePath 6-Down,ca CH_WaterSound pathToPumphouse:3;
+176,9721,PumphousePath 6-Up,ca CH_WaterSound pathToPumphouse:3;
+177,8635,PumphousePath 7-Down,?? Ch_elevator1|sc marker=PumphousePath 7-Down (Elev1Up);ca CH_WaterSound pathToPumphouse:2;
+178,9420,PumphousePath 7-Up,ca CH_WaterSound pathToPumphouse:2;
+179,8881,PumphousePath 8-Down,?? Ch_elevator1|sc marker=PumphousePath 8-Down (Elev1Up);ca CH_WaterSound pathToPumphouse:1;
+180,9075,PumphousePath 8-Up,ca CH_WaterSound pathToPumphouse:1;
+181,93457,Sirrus 1-E,
+182,94270,Sirrus 1-N,pa moovmarker=Sirrus Windmill\0=0=72=52\-12\0.02\YES;
+183,93725,Sirrus 1-S,
+184,93983,Sirrus 1-W,
+185,95623,Sirrus Bed-E,
+186,71121,Sirrus BedDrwr-1,"?? Ch_ldrawer|sc marker=Sirrus BedDrwr-1(L Open),en opendrawer=NO|en closedrawer=NO;"
+187,98232,Sirrus BedDrwr-2,"?? Ch_rdrawer|sc marker=Sirrus BedDrwr-2(R Open),en opendrawer=NO,en tornpage=YES|en closedrawer=NO,en tornpage=NO;en coverall=NO;en coverpage=NO;"
+188,95785,Sirrus Chairs-W,
+189,92740,Sirrus Entrance-E,
+190,93276,Sirrus Entrance-N,
+191,92944,Sirrus Entrance-W,
+192,94554,Sirrus NorthDesk-N,ca CH_SirrusDesk showDrawer:;
+193,94853,Sirrus Sink-E,
+194,95433,Sirrus Sink-N,
+195,95104,Sirrus Sink-W,
+196,96173,Sirrus SouthDesk-S,?? Ch_desk2|sc marker=Sirrus SouthDesk-S (open);
+197,86839,SwitchClose-Input,ca CH_WaterPath initHandle:handle=2=center;ca CH_WaterSound enterZone:4=200;
+198,87418,SwitchClose-LeftOutput,ca CH_WaterPath initHandle:handle=2=left;ca CH_WaterSound enterZone:4=200;
+199,87249,SwitchClose-RightOutput,ca CH_WaterPath initHandle:handle=2=right;ca CH_WaterSound enterZone:4=200;
+200,91766,Temple 1-E,?? Ch_temple|none|sc Temple 1-E (DoorClsd);
+201,99317,Temple 1-N,
+202,99487,Temple 1-S,
+203,92144,Temple 1-W,pm MU ChannelTemple;vm 200;
+204,101458,Temple 1-W BlueLight,pv Holo-ALaugh-F.m4v\go 92144=n;
+205,99650,Temple 2-E,
+206,91455,Temple 2-N,
+207,91261,Temple 2-S,
+208,101349,Temple 2-W,
+209,100047,Temple 3-E,
+210,90873,Temple 3-N,
+211,91011,Temple 3-SW,
+212,100130,Temple 4-E,
+213,90543,Temple 4-N,
+214,90018,Temple 4-S,
+215,90255,Temple 4-W,
+216,89646,TempleHall 1-N,
+217,89440,TempleHall 1-SE,
+218,89220,TempleHall 2-N,
+219,88905,TempleHall 2-S,
+220,46695,TempleHall Wall,in 0.75\go 89646=r;
+221,46136,Village .5-W,?? Ch_openelevator1|sc doormarker=Village .5-W Elev (DoorOpen);
+222,98756,Village .5-W LookDown,?? Ch_lowerstairs|sc marker=Village .5-W LookDown (Open);
+223,46447,Village 1-E,?? Ch_bridge|sc marker=Village 1-E (Bridge);
+224,96569,Village 1-E,
+225,96441,Village 1-W,?? Ch_elevator1|none|sc marker=Village 1-W (Elev1down);
+226,51770,Village 10-N,?? Ch_elevator1|none|sc marker=Village 10-N (Elev1down);?? Ch_lowerstairs|sc marker2=Village 10-N (DoorOpen);
+227,51667,Village 10-S,
+228,52457,Village 11-E,
+229,52658,Village 11-N,
+230,52119,Village 11-S,
+231,52987,Village 11-W,
+232,53323,Village 12-E,
+233,53051,Village 12-W,
+234,53916,Village 13-E,
+235,53748,Village 13-W,
+236,54701,Village 14-E,
+237,54883,Village 14-N,
+238,54277,Village 14-S,
+239,54235,Village 14-W,
+240,55164,Village 15-N,
+241,55361,Village 15-S,
+242,55677,Village 16-N,
+243,55975,Village 16-S,
+244,56127,Village 17-N,
+245,56544,Village 17-S,
+246,56830,Village 18-N,
+247,57070,Village 18-S,
+248,57119,Village 19-N,
+249,47569,Village 2-E,
+250,50725,Village 2-W,?? Ch_elevator1|none|sc marker=Village 2-W (Elev1down);?? Ch_lowerstairs|sc marker2=Village 2-W Stairs (DoorOpen);
+251,57628,Village 20-E,
+252,57357,Village 20-W,
+253,58150,Village 21-E,
+254,57876,Village 21-W,
+255,58828,Village 22-N,
+256,58558,Village 22-S,
+257,58973,Village 23-N,
+258,59359,Village 23-S,
+259,59607,Village 24-E,
+260,59735,Village 24-W,
+261,60345,Village 25-N,
+262,59918,Village 25-S,
+263,60811,Village 26-N,
+264,60558,Village 26-S,
+265,61362,Village 27-E,
+266,61615,Village 27-N,
+267,61143,Village 27-S,
+268,61856,Village 27-W,
+269,62368,Village 28-N,
+270,62019,Village 28-S,
+271,62929,Village 29-N,
+272,62538,Village 29-S,
+273,47869,Village 3-E,
+274,49611,Village 3-W,?? Ch_elevator1|none|sc marker=Village 3-W (Elev1down);
+275,63414,Village 30-E,
+276,63091,Village 30-W,
+277,63938,Village 31-E,
+278,63618,Village 31-W,
+279,64200,Village 32-N,
+280,64450,Village 32-S,
+281,64766,Village 33-N,
+282,64977,Village 33-S,
+283,65080,Village 34-N,
+284,65493,Village 34-S,
+285,65580,Village 35-E,
+286,65832,Village 35-W,
+287,66189,Village 36-E,
+288,66492,Village 36-W,
+289,66725,Village 37-N,
+290,66921,Village 37-S,
+291,67173,Village 38-N,
+292,67523,Village 38-S,
+293,68522,Village 39-E,?? Ch_elevator1|sc marker=Village 39-E (Elev1Up);
+294,67796,Village 39-N,
+295,68131,Village 39-S,
+296,68021,Village 39-W,
+297,47918,Village 4-E,
+298,49214,Village 4-W,
+299,68852,Village 40-N,
+300,68871,Village 40-S,
+301,69143,Village 41-N,
+302,69606,Village 41-S,
+303,70615,Village 42-E,?? Ch_upperstairs|sc marker=Village 42-E (doorOpen);
+304,69669,Village 42-N,
+305,70222,Village 42-S,
+306,69937,Village 42-W,
+307,70784,Village 43-E,pa moovmarker=V 43-E Windmill\0=0=88=48\12\0.1\YES;?? Ch_upperstairs|sc marker=Village 43-E (doorOpen);?? Ch_elevator1|sc marker2=Village 43-E (Elev1Up);
+308,71418,Village 43-W,pm L2 Wind!Ropes Mov;vm 250;
+309,71489,Village 44-E,pa moovmarker=V 44-E Windmill\0=0=84=24\12\0.1\YES;?? Ch_upperstairs|sc marker=Village 44-E (doorOpen);
+310,71823,Village 44-W,
+311,72009,Village 45-E,pa moovmarker=Village 45-E Windmill\0=0=112=104\12\0.1\YES;?? Ch_upperstairs|sc marker=Village 45-E (DoorOpen);
+312,72353,Village 45-W,
+313,72506,Village 46-E,"?? Ch_upperstairs|sc marker=Village 46-E (doorOpen),en climbstairs=YES,en stairsshut=NO|en climbstairs=NO;pm L2 Wind!Ropes Mov;vm 250;?? Ch_openelevator2|sc doormarker=Village 46-E Elev (DoorOpen),en EnterElevator=YES,en OpenElevator=NO,en CloseElevator=YES|en EnterElevator=NO,en CloseElevator=NO;"
+314,100536,Village 46-E LookUp,
+315,72768,Village 46-W,
+316,48267,Village 5-E,
+317,49069,Village 5-W,?? Ch_elevator1|none|sc marker=Village 5-W (Elev1down);
+318,48563,Village 6-E,
+319,48888,Village 6-W,?? Ch_elevator1|none|sc marker=Village 6-W (Elev1down);
+320,50393,Village 7-E,
+321,50043,Village 7-W,?? Ch_elevator1|none|sc marker=Village 7-W  (Elev1down);
+322,50514,Village 8-N,pa moovmarker=V 8-N Windmill\0=0=76=76\12\0.1\YES;
+323,49884,Village 8-S,
+324,51416,Village 9-N,
+325,51081,Village 9-S,
+326,76659,Village High 1-E,?? Ch_elevator1|sc marker=Village High 1-E (Elev1Down);pm L3 Wind Mov;vm 250;?? Ch_openelevator2|sc doormarker=Village High 1-E (ElevDoorOpen);
+327,76503,Village High 1-W,pm L3 Wind Mov;vm 250;
+328,81254,Village High 10-E,"?? Ch_gate|sc marker=Village High 10-E (GateClsd),in 0.75\ps DR Steel Open\sv Ch_gate=NO\go 81254;"
+329,81100,Village High 10-W,
+330,81586,Village High 11-E,
+331,81740,Village High 11-W,
+332,82376,Village High 12-N,pa moovmarker=VH 12-N Windmill\0=0=100=76\12\0.1\YES;
+333,82060,Village High 12-S,pm L3 Wind Mov;vm 250;
+334,82639,Village High 13-N,
+335,82793,Village High 13-S,?? Ch_elevator1|none|sc marker=Village High 13-S (Elev1Down);?? Ch_upperstairs|none|sc marker2=Village High 13-S (StairsClsd);
+336,83143,Village High 14-N,pm L3 Wind Mov;vm 250;?? Ch_hut1|sc doormarker=Village High 14-N (DoorOpen);
+337,83255,Village High 14-S,?? Ch_elevator1|none|sc marker=Village High 14-S (Elev1Down);?? Ch_upperstairs|none|sc marker2=Village High 14-S (StairsClsd);
+338,77034,Village High 2-E,
+339,77151,Village High 2-W,
+340,77454,Village High 3-E,
+341,77805,Village High 3-W,
+342,77985,Village High 4-E,
+343,78158,Village High 4-W,
+344,92317,Village High 4.5-E,pm L3 Wind Mov;vm 250;?? Ch_hut2|sc doormarker=Village High 4.5-E (DoorOpen);
+345,92512,Village High 4.5-W,?? Ch_upperstairs|none|sc marker=Village High 4.5-W (DoorClsd);
+346,78451,Village High 5-N,
+347,78770,Village High 5-S,
+348,78886,Village High 6-N,
+349,79112,Village High 6-S,?? Ch_elevator1|none|sc marker=Village High 6-S (Elev1Down);?? Ch_upperstairs|none|sc marker2=Village High 6-S (DoorClsd);
+350,79664,Village High 7-E,?? Ch_elevator1|none|sc marker=Village High 7-E (Elev1Down);
+351,79496,Village High 7-W,
+352,80103,Village High 8-E,pa moovmarker=VH 8-E Windmill\0=0=139=52\12\0.1\YES;?? Ch_elevator1|none|sc marker=Village High 8-E (Elev1Down);?? Ch_upperstairs|none|sc marker2=Village High 8-E (DoorClsd);
+353,80159,Village High 8-W,
+354,80492,Village High 9-N,"pm L3 Wind Mov;vm 250;?? Ch_gate|sc gatemarker=Village High 9-N (GateClsd),in 0.75\ps DR Steel Open\sv Ch_gate=NO\go 80492;"
+355,80720,Village High 9-S,?? Ch_upperstairs|sc marker=Village High 9-S (DoorClsd);pm L3 Wind Mov;vm 250;
+356,46979,Village High 9.5-W,?? Ch_temple|sc doormarker=Village High 9.5-W (Open);
+357,76263,Village Stairs 1-Down,pa moovmarker=VS 1-Down Windmill\0=0=68=132\12\0.1\YES;
+358,75778,Village Stairs 1-Up closed,?? Ch_upperstairs|sc Village Stairs 1-Up;
+359,75674,Village Stairs 2-Down,
+360,75275,Village Stairs 2-Up,
+361,75252,Village Stairs 3-Down,?? Ch_elevator1|sc marker=Village Stairs 3-Down (Elev1Up);
+362,74809,Village Stairs 3-Up,
+363,74505,Village Stairs 4-Down,
+364,74269,Village Stairs 4-Up,
+365,74168,Village Stairs 5-Down,
+366,73852,Village Stairs 5-Up,pm L2 Wind Mov;vm 250;
+367,73587,Village Stairs 6-Down,?? Ch_lowerstairs|sc marker=VillStairs 6-Down (DoorOpen);?? Ch_elevator1|sc marker2=VillStairs 6-Down (Elev1Up);
+368,73346,Village Stairs 6-Up,ca CH_WaterSound enterZone:6;
+369,73038,Village Stairs 7-Down,?? Ch_lowerstairs|sc Village Stairs 7-Down Open;ca CH_WaterSound enterZone:7;
+370,17225,Village Stairs 7-Up,
+371,86090,VillageBookroom 1-N,
+372,100894,VillageBookroom 1-N Bookopen,
+373,100694,VillageBookroom 1-N Bookup,
+374,86416,VillageBookroom 1-S,
+375,86711,VillageBookroom 1-S Open,
+376,86840,SwitchClose-Input,ca CH_WaterPath initHandle:handle=3=center;ca CH_WaterSound enterZone:8=200;
+377,86841,SwitchClose-Input,ca CH_WaterPath initHandle:handle=4=center;ca CH_WaterSound enterZone:9=200;
+378,86842,SwitchClose-Input,ca CH_WaterPath initHandle:handle=5=center;ca CH_WaterSound enterZone:15=200;
+379,86843,SwitchClose-Input,ca CH_WaterPath initHandle:handle=6=center;ca CH_WaterSound enterZone:14=200;
+380,86844,SwitchClose-Input,ca CH_WaterPath initHandle:handle=7=center;ca CH_WaterSound enterZone:10=200;
+381,87419,SwitchClose-LeftOutput,ca CH_WaterPath initHandle:handle=3=left;ca CH_WaterSound enterZone:8=200;
+382,87420,SwitchClose-LeftOutput,ca CH_WaterPath initHandle:handle=4=left;ca CH_WaterSound enterZone:9=200;
+383,87421,SwitchClose-LeftOutput,ca CH_WaterPath initHandle:handle=5=left;ca CH_WaterSound enterZone:15=200;
+384,87422,SwitchClose-LeftOutput,ca CH_WaterPath initHandle:handle=6=left;ca CH_WaterSound enterZone:14=200;
+385,87423,SwitchClose-LeftOutput,ca CH_WaterPath initHandle:handle=7=left;ca CH_WaterSound enterZone:10=200;
+386,87250,SwitchClose-RightOutput,ca CH_WaterPath initHandle:handle=3=right;ca CH_WaterSound enterZone:8=200;
+387,87251,SwitchClose-RightOutput,ca CH_WaterPath initHandle:handle=4=right;
+388,87252,SwitchClose-RightOutput,ca CH_WaterPath initHandle:handle=5=right;ca CH_WaterSound enterZone:15=200;
+389,87253,SwitchClose-RightOutput,ca CH_WaterPath initHandle:handle=6=right;ca CH_WaterSound enterZone:14=200;
+390,87254,SwitchClose-RightOutput,ca CH_WaterPath initHandle:handle=7=right;ca CH_WaterSound enterZone:10=200;
+391,23468,Boardwalk 27-W Elev1Up,ca CH_WaterSound enterZone:18;
+392,85802,Elevator 3-Up Open,"ps EL SoftHum;in .75\go 85642,ps DR Wood Shut;"
+393,92145,Temple 1-W,?? Ch_monitor=1|in 1\go 101458;?? Ch_monitor=2|in 1\go 101459;?? Ch_monitor=3|in 1\go 101460;?? Ch_monitor=4|in 1\go 101461;
+394,101459,Temple 1-W BlueLight,pv Holo-AMouth-F.m4v\go 92144=n;
+395,101460,Temple 1-W BlueLight,pv Holo-ASirrus-F.m4v\go 92144=n;
+396,101461,Temple 1-W BlueLight,pv Holo-SMessage-F.m4v\go 92144=n;
+397,43980,Boardwalk 62-N,ca CH_WaterSound enterZone:27;
+398,88815,Achenar Monitor,sc buttonmarker=Achenar Button1;sv Ch_monitor=1;pv Mon-ALaugh-F.m4v\go 88814=n;
+399,88816,Achenar Monitor,sc buttonmarker=Achenar Button2;sv Ch_monitor=2;pv Mon-AMouth-F.m4v\go 88814=n;
+400,88817,Achenar Monitor,sc buttonmarker=Achenar Button3;sv Ch_monitor=3;pv Mon-ASirrus-F.m4v\go 88814=n;
+401,88818,Achenar Monitor,sc buttonmarker=Achenar Button4;sv Ch_monitor=4;pv Mon-SMessage-F.m4v\go 88814=n;
+402,88819,Achenar Monitor,sc marker=Achenar Monitor (noPage);sc buttonmarker=Achenar Button1;sv Ch_monitor=1;pv Mon-ALaugh (noPage)-F.m4v\go 88813=n;
+403,88820,Achenar Monitor,sc marker=Achenar Monitor (noPage);sc buttonmarker=Achenar Button2;sv Ch_monitor=2;pv Mon-AMouth (noPage)-F.m4v\go 88813=n;
+404,88821,Achenar Monitor,sc marker=Achenar Monitor (noPage);sc buttonmarker=Achenar Button3;sv Ch_monitor=3;pv Mon-ASirrus (noPage)-F.m4v\go 88813=n;
+405,88822,Achenar Monitor,sc marker=Achenar Monitor (noPage);sc buttonmarker=Achenar Button4;sv Ch_monitor=4;pv Mon-SMessage (noPage)-F.m4v\go 88813=n;
+406,88813,Achenar Monitor,sc marker=Achenar Monitor (noPage);?? Ch_monitor=1|sc buttonmarker=Achenar Button1;?? Ch_monitor=2|sc buttonmarker=Achenar Button2;?? Ch_monitor=3|sc buttonmarker=Achenar Button3;?? Ch_monitor=4|sc buttonmarker=Achenar Button4;zm 2.0=100=0=0.5;
