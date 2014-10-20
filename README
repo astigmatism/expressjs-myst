@@ -13,14 +13,16 @@ myst
 
 6) Clone this repo.
 
-7) in data folder (created above) run: mongod --dbpath [apppath]/data. "You'll see the Mongo server start up. This is going to take a while if it's the first time, because it has to do some preallocating of space and a few other housekeeping tasks"
+7) I ignored a /data folder in the repo, this is where mongo will store its db files so create one now.
 
-8) run: npm start.
+8) in data folder (created above) run: mongod --dbpath [apppath]/data. "You'll see the Mongo server start up. This is going to take a while if it's the first time, because it has to do some preallocating of space and a few other housekeeping tasks"
+
+9) run: npm start. Myst is running. Double check port settings for access, default is 3000.
 
 asset buliding notes
 ====
 
-I constructed the game using the Myst iPhone data. They were pretty slack in protecting the content so I was able to rip all the images, audio and video. I was also able to parse game data form the incldued SQLite databases. To read about how this information was extracted and build, please refer to the following README files:
+I constructed the game using the Myst iPhone data. They were pretty slack in protecting the content so I was able to rip all the images, audio and video. I was also able to parse game data form the incldued SQLite databases. To read about how this information was extracted and built, please refer to the following README files:
 
-/panels/database/README.rtf         - about the conversion of SQLite to CSV and then Numbers Spreadsheets
-/public/assets/audio/README.rtf     - using the OSX command "find" to convert all source audio files to mp3 with ffmpeg
+/panels/database/README         - about the conversion of SQLite to CSV and then Numbers Spreadsheets
+/public/assets/audio/README     - using the OSX command "find" to convert all source audio files to mp3 with ffmpeg

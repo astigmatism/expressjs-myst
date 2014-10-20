@@ -1,0 +1,20 @@
+Ok. I was able to determine that the *DB files in the iPhone package (unzipping the IPA, finding the Myst app and then “View Content”) were files that could be opened with SQLite 3.x. I installed the app which sucks.
+
+Folder:
+
+Source - the original *DB files in SQLite 3.x format. Hopefully you won’t need to open them, but they include 2 tables: Card (a table with all the panels) and Hotspot (a table with all the panel clickable areas … gold!)
+
+CSV - I was able to export the card and hotspot table data as csv files
+
+Numbers - The CSV files were imported into a Numbers spreadsheet and then modified for use within my app. You should only have to look to these files for the data you need
+
+For further reference, the values for top, left, width and height in all the “hotspot” tables are specific for the original iPhone resolution of 480x320. We need to convert these values to the resolution for the original game at 544x332. I performed these changes in the Numbers files.
+
+using: 
+width ratio 544/480 = 1.133
+height ratio 320/332 = 1.0375
+
+I performed a formula in Numbers which converts the value thusly:
+=CEILING(value * 1.1333333, 1)
+
+and yes it was important to take the ceiling

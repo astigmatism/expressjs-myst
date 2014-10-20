@@ -1,0 +1,12 @@
+Audio creation!
+
+I first found all the audio sources I wanted to use from the iPhone collection. They were in “caf” format.
+
+First I had to create directories for each audio file. I did this in terminal with the following where all the audio sources were stored. It creates folders in that same directory:
+
+find ./ -name '*.caf' -exec sh -c 'mkdir "${0%%.caf}"' {} \;
+
+ffmpeg used for the audio conversions. Note that I left ffmpeg in my downloads folder. you’ll have to adjust the paths if you do this again!
+
+find ./ -name '*.caf' -exec sh -c '~/Downloads/ffmpeg -i "$0" "${0%%.caf}/${0%%.caf}.ogg"' {} \;
+find ./ -name '*.caf' -exec sh -c '~/Downloads/ffmpeg -i "$0" "${0%%.caf}/${0%%.caf}.mp3"' {} \;
