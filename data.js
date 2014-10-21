@@ -164,7 +164,7 @@ exports.setDatabase = function (identity, collection, setvalue, callback) {
             return;
         }
 
-        //on successful set, simply clear cache of this record at this time (instead of updating it)
+        //on successful set, simply clear cache of this record at this time (instead of updating cache or resetting cache)
         removeCache(collection + '.' + identity);
 
         callback(docs);

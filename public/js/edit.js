@@ -710,6 +710,24 @@ var edit = {
                 });
             });
 
+            //events to trap local storage state changes
+            var handle_storage = function(e) {
+                var states = {};
+                try {
+                    states = JSON.parse(localStorage.states); //parse out preview states
+                } catch (e) {
+                }
+                $('#statelist').empty();
+                for (state in states) {
+                    $('#statelist').append('<li>' + state + ': ' + states[state] + '</li>');
+                }
+            };
+            if (window.addEventListener) {
+              window.addEventListener("storage", handle_storage, false);
+            } else {
+              window.attachEvent("onstorage", handle_storage);
+            };
+
         });
     },
     _addtoeditor: function(newjson, shallow) {

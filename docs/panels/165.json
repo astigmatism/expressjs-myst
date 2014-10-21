@@ -1,16 +1,1 @@
-{
-    "onload": {
-        "preload": {
-            "audio": [],
-            "images": []
-        }
-    },
-    "onrendercomplete":{
-    },
-    "navigation": [],
-    "ambience":{
-    },
-    "background":"",
-    "content": [
-    ]
-}
+{"notes":"Vault 6-In (marker video): 86827","onload":{"preload":{"images":["43/bg.jpg"],"audio":["MUVaultSoundMov","ELCRTOn","ELCRTOff"],"video":["VLTMRKR"]}},"onrendercomplete":{"playaudio":"ELCRTOn","timer":{"id":"playoffaudio","length":"12000","events":{"playaudio":"ELCRTOff"}}},"content":[{"tag":"video","attr":{"id":"mtnvideo","width":"224","height":"52"},"src":"VLTMRKR","css":{"top":"151px","left":"162px","display":"block"},"autoplay":"true","events":{"ended":{"classicexit":"@43"}}}],"background":"43/bg.jpg","ambience":{"source":"MUVaultSoundMov","volume":0.2},"navigation":[{"width":"138","height":"333","left":"0","bottom":"0","goto":"@30","cursor":"left"},{"width":"138","height":"333","bottom":"0","right":"0","goto":"@28","cursor":"right"}]}

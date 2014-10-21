@@ -38,8 +38,22 @@ exports.getIdentity = function (identity, callback) {
 		data.insertDatabase(userid, 'users', {
 			"identity": identity,
 			"states": {}
-		}, 36000);
+		}, 1200); //20 min cache expire length
 
 		callback(identity);
 	});
+};
+
+exports.getUserRecord = function(identity, callback) {
+
+	data.getDatabase(identity, 'users', function(docs) {
+
+		//always expecting array back, 0 index has the data we want
+		if (docs.length > 0 && docs[0]) {
+			callback(docs[0]);
+			return;
+		}
+		callback({});
+
+	}, 1200); //1200 seconds is 20 minutes. cache user data this long (average user playtime??)
 };

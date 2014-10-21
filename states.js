@@ -6,6 +6,7 @@ var security = require('./security.js');
 var traverse = require('traverse');
 var type = require('type-of-is');
 var async = require('async');
+var users = require('./user.js');
 
 /**
  * this call is handled by both touchback and panels controllers so include the param checks in here as well
@@ -111,25 +112,23 @@ exports.getStates = getStates = function(identity, callback) {
 
 	getDefaultStates(function(content) {
 
-		data.getDatabase(identity, 'users', function(docs) {
+		users.getUserRecord(identity, function(user) {
 
-			//always expecting array back, 0 index has the data we want
-			if (docs.length > 0 && docs[0] && docs[0].states) {
+			//always expecting object back
+			if (user.states) {
 
-				for (state in docs[0].states) {
+				for (state in user.states) {
 
 					//does the default set have a record for the state from the user db? (it alwys should)
 					if (content[state]) {
-						content[state].value = docs[0].states[state]; //override default value with one from saved user db
+						content[state].value = user.states[state]; //override default value with one from saved user db
 					}
-
 				}
-
 			}
 
 			callback(content);
 
-		});
+		}, 1200); //1200 seconds is 20 minutes. cache user data this long (average user playtime??)
 	});
 };
 
