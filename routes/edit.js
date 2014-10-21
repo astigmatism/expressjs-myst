@@ -5,6 +5,7 @@ var async = require('async');
 var panel = require('../panel.js');
 var multipart = require('connect-multiparty');
 var type = require('type-of-is');
+var data = require('../data.js');
 
 var multipartMiddleware = multipart();
 
@@ -33,7 +34,8 @@ router.get('/panels', function(req, res) {
 
 				panels.push({
 					name: name,
-					image: image
+					image: image,
+					docs: 'panels'
 				});
 
 				callback(); // next item in series
@@ -61,24 +63,50 @@ router.get('/audio', function(req, res) {
  */
 router.get('/load', function(req, res) {
 	var panelid = req.param('panel');
-	panel.get(panelid, function(content) {
-		panel.getAssets(panelid, function(assets) {
-			res.json({
-				content: content,
-				assets: assets
-			});
-		});
-	}, -1); //cache length is -1, get from source
+	var type = req.param('type');
+
+	console.log(type);
+
+	switch(type) {
+		case 'panels':
+			panel.get(panelid, function(content) {
+				panel.getAssets(panelid, function(assets) {
+					res.json({
+						content: content,
+						assets: assets
+					});
+				});
+			}, -1); //cache length is -1, get from source
+			break;
+		case 'states':
+			data.getFile('states', 'states', function(content) {
+				res.json({
+					content: content,
+					assets: []
+				});
+			}, -1);
+			break;
+	}
 });
 
 
 router.post('/save', function(req, res) {
 	var panelid = req.param('panel');
+	var type = req.param('type');
 	var contents = req.param('data');
 
-	panel.save(panelid, contents, function() {
+	switch (type) {
+		case 'panels':
+			panel.save(panelid, contents, function() {
 
-	}, -1);
+			}, -1);
+			break;
+		case 'states':
+			data.setFile('states', 'states', contents, function() {
+
+			}, -1);
+			break;
+	}
 
 	res.json(contents);
 });

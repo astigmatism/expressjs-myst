@@ -2,6 +2,7 @@ var edit = {
         
     editor: null,
     activepanel: null,
+    activetype: null,
     assets: null,
 
     uploadbg: null,
@@ -16,9 +17,9 @@ var edit = {
 
         me.buildcontrols();
         
-        if (me.isset(me.storage('editpanel'))) {
-            me.open(me.storage('editpanel'));
-        }
+        // if (me.isset(me.storage('editpanel'))) {
+        //     me.open(me.storage('editpanel'),);
+        // }
 
         me.audioplayer = new Audio();
         me.audioplayer.stop = function() {
@@ -28,14 +29,15 @@ var edit = {
 
     },
     //open this panel in the editor
-    open: function(id) {
+    open: function(id, type) {
         var me = this;
 
         $('#panelassets').empty();
 
-        $.getJSON('/edit/load?panel=' + id, function(response) { 
+        $.getJSON('/edit/load?panel=' + id + '&type=' + type, function(response) { 
 
             me.activepanel = id;
+            me.activetype = type;
 
             me.editor.set(response.content);
             me.assets = response.assets;
@@ -57,7 +59,8 @@ var edit = {
             var json = JSON.stringify(me.editor.get());
             $.post('/edit/save', {
                 panel: me.activepanel,
-                data: json
+                data: json,
+                type: me.activetype
             }, function(response) {
                 me.preview(); 
             });
@@ -69,20 +72,25 @@ var edit = {
     newpanel: function() {
         var me = this;
         $.getJSON('/edit/new', function(response) { 
-            me.open(response);
+            me.open(response, 'panels');
             $('#panelpicker').hide();
         });
     },
     deletepanel: function() {
         var me = this;
-        if (confirm('Are you sure you want to delete panel ' + me.activepanel + ' from the system entirely?')) {
-            if (confirm('Are you REALLY sure? This process is not reversable')) {
-                $.post('/edit/delete', {
-                    panel: me.activepanel
-                }, function() {
-                    me.open(0);
-                });
+        if (me.activetype === 'panels') {
+            if (confirm('Are you sure you want to delete panel ' + me.activepanel + ' from the system entirely?')) {
+                if (confirm('Are you REALLY sure? This process is not reversable')) {
+                    $.post('/edit/delete', {
+                        panel: me.activepanel
+                    }, function() {
+                        me.open(0, 'panels');
+                    });
+                }
             }
+        }
+        else {
+            alert('You cannot delete this file type.');
         }
     },
     preview: function(id) {
@@ -108,9 +116,10 @@ var edit = {
                 }
             });
             $('#panelpicker .panels div').on('click', function() {
-                callback(parseInt($(this).find('div.name').text(), 10));
+                callback(parseInt($(this).find('div.name').text(), 10), 'panels');
                 $('#panelpicker').hide();
             });
+
         }); 
         $('#panelpicker').show();
     },
@@ -153,22 +162,33 @@ var edit = {
               }
             }, false);
 
+            //open
             $('#commands .open').button({ 
                 icons: { 
                     primary: 'ui-icon-folder-open' 
                 }
             }).click(function() {
-                me.buildpanelpicker(function(id) {
-                    me.open(id);
+                me.buildpanelpicker(function(id, type) {
+                    me.open(id, type);
                 });
             });
 
+            //save
             $('#commands .save').button({ 
                 icons: { 
                     primary: 'ui-icon-disk' 
                 }
             }).click(function() {
                 me.save();
+            });
+
+            //states
+            $('#commands .states').button({ 
+                icons: { 
+                    primary: 'ui-icon-note' 
+                }
+            }).click(function() {
+                me.open('states', 'states'); 
             });
 
             //delete
@@ -609,7 +629,7 @@ var edit = {
                 },
                 done: function (e, data) {
                     data.context.remove();
-                    me.open(me.activepanel);
+                    me.open(me.activepanel, me.activetype);
                 }
             });
 
@@ -686,7 +706,7 @@ var edit = {
                             }
                         });
                     }
-                    me.open(me.activepanel);
+                    me.open(me.activepanel, me.activetype);
                 });
             });
 
