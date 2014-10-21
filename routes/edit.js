@@ -216,7 +216,11 @@ router.get('/source', function(req, res) {
 							go = match[1];
 						}
 						getCsvData(gamesection, null, go, function(goresult) {
-						
+							
+							if (goresult && goresult.name) {
+								goresult.name = goresult.name.replace(/\s+\*/g,'');
+							}
+
 							hotspots.push({
 								id: items[0],
 								name: items[1],
@@ -247,7 +251,7 @@ router.get('/source', function(req, res) {
 	            // Final callback after each item has been iterated over.
 	            function() {
 	                res.render('source', { 
-						name: result.name,
+						name: (result.name).replace(/\s+\*/g,''),
 						id: result.id,
 						hotspots: hotspots,
 						title: 'Myst Source' 

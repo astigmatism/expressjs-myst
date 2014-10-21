@@ -9,6 +9,10 @@ var defaultKey = "I love playing MYST!";
 
 exports.encrypt = encrypt = function(value, key) {
 
+    if (config.devmode) {
+        return value;
+    }
+
 	key = key || defaultKey;
 	var encrypted = null;
 	try {
@@ -18,15 +22,14 @@ exports.encrypt = encrypt = function(value, key) {
     	console.error('ERROR: encrypting the string ' + value + ' with key ' + key);
     }
 
-    if (config.devmode) {
-        console.log('DEVMODE: would have encrypted the value ' + value + ' to ' + encrypted);
-        return value;
-    }
-
     return encrypted;
 };
 
 exports.decrypt = decrypt = function(value, key) {
+
+    if (config.devmode) {
+        return value;
+    }
 
     key = key || defaultKey;
     var decrypted = null;
@@ -35,10 +38,6 @@ exports.decrypt = decrypt = function(value, key) {
     	decrypted = decipher.update(value, 'hex', 'utf8') + decipher.final('utf8');
     } catch (e) {
     	console.error('ERROR: decrypting the string ' + value + ' with key ' + key);
-    }
-
-    if (config.devmode) {
-        return value;
     }
 
     return decrypted;

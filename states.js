@@ -111,9 +111,25 @@ exports.getStates = getStates = function(identity, callback) {
 
 	getDefaultStates(function(content) {
 
-		//TODO: merge user's state values in
+		data.getDatabase(identity, 'users', function(docs) {
 
-		callback(content);
+			//always expecting array back, 0 index has the data we want
+			if (docs.length > 0 && docs[0] && docs[0].states) {
+
+				for (state in docs[0].states) {
+
+					//does the default set have a record for the state from the user db? (it alwys should)
+					if (content[state]) {
+						content[state].value = docs[0].states[state]; //override default value with one from saved user db
+					}
+
+				}
+
+			}
+
+			callback(content);
+
+		});
 	});
 };
 
@@ -177,6 +193,8 @@ exports.setState = setState = function(identity, statename, value, callback) {
 			    // Final callback after each item has been iterated over.
 			    function() {
 			       	
+			    	console.log('updating db with:', Object.keys(firstlevelupdates));
+
 					//ok, we have an firstlevelupdates object with data about other states updated. we actually need to update those states as well now!
 				    async.eachSeries(Object.keys(firstlevelupdates), function(firstlevelupdate, cb) {
 						
@@ -197,27 +215,21 @@ exports.setState = setState = function(identity, statename, value, callback) {
 				    // Final callback after each item has been iterated over.
 				    function() {
 
-				    	//let's prepare the database set values
-						setdata = {};
-						setdata['states.' + statename] = value; //this state
-						//all updated states
-						for (updatedstate in updatedstates) {
-							setdata['states.' + updatedstate] = updatedstates[updatedstate];
-						}
+				    	//add this state to the mix too finally!
+				    	updatedstates[statename] = value;
 
-						//update database with new state value for this user
-						data.setDatabase(identity, 'users', setdata, function() {
-							//don't really need to wait
-						});	
-
-						callback(updatedstates);
-
+				    	execDatabaseSet(identity, updatedstates);
+				    	callback(updatedstates);
 				    });
 			    });
 			}
 			//updating this state does not update others
 			else {
-				callback({});
+				
+				//all we need to do is update this one state then
+				updatedstates[statename] = value;
+				execDatabaseSet(identity, updatedstates);
+				callback(updatedstates);
 			}
 		});
 	}
@@ -226,6 +238,24 @@ exports.setState = setState = function(identity, statename, value, callback) {
 		callback({});
 	}
 };
+
+
+var execDatabaseSet = function(identity, updatedstates) {
+
+	//let's prepare the database set values
+	setdata = {};
+	//all updated states
+	for (updatedstate in updatedstates) {
+		setdata['states.' + updatedstate] = updatedstates[updatedstate];
+	}
+
+	//update database with new state value for this user
+	data.setDatabase(identity, 'users', setdata, function() {
+		//don't really need to wait for callback
+	});	
+};
+
+
 
 /**
  * look through the default state details and determine if the state passed in is supposed to have its client value encrypted or not

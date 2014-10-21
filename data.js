@@ -108,13 +108,44 @@ exports.insertDatabase = function(identity, collection, content, cachelength) {
 
 exports.getDatabase = function (identity, collection, callback, cachelength) {
 
-    cachelength = cachelength || -1; //-1 says don't cache at all
+    cachelength = cachelength || -1; //when -1, avoid using cache altogether
 
-    if (!config.devmode) {
+    var cachekey = collection + '.' + identity;
+
+    //attempt cache get
+    memcached.get(cachekey, function(err, data) {
+
+        if (err) {
+            console.error('ERROR: Memcached get error for ' + cachekey);
+            callback(null);
+            return;
+        }
+
+        //successful cache hit will return record
+        if (data && cachelength !== -1 && !config.devmode) {
+            console.info('Memcached get success. ' + cachekey);
+            callback(data);
+            return;
+        }
+
+        //no successful cache hit, find in the db and add to cache
         var dbcollection = db.get(collection);
 
-        
-    }
+        dbcollection.find({
+            "identity": identity
+        }, function(err, docs) {
+            if (err) {
+                console.error('ERROR: getting db collection "' + collection + '", identity "' + identity);
+                callback([]);
+                return;
+            }
+
+            //set cache
+            setCache(cachekey, docs, cachelength);
+
+            callback(docs);
+        });
+    });
 };
 
 exports.setDatabase = function (identity, collection, setvalue, callback) {
@@ -129,7 +160,13 @@ exports.setDatabase = function (identity, collection, setvalue, callback) {
     }, function(err, docs) {
         if (err) {
             console.error('ERROR: updating db collection "' + collection + '", identity "' + identity + '" with content:', content);
+            callback([]);
+            return;
         }
+
+        //on successful set, simply clear cache of this record at this time (instead of updating it)
+        removeCache(collection + '.' + identity);
+
         callback(docs);
     });
 };

@@ -31,7 +31,7 @@ exports.setPanelStates = function (content, identity, callback) {
     var statesused = {};
 
     statemanager.getStates(identity, function(states) {
-
+        
         //traverse the json tree
         traverse(content).forEach(function (value) {
 
@@ -68,8 +68,6 @@ exports.setPanelStates = function (content, identity, callback) {
                         }
                         //2) if state is a string, then this means the state in the client is being set to that value within the event specified
                         else if (type.is(statedata, String)) {
-
-                            console.log(state);
 
                             //does the client value need to appear encryped?
                             var clientstatevalue = states[state].encrypt ? security.serverencrypt(statedata, identity) : statedata;
