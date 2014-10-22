@@ -801,9 +801,22 @@ var myst = {
                 });
             },
             playaudio: function(value) {
-                if (me.has(me.audio, value)) {
-                    var audio = me.audio[value];
+
+                var track = value;
+                var playrate = 1;
+
+                //if string, string is audio value, if object, look for playrate 
+                if (me.defined(value, 'object') && value.track) {
+                    track = value.track;
+                    if (value.playrate) {
+                        playrate = parseFloat(value.playrate);
+                    }
+                }
+
+                if (me.has(me.audio, track)) {
+                    var audio = me.audio[track];
                     me.mediaready(audio, function() {
+                        audio.playbackRate = playrate;
                         audio.play();
                     });
                 }

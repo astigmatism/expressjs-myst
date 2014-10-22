@@ -217,7 +217,10 @@ exports.setState = setState = function(identity, statename, value, callback) {
 				    	//add this state to the mix too finally!
 				    	updatedstates[statename] = value;
 
+				    	//helper functions
+				    	updatedstates = setStateValuesByReferance(updatedstates, states);
 				    	execDatabaseSet(identity, updatedstates);
+
 				    	callback(updatedstates);
 				    });
 			    });
@@ -227,7 +230,11 @@ exports.setState = setState = function(identity, statename, value, callback) {
 				
 				//all we need to do is update this one state then
 				updatedstates[statename] = value;
+
+				//helper functions
+				updatedstates = setStateValuesByReferance(updatedstates, states);
 				execDatabaseSet(identity, updatedstates);
+
 				callback(updatedstates);
 			}
 		});
@@ -238,7 +245,33 @@ exports.setState = setState = function(identity, statename, value, callback) {
 	}
 };
 
+/**
+ * If a state value directly references another, assign the other value to it. uses the syntax [=statename]
+ * @param {Object} updatedstates [description]
+ * @param {Object} allstates     [description]
+ * @return {Object}
+ */
+var setStateValuesByReferance = function(updatedstates, allstates) {
 
+	//regex for "direct value" words e.g. [=statename]
+    var regex = /\[=(\w+)\]/g;
+
+	for (updatedstate in updatedstates) {
+        
+        //assign value of other state
+        if (type.is(updatedstates[updatedstate], String)) {
+	        updatedstates[updatedstate] = (updatedstates[updatedstate]).replace(/\[=(\w+)\]/g, function(match, p1) {
+	            if (allstates[p1]) {
+	            	return allstates[p1].value;
+	            }
+	            return '';
+	        });
+    	}
+	}
+	return updatedstates;
+};
+
+//helper
 var execDatabaseSet = function(identity, updatedstates) {
 
 	//let's prepare the database set values
