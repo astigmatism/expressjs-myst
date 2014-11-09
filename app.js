@@ -30,7 +30,7 @@ app.use('/panels', panels);
 if (app.get('env') === 'development') {
 
     app.use('/edit', edit);
-    //config.devmode = true;
+    config.devmode = true;
 }
 
 // catch 404 and forward to error handler

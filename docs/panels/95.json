@@ -1,1 +1,1 @@
-{"onload":{"preload":{"audio":[],"images":["95\/bg.jpg"]}},"onrendercomplete":{},"navigation":{"goto":["","",""]},"ambience":{},"background":"95\/bg.jpg","content":[]}
+{"notes":"Garden3-E/down:15854","onload":{"preload":{"audio":["ARLiteWindMov"],"images":["95/bg.jpg"]}},"onrendercomplete":{},"navigation":[{"width":"544","height":"333","goto":"@93","cursor":"up"},{"width":"331","height":"223","left":"144","bottom":"2","cursor":"up"}],"ambience":{"source":"ARLiteWindMov","volume":1},"background":"95/bg.jpg","content":[]}

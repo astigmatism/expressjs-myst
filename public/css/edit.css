@@ -11,6 +11,9 @@ body {
     font-size: 14px;
     position: relative;
 }
+tr .linked {
+	background-color: red;
+}
 #commands {
 	padding: 5px;
 	width: 100%;

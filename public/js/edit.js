@@ -50,6 +50,7 @@ var edit = {
             me.storage('editpanel', me.activepanel);
             $('#panelname').text(id);
             me.preview();
+            //$('#source').attr('src', 'http://localhost:3000/edit/source?id=10238');
         });
     },
     save: function() {
@@ -642,14 +643,18 @@ var edit = {
                 selected = parseInt($('#panelassets li.ui-selected').attr('option')); //index into me.assets array
 
                 var images = [(me.assets[selected].path).replace('/assets/','')];
+
+                var image = new Image();
+                image.src = me.assets[selected].path;
+
                 var inserted = [{
                     tag: 'div',
                     attr: {},
                     css: {
                         top: '166px',
                         left: '272px',
-                        width: me.assets[selected].size['0'] + 'px',
-                        height: me.assets[selected].size['1'] + 'px',
+                        width: image.width + 'px',
+                        height: image.height + 'px',
                         'background-image': 'url(\'' + me.assets[selected].path + '\')'
                     },
                     events: {}

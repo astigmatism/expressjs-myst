@@ -36,7 +36,7 @@ exports.setPanelStates = function (content, identity, callback) {
         traverse(content).forEach(function (value) {
 
             //if the current key is "state"
-            if (this.key === 'state') {
+            if (this.key === 'state' || this.key === 'setstate') {
 
                 var newstate = {}; //we'll add this to this node once modified
 

@@ -169,7 +169,7 @@ var myst = {
             //render content
             var drawtag = function(object) {
 
-                //handle state considerations - they override default values for anything in this tag
+                //handle state considerations - they override default values for anything in this tag. they extend and override the object
                 if (me.has(object, 'state')) {
                     //examine all local state values
                     $.each(me.states, function(state, statevalue) {
@@ -453,7 +453,7 @@ var myst = {
                             me.action({
                                 'exit': {
                                     'goto': goto,
-                                    'direction': item.cursor
+                                    'direction': item.direction || item.cursor
                                 }
                             });
                         });
@@ -505,7 +505,7 @@ var myst = {
                         //handle volume changes
                         var volume = 1;
                         if (me.has(panel, 'ambience.volume')) {
-                            var volume = panel.ambience.volume > 1 ? 1 : (panel.ambience.volume < 0 ? 0 : panel.ambience.volume); //greater than 1 is 1. less than 0 is 0
+                            volume = panel.ambience.volume > 1 ? 1 : (panel.ambience.volume < 0 ? 0 : panel.ambience.volume); //greater than 1 is 1. less than 0 is 0
                         }
                         $(me.audio[me.ambience]).animate({
                             volume: volume
@@ -534,27 +534,34 @@ var myst = {
                     $('div.panel').before(dompanel); //inject new panel behind current
                     
                     var direction = options.direction || 'up';
-                    var leftrighttransition = function(a, b) {
-                        outgoing.animate({
-                            'left': a,
+                    var transition = function(outgoingto, incomingto, axis) {
+                        var axis = axis === 'x' ? 'left' : 'top';
+                        var animateout = {
                             'opacity': 0
-                        }, 500, 'swing', function() {
+                        };
+                        animateout[axis] = outgoingto;
+                        outgoing.animate(animateout, 500, 'swing', function() {
                             outgoing.remove();
                             $('#guard').hide();
                         });
-                        dompanel.css('left', b + 'px').animate({
-                            'left': 0
-                        }, 500, 'swing');
+                        var animatein = {};
+                        animatein[axis] = 0;
+                        dompanel.css(axis, incomingto + 'px').animate(animatein, 500, 'swing');
                     };
-
 
                     //based on direction, transition accordingly
                     switch (direction) {
                         case 'left':
-                            leftrighttransition(544, -544);
+                            transition(544, -544, 'x');
                             break;
                         case 'right':
-                            leftrighttransition(-544, 544);
+                            transition(-544, 544, 'x');
+                            break;
+                        case 'above':
+                            transition(333, -333, 'y');
+                            break;
+                        case 'down':
+                            transition(-333, 333, 'y');
                             break;
                         default:
                             outgoing.fadeOut(500, function() {
@@ -821,6 +828,32 @@ var myst = {
                     });
                 }
             },
+            swapambiance: function(value) {
+                
+                var source = me.defined(value, 'object') ? value.source : value;
+                var volume = value.volume || 1;
+
+                if (value !== me.ambience) {
+                            
+                    //stop current ambience
+                    me.audio[me.ambience].stop();
+                    
+                    //set up new amibence
+                    me.ambience = source;
+                    me.audio[me.ambience].loop = true;
+                    
+                    //play sound if not muted
+                    if (!me.muted) {
+                        me.audio[me.ambience].play();
+                    }
+                }
+
+                //handle volume changes
+                volume = volume > 1 ? 1 : (volume < 0 ? 0 : volume); //greater than 1 is 1. less than 0 is 0
+                $(me.audio[me.ambience]).animate({
+                    volume: volume
+                }, 500);
+            },
             stopaudio: function(value) {
                 if (me.has(me.audio, value)) {
                     var audio = me.audio[value];
@@ -902,11 +935,24 @@ var myst = {
                     }
                 });
             },
+            //used as a conditional. if the current state is one of the values, call action on them
+            state: function(value) {
+
+                for (state in value) {
+                    for (statevalue in value[state]) {
+                        //if current state value equals this
+                        if (statevalue === me.states[state]) {
+                            me.action(value[state][statevalue]); //process as action
+                        }
+                    }                    
+                }
+
+            },
             /**
-             * state action: used for chaging panel states
+             * setstate action: used for chaging panel states
              * @return {[type]}
              */
-            state: function(value) {
+            setstate: function(value) {
                 //handle each state individually
                 $.each(value, function(statename, newvalue){
 

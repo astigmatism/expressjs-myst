@@ -230,16 +230,20 @@ router.get('/source', function(req, res) {
 				var lines = data.split('\n'); //split each line
 
 				var hotspots = [];
+				var linkedfrom = [];
 				
 				async.eachSeries(lines, function(line, cb) {
 
+					var regex = /go (\d+)/g;
 					var items = line.split(',');
+					var match = regex.exec(items[13]); //run match against commands since its needed for both cases
+
+					//did we match this id?
 					if (items[2] == result.id) {
 
 						//parse out "go" cardIds from commands
-						var regex = /go (\d+);/g;
-						var match = regex.exec(items[13]);
 						var go = null;
+						console.log(items[13] + ' ' + match);
 						if (type.is(match, Array) && match.length > 1) {
 							go = match[1];
 						}
@@ -268,20 +272,41 @@ router.get('/source', function(req, res) {
 
 							});
 							
-
 							cb(); // next item in series
 						});
-					} else { //couldn't match the id on this pass, not a hotspot for this panel
+					}
+					//does this id appear in the commands? (this panel is linked to from another panel)
+					else if (type.is(match, Array) && match.length > 1) {
+
+						if (match[1] == result.id) {
+
+							console.log('does match ' + match[1] + ' equal result.id ' + result.id);
+
+							getCsvData(gamesection, null, go, function(goresult) {
+
+								linkedfrom.push({
+									id: items[0],
+									commands: items[13],
+								});
+								
+
+								cb(); // next item in series
+							});
+						} else {
+							cb();
+						}
+					} else {
 						cb();
 					}
-	                
 	            },
 	            // Final callback after each item has been iterated over.
 	            function() {
+
 	                res.render('source', { 
 						name: (result.name).replace(/\s+\*/g,''),
 						id: result.id,
 						hotspots: hotspots,
+						linkedfrom: linkedfrom,
 						title: 'Myst Source' 
 					});
 	            });
