@@ -33,6 +33,8 @@ if (app.get('env') === 'development') {
     config.devmode = true;
 }
 
+console.log('environment: ' + app.get('env'));
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
