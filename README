@@ -57,7 +57,9 @@ sudo chown root:wheel /Library/LaunchDaemons/org.mongo.mongod.plist  //not sure 
 sudo launchctl load /Library/LaunchDaemons/org.mongo.mongod.plist  
 sudo launchctl start org.mongo.mongod  
 
-12) run: npm start. Myst is running. Double check port settings for access, default is 3000.
+13) Set node env flag. If a production environment, set global var: export NODE_ENV=production
+
+14) run: npm start. Myst is running. Double check port settings for access, default is 3000.
 
 asset buliding notes
 ====
