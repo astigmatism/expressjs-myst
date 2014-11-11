@@ -938,14 +938,20 @@ var myst = {
             //used as a conditional. if the current state is one of the values, call action on them
             state: function(value) {
 
+                var actions = [];
                 for (state in value) {
                     for (statevalue in value[state]) {
                         //if current state value equals this
                         if (statevalue === me.states[state]) {
-                            me.action(value[state][statevalue]); //process as action
+                            actions.push(value[state][statevalue]);
                         }
                     }                    
                 }
+
+                //process actions after control loop (i had an issue where I was changing state while looping which triggered the other change state)
+                $.each(actions, function(index, item) {
+                    me.action(item); //process as action
+                });
 
             },
             /**
