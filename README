@@ -1,11 +1,13 @@
 myst
 ====
 
+These instruction were written for OSX. I both develop and serve apps with it :) At the time of writing Version 10.10, Yosemite.
+
 1) Install brew. run brew doctor and brew update.
 
 2) Install NodeJS. Use homebrew: brew install nodejs
 
-3) Install Memcache. Use homebrew again: brew install memcached.
+3) Install Memcache. Use homebrew again: brew install memcached. Follow the instructions to have it run on startup.
 
 4) Install MongoDB: http://mongodb.org/. I used Homebrew: brew install mongodb. Follow instructions at end of brew but note that if you want to run mongo automatically at start ignore the instructions to do so because we're going to write our own specific for Myst (see step 12)
 
@@ -23,9 +25,9 @@ Steps 6 and 7 for development:
 
 10) I also ignored a /logs folder in the repo. This is where mongo will put db logs. Create one as well
 
-11) Create an empty mongo.log files in the /logs folder created above:  
+11) Create an empty mongo.log file in the /logs folder created above: sudo touch [app path]/logs/mongodb.log
 
-Two options here for running mongo for Myst: either manually do it or if Mac, run it on startup: 
+Two options here for running mongo for Myst: either manually do it or run it on startup.
 
 12 A: Manual) in data folder (created above) run: mongod --dbpath [apppath]/data. "You'll see the Mongo server start up. This is going to take a while if it's the first time, because it has to do some preallocating of space and a few other housekeeping tasks"
 
@@ -67,4 +69,24 @@ asset buliding notes
 I constructed the game using the Myst iPhone data. They were pretty slack in protecting the content so I was able to rip all the images, audio and video. I was also able to parse game data form the incldued SQLite databases. To read about how this information was extracted and built, please refer to the following README files:
 
 /panels/database/README         - about the conversion of SQLite to CSV and then Numbers Spreadsheets
-/public/assets/audio/README     - using the OSX command "find" to convert all source audio files to mp3 with ffmpeg
+
+building audio
+====
+
+Audio creation!
+
+I first found all the audio sources I wanted to use from the iPhone collection. They were in “caf” format.
+
+First I had to create directories for each audio file. I did this in terminal with the following where all the audio sources were stored. It creates folders in that same directory:
+
+find ./ -name '*.caf' -exec sh -c 'mkdir "${0%%.caf}"' {} \;
+
+ffmpeg used for the audio conversions. Note that I left ffmpeg in my downloads folder. you’ll have to adjust the paths if you do this again!
+
+find ./ -name '*.caf' -exec sh -c '~/Downloads/ffmpeg -i "$0" "${0%%.caf}/${0%%.caf}.ogg"' {} \;
+find ./ -name '*.caf' -exec sh -c '~/Downloads/ffmpeg -i "$0" "${0%%.caf}/${0%%.caf}.mp3"' {} \;
+
+building video
+====
+
+I tried using ffmpeg to convert video, there's so many tutorials out there but honestly nothing has been easier then just using an online-conversion service (for free) to convert to mp4, ogg and webm: http://www.online-convert.com/

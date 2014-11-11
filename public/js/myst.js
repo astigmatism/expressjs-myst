@@ -798,7 +798,7 @@ var myst = {
                 $('#panel').css('background-image','url("/assets/' + value + '/bg.jpg")');
             },
             removebackground: function(value) {
-                $('#panel').css('background-image','none');
+                $('div.panel').css('background-image','none');
             },
             css: function(value) {
                 $.each(value, function(key, valu) {
