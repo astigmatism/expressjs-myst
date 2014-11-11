@@ -55,6 +55,8 @@ exports.getFile = function(file, collection, callback, cachelength) {
                     return;
                 }
 
+                console.info('File system get success: ' + collection + '/' + file);
+
                 //set cache
                 setCache(cachekey, content, cachelength);
             }
@@ -75,7 +77,7 @@ exports.setFile = function (file, collection, content, cachelength) {
             return;
         }
         
-        console.error('File system save success: ' + collection + '/' + file);
+        console.info('File system save success: ' + collection + '/' + file);
 
         //remove cached version on successful save
         removeCache(cachekey);
@@ -99,6 +101,8 @@ exports.insertDatabase = function(identity, collection, content, cachelength) {
             if (err) {
                 console.error('ERROR: inserting into db collection "' + collection + '", identity "' + identity + '" with content:', content);
             }
+
+            console.info('Mongo insert success. collection ' + collection);
 
             //add to cache
             setCache(collection + '.' + identity, content, cachelength);
@@ -140,6 +144,8 @@ exports.getDatabase = function (identity, collection, callback, cachelength) {
                 return;
             }
 
+            console.info('Mongo get success. collection ' + collection + ' identity ' + identity);
+
             //set cache
             setCache(cachekey, docs, cachelength);
 
@@ -163,6 +169,8 @@ exports.setDatabase = function (identity, collection, setvalue, callback) {
             callback([]);
             return;
         }
+
+        console.info('Mongo set success. collection ' + collection + ' identity ' + identity);
 
         //on successful set, simply clear cache of this record at this time (instead of updating cache or resetting cache)
         removeCache(collection + '.' + identity);
