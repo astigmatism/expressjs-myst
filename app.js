@@ -35,7 +35,7 @@ var config = config.data;
 if (app.get('env') === 'development') {
 
     app.use('/edit', edit);
-    config.devmode = false;
+    config.devmode = true;
 }
 
 // catch 404 and forward to error handler
