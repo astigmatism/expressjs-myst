@@ -5,6 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var config = require('./config.js');
+var data = require('./data.js');
+var type = require('type-of-is');
 
 var routes = require('./routes/index');
 var panels = require('./routes/panels');
@@ -26,14 +28,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/panels', panels);
 
+//pull in app configuration
+var config = config.data;
+
 //development only
 if (app.get('env') === 'development') {
 
     app.use('/edit', edit);
-    config.devmode = true;
+    config.devmode = false;
 }
-
-console.log('environment: ' + app.get('env'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -64,6 +67,26 @@ app.use(function(err, req, res, next) {
         message: err.message,
         error: {}
     });
+});
+
+
+console.log('environment: ' + app.get('env')); //show env in console for verification
+
+//increment run counter
+data.getDatabaseSingle('configuration', 'server', function(configuration) {
+    if (configuration) {
+        var runcount = (configuration.runcounter + 1);
+        data.setDatabase('configuration', 'server', {
+            runcounter: runcount,
+            version: config.version + '.' + runcount
+        });    
+    } else {
+        data.insertDatabase('configuration', 'server', {
+            identity: 'configuration',
+            runcounter: 0,
+            version: config.version + '.0'
+        }, 0);
+    }
 });
 
 

@@ -282,9 +282,7 @@ var execDatabaseSet = function(identity, updatedstates) {
 	}
 
 	//update database with new state value for this user
-	data.setDatabase(identity, 'users', setdata, function() {
-		//don't really need to wait for callback
-	});	
+	data.setDatabase(identity, 'users', setdata);	
 };
 
 

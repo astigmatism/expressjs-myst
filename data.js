@@ -154,6 +154,17 @@ exports.getDatabase = function (identity, collection, callback, cachelength) {
     });
 };
 
+//a wrapper function for the above which returns the first record instead of a set
+exports.getDatabaseSingle = function(identity, collection, callback, cachelength) {
+    this.getDatabase(identity, collection, function(docs) {
+        if (docs.length > 0 && docs[0]) {
+            callback(docs[0]);
+            return;
+        }
+        callback(null);
+    }, cachelength);
+};
+
 exports.setDatabase = function (identity, collection, setvalue, callback) {
 
     // Set our collection
@@ -165,17 +176,26 @@ exports.setDatabase = function (identity, collection, setvalue, callback) {
         $set: setvalue
     }, function(err, docs) {
         if (err) {
-            console.error('ERROR: updating db collection "' + collection + '", identity "' + identity + '" with content:', content);
-            callback([]);
+            console.error('ERROR: updating db collection "' + collection + '", identity "' + identity + '" with content:' + setvalue, err);
+            if (callback) {
+                callback([]);
+            }
             return;
         }
 
-        console.info('Mongo set success. collection ' + collection + ' identity ' + identity);
+        //docs returns the count of the documents updated. when 0, do an insert instead
+        if (docs === 0) {
+            console.warn('Mongo set returns 0 for docs updated. Check query. collection ' + collection + ' identity ' + identity);
+        } else {
+            console.info('Mongo set success. collection ' + collection + ' identity ' + identity);
+        }
 
         //on successful set, simply clear cache of this record at this time (instead of updating cache or resetting cache)
         removeCache(collection + '.' + identity);
 
-        callback(docs);
+        if (callback) {
+            callback(docs);
+        }
     });
 };
 

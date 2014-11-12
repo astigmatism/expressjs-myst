@@ -1,3 +1,4 @@
-var config = {
-	devmode: false	
-};
+exports.data = {
+	devmode: false,
+	version: '1.0.0'
+}

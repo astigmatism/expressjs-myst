@@ -54,7 +54,7 @@ var myst = {
     
     sessiontime:    new Date().getTime(),
     
-    initialize: function() {
+    initialize: function(serverconfig) {
         var me = this, urlparams = me.jsonizeurlparameters(), startat = 'myst';
 
         //force clear local storage first
@@ -64,6 +64,9 @@ var myst = {
         
         //retrieve identity
         me.identity = me.storage('identity');
+
+        //a version mismatch will clear all cache except identity
+        me.handleversion(serverconfig.version);
 
         //retrieve game state values
         me.states = me.storage('states') || {};
@@ -1195,6 +1198,13 @@ var myst = {
                 }
             }
 
+            //handle server version
+            if (me.has(response, 'version')) {
+
+                //a version mismatch will clear all cache except for identity
+                me.handleversion(response.version);
+            }
+
             //when a panel makes use of a state, its necessary to provide the client with a default value. but DONT set the state value if it already exists
             //this value is meant only to provide the client with a default. its possible a touchback call has set this state ready and we dont want to to override it with a default setting :)
             if (me.has(response, 'states')) {
@@ -1242,6 +1252,22 @@ var myst = {
                 me.console(errorThrown, jqXHR, 'error');
             }
         });
+    },
+    handleversion: function(serverversion) {
+        var me = this;
+        //we need to validate the server version of myst with the client. if the client differes, we need to expire all cache on the client to retireve "new" content from the server
+        if (me.storage('version') !== serverversion) {
+                
+            //clear client caches, local storage and browser memory
+            localStorage.clear();
+            me.panels = {};
+            me.images = {};
+            //me.audio = {};    //i'm actualy going to hold off on clearing these caches because we don't want to remove the reference if the client is playing them (ambiance etc). they change infrequently enough anyway
+            //me.video = {};
+            
+            me.storage('identity', me.identity);        //keep our identity
+            me.storage('version', serverversion);    //update with new server version
+        }
     },
     //defined is a utility function which returns a boolean based on if the var passed in is defined or not. takes optional param which compares typeof. works with "array"
     defined: function(object, type) {
@@ -1478,4 +1504,4 @@ var myst = {
         $('#travel span').text(me.transitiontype);
     }
 };
-myst.initialize();
+myst.initialize(mystserver); //be sure mystserver value is defined in dom (generally from jade template)

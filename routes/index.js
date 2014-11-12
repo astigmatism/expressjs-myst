@@ -4,10 +4,23 @@ var type = require('type-of-is');
 var statemanager = require('../states.js');
 var security = require('../security.js');
 var panel = require('../panel.js');
+var data = require('../data.js');
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Myst' });
+
+	data.getDatabaseSingle('configuration', 'server', function(configuration) {
+
+		response = {
+			title: 'Myst'
+		};
+
+        if (configuration) {
+            response.version = configuration.version;
+        }
+
+        res.render('index', response);
+    });
 });
 
 router.post('/touchback', function(req, res) {

@@ -38,9 +38,11 @@ exports.getIdentity = function (identity, callback) {
 		data.insertDatabase(userid, 'users', {
 			"identity": identity,
 			"states": {}
-		}, 1200); //20 min cache expire length
+		}, function() {
 
-		callback(identity);
+			callback(identity);
+			
+		}, 1200); //20 min cache expire length
 	});
 };
 

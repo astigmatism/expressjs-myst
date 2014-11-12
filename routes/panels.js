@@ -10,6 +10,7 @@ var security = require('../security.js');
 var async = require('async');
 var type = require('type-of-is');
 var statemanager = require('../states.js');
+var data = require('../data.js');
 
 router.get('/', function(req, res) {
     
@@ -30,7 +31,8 @@ router.get('/', function(req, res) {
         var response = {
             'identity': identity,
             'panels': {},
-            'states': {}
+            'states': {},
+            'version': 0
         };
 
         //game begin scenario: if myst passed in or url param not present
@@ -86,7 +88,15 @@ router.get('/', function(req, res) {
 
                 panel.encryptPanelNames(response, identity); //encrypt all panel id references for all panel content and states
 
-                res.json(response);
+                //finally append the server run count (we'll validate it on the client to ensure client ver and server ver match)
+                data.getDatabaseSingle('configuration', 'server', function(configuration) {
+
+                    if (configuration) {
+                        response.version = configuration.version;
+                    }
+
+                    res.json(response);
+                });
             });
 
         });
