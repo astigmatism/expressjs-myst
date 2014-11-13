@@ -124,27 +124,33 @@ var edit = {
         }); 
         $('#panelpicker').show();
     },
-    buildaudiopicker: function() {
+    buildaudiopicker: function(callback) {
         var me = this;
-        //if not built, build it
-        if ($('#audiomenu li').length === 0) {
-            $.ajax({
-                url: '/edit/audio'
-            }).done(function(response) {
+        $('#audiomenu').empty();
+        $('#audiopicker .use').unbind();
+        $.ajax({
+            url: '/edit/audio'
+        }).done(function(response) {
 
-                $.each(response, function(index, item) {
-                    $('#audiomenu').append('<li option="' + item + '">' + item + '</li>');
-                });
-                $('#audiomenu').selectable({
-                    selected: function( event, ui ) {
-                        var selected = ui.selected.attributes.option.value;
-                        me.audioplayer.src = "/assets/audio/" + selected + "/" + selected + ".mp3";
-                        me.audioplayer.play();
-                    }
-
-                });
+            $.each(response, function(index, item) {
+                $('#audiomenu').append('<li option="' + item + '">' + item + '</li>');
             });
-        }
+            $('#audiomenu').selectable({
+                selected: function( event, ui ) {
+                    var selected = ui.selected.attributes.option.value;
+                    me.audioplayer.src = "/assets/audio/" + selected + "/" + selected + ".mp3";
+                    me.audioplayer.play();
+                }
+
+            });
+
+            //bnd event to use to callback with track
+            $('#audiopicker .use').on('click', function() {
+                var selected = $('#audiomenu li.ui-selected').attr('option');
+                callback(selected);
+                $('#audiopicker .cancel').trigger('click');
+            });
+        });
         $('#audiopicker').show();
     },
     buildcontrols: function() {
@@ -303,7 +309,23 @@ var edit = {
                     primary: 'ui-icon-newwin'
                 }
             }).click(function() {
-                me.buildaudiopicker();
+                me.buildaudiopicker(function(track) {
+                    var audio = [track],
+                    json = me.editor.get(); //need to maintain preload audio array
+
+                    if (me.has(json, 'onload.preload.audio')) {
+                        audio = $.merge(audio, json.onload.preload.audio);
+                        $.unique(audio); //remove dupes
+                    }
+
+                    me._addtoeditor({
+                        'onload': {
+                            'preload': {
+                                'audio': audio
+                            }
+                        }
+                    });
+                });
             });
 
             //cancel audio picker
@@ -323,59 +345,12 @@ var edit = {
             }).click(function() {
                 me.audioplayer.stop();
             });
-            //use audio
+
+            //use (style only), event with buildaudiopicker
             $('#audiopicker .use').button({ 
                 icons: { 
                     primary: 'ui-icon-check'
                 }
-            }).click(function() {
-
-                var selected = $('#audiomenu li.ui-selected').attr('option'),
-                    audio = [selected],
-                    json = me.editor.get(); //need to maintain preload audio array
-
-                if (me.has(json, 'onload.preload.audio')) {
-                    audio = $.merge(audio, json.onload.preload.audio);
-                    $.unique(audio); //remove dupes
-                }
-
-                me._addtoeditor({
-                    'onload': {
-                        'preload': {
-                            'audio': audio
-                        }
-                    },
-                    'ambience': {
-                        'source': selected,
-                        'volume':1
-                    }
-                });
-                $('#audiopicker .cancel').trigger('click');
-            });
-            //preload audio
-            $('#audiopicker .preload').button({ 
-                icons: { 
-                    primary: 'ui-icon-check'
-                }
-            }).click(function() {
-
-                var selected = $('#audiomenu li.ui-selected').attr('option'),
-                    audio = [selected],
-                    json = me.editor.get(); //need to maintain preload audio array
-
-                if (me.has(json, 'onload.preload.audio')) {
-                    audio = $.merge(audio, json.onload.preload.audio);
-                    $.unique(audio); //remove dupes
-                }
-
-                me._addtoeditor({
-                    'onload': {
-                        'preload': {
-                            'audio': audio
-                        }
-                    }
-                });
-                $('#audiopicker .cancel').trigger('click');
             });
 
             //nav dialog
@@ -418,6 +393,12 @@ var edit = {
                                 if (($('#navigationdialog .panel .hotspot' + (index + 1)).find('.cursor').attr('name')).length > 0) {
                                     hotspot.cursor = $('#navigationdialog .panel .hotspot' + (index + 1)).find('.cursor').attr('name');
                                 }
+                                if ($(this).find('.track').val().length > 0) {
+                                    hotspot.ambience = $(this).find('.track').val();
+                                }
+                                if ($(this).find('.volume').val().length > 0) {
+                                    hotspot.volume = $(this).find('.volume').val();
+                                }
 
                                 navigation.push(hotspot);
                             });
@@ -429,8 +410,12 @@ var edit = {
                     }
                 ],
                 modal: true,
-                minHeight: 575,
-                minWidth: 574,
+                minHeight: 800,
+                minWidth: 700,
+                position: { 
+                    my: "center", 
+                    at: "top", 
+                    of: window },
                 open: function(event, ui) {
                     //set dialog components with data from this panel by default
                     $('#navigationdialog .panel').css('background-image','url(/assets/' + me.activepanel + '/bg.jpg)');
@@ -464,22 +449,32 @@ var edit = {
                 var child = $('#navigationdialog ul.hotspots').children().length + 1;
                 var listme = '#navigationdialog li.hotspot' + child;
                 $('#navigationdialog ul.hotspots').append(
-                    '<li class="hotspot' + child + '">' +
-                    '<button class="picker">Pick</button>' +
-                    'Goes: <input type="text" class="goesto" value="' + (json.goto ? json.goto.replace(/\D/g,'') : '') + '" />' +
-                    'W: <input class="width" value="' + (json.width || '') + '" />' +
-                    'H: <input class="height" value="' + (json.height || '') + '" />' +
-                    'L: <input class="left" value="' + (json.left || '') + '" />' +
-                    'B: <input class="bottom" value="' + (json.bottom || '') + '" />' +
-                    'R: <input class="right" value="' + (json.right || '') + '" />' +
-                    'T: <input class="top" value="' + (json.top || '') + '" />' +
+                    '<li class="hotspot hotspot' + child + '">' +
+                    '<div class="sectionleft">' + 
+                    '<img class="panelprev" src="' + (json.goto ? '/assets/' + json.goto.replace(/\D/g,'') + '/bg.jpg': '') + '" height="66" width="108" />' + 
+                    '</div>' + 
+                    '<div class="sectionright">' + 
+                    '<button class="picker">Goto Panel</button>' +
+                    ' <input hidden="true" type="text" class="goesto" value="' + (json.goto ? json.goto.replace(/\D/g,'') : '') + '" />' +
+                    ' W: <input class="width" value="' + (json.width || '') + '" />' +
+                    ' H: <input class="height" value="' + (json.height || '') + '" />' +
+                    ' L: <input class="left" value="' + (json.left || '') + '" />' +
+                    ' B: <input class="bottom" value="' + (json.bottom || '') + '" />' +
+                    ' R: <input class="right" value="' + (json.right || '') + '" />' +
+                    ' T: <input class="top" value="' + (json.top || '') + '" />' +
+                    ' <br/><button class="audiopicker">Ambiance</button>' +
+                    ' <input class="track" style="width:250px" value="' + (json.ambience || '') + '" />' +
+                    ' Vol: <input class="volume" value="' + (json.volume || '') + '" />' + 
                     '<ul class="cursors">' +
                         '<li option="">X</a></li>' +
                         '<li option="up"><img src="/assets/cursors/up.png" /></li>' +
                         '<li option="left"><img src="/assets/cursors/left.png" /></li>' +
                         '<li option="right"><img src="/assets/cursors/right.png" /></li>' +
+                        '<li option="open"><img src="/assets/cursors/open.png" /></li>' +
                     '</ul>' +
-                    '<button class="remove">Remove</button>' +
+                    ' <button class="remove" style="float:right">Remove</button>' +
+                    '<div style="clear:both"></div>' +
+                    '</div>' + 
                     '</li>'
                 );
 
@@ -495,7 +490,6 @@ var edit = {
                 });
 
                 //remove this
-                //nav pabel picker
                 $(listme + ' .remove').button({ 
                     icons: { 
                         primary: ' ui-icon-close'
@@ -504,6 +498,17 @@ var edit = {
                     $(listme).remove();
                     $('#navigationdialog .panel .hotspot' + child).remove();
 
+                });
+
+                //ambiance button
+                $(listme + ' .audiopicker').button({ 
+                    icons: { 
+                        primary: 'ui-icon-newwin'
+                    }
+                }).click(function(e) {
+                    me.buildaudiopicker(function(track) {
+                        $(listme + ' .track').val(track);
+                    });
                 });
 
                 //panel oerlay
@@ -522,6 +527,7 @@ var edit = {
                 //goes to
                 $(listme + ' .goesto').change(function() {
                     $('#navigationdialog .panel .hotspot' + child).find('.goes').text(this.value);
+                    $(listme + ' img.panelprev').attr('src', '/assets/' + this.value + '/bg.jpg');
                 });
 
                 //selectable

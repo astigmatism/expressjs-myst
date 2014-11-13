@@ -400,14 +400,18 @@ var myst = {
                         "height": "333",
                         "right": "0",
                         "goto": "@7",
-                        "cursor": "right"
+                        "cursor": "right",
+                        "ambience":"MUVaultSoundMov",
+                        "volume": "0.2"
                     }
                 ],
             */
 
             var buildNavigation = function(nav) {
                 
-                var i = 0, preload = [];
+                var i = 0, 
+                    preloadpanels = [],
+                    preloadaudio = [];
                 var domnav = $('<div class="nav"></div>');
                 
                 $.each(panel.navigation, function(index, item) {
@@ -434,6 +438,11 @@ var myst = {
                     //cursor?
                     $(div).css('cursor','url("/assets/cursors/' + item.cursor + '.png"), pointer');
 
+                    //ambience track. let's add it to the preload now
+                    if (item.ambience) {
+                        preloadaudio.push(item.ambience);
+                    }
+
                     //event listener for goto and preload
                     if (item.goto) {
 
@@ -449,9 +458,9 @@ var myst = {
                             }
                         }
 
-                        preload.push(goto); //add value to preload to preload this panel
+                        preloadpanels.push(goto); //add value to preload to preload this panel
 
-                        //click event to go to next panel
+                        //click event to go to next panel and handle ambience and/or volume change
                         $(div).click(function() {
                             me.action({
                                 'exit': {
@@ -459,16 +468,25 @@ var myst = {
                                     'direction': item.direction || item.cursor
                                 }
                             });
+                            if (item.ambience || item.volume) {
+                                me.action({
+                                    'ambience': {
+                                        'track': item.ambience,
+                                        'volume': parseInt(item.volume, 10) / 200 //using the values from the iphone db volume given 0-200 needs to be converted to 0-1
+                                    }
+                                });
+                            }
                         });
                     }
                     //append to dom
                     $(domnav).append(div);
                 });
 
-                //preload goto panels
+                //preload goto panels and or audio
                 me.action({
                     'preload': {
-                        'panels': preload
+                        'panels': preloadpanels,
+                        'audio': preloadaudio
                     }
                 });
 
@@ -478,51 +496,16 @@ var myst = {
             if (me.has(panel, 'navigation')) {
                 $(dompanel).append($(buildNavigation(panel.navigation)));
             }
-            
-            //ambient sound (background, persists until ambient changes or is empty string)
-            var stopambience = function() {
-                if (me.isset(me.ambience)) {
-                    me.audio[me.ambience].stop();
-                    me.audio[me.ambience].volume = 1;
-                    me.ambience = null;
-                }
-            };
-            if (me.has(panel, 'ambience.source')) {
-                if (me.isset(panel.ambience.source)) {
-                    if (me.has(me.audio, panel.ambience.source)) {
-                        //if audio is not the same
-                        if (panel.ambience.source !== me.ambience) {
-                            
-                            //stop current ambience
-                            stopambience();
-                            
-                            //set up new amibence
-                            me.ambience = panel.ambience.source;
-                            me.audio[me.ambience].loop = true;
-                            
-                            //play sound if not muted
-                            if (!me.muted) {
-                                me.audio[me.ambience].play();
-                            }
-                        }
-                        //handle volume changes
-                        var volume = 1;
-                        if (me.has(panel, 'ambience.volume')) {
-                            volume = panel.ambience.volume > 1 ? 1 : (panel.ambience.volume < 0 ? 0 : panel.ambience.volume); //greater than 1 is 1. less than 0 is 0
-                        }
-                        $(me.audio[me.ambience]).animate({
-                            volume: volume
-                        }, 500);
 
-                    } else {
-                        stopambience();
+
+            //sometimes we have to specify ambient track on the panel itself, mostly throgh navgation though
+            if (me.has(panel, 'ambience.track')) {
+                me.action({ 
+                    'ambience': {
+                        'track': panel.ambience.track,
+                        'volume': panel.ambience.volume || 1
                     }
-                } else {
-                    stopambience();
-                }
-            } else {
-                //panel.ambience was not set, this means we want to stop any amibent sounds
-                stopambience();
+                });
             }
             
             //dev notes
@@ -831,31 +814,45 @@ var myst = {
                     });
                 }
             },
-            swapambiance: function(value) {
+            //track or object with track and volume
+            ambience: function(value) {
                 
-                var source = me.defined(value, 'object') ? value.source : value;
-                var volume = value.volume || 1;
+                //expecting { track: String. volume: Number }
 
-                if (value !== me.ambience) {
-                            
-                    //stop current ambience
-                    me.audio[me.ambience].stop();
-                    
-                    //set up new amibence
-                    me.ambience = source;
-                    me.audio[me.ambience].loop = true;
-                    
-                    //play sound if not muted
-                    if (!me.muted) {
-                        me.audio[me.ambience].play();
+                //handle track change
+                var trackchange = function(volume) {
+                    if (value.track && (value.track !== me.ambience)) {
+                        
+                        //stop current ambience
+                        if (me.isset(me.ambience)) {
+                            me.audio[me.ambience].stop();
+                        }
+                        
+                        //set up new amibence
+                        me.ambience = value.track;
+                        me.audio[me.ambience].loop = true;
+                        
+                        //play sound if not muted
+                        if (!me.muted) {
+                            if (volume) {
+                                me.audio[me.ambience].volume = volume;
+                            }
+                            me.audio[me.ambience].play();
+                        }
                     }
-                }
+                };
 
-                //handle volume changes
-                volume = volume > 1 ? 1 : (volume < 0 ? 0 : volume); //greater than 1 is 1. less than 0 is 0
-                $(me.audio[me.ambience]).animate({
-                    volume: volume
-                }, 500);
+                //animate volume changes
+                if (value.volume && me.ambience) {
+                    var volume = value.volume > 1 ? 1 : (value.volume < 0 ? 0 : value.volume); //greater than 1 is 1. less than 0 is 0
+                    $(me.audio[me.ambience]).animate({
+                        volume: volume
+                    }, 500, function() {
+                        trackchange(volume);
+                    });
+                } else {
+                    trackchange(value.volume);
+                }
             },
             stopaudio: function(value) {
                 if (me.has(me.audio, value)) {

@@ -1,1 +1,1 @@
-{"notes":"Gear1-N (up):82170","onload":{"preload":{"images":["41\/bg.jpg"],"audio":["FlyGearGateMusicMoov"]}},"onrendercomplete":{},"background":"41\/bg.jpg","content":[],"ambience":{"source":"FlyGearGateMusicMoov","volume":0.5},"navigation":[{"width":"544","height":"116","left":"0","bottom":"0","goto":"@40","cursor":"down"}]}
+{"notes":"Gear1-N (up):82170","onload":{"preload":{"images":["41/bg.jpg"]}},"background":"41/bg.jpg","content":[],"navigation":[{"width":"544","height":"116","left":"0","bottom":"0","goto":"@40","cursor":"down"}]}

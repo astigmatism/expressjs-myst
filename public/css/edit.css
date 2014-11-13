@@ -102,6 +102,7 @@ tr .linked {
 	font-size: 20px;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	position: relative;
+	margin: 0 auto;
 }
 #navigationdialog .panel div.overlay {
 	width: 100px;
@@ -110,8 +111,9 @@ tr .linked {
 	opacity: 0.5;
 	background-color: blue;
 }
-#navigationdialog ul.hotspots { list-style-type: none; margin: 5px; padding: 0; width: 100%; height}
-#navigationdialog li { height: 90px; }
+#navigationdialog ul.hotspots { list-style-type: none; margin: 5px; padding: 0; width: 100%;}
+#navigationdialog ul.hotspots div.sectionleft { float: left; width: 108px; margin-right: 10px;}
+#navigationdialog ul.hotspots li.hotspot {clear:both; margin-top: 10px;}
 
 #navigationdialog li input {
 	width: 30px;

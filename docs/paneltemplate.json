@@ -1,15 +1,5 @@
 {
-    "onload": {
-        "preload": {
-            "audio": [],
-            "images": []
-        }
-    },
-    "onrendercomplete":{
-    },
-    "navigation": [],
-    "ambience":{
-    },
+    "notes":"",
     "background":"",
     "content": [
     ]

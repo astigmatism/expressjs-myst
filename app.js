@@ -29,7 +29,7 @@ app.use('/', routes);
 app.use('/panels', panels);
 
 //pull in app configuration
-var config = config.data;
+config = config.data;
 
 //development only
 if (app.get('env') === 'development') {

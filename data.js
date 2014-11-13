@@ -14,6 +14,9 @@ var memcached = new Memcached('localhost:11211', {
     retry: 10000
 });
 
+//pull in app configuration
+config = config.data;
+
 exports.getFile = function(file, collection, callback, cachelength) {
     
     cachelength = cachelength || -1; //when -1, avoid using cache altogether
@@ -92,6 +95,7 @@ exports.insertDatabase = function(identity, collection, content, cachelength) {
     cachelength = cachelength || -1; //-1 says don't cache at all
 
     // Submit to the DB
+    console.log(config.devmode);
     if (!config.devmode) {
 
         // Set our collection
