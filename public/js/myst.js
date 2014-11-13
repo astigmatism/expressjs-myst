@@ -472,7 +472,7 @@ var myst = {
                                 me.action({
                                     'ambience': {
                                         'track': item.ambience,
-                                        'volume': parseInt(item.volume, 10) / 200 //using the values from the iphone db volume given 0-200 needs to be converted to 0-1
+                                        'volume': parseInt(item.volume, 10) / 256 //using the values from the iphone db volume given 0-256 needs to be converted to 0-1
                                     }
                                 });
                             }

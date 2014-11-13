@@ -1,1 +1,1 @@
-{"onload":{"preload":{"audio":[],"images":["121\/bg.jpg"]}},"onrendercomplete":{},"navigation":{"goto":["","",""]},"ambience":{},"background":"121\/bg.jpg","content":[]}
+{"notes":"SpaceShipPath3-W:14084","onload":{"preload":{"audio":[],"images":["121/bg.jpg"]}},"background":"121/bg.jpg","content":[],"navigation":[{"width":"245","height":"229","left":"127","bottom":"0","goto":"@119","cursor":"up"},{"width":"85","height":"333","left":"465","bottom":"0","goto":"@120","cursor":"right"},{"width":"68","height":"333","left":"0","bottom":"0","goto":"@120","cursor":"left"}]}
