@@ -63,6 +63,34 @@ sudo launchctl start org.mongo.mongod
 
 14) run: npm start. Myst is running. Double check port settings for access, default is 3000.
 
+Setting up Apache to forward to nodejs
+====
+
+An easy to host a nodejs app (or maybe several?) is to still rely on Apache's powerful vhost configuration. 
+
+1) Ensure Apache is stopped: sudo /usr/sbin/apachectl stop
+
+2) Edit the main httpd.conf (/private/etc/apache2/httpd.conf) and enable the vhost file in the extras folder, by default it is commected out. 
+
+3) Add these virtual hosts:
+
+<VirtualHost *:80>
+    DocumentRoot /var/www/example
+</VirtualHost>
+
+#Proxy to nodejs
+<VirtualHost *:80>
+    ServerName myst.crazyerics.com
+    ProxyPreserveHost on
+    ProxyPass / http://localhost:3000/
+</VirtualHost>
+
+Note the above is a very specific example for my own setup so adjust as needed. The first entry acts as a default for all traffic on port 80 that does not match my server name.
+
+4) Start up Apache: sudo /usr/sbin/apachectl start
+
+If the above does not work, ensure mod_proxy.so is enabled in httpd.conf as well. For Yosemite is was enabled by default.
+
 asset buliding notes
 ====
 
