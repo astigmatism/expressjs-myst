@@ -746,6 +746,13 @@ var myst = {
                     me.console('The "exit" action must take as a parameter an object with "goto" and optionally "direction" values', 'error');
                 }
             },
+            guard: function(value) {
+                if (value) {
+                    $('#guard').show();
+                } else {
+                    $('#guard').hide();
+                }
+            },
             show: function(value) {
                 if ($(value).length > 0) {
                     $(value).show();
