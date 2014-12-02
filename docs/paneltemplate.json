@@ -1,5 +1,8 @@
 {
-    "notes":"",
+    "notes": {
+    	"name":"",
+    	"id": 0
+    },
     "background":"",
     "content": [
     ]
