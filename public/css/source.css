@@ -30,7 +30,11 @@ div.nav {
 	margin-right: 30px;
 }
 
-div.nav div {
+div.nav a {
+	cursor: pointer;
+}
+
+div.nav a div {
 	background-color: blue;
 	opacity: 0.5;
 	position: absolute;

@@ -73,7 +73,7 @@ tr .linked {
 #panelpicker .panels {
 	width: 100%;
 }
-#panelpicker .panels .screen {
+#panelpicker .panels .screen, #navigationdialog ul.hotspots .screen {
 	cursor: pointer;
 	display: inline-block;
 	height: 86px;
@@ -81,7 +81,7 @@ tr .linked {
 	border: solid 1px transparent;
 	position: relative;
 }
-#panelpicker .panels .screen .name {
+#panelpicker .panels .screen .name, #navigationdialog ul.hotspots .screen .name {
 	position: absolute;
 	top: 0;
 	left: 0;

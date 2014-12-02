@@ -37,6 +37,9 @@ var myst = {
 
     //zoom
     zoomfactor: 1,              //zoom level of screen
+
+    //zip mode
+    zip: false,
     
     //audio
     audioformats: {
@@ -122,8 +125,8 @@ var myst = {
             //construct screen controls
             me.buildcontrols();
 
-            //check local storage for saved prefs
-            $.each(['mute','zoom'], function(index, item) {
+            //check local storage for saved prefs. names MUST be function names with values as first param
+            $.each(['mute','zoom','zipmode','transition'], function(index, item) {
                 if (me.isset(me.storage(item))) {
                     me[item](me.storage(item));
                 }
@@ -416,6 +419,32 @@ var myst = {
                 
                 $.each(panel.navigation, function(index, item) {
 
+                    var goto;
+
+                    //first figure out what the goto value is
+                    if (item.goto) {
+                        goto = item.goto;
+
+                        //does goto have a [=x] value? if so, is found in state
+                        if (goto.slice(0,2) === "[=" && goto.slice(-1) === "]") {
+                            goto = goto.slice(2, -1);
+                            if (me.states[goto]) {
+                                goto = me.states[goto];
+                            } else {
+                                me.console('panel is asking for a value for state "' + goto + '" but none exists?');
+                            }
+                        }
+                    }
+
+                    //secondly, handle zip mode, the nav object will contain a "zipcode" member
+                    if (item.zipcode) {
+                        if (!me.zip) return; //bail when zip mode is disabled
+
+                        //the qualifier for zip mode is that they have to have visited the panel first, the only way
+                        //I can do this is to check local storage for the panel
+                        if (!(goto in me.panels)) return;
+                    }
+
                     var div = $('<div></div>');
 
                     //look for specific css properties
@@ -436,27 +465,15 @@ var myst = {
                     }
                     
                     //cursor?
-                    $(div).css('cursor','url("/assets/cursors/' + item.cursor + '.png"), pointer');
+                    div.css('cursor','url("/assets/cursors/' + item.cursor + '.png"), pointer');
 
                     //ambience track. let's add it to the preload now
                     if (item.ambience) {
                         preloadaudio.push(item.ambience);
                     }
 
-                    //event listener for goto and preload
-                    if (item.goto) {
-
-                        var goto = item.goto;
-
-                        //does goto have a [=x] value? if so, is found in state
-                        if (goto.slice(0,2) === "[=" && goto.slice(-1) === "]") {
-                            goto = goto.slice(2, -1);
-                            if (me.states[goto]) {
-                                goto = me.states[goto];
-                            } else {
-                                me.console('panel is asking for a value for state "' + goto + '" but none exists?');
-                            }
-                        }
+                    //event listener for goto completion and preload
+                    if (goto) {
 
                         preloadpanels.push(goto); //add value to preload to preload this panel
 
@@ -472,7 +489,7 @@ var myst = {
                                 me.action({
                                     'ambience': {
                                         'track': item.ambience,
-                                        'volume': parseInt(item.volume, 10) / 256 //using the values from the iphone db volume given 0-256 needs to be converted to 0-1
+                                        'volume': parseInt(item.volume, 10) / 255 //using the values from the iphone db volume given 0-255 needs to be converted to 0-1
                                     }
                                 });
                             }
@@ -983,28 +1000,10 @@ var myst = {
                 });
             },
             conditional: function(value) {
-                if (me.has(value, 'condition') && me.has(value, 'evaluate') && me.has(value, 'events')) {
-                    if (me.has(value, 'operand')) {
-                        switch (value.operand) {
-                            case 'lessthan':
-                                me.console('conditional result for: ' + eval(value.evaluate) + ' < ' + value.condition + ' is ' + (eval(value.evaluate) < value.condition));
-                                if (eval(value.evaluate) < value.condition) {
-                                    me.action(value.events);
-                                }
-                                break;
-                            case 'greaterthan':
-                                me.console('conditional result for: ' + eval(value.evaluate) + ' > ' + value.condition + ' is ' + (eval(value.evaluate) > value.condition));
-                                if (eval(value.evaluate) > value.condition) {
-                                    me.action(value.events);
-                                }
-                                break;
-                        }
-                    } else {
-                        //equals
-                        me.console('conditional result for: ' + eval(value.evaluate) + ' === ' + value.condition + ' is ' + (eval(value.evaluate) === value.condition));
-                        if (value.condition === eval(value.evaluate)) {
-                            me.action(value.events);
-                        }
+                if (me.has(value, 'evaluate') && me.has(value, 'events')) {
+                    me.console('conditional result for: ' + value.evaluate + ' is ' + eval(value.evaluate));
+                    if (eval(value.evaluate)) {
+                        me.action(value.events);
                     }
                 } else {
                     me.console('conditional action must have "condition", "evaluate" and "events" as members', 'error');
@@ -1461,6 +1460,9 @@ var myst = {
             me.mute(!$(this).hasClass('muted'));
         });
 
+        $('#zip').click(function(e) {
+            me.zipmode();
+        });
         $('#zoom').click(function(e) {
             me.zoom();
         });
@@ -1487,6 +1489,16 @@ var myst = {
         $.each(me.audio, function(index, item) {
             this.muted = on;
         });
+    },
+    zipmode: function(bool) {
+        var me = this;
+        if (bool !== undefined) {
+            me.zip = bool;
+        } else {
+            me.zip = !me.zip;
+        }
+        me.storage('zipmode', me.zip);
+        $('#zip span').text(me.zip ? 'on' : 'off');
     },
     zoom: function(factor) {
         var me = this;

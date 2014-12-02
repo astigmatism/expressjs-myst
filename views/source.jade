@@ -14,7 +14,8 @@ html
         .nav
           img(src='/source/myst/' + name + '.jpeg')
           - for (var i = 0; i < hotspots.length; ++i) {
-            div(style='width:' + hotspots[i].width + 'px;height:' + hotspots[i].height + 'px;' + (hotspots[i].bottom > 0 ? 'bottom:' + hotspots[i].bottom + 'px;' : 'bottom:0px;') + (hotspots[i].left > 0 ? 'left:' + hotspots[i].left + 'px;' : ''))= hotspots[i].id
+            a(href='/edit/source?id=' + hotspots[i].goto)
+              div(style='width:' + hotspots[i].width + 'px;height:' + hotspots[i].height + 'px;' + (hotspots[i].bottom > 0 ? 'bottom:' + hotspots[i].bottom + 'px;' : 'bottom:0px;') + (hotspots[i].left > 0 ? 'left:' + hotspots[i].left + 'px;' : ''))= hotspots[i].id
           - }
         img(src='/source/myst/' + name + '.jpeg', style='float:left')
         div(style='clear: both;')

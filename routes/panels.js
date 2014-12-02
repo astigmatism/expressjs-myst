@@ -67,18 +67,22 @@ router.get('/', function(req, res) {
                         return;
                     }
 
-                    //set states used by this panel
-                    panel.setPanelStates(content, identity, function(content, states) {
+                    //set panel navigation zip mode data (do this before states in case zip data uses them)
+                    panel.setPanelNavigationZips(content, function(content) {
 
-                        response.panels[panelid] = content;
+                        //set states used by this panel
+                        panel.setPanelStates(content, identity, function(content, states) {
 
-                        //append states used to our response object.. and always encrypt names
-                        for (state in states) {
-                            var statenameencrypted = security.serverencrypt(state, identity);
-                            response.states[statenameencrypted] = states[state]; //save state value to response object
-                        }
+                            response.panels[panelid] = content;
 
-                        callback(); // next item in series
+                            //append states used to our response object.. and always encrypt names
+                            for (state in states) {
+                                var statenameencrypted = security.serverencrypt(state, identity);
+                                response.states[statenameencrypted] = states[state]; //save state value to response object
+                            }
+
+                            callback(); // next item in series
+                        });
                     });
 
                 }, 0); //cache length says never expire this panel content!

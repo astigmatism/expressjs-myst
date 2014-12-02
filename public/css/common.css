@@ -102,14 +102,14 @@ div.panel div.nav div {
     background-position: 0px -25px;
 }
 
-#zoom, #travel, #title {
+#zoom, #travel, #title, #zip {
     line-height: 50px;
     height: 100%;
     margin-right: 30px;
     cursor: pointer;
 }
 
-#zoom, #travel {
+#zoom, #travel, #zip {
     float: right;
 }
 
@@ -117,7 +117,7 @@ div.panel div.nav div {
     float: left;
 }
 
-#zoom:hover, #travel:hover {
+#zip:hover, #zoom:hover, #travel:hover {
     -o-transform: scale(1.1,1.14);
     -ms-transform: scale(1.1,1.14);
     -webkit-transform: scale(1.1,1.14);

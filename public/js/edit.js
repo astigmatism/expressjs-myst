@@ -124,6 +124,29 @@ var edit = {
         }); 
         $('#panelpicker').show();
     },
+    buildzippicker: function(callback) {
+        var me = this;
+        $('#panelpicker .panels').empty();
+        $.ajax({
+            url: '/edit/zips'
+        }).done(function(response) {
+
+            $.each(response.content, function(key, value) {
+
+                var item = $('<div class="screen"><div class="name">' + key + '</div><image src="/assets/' + me.panelImage(value.goto) + '/bg.jpg" height="86" width="136"></image></div>').on('click', {
+                    name: key,
+                    details: value
+                }, function(event) {
+                    callback(event.data);
+                    $('#panelpicker').hide();
+                    $('button.new').show();
+                });
+                $('#panelpicker .panels').append(item);
+            });
+        });
+        $('button.new').hide();
+        $('#panelpicker').show();
+    },
     buildaudiopicker: function(callback) {
         var me = this;
         $('#audiomenu').empty();
@@ -189,10 +212,19 @@ var edit = {
                 me.save();
             });
 
+            //zip mode
+            $('#commands .zips').button({ 
+                icons: { 
+                    primary: 'ui-icon-extlink' 
+                }
+            }).click(function() {
+                me.open('zips', 'zips'); 
+            });
+            
             //states
             $('#commands .states').button({ 
                 icons: { 
-                    primary: 'ui-icon-note' 
+                    primary: 'ui-icon-document' 
                 }
             }).click(function() {
                 me.open('states', 'states'); 
@@ -387,17 +419,25 @@ var edit = {
                                 if ($(this).find('.right').val().length > 0) {
                                     hotspot.right = $(this).find('.right').val();
                                 }
-                                if ($('#navigationdialog .panel .hotspot' + (index + 1)).find('.goes').text().length > 0) {
-                                    hotspot.goto = '@' + parseInt($('#navigationdialog .panel .hotspot' + (index + 1)).find('.goes').text(), 10);
+                                if ($(this).find('.goesto').val().length > 0) {
+                                    hotspot.goto = $(this).find('.goesto').val();
                                 }
-                                if (($('#navigationdialog .panel .hotspot' + (index + 1)).find('.cursor').attr('name')).length > 0) {
-                                    hotspot.cursor = $('#navigationdialog .panel .hotspot' + (index + 1)).find('.cursor').attr('name');
+
+                                //if a zip node
+                                if ($(this).find('.forzip').text().length > 0) {
+                                    hotspot.zipcode = $(this).find('.forzip').text();
                                 }
-                                if ($(this).find('.track').val().length > 0) {
-                                    hotspot.ambience = $(this).find('.track').val();
-                                }
-                                if ($(this).find('.volume').val().length > 0) {
-                                    hotspot.volume = $(this).find('.volume').val();
+                                //if not a zip, then these details are imporant
+                                else {
+                                    if (($('#navigationdialog .panel .hotspot' + (index + 1)).find('.cursor').attr('name')).length > 0) {
+                                        hotspot.cursor = $('#navigationdialog .panel .hotspot' + (index + 1)).find('.cursor').attr('name');
+                                    }
+                                    if ($(this).find('.track').val().length > 0) {
+                                        hotspot.ambience = $(this).find('.track').val();
+                                    }
+                                    if ($(this).find('.volume').val().length > 0) {
+                                        hotspot.volume = $(this).find('.volume').val();
+                                    }
                                 }
 
                                 navigation.push(hotspot);
@@ -451,27 +491,33 @@ var edit = {
                 $('#navigationdialog ul.hotspots').append(
                     '<li class="hotspot hotspot' + child + '">' +
                     '<div class="sectionleft">' + 
-                    '<img class="panelprev" src="' + (json.goto ? '/assets/' + json.goto.replace(/\D/g,'') + '/bg.jpg': '') + '" height="66" width="108" />' + 
+                    '<div class="screen"><div class="name"></div><img class="panelprev" src="" height="66" width="108" /></div>' + 
                     '</div>' + 
                     '<div class="sectionright">' + 
-                    '<button class="picker">Goto Panel</button>' +
-                    ' <input hidden="true" type="text" class="goesto" value="' + (json.goto ? json.goto.replace(/\D/g,'') : '') + '" />' +
+                    '<button class="picker">Goto</button>' +
+                    '<button class="zip">Zip</button>' +
+                    ' <input hidden="true" type="text" class="goesto" value="" />' + //the TRUE name of the goto including @ or state values
+                    ' <input hidden="true" type="text" class="zipcode" value="" />' +
                     ' W: <input class="width" value="' + (json.width || '') + '" />' +
                     ' H: <input class="height" value="' + (json.height || '') + '" />' +
                     ' L: <input class="left" value="' + (json.left || '') + '" />' +
                     ' B: <input class="bottom" value="' + (json.bottom || '') + '" />' +
                     ' R: <input class="right" value="' + (json.right || '') + '" />' +
                     ' T: <input class="top" value="' + (json.top || '') + '" />' +
-                    ' <br/><button class="audiopicker">Ambiance</button>' +
+                    '<div class="forzip"></div>' + 
+                    ' <div class="nonzip"><button class="audiopicker">Ambiance</button>' +
                     ' <input class="track" style="width:250px" value="' + (json.ambience || '') + '" />' +
                     ' Vol: <input class="volume" value="' + (json.volume || '') + '" />' + 
                     '<ul class="cursors">' +
                         '<li option="">X</a></li>' +
                         '<li option="up"><img src="/assets/cursors/up.png" /></li>' +
+                        '<li option="down"><img src="/assets/cursors/down.png" /></li>' +
                         '<li option="left"><img src="/assets/cursors/left.png" /></li>' +
                         '<li option="right"><img src="/assets/cursors/right.png" /></li>' +
                         '<li option="open"><img src="/assets/cursors/open.png" /></li>' +
+                        '<li option="zip"><img src="/assets/cursors/zip.png" /></li>' +
                     '</ul>' +
+                    '</div>' + 
                     ' <button class="remove" style="float:right">Remove</button>' +
                     '<div style="clear:both"></div>' +
                     '</div>' + 
@@ -485,7 +531,21 @@ var edit = {
                     }
                 }).click(function() {
                     me.buildpanelpicker(function(panel) {
-                        $(listme + ' .goesto').val(panel).trigger('change');
+                        $(listme + ' .goesto').val('@' + panel).trigger('change');
+                    });
+                });
+
+                //zip panel picker
+                $(listme + ' .zip').button({ 
+                    icons: { 
+                        primary: 'ui-icon-star'
+                    }
+                }).click(function() {
+                    me.buildzippicker(function(zipdata) {
+                        $(listme + ' .zipcode').val(zipdata.name).trigger('change', {
+                            name: zipdata.name,
+                            goto: zipdata.details.goto
+                        });
                     });
                 });
 
@@ -526,8 +586,27 @@ var edit = {
 
                 //goes to
                 $(listme + ' .goesto').change(function() {
-                    $('#navigationdialog .panel .hotspot' + child).find('.goes').text(this.value);
-                    $(listme + ' img.panelprev').attr('src', '/assets/' + this.value + '/bg.jpg');
+                    $(listme + ' .forzip').empty().hide();
+                    $(listme + ' .nonzip').show();
+                    
+                    $('#navigationdialog .panel .hotspot' + child).find('.goes').text(me.panelImage(this.value)); //label in preview
+                    $('#navigationdialog .panel .hotspot' + child).find('.cursor').empty();
+
+                    $(listme + ' img.panelprev').attr('src', '/assets/' + me.panelImage(this.value) + '/bg.jpg');
+                    $(listme + ' .screen .name').text(me.panelImage(this.value));
+                });
+
+                //zipcode
+                $(listme + ' .zipcode').change(function(event, zipdata) {
+                    $(listme + ' .nonzip').hide();
+                    $(listme + ' .forzip').show().text(zipdata.name);
+                    $(listme + ' .goesto').val(zipdata.goto);
+                    
+                    $(listme + ' img.panelprev').attr('src', '/assets/' + me.panelImage(zipdata.goto) + '/bg.jpg');
+                    $(listme + ' .screen .name').text(zipdata.name);
+
+                    $('#navigationdialog .panel .hotspot' + child).find('.goes').text(zipdata.name); //label in preview
+                    $('#navigationdialog .panel .hotspot' + child).find('.cursor').empty().append('<img src="/assets/cursors/zip.png" />');
                 });
 
                 //selectable
@@ -543,16 +622,27 @@ var edit = {
                 });
 
                 //defaults
-                if (json.goto) {
-                    $(listme + ' .goesto').trigger('change');
+                
+                if (json.zipcode) {
+                    $(listme + ' .zipcode').trigger('change', {
+                        name: json.zipcode, 
+                        goto: json.goto
+                    });   
                 }
-                $.each($(listme + ' .cursors').selectable().children(), function(index, item) {
-                    if ($(item).attr('option') === json.cursor) {
-                        $(item).addClass('ui-selected');
-                        $('#navigationdialog .panel .hotspot' + child).find('.cursor').attr('name', json.cursor);
-                        $('#navigationdialog .panel .hotspot' + child).find('.cursor').empty().append('<img src="/assets/cursors/' + json.cursor + '.png" />');
+                //not a zip
+                else {
+                    if (json.goto) {
+                        $(listme + ' .goesto').val(json.goto).trigger('change');
                     }
-                });
+                    $.each($(listme + ' .cursors').selectable().children(), function(index, item) {
+                        if ($(item).attr('option') === json.cursor) {
+                            $(item).addClass('ui-selected');
+                            $('#navigationdialog .panel .hotspot' + child).find('.cursor').attr('name', json.cursor);
+                            $('#navigationdialog .panel .hotspot' + child).find('.cursor').empty().append('<img src="/assets/cursors/' + json.cursor + '.png" />');
+                        }
+                    });
+                }
+                
                 $('#navigationdialog .panel .hotspot' + child).css({
                     width: json.width,
                     height: json.height
@@ -829,6 +919,15 @@ var edit = {
             }
         }
         return true;
+    },
+    panelImage: function(value) {
+        if (value) {
+            if (value.slice(0,2) === "[=" && value.slice(-1) === "]") {
+                return value; //do nothing for now
+            } 
+            return value.replace(/\D/g,'');
+        }
+        return '';
     }
 };
 edit.initialize();

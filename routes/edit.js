@@ -48,6 +48,16 @@ router.get('/panels', function(req, res) {
 	});
 });
 
+router.get('/zips', function(req, res) {
+
+	data.getFile('zips', 'zips', function(content) {
+		res.json({
+			content: content,
+			assets: []
+		});
+	}, -1);
+});
+
 router.get('/audio', function(req, res) {
 
 	fs.readdir(__dirname + '/../public/assets/audio', function (err, list) {
@@ -86,6 +96,14 @@ router.get('/load', function(req, res) {
 				});
 			}, -1);
 			break;
+		case 'zips':
+			data.getFile('zips', 'zips', function(content) {
+				res.json({
+					content: content,
+					assets: []
+				});
+			}, -1);
+			break;
 	}
 });
 
@@ -103,6 +121,11 @@ router.post('/save', function(req, res) {
 			break;
 		case 'states':
 			data.setFile('states', 'states', contents, function() {
+
+			}, -1);
+			break;
+		case 'zips': 
+			data.setFile('zips', 'zips', contents, function() {
 
 			}, -1);
 			break;

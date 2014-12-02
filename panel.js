@@ -115,6 +115,51 @@ exports.setPanelStates = function (content, identity, callback) {
     });
 };
 
+exports.setPanelNavigationZips = function(panel, callback) {
+
+    if (type.is(panel.navigation, Array)) {
+
+        //get zip information from file
+        data.getFile('zips', 'zips', function(content) {
+
+            //for each navigation object
+            async.eachSeries(panel.navigation, function(navigation, callback) {
+
+                //if navigation object has a zipcode entry..
+                if (navigation.zipcode) {
+
+                    //..loop through the zips file looking for a match
+                    for (zipinfo in content) {
+                        if (zipinfo === navigation.zipcode) {
+
+                            //override the navigation object's properties using those found in the zip file
+                            for (var attr in content[zipinfo]) { 
+                                navigation[attr] = content[zipinfo][attr]; 
+                            }
+
+                            //always add cursor to zips (we could have done this in the editor but why not here and remove the hassle! :)
+                            navigation.cursor = "zip";
+                        }
+                    }
+                    callback();
+                }
+                //no zip code member? go to next nav
+                else {
+                    callback(); // next item in series
+                }
+            }, 
+            // Final callback after each item has been iterated over.
+            function() {
+                callback(panel);
+            });
+
+        }, 0); //0 cache length says keep zip data file in cache always!
+    }
+    else {
+        callback(panel);
+    }
+};
+
 /**
  * Tranvse Json tree for panel and replace any leaf nodes with panel id's in them. encry using the server indent for this user
  * @param  {Object} panel
@@ -127,13 +172,13 @@ exports.encryptPanelNames = function(panel, identity) {
     traverse(panel).forEach(function (value) {
 
         //if a leaf node, a string, and the string matches
-        if (this.isLeaf && type.is(value, String) && value.match(/^@(\d+)$/)) {
+        if (this.isLeaf && type.is(value, String) && value.match(/@(\d+)/g)) {
             
-            var panelid = value.slice(1); //extract out the actual panel id. based on our match routine, simply drop the @ char
+            value = value.replace(/@(\d+)/g, function(match, panelid) {
+                return security.serverencrypt(panelid, identity); //encrypt id
+            });
 
-            var encrypted = security.serverencrypt(panelid, identity); //encrypt id
-
-            this.update(encrypted); //update value in tree
+            this.update(value); //update value in tree
         }
     });
 };
