@@ -448,7 +448,7 @@ var myst = {
 
                         //the qualifier for zip mode is that they have to have visited the panel first, the only way
                         //I can do this is to check local storage for the panel
-                        if (!(goto in me.panels)) return;
+                        if (!me.storage(goto)) return;
                     }
 
                     var div = $('<div></div>');
