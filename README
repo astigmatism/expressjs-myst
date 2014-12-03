@@ -63,6 +63,17 @@ sudo launchctl start org.mongo.mongod
 
 14) run: npm start. Myst is running. Double check port settings for access, default is 3000.
 
+Application environment configuration
+====
+
+Open the ./config.js file. Here you will find various application-wide configuration settings. Ensure they make sense!
+
+devmode -       a boolean flag which allows functionality within the app when in a development environment only (like the editor)
+version -       We use a x.x.x.x version number the first three are defined in the config. the final value increments on each server restart. When the 
+                client connects to the server and cached is an older version number, the client clears its cache (meaning that the client might have old data)
+assetpath -     The full path ending in "/" were the game's assets are found. For development we use the local set but for production we might want to use
+                a CDN
+
 Setting up Apache to forward to nodejs
 ====
 
