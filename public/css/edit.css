@@ -20,10 +20,14 @@ tr .linked {
 	height: 35px;
 }
 #toolbar {
-	position: absolute;
-	width: 40%;
-	right: 0;
+	float:left;
+	width: 33%;
 	height: 100%;
+}
+#sourcewrapper {
+	float:right;
+	width: 33%;
+	height: 100%;	
 }
 #toolbar .options {
 	padding: 10px;
@@ -37,9 +41,8 @@ tr .linked {
 	background-color: #000;
 }
 #editor {
-	position: absolute;
-	left: 0;
-	width: 60%;
+	float:left;
+	width: 33%;
 	height: 100%;
 	background-color: #fff;
 }

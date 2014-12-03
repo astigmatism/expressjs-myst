@@ -1,1 +1,1 @@
-{"notes":"SpaceShipEnter:55197","onload":{"preload":{"audio":[],"images":["124/bg.jpg"]}},"background":"124/bg.jpg","content":[],"navigation":[{"width":"173","height":"333","left":"0","bottom":"0","goto":"@123","cursor":"left"}]}
+{"notes":{"name":"SpaceShipEnter","id":"55197","details":""},"onload":{"preload":{"audio":[],"images":["124/bg.jpg"]}},"background":"124/bg.jpg","content":[],"navigation":[{"width":"173","height":"333","left":"0","bottom":"0","goto":"@123","cursor":"left"}]}

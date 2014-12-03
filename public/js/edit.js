@@ -50,7 +50,10 @@ var edit = {
             me.storage('editpanel', me.activepanel);
             $('#panelname').text(id);
             me.preview();
-            //$('#source').attr('src', 'http://localhost:3000/edit/source?id=10238');
+            
+            if (response.content.notes.id) {
+                $('#source').attr('src', 'http://localhost:3000/edit/source?id=' + response.content.notes.id);
+            }
         });
     },
     save: function() {

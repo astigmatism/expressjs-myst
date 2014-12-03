@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var config = require('./config.js');
+var configuration = require('./config.js');
 var data = require('./data.js');
 var type = require('type-of-is');
 
@@ -29,13 +29,13 @@ app.use('/', routes);
 app.use('/panels', panels);
 
 //pull in app configuration
-config = config.data;
+GLOBAL.config = configuration.data.production;
 
 //development only
 if (app.get('env') === 'development') {
 
     app.use('/edit', edit);
-    config.devmode = true;
+    GLOBAL.config = configuration.data.development;
 }
 
 // catch 404 and forward to error handler
