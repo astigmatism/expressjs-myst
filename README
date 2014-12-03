@@ -81,11 +81,13 @@ An easy to host a nodejs app (or maybe several?) is to still rely on Apache's po
 #Proxy to nodejs
 <VirtualHost *:80>
     ServerName myst.crazyerics.com
+    RewriteEngine on
+    RewriteRule   ^/assets/(.+)  http://googledrive.com/host/0BxDpriCgWYk3VVRPMXhGdUs1R0k/public/assets/$1  [R,L]
     ProxyPreserveHost on
     ProxyPass / http://localhost:3000/
 </VirtualHost>
 
-Note the above is a very specific example for my own setup so adjust as needed. The first entry acts as a default for all traffic on port 80 that does not match my server name.
+Note the above is a very specific example for my own setup so adjust as needed. The first entry acts as a default for all traffic on port 80 that does not match my server name. Also note that I have a rewrite rule on for rerouting anything in the assets folder to my public Google Drive. I use it as a free CDN :) - be sure to only use that rule on your production box and be sure to update the Google Drive!!
 
 4) Start up Apache: sudo /usr/sbin/apachectl start
 

@@ -29,13 +29,13 @@ app.use('/', routes);
 app.use('/panels', panels);
 
 //pull in app configuration
-GLOBAL.config = configuration.data.production;
+config = configuration.data.production;
 
 //development only
 if (app.get('env') === 'development') {
 
     app.use('/edit', edit);
-    GLOBAL.config = configuration.data.development;
+    config = configuration.data.development;
 }
 
 // catch 404 and forward to error handler

@@ -3,12 +3,8 @@
  */
 
 var crypto = require('crypto');
-var config = require("./config.js");
 
 var defaultKey = "I love playing MYST!";
-
-//pull in app configuration
-config = config.data;
 
 exports.encrypt = encrypt = function(value, key) {
 
