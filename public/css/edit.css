@@ -14,19 +14,23 @@ body {
 tr .linked {
 	background-color: red;
 }
-#commands {
-	padding: 5px;
+#workspace {
 	width: 100%;
-	height: 35px;
+	height: 100%;
+	display: table;
+	padding: 0px;
+	margin: 0px;
+	border-spacing: 0px;
 }
 #toolbar {
-	float:left;
-	width: 33%;
+	display: table-cell;
+	vertical-align: top;
+	width: 544px;
 	height: 100%;
 }
 #sourcewrapper {
-	float:right;
-	width: 33%;
+	display: table-cell;
+	vertical-align: top;
 	height: 100%;	
 }
 #toolbar .options {
@@ -40,11 +44,21 @@ tr .linked {
 	height: 332px;
 	background-color: #000;
 }
-#editor {
-	float:left;
-	width: 33%;
+#editorwrapper {
+	display: table-cell;
+	vertical-align: top;
 	height: 100%;
+	width: 40%;
+}
+
+#editor {
 	background-color: #fff;
+	height: 100%;
+}
+
+#editorwrapper .commands, #toolbar .commands {
+	height: 35px;
+	padding: 5px;
 }
 
 #audiopicker {

@@ -19,17 +19,6 @@ html
     link(rel='stylesheet', href='/libraries/jquery-ui-1.10.3.custom/css/ui-darkness/jquery-ui-1.10.3.custom.min.css', type='text/css')
 
   body
-    #commands
-      div(style='float: left;')
-          button.open Open
-          button.save Save
-          button.states States
-          button.zips Zips
-          button.delete Delete
-        div(style='float: right;')
-          button.mute Mute
-          button.preview Preview
-          button.clearls Clear Cache
     #panelpicker
       .commands
         button.cancel Cancel
@@ -41,38 +30,51 @@ html
         button.stop Stop Audio
         button.use Use Selected
       ul#audiomenu
-    #editor
-    #toolbar
-      iframe#preview(scrolling='no', frameborder='0')
-      .options(style='padding: 10px;')
-        .option
-          | Panel:
-          span#panelname
-        .option
-          | Background Upload:
-          input#uploadbg(type='file', name='files[]', multiple='multiple')
-        .option
-          | Add Audio Tracks:
-          button.audiopicker Pick Audio
-        .option
-          | Navigation:
-          button.navigation Build Navigation
-        .option
-          | Insert:
-          button.div Div
-        .option.assets
-          span
-            | Asset Upload:
-            input#uploadasset(type='file', name='files[]', multiple='multiple')
-          br
-          button.insert Insert Selected
-          button.delete Delete Selected
-          ul#panelassets
-          br
-          div(style='clear:both') Current Preview States:
-          ul#statelist
-    #sourcewrapper
-      iframe(id='source', width='100%', height='100%', scrolling='yes', frameborder='no')
+    #workspace
+      #toolbar
+        div.commands
+          button.mute Mute
+          button.preview Preview
+          button.clearls Clear Cache
+        iframe#preview(scrolling='no', frameborder='0')
+        .options(style='padding: 10px;')
+          .option
+            | Panel:
+            span#panelname
+          .option
+            | Background Upload:
+            input#uploadbg(type='file', name='files[]', multiple='multiple')
+          .option
+            | Add Audio Tracks:
+            button.audiopicker Pick Audio
+          .option
+            | Navigation:
+            button.navigation Build Navigation
+          .option
+            | Insert:
+            button.div Div
+          .option.assets
+            span
+              | Asset Upload:
+              input#uploadasset(type='file', name='files[]', multiple='multiple')
+            br
+            button.insert Insert Selected
+            button.delete Delete Selected
+            ul#panelassets
+            br
+            div(style='clear:both') Current Preview States:
+            ul#statelist
+      
+      #editorwrapper
+        div.commands
+          button.open Open
+          button.save Save
+          button.states States
+          button.zips Zips
+          button.delete Delete
+        #editor
+      #sourcewrapper
+        iframe(id='source', width='100%', height='100%', scrolling='yes', frameborder='no')
     #navigationdialog(title='Navigation')
       .panel
       ul.hotspots

@@ -196,7 +196,7 @@ var edit = {
             }, false);
 
             //open
-            $('#commands .open').button({ 
+            $('.commands .open').button({ 
                 icons: { 
                     primary: 'ui-icon-folder-open' 
                 }
@@ -207,7 +207,7 @@ var edit = {
             });
 
             //save
-            $('#commands .save').button({ 
+            $('.commands .save').button({ 
                 icons: { 
                     primary: 'ui-icon-disk' 
                 }
@@ -216,7 +216,7 @@ var edit = {
             });
 
             //zip mode
-            $('#commands .zips').button({ 
+            $('.commands .zips').button({ 
                 icons: { 
                     primary: 'ui-icon-extlink' 
                 }
@@ -225,7 +225,7 @@ var edit = {
             });
             
             //states
-            $('#commands .states').button({ 
+            $('.commands .states').button({ 
                 icons: { 
                     primary: 'ui-icon-document' 
                 }
@@ -234,7 +234,7 @@ var edit = {
             });
 
             //delete
-            $('#commands .delete').button({ 
+            $('.commands .delete').button({ 
                 icons: { 
                     primary: 'ui-icon-closethick' 
                 }
@@ -243,7 +243,7 @@ var edit = {
             });
 
             //preview
-            $('#commands .preview').button({ 
+            $('.commands .preview').button({ 
                 icons: { 
                     primary: 'ui-icon-refresh' 
                 }
@@ -252,7 +252,7 @@ var edit = {
             });
 
             //preview
-            $('#commands .mute').button({ 
+            $('.commands .mute').button({ 
                 icons: { 
                     primary: 'ui-icon-volume-off' 
                 }
@@ -271,7 +271,7 @@ var edit = {
             });   
 
             //clear local storgae
-            $('#commands .clearls').button({ 
+            $('.commands .clearls').button({ 
                 icons: { 
                     primary: 'ui-icon-refresh' 
                 }
@@ -452,13 +452,13 @@ var edit = {
                         } 
                     }
                 ],
-                modal: true,
+                modal: false,
                 minHeight: 800,
                 minWidth: 700,
                 position: { 
                     my: "center", 
                     at: "top", 
-                    of: window },
+                    of: $('#editor') },
                 open: function(event, ui) {
                     //set dialog components with data from this panel by default
                     $('#navigationdialog .panel').css('background-image','url(/assets/' + me.activepanel + '/bg.jpg)');
@@ -750,10 +750,10 @@ var edit = {
                     tag: 'div',
                     attr: {},
                     css: {
-                        top: '166px',
-                        left: '272px',
                         width: image.width + 'px',
                         height: image.height + 'px',
+                        left: '272px',
+                        bottom: '166px',
                         'background-image': 'url(\'' + me.assets[selected].path + '\')'
                     },
                     events: {}
