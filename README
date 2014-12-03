@@ -93,6 +93,19 @@ Note the above is a very specific example for my own setup so adjust as needed. 
 
 If the above does not work, ensure mod_proxy.so is enabled in httpd.conf as well. For Yosemite is was enabled by default.
 
+Using Google Drive as a CDN
+====
+
+I found it very useful to store all my assets on Google Drive and why not? It's a free 15GB and Myst in total is way smaller than that.
+
+Realistically you're only going to enable this for a production environment, so on each push you'll need to update the Google Drive with the latest content. The best way I've found to do this is to download the app which links a local folder on your system to your Google Drive. After that, just use rsync to sync your asset folder with the one in the Google Drive folder:
+
+rsync -avz  ~/Projects/expressjs-myst/public/ ~/Google\ Drive/expressjs-myst/public
+
+You'll need to adjust the path's accordingly in the example above. -a is all files, -z compresses the files during transfer and -v is a verbose listing of the process.
+
+Next be sure to include the rewrite rule in your virtual host listing as seen in the example above.
+
 asset buliding notes
 ====
 
