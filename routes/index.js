@@ -19,6 +19,8 @@ router.get('/', function(req, res) {
             response.version = configuration.version;
         }
 
+        response.assetpath = config.assetpath || '/assets/'; //default to our local asset directory in /public/assets/
+
         res.render('index', response);
     });
 });

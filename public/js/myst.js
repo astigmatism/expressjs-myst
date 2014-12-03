@@ -22,6 +22,9 @@ var myst = {
     },
     activeaudioformat: null,
 
+    //asset path
+    assetpath: '/assets/',
+
     //user states
     states: {},
 
@@ -70,6 +73,9 @@ var myst = {
 
         //a version mismatch will clear all cache except identity
         me.handleversion(serverconfig.version);
+
+        //take asset path passed in to load/cache all our assets from.
+        me.assetpath = serverconfig.assetpath;
 
         //retrieve game state values
         me.states = me.storage('states') || {};
@@ -162,7 +168,7 @@ var myst = {
 
             //background
             if (me.has(panel, 'background')) {
-                $(dompanel).css('background-image', 'url("/assets/' + panel.background + '")');
+                $(dompanel).css('background-image', 'url("' + me.assetpath + panel.background + '")');
             }
 
             //actions to call when render completes (preload extra panel/assets)
@@ -278,7 +284,7 @@ var myst = {
                     $.each(object.css, function(key, value) {
                         switch (key) {
                             case 'cursor':
-                                $(element).css('cursor', 'url("/assets/cursors/' + value + '.png"), pointer');
+                                $(element).css('cursor', 'url("' + me.assetpath + 'cursors/' + value + '.png"), pointer');
                                 break;
                             default:
                                 $(element).css(key, value);
@@ -465,7 +471,7 @@ var myst = {
                     }
                     
                     //cursor?
-                    div.css('cursor','url("/assets/cursors/' + item.cursor + '.png"), pointer');
+                    div.css('cursor','url("' + me.assetpath + 'cursors/' + item.cursor + '.png"), pointer');
 
                     //ambience track. let's add it to the preload now
                     if (item.ambience) {
@@ -643,7 +649,7 @@ var myst = {
                     $.each(value.images, function() {
                         if (!me.has(me.images, this)) {
                             var img = new Image();
-                            img.src = '/assets/' + this;
+                            img.src = me.assetpath + this;
                             me.images[this] = img;
                         }
                     });
@@ -653,7 +659,7 @@ var myst = {
                         var source = this.toString();
                         if (!me.has(me.audio, source) && me.isset(me.activeaudioformat)) {
                             var audio = new Audio();
-                            audio.src = "/assets/audio/" + source + "/" + source + "." + me.activeaudioformat.filetype;
+                            audio.src = me.assetpath + "audio/" + source + "/" + source + "." + me.activeaudioformat.filetype;
                             audio.load();
                             audio.stop = function() {
                                 this.pause();
@@ -669,7 +675,7 @@ var myst = {
                         if (!me.has(me.video, item) && me.isset(me.activevideoformat)) {
                             var video = document.createElement('video');
                             video.videoerror = myst.videoerror;
-                            video.src = "/assets/video/" + item + "/" + item + "." + me.activevideoformat.filetype;
+                            video.src = me.assetpath + "video/" + item + "/" + item + "." + me.activevideoformat.filetype;
                             video.load();
                             //create my custom properties! :)
                             video['stop'] = function() {
@@ -805,7 +811,7 @@ var myst = {
                 $(value).css('visibility','hidden');
             },
             swapbackground: function(value) {
-                $('#panel').css('background-image','url("/assets/' + value + '/bg.jpg")');
+                $('#panel').css('background-image','url("' + me.assetpath + value + '/bg.jpg")');
             },
             removebackground: function(value) {
                 $('div.panel').css('background-image','none');
