@@ -1266,7 +1266,12 @@ var myst = {
         var me = this;
         //we need to validate the server version of myst with the client. if the client differes, we need to expire all cache on the client to retireve "new" content from the server
         if (me.storage('version') !== serverversion) {
-                
+            
+            me.console('A version mismatch was detected between server and client cache:', {
+                server: serverversion,
+                client: me.storage('version')
+            });
+
             //clear client caches, local storage and browser memory
             localStorage.clear();
             me.panels = {};
