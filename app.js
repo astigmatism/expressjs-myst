@@ -79,13 +79,15 @@ data.getDatabaseSingle('configuration', 'server', function(configuration) {
         data.setDatabase('configuration', 'server', {
             runcounter: runcount,
             version: config.version + '.' + runcount
-        });    
+        });
+        console.log('Started Myst version ' + config.version + '.' + runcount); 
     } else {
         data.insertDatabase('configuration', 'server', {
             identity: 'configuration',
             runcounter: 0,
             version: config.version + '.0'
         }, 0);
+        console.log('Started Myst version ' + config.version + '.0'); 
     }
 });
 
