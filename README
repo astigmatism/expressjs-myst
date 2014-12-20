@@ -112,6 +112,8 @@ I found it very useful to store all my assets on Google Drive and why not? It's 
 Realistically you're only going to enable this for a production environment, so on each push you'll need to update the Google Drive with the latest content. The best way I've found to do this is to download the app which links a local folder on your system to your Google Drive. After that, just use rsync to sync your asset folder with the one in the Google Drive folder:
 
 rsync -avz  ~/Projects/expressjs-myst/public/ ~/Google\ Drive/expressjs-myst/public
+OR
+cp -R -v ~/Cloud/Projects/expressjs-myst/public ~/Google\ Drive/expressjs-myst/
 
 You'll need to adjust the path's accordingly in the example above. -a is all files, -z compresses the files during transfer and -v is a verbose listing of the process.
 
