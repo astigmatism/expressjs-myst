@@ -149,9 +149,9 @@ var myst = {
     render: function(panelname, callback, options) {
         
         var dompanel = $('<div class="panel"></div>');
-            me = this,
-            onrendercomplete = [], //an array of functions to call when render is complete for this panel
-            options = options || {};
+        me = this,
+        onrendercomplete = [], //an array of functions to call when render is complete for this panel
+        options = options || {};
         
         //put guard up for to prevent user interaction during recall and transition
         $('#guard').show();
@@ -637,7 +637,7 @@ var myst = {
             panel = me.activepanel,
             action = {
 
-            preload: function(value) {
+                preload: function(value) {
                 //for the most part, panels is depricated since we examine the nav.goto list. use this to reload panels which are not used by nav
                 if (me.has(value, 'panels')) {
                     //actually attempt to recall (from there we handle load from server)
@@ -692,25 +692,25 @@ var myst = {
                     });
                 }
             },
-            render: function(value) {
+                render: function(value) {
                 me.render(value); //use carefully, perhaps exit is a better choice?
             },
-            goto: function(value) {
+                goto: function(value) {
                 me.action({'exit':value});
             },
-            /**
-             * exit with forcing a classic transition
-             */
-            classicexit: function(value) {
+                /**
+                 * exit with forcing a classic transition
+                 */
+                classicexit: function(value) {
                 me.forcedtransition = 'classic';
                 me.action({'exit': value });
             },
-            /**
-             * occurs when user is leaving current panel by action or automation. on exit is called, and next panel render is initiated
-             * @param  {object} {"goto":{string}, "direction": {string}} goto is the panel id (or name) and direction is the cursor value
-             * @return {undef}
-             */
-            exit: function(value) {
+                /**
+                 * occurs when user is leaving current panel by action or automation. on exit is called, and next panel render is initiated
+                 * @param  {object} {"goto":{string}, "direction": {string}} goto is the panel id (or name) and direction is the cursor value
+                 * @return {undef}
+                 */
+                exit: function(value) {
                 //translate older number only input
                 value = !me.defined(value, 'object') ? {"goto": value, "direction":"up"} : value;
                 if (value.goto) {
@@ -769,83 +769,83 @@ var myst = {
                     me.console('The "exit" action must take as a parameter an object with "goto" and optionally "direction" values', 'error');
                 }
             },
-            guard: function(value) {
+                guard: function(value) {
                 if (value) {
                     $('#guard').show();
                 } else {
                     $('#guard').hide();
                 }
             },
-            show: function(value) {
+                show: function(value) {
                 if ($(value).length > 0) {
                     $(value).show();
                 } else {
                     me.console('Trying to show element "' + value + '", but none exist?', 'error');
                 }
             },
-            hide: function(value) {
+                hide: function(value) {
                 if ($(value).length > 0) {
                     $(value).hide();
                 } else {
                     me.console('Trying to hide element "' + value + '", but none exist?', 'error');
                 }
             },
-            toggle: function(value) {
+                toggle: function(value) {
                 if ($(value).length > 0) {
                     $(value).is(":visible") ? $(value).hide() : $(value).show();
                 } else {
                     me.console('Trying to toggle element "' + value + '", but none exist?', 'error');
                 }
             },
-            random: function(value) {
+                random: function(value) {
                 if (me.has(value, 'events')) {
                     me.action(value.events[Math.floor((Math.random() * (value.events.length - 1)))]);
                 } else {
                     me.console('random requires events property as array of choices');
                 }
             },
-            visible: function(value) {
+                visible: function(value) {
                 $(value).css('visibility','visible');
             },
-            invisible: function(value) {
+                invisible: function(value) {
                 $(value).css('visibility','hidden');
             },
-            swapbackground: function(value) {
+                swapbackground: function(value) {
                 $('#panel').css('background-image','url("' + me.assetpath + value + '/bg.jpg")');
             },
-            removebackground: function(value) {
+                removebackground: function(value) {
                 $('div.panel').css('background-image','none');
             },
-            css: function(value) {
+                css: function(value) {
                 $.each(value, function(key, valu) {
                     $.each(valu, function(a,b) {
                         $(key).css(a,b);
                     });
                 });
             },
-            playaudio: function(value) {
+                playaudio: function(value) {
 
-                var track = value;
-                var playrate = 1;
+                    var track = value;
+                    var playrate = 1;
 
-                //if string, string is audio value, if object, look for playrate 
-                if (me.defined(value, 'object') && value.track) {
-                    track = value.track;
-                    if (value.playrate) {
-                        playrate = parseFloat(value.playrate);
+                    //if string, string is audio value, if object, look for playrate 
+                    if (me.defined(value, 'object') && value.track) {
+                        track = value.track;
+                        if (value.playrate) {
+                            playrate = parseFloat(value.playrate);
+                        }
                     }
-                }
 
-                if (me.has(me.audio, track)) {
-                    var audio = me.audio[track];
-                    me.mediaready(audio, function() {
+                    if (me.has(me.audio, track)) {
+                        var audio = me.audio[track];
+                        me.mediaready(audio, function() {
                         audio.playbackRate = playrate;
                         audio.play();
                     });
-                }
-            },
-            //track or object with track and volume
-            ambience: function(value) {
+                    }
+                },
+                //track or object with track and volume
+                ambience: function(value) {
                 
                 //expecting { track: String. volume: Number }
 
@@ -884,7 +884,7 @@ var myst = {
                     trackchange(value.volume);
                 }
             },
-            stopaudio: function(value) {
+                stopaudio: function(value) {
                 if (me.has(me.audio, value)) {
                     var audio = me.audio[value];
                     me.mediaready(audio, function() {
@@ -892,7 +892,7 @@ var myst = {
                     });
                 }
             },
-            playvideo: function(value) {
+                playvideo: function(value) {
                 var video = document.getElementById(value);
                 if (me.isset(video)) {
                     me.mediaready(video, function() {
@@ -900,7 +900,7 @@ var myst = {
                     });
                 }
             },
-            stopvideo: function(value) {
+                stopvideo: function(value) {
                 var video = document.getElementById(value);
                 if (me.isset(video)) {
                     me.mediaready(video, function() {
@@ -908,7 +908,7 @@ var myst = {
                     });
                 }
             },
-            timer: function(value) {
+                timer: function(value) {
                 if (me.has(value, 'events') && me.has(value, 'length') && me.has(value, 'id')) {
                     var timer = setTimeout(function() {
                         me.action(value.events);
@@ -919,14 +919,14 @@ var myst = {
                     me.console('interval requires properties id, length and events.', 'error');
                 }
             },
-            stoptimer: function(value) {
+                stoptimer: function(value) {
                 $.each(me.activetimers, function(key, timer) {
                     if (value === key) {
                         clearTimeout(timer);
                     }
                 });
             },
-            interval: function(value) {
+                interval: function(value) {
                 if (me.has(value, 'events') && me.has(value, 'length') && me.has(value, 'id')) {
                     var interval = setInterval(function() {
                         me.action(value.events);
@@ -936,14 +936,14 @@ var myst = {
                     me.console('interval requires properties id, length and events.', 'error');
                 }
             },
-            stopinterval: function(value) {
+                stopinterval: function(value) {
                 $.each(me.activeintervals, function(key, interval) {
                     if (value === key) {
                         clearInterval(interval);
                     }
                 });
             },
-            playanimation: function(value) {
+                playanimation: function(value) {
                 $.each(me.animations, function(index, item){
                     if (item.id === value) {
                         $(item.element).css('background-position','0px 0px');
@@ -955,7 +955,7 @@ var myst = {
                     }
                 });
             },
-            stopanimation: function(value) {
+                stopanimation: function(value) {
                 $.each(me.animations, function(index, item){
                     if (item.id === value && me.has(item, 'interval')) {
                         clearInterval(item.interval);
@@ -965,30 +965,30 @@ var myst = {
                     }
                 });
             },
-            //used as a conditional. if the current state is one of the values, call action on them
-            state: function(value) {
+                //used as a conditional. if the current state is one of the values, call action on them
+                state: function(value) {
 
-                var actions = [];
-                for (state in value) {
-                    for (statevalue in value[state]) {
-                        //if current state value equals this
-                        if (statevalue === me.states[state]) {
-                            actions.push(value[state][statevalue]);
-                        }
-                    }                    
-                }
+                    var actions = [];
+                    for (state in value) {
+                        for (statevalue in value[state]) {
+                            //if current state value equals this
+                            if (statevalue === me.states[state]) {
+                                actions.push(value[state][statevalue]);
+                            }
+                        }                    
+                    }
 
-                //process actions after control loop (i had an issue where I was changing state while looping which triggered the other change state)
-                $.each(actions, function(index, item) {
+                    //process actions after control loop (i had an issue where I was changing state while looping which triggered the other change state)
+                    $.each(actions, function(index, item) {
                     me.action(item); //process as action
                 });
 
-            },
-            /**
-             * setstate action: used for chaging panel states
-             * @return {[type]}
-             */
-            setstate: function(value) {
+                },
+                /**
+                 * setstate action: used for chaging panel states
+                 * @return {[type]}
+                 */
+                setstate: function(value) {
                 //handle each state individually
                 $.each(value, function(statename, newvalue){
 
@@ -1005,7 +1005,7 @@ var myst = {
                     me.touchback(serverstate);
                 });
             },
-            conditional: function(value) {
+                conditional: function(value) {
                 if (me.has(value, 'evaluate') && me.has(value, 'events')) {
                     me.console('conditional result for: ' + value.evaluate + ' is ' + eval(value.evaluate));
                     if (eval(value.evaluate)) {
@@ -1015,14 +1015,14 @@ var myst = {
                     me.console('conditional action must have "condition", "evaluate" and "events" as members', 'error');
                 }
             },
-            custom: function(value) {
-                 try {
-                    eval(value);
-                } catch(e) {
-                    me.console('There was an error in the action "custom":', e, 'error');
+                custom: function(value) {
+                    try {
+                        eval(value);
+                    } catch(e) {
+                        me.console('There was an error in the action "custom":', e, 'error');
+                    }
                 }
-            }
-        };
+            };
         $.each(object, function(key, value) {
             if (me.defined(value, 'array')) {
                 $.each(value, function(index, item) {
@@ -1369,7 +1369,7 @@ var myst = {
             q = window.location.search.substring(1);
     
         while (e = r.exec(q)) {
-           response[d(e[1])] = d(e[2]);
+            response[d(e[1])] = d(e[2]);
         }
         return response;
     },
@@ -1397,7 +1397,7 @@ var myst = {
     mediaready: function(element, callback, maxtries) {
         var tries = 0, maxtries = maxtries || 10000, isready = function() {
             if (element.readyState === 4) {
-               callback(element);
+                callback(element);
             } else if (tries < maxtries) {
                 setTimeout(function() {
                     isready();
